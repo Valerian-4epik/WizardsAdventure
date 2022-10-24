@@ -326,6 +326,7 @@
 -r:"D:/UnityGames/StickmanArena/WizardsAdventure/WizardsAdventure/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/Newtonsoft.Json.dll"
 -r:"D:/UnityGames/StickmanArena/WizardsAdventure/WizardsAdventure/Library/PackageCache/com.unity.testtools.codecoverage@1.0.1/lib/ReportGenerator/ReportGeneratorMerged.dll"
 -r:"D:/UnityGames/StickmanArena/WizardsAdventure/WizardsAdventure/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/ParadoxNotion.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.2D.Sprite.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.EditorCoroutines.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.Performance.Profile-Analyzer.Editor.ref.dll"
@@ -375,8 +376,17 @@
 "Assets/Scripts/Infrastructure/States/GameStateMachine.cs"
 "Assets/Scripts/Infrastructure/States/LoadLevelState.cs"
 "Assets/Scripts/InitPoint.cs"
-"Assets/Scripts/UI/UIItem.cs"
-"Assets/Scripts/UI/UISlot.cs"
+"Assets/Scripts/Inventory/Items/ItemInfo.cs"
+"Assets/Scripts/Inventory/Items/MagicStaffs.cs"
+"Assets/Scripts/UI/Elements/ButtonsPanel.cs"
+"Assets/Scripts/UI/Elements/BuyButton.cs"
+"Assets/Scripts/UI/Elements/UIInventory.cs"
+"Assets/Scripts/UI/Elements/UIInventoryItem.cs"
+"Assets/Scripts/UI/Elements/UIInventorySlot.cs"
+"Assets/Scripts/UI/Elements/UIItem.cs"
+"Assets/Scripts/UI/Elements/UISlot.cs"
+"Assets/Scripts/UI/Services/WindowService.cs"
+"Assets/Scripts/UI/WindowBase.cs"
 -langversion:9.0
 
 /deterministic
