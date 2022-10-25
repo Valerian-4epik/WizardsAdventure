@@ -22,10 +22,8 @@ public class AgentMoveTo : MonoBehaviour
             _agent.destination = _targetTransform.position;
     }
 
-    public void SetTarget(Transform target)
-    {
+    public void SetTarget(Transform target) => 
         _targetTransform = target;
-    }
 
     private bool Initialized() => 
         _targetTransform != null;

@@ -9,31 +9,46 @@ namespace Enemy
 
         private Transform _targetTransform;
         private bool _isAttacking;
+        private float _cooldown;
+
+        private void Start()
+        {
+            _cooldown = _attackCooldown;
+        }
 
         private void Update()
         {
-            if (!CooldownIsUp())
-                _attackCooldown -= Time.deltaTime;
-            
-            if (!_isAttacking && CooldownIsUp())
-            {
+            UpdateCooldown();
+
+            if (CanAttack())
+            { 
                 StartAttack();
             }
         }
 
-        public void SetTarget(Transform target)
-        {
+        public void SetTarget(Transform target) => 
             _targetTransform = target;
+
+        private void UpdateCooldown()
+        {
+            if (!CooldownIsUp())
+                _cooldown -= Time.deltaTime;
+            else
+                _isAttacking = false;
         }
 
+        private bool CanAttack() => 
+            !_isAttacking && CooldownIsUp();
+
         private bool CooldownIsUp() => 
-            _attackCooldown <= 0;
+            _cooldown <= 0;
 
         private void StartAttack()
         {
             transform.LookAt(_targetTransform);
             _isAttacking = true;
+            _cooldown = _attackCooldown;
             Debug.Log("Attack");
         }
-    }
+     }
 }
