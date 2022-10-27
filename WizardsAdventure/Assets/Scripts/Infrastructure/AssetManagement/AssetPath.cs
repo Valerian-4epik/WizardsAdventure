@@ -1,7 +1,9 @@
 namespace Infrastructure.AssetManagement
 {
-    public static class AssetPath //этот класс содержит только константы
+    public static class AssetPath
     {
-        public const string HeroesSpawnerPath = "Prefabs/HeroesSpawner";
+        public const string WizardsSpawnerPath = "Prefabs/WizardsSpawner";
+        public const string ShopInterface = "Prefabs/[INTERFACE]";
+        public const string ArenaDisposer = "Prefabs/ArenaDisposer";
     }
 }

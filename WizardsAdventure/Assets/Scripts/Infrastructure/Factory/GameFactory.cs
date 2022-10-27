@@ -12,7 +12,13 @@ namespace Infrastructure.Factory
             _assetses = assetses;
         }
         
-        public GameObject CreateHeroesSpawner(GameObject at) => 
-            _assetses.Instantiate(AssetPath.HeroesSpawnerPath, at.transform.position);
+        public GameObject CreateWizardsSpawner(GameObject at) => 
+            _assetses.Instantiate(AssetPath.WizardsSpawnerPath, at.transform.position);
+
+        public GameObject CreateShopInterface() => 
+            _assetses.Instantiate(AssetPath.ShopInterface);
+
+        public GameObject CreateArenaDisposer() => 
+            _assetses.Instantiate(AssetPath.ArenaDisposer);
     }
 }

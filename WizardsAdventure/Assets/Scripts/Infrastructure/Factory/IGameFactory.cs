@@ -5,6 +5,8 @@ namespace Infrastructure.Factory
 {
     public interface IGameFactory : IService
     {
-        GameObject CreateHeroesSpawner(GameObject at);
+        GameObject CreateWizardsSpawner(GameObject at);
+        GameObject CreateShopInterface();
+        GameObject CreateArenaDisposer();
     }
 }
