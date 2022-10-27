@@ -1,6 +1,7 @@
 using Infrastructure.AssetManagement;
 using Infrastructure.Factory;
 using Infrastructure.Services;
+using Infrastructure.Services.PersistentProgress;
 using UnityEngine;
 
 namespace Infrastructure.States
@@ -40,6 +41,7 @@ namespace Infrastructure.States
             //допустим зарегестрировать импут сервис если он у вас есть
 
             _services.RegisterSingle<IAssets>(new AssetProvider());
+            _services.RegisterSingle<IPersistentProgressService>(new PersistentProgressService());
             _services.RegisterSingle<IGameFactory>(new GameFactory(AllServices.Container.Single<IAssets>()));
             //регистрируем сервис как сингл инстанс сервис
         }

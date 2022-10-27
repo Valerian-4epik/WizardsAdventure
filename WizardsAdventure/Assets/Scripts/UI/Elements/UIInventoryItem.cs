@@ -20,10 +20,10 @@ public class UIInventoryItem : UIItem
         }
 
         item = slot.InventoryItem.item;
-        _imageIcon.sprite = item.icon;
-        _levelText.text = item.level.ToString();
+        _imageIcon.sprite = item.Icon;
+        _levelText.text = item.Level.ToString();
 
-        var levelText = slot.InventoryItem.item.level > 0;
+        var levelText = slot.InventoryItem.item.Level > 0;
         
         if (!levelText)
             _levelText.GetComponentInParent<Image>().enabled = false;

@@ -1,12 +1,13 @@
 using Infrastructure.Factory;
 using Infrastructure.Logic;
+using UI;
 using UnityEngine;
 
 namespace Infrastructure.States
 {
     public class LoadLevelState : IPayloadedState<string> //так как интерфейс пайлоадед принимает в себя условие
     {
-        private const string Initialpointheroesspawner = "InitialPointHeroesSpawner";
+        private const string Initialpointspawner = "InitialPointHeroesSpawner";
 
         private readonly GameStateMachine _stateMachine;
         private readonly SceneLoader _sceneLoader;
@@ -33,7 +34,10 @@ namespace Infrastructure.States
 
         private void OnLoaded()//тут я зягружаю все обьекты и поведения которые должны быть на сцене 
         {
-            GameObject heroesSpawner = _gameFactory.CreateHeroesSpawner(GameObject.FindWithTag(Initialpointheroesspawner));// at где создать
+            GameObject heroesSpawner = _gameFactory.CreateWizardsSpawner(GameObject.FindWithTag(Initialpointspawner));// at где создать
+            GameObject shopInterface = _gameFactory.CreateShopInterface();
+            GameObject arenaDisposer = _gameFactory.CreateArenaDisposer();
+            arenaDisposer.GetComponent<ArenaDisposer>().SetShopInterface(shopInterface.GetComponent<UIInventory>());
         
             //shop
             //spawner

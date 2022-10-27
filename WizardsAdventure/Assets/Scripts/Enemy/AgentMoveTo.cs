@@ -4,22 +4,25 @@ using UnityEngine.AI;
 
 public class AgentMoveTo : MonoBehaviour
 {
-    private const float MinimalDistance = 1;
+    private const float MinimalDistance = 2;
 
     [SerializeField] private NavMeshAgent _agent;
 
     private Transform _targetTransform;
     private IGameFactory _gameFactory;
+    private bool _isTargetInAttackZone;
 
-    private void Start()
+    public bool IsTargetInAttackZone
     {
-        // _gameFactory = AllServices.Container.Single<IGameFactory>(); // получение фактори через сингелнтон.
+        set => _isTargetInAttackZone = value;
     }
-
+    
     private void Update()
     {
-        if (Initialized() && HeroNotReached())
+        if (Initialized() && HeroNotReached() && !_isTargetInAttackZone)
             _agent.destination = _targetTransform.position;
+        else
+            _agent.destination = transform.position;
     }
 
     public void SetTarget(Transform target) => 

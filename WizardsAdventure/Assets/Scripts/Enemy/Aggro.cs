@@ -1,18 +1,18 @@
-using System;
+using System.Collections.Generic;
 using ParadoxNotion;
-using Unity.VisualScripting;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 namespace Enemy
 {
     public class Aggro : MonoBehaviour
     {
-        [SerializeField] private LayerMask _target;
+        [SerializeField] private LayerMask _targetLayerMask;
         [SerializeField] private TriggerObserver _triggerObserver;
         [SerializeField] private AgentMoveTo _follow;
-        
-        private bool _hasAggroTarget;
+
+        private List<GameObject> _targets = new List<GameObject>();
+
+        public string Target => _targetLayerMask.MaskToString();
 
         private void Start()
         {
@@ -24,20 +24,25 @@ namespace Enemy
 
         private void TriggerEnter(Collider obj)
         {
-            if (!_hasAggroTarget)
+            if (LayerMask.LayerToName(obj.gameObject.layer) == _targetLayerMask.MaskToString())
             {
-                _hasAggroTarget = true;
-
-                if (LayerMask.LayerToName(obj.gameObject.layer) == _target.MaskToString())
-                {
-                    SwitchFollowOn();
-                    _follow.SetTarget(obj.gameObject.GetComponent<Transform>());
-                }
+                _targets.Add(obj.gameObject);
+                SwitchFollowOn();
+                _follow.SetTarget(_targets[0].GetComponent<Transform>());
             }
         }
 
-        private void TriggerExit(Collider obj) =>
+        private void TriggerExit(Collider obj)
+        {
             SwitchFollowOff();
+            _targets.Remove(obj.gameObject);
+            
+            if (_targets.Count != 0)
+            {
+                SwitchFollowOn();
+                _follow.SetTarget(_targets[0].GetComponent<Transform>());
+            }
+        }
 
         private bool SwitchFollowOn() =>
             _follow.enabled = true;

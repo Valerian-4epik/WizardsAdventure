@@ -10,6 +10,8 @@ namespace UI
         [SerializeField] private UIInventorySlot[] _slots;
         [SerializeField] private List<ItemInfo> _items = new List<ItemInfo>();
 
+        public event Action Fight;
+        
         private void Awake()
         {
             var slots = GetComponentsInChildren<UIInventorySlot>();
@@ -32,11 +34,11 @@ namespace UI
 
         public void Merge(UIInventorySlot fromSlot, UIInventorySlot toSlot)
         {
-            if (fromSlot.InventoryItem.item.level == toSlot.InventoryItem.item.level)
+            if (fromSlot.InventoryItem.item.Level == toSlot.InventoryItem.item.Level)
             {
                 foreach (var item in _items)
                 {
-                    if (toSlot.InventoryItem.item.level+1 == item.level)
+                    if (toSlot.InventoryItem.item.Level+1 == item.Level)
                     {
                         toSlot.SetItem(item);
                         fromSlot.Refresh();
