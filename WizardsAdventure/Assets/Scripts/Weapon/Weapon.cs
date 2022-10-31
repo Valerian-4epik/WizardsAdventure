@@ -1,6 +1,3 @@
-using Blobcreate.ProjectileToolkit;
-using JetBrains.Annotations;
-using NodeCanvas.Tasks.Actions;
 using UnityEngine;
 
 namespace Wizards
@@ -21,6 +18,14 @@ namespace Wizards
             _projectile = item.Projectile;
             _projectile.GetComponent<ETFXProjectileScript>().Damage = item.Damage;
             ProjecttileRig = _projectile.GetComponent<Rigidbody>();
+        }
+    }
+
+    public class Armor
+    {
+        public Armor(ItemInfo itemInfo)
+        {
+            
         }
     }
 }

@@ -2,10 +2,11 @@
 using UnityEngine;
 using System.Collections;
 using Enemy;
+using UnityEngine.Serialization;
 
 public class ETFXProjectileScript : MonoBehaviour
 {
-    [SerializeField] private LayerMask _ignoreMask;
+    [SerializeField] private LayerMask _targetMask;
         public GameObject impactParticle; // Effect spawned when projectile hits a collider
         public GameObject projectileParticle; // Effect attached to the gameobject as child
         public GameObject muzzleParticle; // Effect instantly spawned when gameobject is spawned
@@ -64,7 +65,7 @@ public class ETFXProjectileScript : MonoBehaviour
 
             float detectionDistance = transform.GetComponent<Rigidbody>().velocity.magnitude * Time.deltaTime; // Distance of collision detection for this frame
 
-            if (Physics.SphereCast(transform.position, radius, direction, out hit, detectionDistance, _ignoreMask)) // Checks if collision will happen
+            if (Physics.SphereCast(transform.position, radius, direction, out hit, detectionDistance, _targetMask)) // Checks if collision will happen
             {
                 transform.position = hit.point + (hit.normal * collideOffset); // Move projectile to point of collision
                 

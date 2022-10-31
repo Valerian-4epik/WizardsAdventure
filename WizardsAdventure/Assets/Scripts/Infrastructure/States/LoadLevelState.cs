@@ -39,8 +39,6 @@ namespace Infrastructure.States
             GameObject arenaDisposer = _gameFactory.CreateArenaDisposer();
             arenaDisposer.GetComponent<ArenaDisposer>().SetShopInterface(shopInterface.GetComponent<UIInventory>());
         
-            //shop
-            //spawner
             //cameraFolower
             _stateMachine.Enter<GameLoopState>();
         }

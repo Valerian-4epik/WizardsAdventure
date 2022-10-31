@@ -8,7 +8,6 @@ namespace Enemy
     public class Attack : MonoBehaviour
     {
         [Range(0, 10)] [SerializeField] private float _attackCooldown;
-        [SerializeField] private float _damage;
 
         private Transform _targetTransform;
         private bool _isAttacking;

@@ -11,7 +11,7 @@ namespace Enemy
         [SerializeField] private Health _health;
         [SerializeField] private GameObject _deathFx;
 
-        public event Action Happened;
+        public event Action<GameObject> Happened;
 
         private void Start() => 
             _health.HealthChanged += HealthChanged;
@@ -31,7 +31,7 @@ namespace Enemy
             Debug.Log("Точно подох");
             StartCoroutine(DestroyTimer());
             
-            Happened?.Invoke();
+            Happened?.Invoke(gameObject);
         }
 
         private void SpawnDeathFx() => 

@@ -9,7 +9,7 @@ public class UIInventoryItem : UIItem
     [SerializeField] private Image _imageIcon;
     [SerializeField] private TMP_Text _levelText;
     
-    public ItemInfo item { get; private set; }
+    public ItemInfo Item { get; private set; }
     
     public void Refresh(UIInventorySlot slot)
     {
@@ -19,11 +19,11 @@ public class UIInventoryItem : UIItem
             return;
         }
 
-        item = slot.InventoryItem.item;
-        _imageIcon.sprite = item.Icon;
-        _levelText.text = item.Level.ToString();
+        Item = slot.InventoryItem.Item;
+        _imageIcon.sprite = Item.Icon;
+        _levelText.text = Item.Level.ToString();
 
-        var levelText = slot.InventoryItem.item.Level > 0;
+        var levelText = slot.InventoryItem.Item.Level > 0;
         
         if (!levelText)
             _levelText.GetComponentInParent<Image>().enabled = false;
@@ -31,7 +31,7 @@ public class UIInventoryItem : UIItem
 
     public void SetItem(ItemInfo item)
     {
-        this.item = item;
+        Item = item;
         _imageIcon.gameObject.SetActive(true);
         _levelText.gameObject.SetActive(true);
     }
