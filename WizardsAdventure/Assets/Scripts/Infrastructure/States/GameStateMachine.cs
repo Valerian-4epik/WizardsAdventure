@@ -18,7 +18,7 @@ namespace Infrastructure.States
             {
                 [typeof(BootstrapState)] = new BootstrapState(this, sceneLoader, services), //добавляем наше первое состояние this - мы передаем ссылку на машину
                 [typeof(LoadLevelState)] = new LoadLevelState(this, sceneLoader, loadingCurtain, services.Single<IGameFactory>()), //состояние загрузки первого уровня
-                [typeof(GameLoopState)] = new GameLoopState(this), 
+                [typeof(GameLoopState)] = new GameLoopState(this, sceneLoader, loadingCurtain), 
             };
         }
 
@@ -47,5 +47,5 @@ namespace Infrastructure.States
 
         private TState GetState<TState>() where TState : class, IExitableState =>
             _states[typeof(TState)] as TState; //as TState - это даункаст 
-    }
+    }   
 }

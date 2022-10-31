@@ -20,5 +20,11 @@ namespace Infrastructure.Factory
 
         public GameObject CreateArenaDisposer() => 
             _assetses.Instantiate(AssetPath.ArenaDisposer);
+        
+        public GameObject CreateCameraFollower() => 
+            _assetses.Instantiate(AssetPath.CameraFollower);
+        
+        public GameObject CreateLevelFinishInterface() => 
+            _assetses.Instantiate(AssetPath.LevelFinishInterface);
     }
 }

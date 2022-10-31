@@ -385,7 +385,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _attackCooldown: 2
-  _damage: 30
 --- !u!114 &8147777223720408579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -455,7 +454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48a74523017c4e24825f49505460d76a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _item: {fileID: 11400000, guid: d24ebaf70d5cd5f4ba9324d843a61973, type: 2}
+  _inventory: {fileID: 960986080973558923}
   _checkAttackRange: {fileID: 8147777223720408579}
   _attack: {fileID: 8147777223720408580}
 --- !u!114 &2424840043306976652
@@ -484,7 +483,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 944f51766dcb1644a996b642f5a39c42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inventory: {fileID: 0}
 --- !u!1 &8147777223884128274
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,7 +668,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8147777223974165385}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8a8f73680fa24c9fa6ef9aa0bd797c81, type: 3}
   m_Name: 

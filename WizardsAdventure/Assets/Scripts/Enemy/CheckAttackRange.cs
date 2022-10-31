@@ -8,12 +8,22 @@ namespace Enemy
     [RequireComponent(typeof(Attack))]
     public class CheckAttackRange : MonoBehaviour
     {
+        private const float BASE_ATTACK_RANGE = 2;
+
         [SerializeField] private Attack _attack;
         [SerializeField] private TriggerObserver _triggerObserver;
         [SerializeField] private AgentMoveTo _agentMoveTo;
         [SerializeField] private Aggro _aggro;
 
+        private float _attackRange;
         private List<GameObject> _targets = new List<GameObject>();
+
+        public float AttackRange
+        {
+            get => _attackRange;
+            set => _attackRange = value;
+        }
+
 
         private void Start()
         {
@@ -37,7 +47,6 @@ namespace Enemy
 
         private void TriggerExit(Collider obj)
         {
-            Debug.Log("Подох");
             _attack.DisableAttack();
             _targets.Remove(obj.gameObject);
 
@@ -52,6 +61,9 @@ namespace Enemy
 
         public void ChangeAttackRange(float value) =>
             _triggerObserver.gameObject.GetComponent<SphereCollider>().radius = value;
+        
+        public void SetupDefaultRange() =>
+            _triggerObserver.gameObject.GetComponent<SphereCollider>().radius = BASE_ATTACK_RANGE;
 
         private bool IsEnemy(Collider obj) =>
             LayerMask.LayerToName(obj.gameObject.layer) == _aggro.Target;

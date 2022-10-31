@@ -1,0 +1,404 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.11f1 (0a5ca18544bf) revision 679073'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22000) 64bit CoreSingleLanguage' Language: 'ru' Physical Memory: 15741 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+D:\Unity\2021.3.11f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker5
+-projectPath
+D:/UnityGames/WizardsAdventure/WizardsAdventure
+-logFile
+Logs/AssetImportWorker5.log
+-srvPort
+60473
+Successfully changed project path to: D:/UnityGames/WizardsAdventure/WizardsAdventure
+D:/UnityGames/WizardsAdventure/WizardsAdventure
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 141.06 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.11f1 (0a5ca18544bf)
+[Subsystems] Discovering subsystems at path D:/Unity/2021.3.11f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/UnityGames/WizardsAdventure/WizardsAdventure/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon(TM) Graphics (ID=0x1636)
+    Vendor:   ATI
+    VRAM:     7870 MB
+    Driver:   27.20.11032.1001
+Initialize mono
+Mono path[0] = 'D:/Unity/2021.3.11f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/2021.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Unity/2021.3.11f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56308
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Unity/2021.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003156 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 111.51 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.824 seconds
+Domain Reload Profiling:
+	ReloadAssembly (825ms)
+		BeginReloadAssembly (107ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (567ms)
+			LoadAssemblies (106ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (162ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (33ms)
+			SetupLoadedEditorAssemblies (300ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (112ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (130ms)
+				ProcessInitializeOnLoadMethodAttributes (49ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.006283 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.06 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.177 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1178ms)
+		BeginReloadAssembly (108ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (20ms)
+		EndReloadAssembly (962ms)
+			LoadAssemblies (82ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (283ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (60ms)
+			SetupLoadedEditorAssemblies (500ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (106ms)
+				ProcessInitializeOnLoadAttributes (279ms)
+				ProcessInitializeOnLoadMethodAttributes (107ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 1.06 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4007 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 27 unused Assets / (284.4 KB). Loaded Objects now: 4494.
+Memory consumption went from 144.5 MB to 144.3 MB.
+Total: 4.191200 ms (FindLiveObjects: 0.450600 ms CreateObjectMapping: 0.164400 ms MarkObjects: 3.453400 ms  DeleteObjects: 0.121100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 337718.833328 seconds.
+  path: Assets/GUI Kit Casual Game/Prefabs/UI_CommonUI/Button_Arrow_Next.prefab
+  artifactKey: Guid(9d0fc81bb16984961a0251e1f22b6801) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GUI Kit Casual Game/Prefabs/UI_CommonUI/Button_Arrow_Next.prefab using Guid(9d0fc81bb16984961a0251e1f22b6801) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6dc8ea8116ce672e7935a3a034c5982c') in 0.066925 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/Epic Toon FX/Demo/Demo Prefabs/CanvasSceneSelect.prefab
+  artifactKey: Guid(696a93e0e2eb398428d7b5be3f360be6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Epic Toon FX/Demo/Demo Prefabs/CanvasSceneSelect.prefab using Guid(696a93e0e2eb398428d7b5be3f360be6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c952a5fe296922df583520b9aee24dce') in 0.023388 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Epic Toon FX/Prefabs/Environment/Fire/Cartoon/Torch/CartoonFireTorchBlue.prefab
+  artifactKey: Guid(00a301e11327c274eb48187aaa8aa91a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Epic Toon FX/Prefabs/Environment/Fire/Cartoon/Torch/CartoonFireTorchBlue.prefab using Guid(00a301e11327c274eb48187aaa8aa91a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd2b2cb61f7f05c2af6ab45c81343817') in 0.086505 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/Epic Toon FX/Prefabs/Environment/Fire/Candle/CandleLightSoft/CandleLightSoftRed.prefab
+  artifactKey: Guid(19936ebf972cace4c9f2e3b814ca212c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Epic Toon FX/Prefabs/Environment/Fire/Candle/CandleLightSoft/CandleLightSoftRed.prefab using Guid(19936ebf972cace4c9f2e3b814ca212c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25d8b1586534e3a41de4068875608dd8') in 0.020732 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/Epic Toon FX/Prefabs/Interactive/Cards/CardglowType02.prefab
+  artifactKey: Guid(19e0f569c602f8a458d5d3baa3ac2899) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Epic Toon FX/Prefabs/Interactive/Cards/CardglowType02.prefab using Guid(19e0f569c602f8a458d5d3baa3ac2899) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8272a769fe369eee2bcc5a4e5512f405') in 0.133634 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/GUI Kit Casual Game/Prefabs/UI_Buttons/Button_Color_Sky.prefab
+  artifactKey: Guid(495c05e97ce2d48f29ed71af576ab9e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GUI Kit Casual Game/Prefabs/UI_Buttons/Button_Color_Sky.prefab using Guid(495c05e97ce2d48f29ed71af576ab9e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1f4a07445195c209c21dc618a0abc34') in 0.050720 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000098 seconds.
+  path: Assets/Epic Toon FX/Prefabs/Environment/Fire/Candle/CandleLightSoft/CandleLightSoftGreen.prefab
+  artifactKey: Guid(402817be8160781439ab26b12d1719df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Epic Toon FX/Prefabs/Environment/Fire/Candle/CandleLightSoft/CandleLightSoftGreen.prefab using Guid(402817be8160781439ab26b12d1719df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da5899f6298e48ac993fd002da1973d3') in 0.019921 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Epic Toon FX/Prefabs/Environment/Fire/Candle/CandleLightSoft/CandleLightSoftBlue.prefab
+  artifactKey: Guid(62b0b93adb89a644bb8bd0d81f7b97ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Epic Toon FX/Prefabs/Environment/Fire/Candle/CandleLightSoft/CandleLightSoftBlue.prefab using Guid(62b0b93adb89a644bb8bd0d81f7b97ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aae5a70bcac8fd3ea5da36c6929d2402') in 0.023680 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000072 seconds.
+  path: Assets/GUI Kit Casual Game/Prefabs/UI_Buttons/Button_Lobby_Battle.prefab
+  artifactKey: Guid(73eb15f94061e4bd38866ca49cb4c242) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GUI Kit Casual Game/Prefabs/UI_Buttons/Button_Lobby_Battle.prefab using Guid(73eb15f94061e4bd38866ca49cb4c242) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2d4a159b9e77d069209140cc9fe0b785') in 0.031631 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Epic Toon FX/Prefabs/Interactive/Cards/CardglowType01.prefab
+  artifactKey: Guid(1fd0b4a9d5aa7e049a14955abe32d4c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Epic Toon FX/Prefabs/Interactive/Cards/CardglowType01.prefab using Guid(1fd0b4a9d5aa7e049a14955abe32d4c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51189f155ece1e43644cc31cfe239a23') in 0.037499 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000127 seconds.
+  path: Assets/Epic Toon FX/Prefabs/Interactive/Cards/CardglowType04.prefab
+  artifactKey: Guid(84057e0cb9821ce439e07503c43b3e78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Epic Toon FX/Prefabs/Interactive/Cards/CardglowType04.prefab using Guid(84057e0cb9821ce439e07503c43b3e78) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9b65a03b8f00ec40137d5d595753ee4') in 0.088125 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/GUI Kit Casual Game/Prefabs/UI_Play/Button_Pause.prefab
+  artifactKey: Guid(84a81d0aa95954373ab9b12eba00424b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GUI Kit Casual Game/Prefabs/UI_Play/Button_Pause.prefab using Guid(84a81d0aa95954373ab9b12eba00424b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54bde78214844440bdd3df6808bb9f22') in 0.009161 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/GUI Kit Casual Game/Prefabs/UI_Buttons/Button_Trash.prefab
+  artifactKey: Guid(17d114eaf71c040d6bd949d2fc0d4528) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GUI Kit Casual Game/Prefabs/UI_Buttons/Button_Trash.prefab using Guid(17d114eaf71c040d6bd949d2fc0d4528) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'caefde99838c1eaf45c8327667787aa8') in 0.011182 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/GUI Kit Casual Game/Prefabs/UI_Buttons/Button_ETC_AD_TwoLine.prefab
+  artifactKey: Guid(ab142c7353d354314b4e2cdecfc1802b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GUI Kit Casual Game/Prefabs/UI_Buttons/Button_ETC_AD_TwoLine.prefab using Guid(ab142c7353d354314b4e2cdecfc1802b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb49e4fd82d5ac5c0414d66407e7b583') in 0.020224 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/GUI Kit Casual Game/Prefabs/UI_Buttons/Button_Hexagon_Exit.prefab
+  artifactKey: Guid(f5c2679886ea94c5f999dc55b059c39b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GUI Kit Casual Game/Prefabs/UI_Buttons/Button_Hexagon_Exit.prefab using Guid(f5c2679886ea94c5f999dc55b059c39b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e1c2ba3995524a41866eb48ad10b59e') in 0.010813 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/GUI Kit Casual Game/Prefabs/UI_Buttons/Button_Color_Blue.prefab
+  artifactKey: Guid(0352ceea32ec14dc0ba5c2fcc44d9849) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GUI Kit Casual Game/Prefabs/UI_Buttons/Button_Color_Blue.prefab using Guid(0352ceea32ec14dc0ba5c2fcc44d9849) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0a81ab5a4b60b182954d88412b63a5b') in 0.026613 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/GUI Kit Casual Game/Prefabs/UI_Buttons/Button_Lobby_Stage.prefab
+  artifactKey: Guid(98d3092aa5868474685730b082065a22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GUI Kit Casual Game/Prefabs/UI_Buttons/Button_Lobby_Stage.prefab using Guid(98d3092aa5868474685730b082065a22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80044ac7bf78b707a833ea6f30d16fad') in 0.028968 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/GUI Kit Casual Game/Prefabs/UI_Buttons/Button_Close.prefab
+  artifactKey: Guid(f739138c8d3294a4e87bb1e45294dfaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GUI Kit Casual Game/Prefabs/UI_Buttons/Button_Close.prefab using Guid(f739138c8d3294a4e87bb1e45294dfaf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d235d49b2cea861ce4d1929c543ec93') in 0.009201 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/GUI Kit Casual Game/Prefabs/UI_Buttons/Button_ETC_AD_Text.prefab
+  artifactKey: Guid(e03349a51600f4d7fac6f09346faacc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GUI Kit Casual Game/Prefabs/UI_Buttons/Button_ETC_AD_Text.prefab using Guid(e03349a51600f4d7fac6f09346faacc9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bbc8a14272e3e59f4ba8113265e7497') in 0.019718 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/GUI Kit Casual Game/Prefabs/UI_Buttons/Button_Color_White.prefab
+  artifactKey: Guid(d85edab7576f54804a36163b78f6ed54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GUI Kit Casual Game/Prefabs/UI_Buttons/Button_Color_White.prefab using Guid(d85edab7576f54804a36163b78f6ed54) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ecad292ebfc03858746db3361296810c') in 0.015482 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.554990 seconds.
+  path: Assets/Epic Toon FX/Prefabs/Environment/Fire/Cartoon/Torch/CartoonFireTorchPink.prefab
+  artifactKey: Guid(1676e381cf25b6a4e9e6ae0d12908816) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Epic Toon FX/Prefabs/Environment/Fire/Cartoon/Torch/CartoonFireTorchPink.prefab using Guid(1676e381cf25b6a4e9e6ae0d12908816) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c285bc50865ff3f3261f4cb0fe748e7b') in 0.019885 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Epic Toon FX/Prefabs/Environment/Fire/Trails/CartoonFireTrail.prefab
+  artifactKey: Guid(c2d62f2fde0759941be25d8231ae1997) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Epic Toon FX/Prefabs/Environment/Fire/Trails/CartoonFireTrail.prefab using Guid(c2d62f2fde0759941be25d8231ae1997) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4574e45c9032666e02b52e2df9910a3b') in 0.019657 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Epic Toon FX/Prefabs/Combat/Brawling/Cartoony/CartoonyPunchHeavy.prefab
+  artifactKey: Guid(77aff4f1c9d07704bafd856e02a46ac9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Epic Toon FX/Prefabs/Combat/Brawling/Cartoony/CartoonyPunchHeavy.prefab using Guid(77aff4f1c9d07704bafd856e02a46ac9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95a588c20aa8bbad6de9c3e1a179d331') in 0.024256 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000055 seconds.
+  path: Assets/Epic Toon FX/Prefabs/Combat/Brawling/Cartoony/CartoonyFightAction2.prefab
+  artifactKey: Guid(fa0f45d143def4e4188900695d955614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Epic Toon FX/Prefabs/Combat/Brawling/Cartoony/CartoonyFightAction2.prefab using Guid(fa0f45d143def4e4188900695d955614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8196abfcd0e34317d56a4b9c72f25b8e') in 0.022568 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/Epic Toon FX/Prefabs/Environment/Confetti/Blast/ConfettiBlastBlue.prefab
+  artifactKey: Guid(a54f4434684ca0143bf644289de35374) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Epic Toon FX/Prefabs/Environment/Confetti/Blast/ConfettiBlastBlue.prefab using Guid(a54f4434684ca0143bf644289de35374) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2b3f806e941c74d8d5df848e9c42d2f') in 0.022907 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Epic Toon FX/Prefabs/Environment/Confetti/Blast/ConfettiBlastGreenYellow.prefab
+  artifactKey: Guid(1c417f6a98778594d92a7a8883ede96e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Epic Toon FX/Prefabs/Environment/Confetti/Blast/ConfettiBlastGreenYellow.prefab using Guid(1c417f6a98778594d92a7a8883ede96e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cca3f90c5d11d8beb322f3cf7bebfcee') in 0.022970 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Epic Toon FX/Prefabs/Environment/Confetti/Directional/ConfettiDirectionalOrangePurple.prefab
+  artifactKey: Guid(dfa14883224916b4fb7a88d6a3b2eb6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Epic Toon FX/Prefabs/Environment/Confetti/Directional/ConfettiDirectionalOrangePurple.prefab using Guid(dfa14883224916b4fb7a88d6a3b2eb6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eadd0ab3cf4b1894eef4b8f17b505dfe') in 0.022818 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Epic Toon FX/Prefabs/Combat/Brawling/Cartoony/CartoonyPunchMedium.prefab
+  artifactKey: Guid(acee4f4e191fea8479aad0b4b8e1dc18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Epic Toon FX/Prefabs/Combat/Brawling/Cartoony/CartoonyPunchMedium.prefab using Guid(acee4f4e191fea8479aad0b4b8e1dc18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80ffc94e5af4599ae122d7f7c2b8e926') in 0.022436 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Epic Toon FX/Prefabs/Environment/Confetti/Directional/ConfettiDirectionalOrangeGreen.prefab
+  artifactKey: Guid(fd08df779feb78b4d8630648be0ac203) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Epic Toon FX/Prefabs/Environment/Confetti/Directional/ConfettiDirectionalOrangeGreen.prefab using Guid(fd08df779feb78b4d8630648be0ac203) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40b7a3d5b62303353aea4a77bf6c90c0') in 0.020812 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Epic Toon FX/Prefabs/Interactive/Loot/ChestAppear/ChestAppearYellow.prefab
+  artifactKey: Guid(1e9dc57b9c268e84dbb8ede9289e1474) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Epic Toon FX/Prefabs/Interactive/Loot/ChestAppear/ChestAppearYellow.prefab using Guid(1e9dc57b9c268e84dbb8ede9289e1474) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8d1ae5a129964abaaf8786a0edf8ed6') in 0.018719 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/GUI Kit Casual Game/Prefabs/UI_Play/Character_Info.prefab
+  artifactKey: Guid(90001393b5da84680aaf71d2a6c6013c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GUI Kit Casual Game/Prefabs/UI_Play/Character_Info.prefab using Guid(90001393b5da84680aaf71d2a6c6013c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e91935bb658b220d45a468fb9731e0ea') in 0.053388 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000074 seconds.
+  path: Assets/Epic Toon FX/Prefabs/Environment/Confetti/Shower/ConfettiShowerGreenYellow.prefab
+  artifactKey: Guid(44fee991522ba5146b96d736beaf1dbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Epic Toon FX/Prefabs/Environment/Confetti/Shower/ConfettiShowerGreenYellow.prefab using Guid(44fee991522ba5146b96d736beaf1dbb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad4c7cb3a7263670f6e781fa20f279de') in 0.019343 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000051 seconds.
+  path: Assets/Epic Toon FX/Prefabs/Environment/Fire/Cartoon/Torch/CartoonFireTorchRed.prefab
+  artifactKey: Guid(0b5e7793d4d1e854385c5ce9b1e79f47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Epic Toon FX/Prefabs/Environment/Fire/Cartoon/Torch/CartoonFireTorchRed.prefab using Guid(0b5e7793d4d1e854385c5ce9b1e79f47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a6909236cc395d79e7e211b89a64289e') in 0.022339 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Epic Toon FX/Prefabs/Combat/Brawling/Cartoony/CartoonyFightAction.prefab
+  artifactKey: Guid(4a3acdc5cefd5f74ebcb02914ae9be64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Epic Toon FX/Prefabs/Combat/Brawling/Cartoony/CartoonyFightAction.prefab using Guid(4a3acdc5cefd5f74ebcb02914ae9be64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b3d464dc47f5b19413706f6fc2714c42') in 0.020578 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/GUI Kit Casual Game/Prefabs/UI_Other/Character_Slot_Select.prefab
+  artifactKey: Guid(0f049e4f16eea44098c0c7f4554e258a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GUI Kit Casual Game/Prefabs/UI_Other/Character_Slot_Select.prefab using Guid(0f049e4f16eea44098c0c7f4554e258a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e0e3f4faa6a987188e78d505a2d67435') in 0.055048 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Epic Toon FX/Prefabs/Environment/Confetti/Shower/ConfettiShowerOrangeGreen.prefab
+  artifactKey: Guid(1b48b8c5e456cfc40bbadcbf02cb1e3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Epic Toon FX/Prefabs/Environment/Confetti/Shower/ConfettiShowerOrangeGreen.prefab using Guid(1b48b8c5e456cfc40bbadcbf02cb1e3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c0f1c50358ad3699c72bdbc8b69480a5') in 0.019198 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Epic Toon FX/Prefabs/Environment/Confetti/Blast/ConfettiBlastRed.prefab
+  artifactKey: Guid(aa67315846cbf1a4db925cced0c050da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Epic Toon FX/Prefabs/Environment/Confetti/Blast/ConfettiBlastRed.prefab using Guid(aa67315846cbf1a4db925cced0c050da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fec87e59d1418e5ec536ebccc30b28b0') in 0.018360 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Epic Toon FX/Prefabs/Environment/Confetti/Directional/ConfettiDirectionalBlue.prefab
+  artifactKey: Guid(69a5a1b71d7b39c4ab91a0215b32f537) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Epic Toon FX/Prefabs/Environment/Confetti/Directional/ConfettiDirectionalBlue.prefab using Guid(69a5a1b71d7b39c4ab91a0215b32f537) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91abf349117fb6293edcdb2b280906ed') in 0.015736 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/GUI Kit Casual Game/Prefabs/UI_Other/Character_Stage_Slot_Rare.prefab
+  artifactKey: Guid(29c233e2665e147ef9a32bbaf05fe80e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GUI Kit Casual Game/Prefabs/UI_Other/Character_Stage_Slot_Rare.prefab using Guid(29c233e2665e147ef9a32bbaf05fe80e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f28890f14e76776d587165046259c8ed') in 0.014733 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/GUI Kit Casual Game/Prefabs/UI_Other/Character_Slot_Rare.prefab
+  artifactKey: Guid(142beb11c92ec45789ece8a9b55f194a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/GUI Kit Casual Game/Prefabs/UI_Other/Character_Slot_Rare.prefab using Guid(142beb11c92ec45789ece8a9b55f194a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4824c0dbd206ad956d0fc6f1c3307c4d') in 0.038033 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
