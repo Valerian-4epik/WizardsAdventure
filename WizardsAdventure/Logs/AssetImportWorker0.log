@@ -11,10 +11,11 @@ D:\Unity\2021.3.11f1\Editor\Unity.exe
 -name
 AssetImportWorker0
 -projectPath
-D:/UnityGames/StickmanArena/WizardsAdventure/WizardsAdventure
+D:/UnityGames/WizardsAdventure/WizardsAdventure
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
+<<<<<<< HEAD
 <<<<<<< HEAD
 53714
 =======
@@ -22,6 +23,11 @@ Logs/AssetImportWorker0.log
 >>>>>>> Valeriyan
 Successfully changed project path to: D:/UnityGames/StickmanArena/WizardsAdventure/WizardsAdventure
 D:/UnityGames/StickmanArena/WizardsAdventure/WizardsAdventure
+=======
+58985
+Successfully changed project path to: D:/UnityGames/WizardsAdventure/WizardsAdventure
+D:/UnityGames/WizardsAdventure/WizardsAdventure
+>>>>>>> Valeriyan
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -52,14 +58,18 @@ D:/UnityGames/StickmanArena/WizardsAdventure/WizardsAdventure
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
 <<<<<<< HEAD
+<<<<<<< HEAD
 Refreshing native plugins compatible for Editor in 146.24 ms, found 3 plugins.
 =======
 Refreshing native plugins compatible for Editor in 103.69 ms, found 3 plugins.
 >>>>>>> Valeriyan
+=======
+Refreshing native plugins compatible for Editor in 105.57 ms, found 3 plugins.
+>>>>>>> Valeriyan
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.11f1 (0a5ca18544bf)
 [Subsystems] Discovering subsystems at path D:/Unity/2021.3.11f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path D:/UnityGames/StickmanArena/WizardsAdventure/WizardsAdventure/Assets
+[Subsystems] Discovering subsystems at path D:/UnityGames/WizardsAdventure/WizardsAdventure/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
@@ -71,6 +81,7 @@ Initialize mono
 Mono path[0] = 'D:/Unity/2021.3.11f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity/2021.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'D:/Unity/2021.3.11f1/Editor/Data/MonoBleedingEdge/etc'
+<<<<<<< HEAD
 <<<<<<< HEAD
 Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56036
 Begin MonoManager ReloadAssembly
@@ -87,24 +98,33 @@ Domain Reload Profiling:
 		BeginReloadAssembly (210ms)
 =======
 Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56600
+=======
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56384
+>>>>>>> Valeriyan
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Unity/2021.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001841 seconds.
+Registered in 0.001613 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 132.90 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 131.21 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.642 seconds
+- Completed reload, in  0.648 seconds
 Domain Reload Profiling:
+<<<<<<< HEAD
 	ReloadAssembly (642ms)
 		BeginReloadAssembly (70ms)
+>>>>>>> Valeriyan
+=======
+	ReloadAssembly (649ms)
+		BeginReloadAssembly (68ms)
 >>>>>>> Valeriyan
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
+<<<<<<< HEAD
 <<<<<<< HEAD
 		EndReloadAssembly (727ms)
 			LoadAssemblies (210ms)
@@ -123,18 +143,27 @@ Domain Reload Profiling:
 =======
 		EndReloadAssembly (475ms)
 			LoadAssemblies (69ms)
+=======
+		EndReloadAssembly (482ms)
+			LoadAssemblies (67ms)
+>>>>>>> Valeriyan
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (96ms)
+			SetupTypeCache (101ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (28ms)
-			SetupLoadedEditorAssemblies (304ms)
+			RebuildScriptCaches (27ms)
+			SetupLoadedEditorAssemblies (307ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (133ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (131ms)
 				BeforeProcessingInitializeOnLoad (1ms)
+<<<<<<< HEAD
 				ProcessInitializeOnLoadAttributes (117ms)
 				ProcessInitializeOnLoadMethodAttributes (45ms)
+>>>>>>> Valeriyan
+=======
+				ProcessInitializeOnLoadAttributes (118ms)
+				ProcessInitializeOnLoadMethodAttributes (49ms)
 >>>>>>> Valeriyan
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
@@ -142,6 +171,7 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
+<<<<<<< HEAD
 <<<<<<< HEAD
 Registered in 0.007037 seconds.
 =======
@@ -163,17 +193,31 @@ Domain Reload Profiling:
 		BeginReloadAssembly (225ms)
 =======
 Refreshing native plugins compatible for Editor in 0.98 ms, found 3 plugins.
+=======
+Registered in 0.003944 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.09 ms, found 3 plugins.
+>>>>>>> Valeriyan
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.225 seconds
+- Completed reload, in  1.176 seconds
 Domain Reload Profiling:
+<<<<<<< HEAD
 	ReloadAssembly (1226ms)
 		BeginReloadAssembly (111ms)
+>>>>>>> Valeriyan
+=======
+	ReloadAssembly (1177ms)
+		BeginReloadAssembly (107ms)
 >>>>>>> Valeriyan
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (10ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
+<<<<<<< HEAD
 <<<<<<< HEAD
 			CreateAndSetChildDomain (45ms)
 		EndReloadAssembly (1929ms)
@@ -194,32 +238,37 @@ Domain Reload Profiling:
 			CreateAndSetChildDomain (18ms)
 		EndReloadAssembly (1006ms)
 			LoadAssemblies (83ms)
+=======
+			CreateAndSetChildDomain (23ms)
+		EndReloadAssembly (962ms)
+			LoadAssemblies (77ms)
+>>>>>>> Valeriyan
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (313ms)
+			SetupTypeCache (324ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (61ms)
-			SetupLoadedEditorAssemblies (509ms)
+			RebuildScriptCaches (58ms)
+			SetupLoadedEditorAssemblies (456ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (87ms)
-				ProcessInitializeOnLoadAttributes (314ms)
-				ProcessInitializeOnLoadMethodAttributes (100ms)
-				AfterProcessingInitializeOnLoad (2ms)
+				BeforeProcessingInitializeOnLoad (80ms)
+				ProcessInitializeOnLoadAttributes (272ms)
+				ProcessInitializeOnLoadMethodAttributes (96ms)
+				AfterProcessingInitializeOnLoad (3ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (9ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 1.09 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 1.44 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3998 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 25 unused Assets / (284.2 KB). Loaded Objects now: 4482.
-Memory consumption went from 144.2 MB to 143.9 MB.
-Total: 4.431100 ms (FindLiveObjects: 0.523400 ms CreateObjectMapping: 0.169700 ms MarkObjects: 3.640700 ms  DeleteObjects: 0.096000 ms)
+Unloading 4000 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 25 unused Assets / (284.2 KB). Loaded Objects now: 4484.
+Memory consumption went from 144.2 MB to 144.0 MB.
+Total: 4.150100 ms (FindLiveObjects: 0.505400 ms CreateObjectMapping: 0.244400 ms MarkObjects: 3.302400 ms  DeleteObjects: 0.092500 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -234,13 +283,50 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 549.947712 seconds.
-  path: Assets/Scenes/Level2.unity
-  artifactKey: Guid(f8f333c82cccc8f41aed148d643e7bd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Level2.unity using Guid(f8f333c82cccc8f41aed148d643e7bd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7f32adea7d417cb72e02db330267659f') in 0.008687 seconds 
+  Time since last request: 180446.220072 seconds.
+  path: Assets/Scripts/Enemy
+  artifactKey: Guid(9d5fd0e285ffc7a46a22c885ffa7d718) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Enemy using Guid(9d5fd0e285ffc7a46a22c885ffa7d718) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e2377321f3f25f93d804b8641e27bf1') in 0.008739 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.390745 seconds.
+  path: Assets/Scripts/Weapon
+  artifactKey: Guid(5019d3350296442483bb942f766fa9de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Weapon using Guid(5019d3350296442483bb942f766fa9de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7af5b3d57bdf96ae4e556e8701168343') in 0.001851 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.218586 seconds.
+  path: Assets/Scripts/UI
+  artifactKey: Guid(a631259b67534a989b95c30d8babfbe6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/UI using Guid(a631259b67534a989b95c30d8babfbe6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '441398b4d21b867b006de5a11a77a0d9') in 0.001774 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.406925 seconds.
+  path: Assets/Scripts/Inventory/Items/MagicStaff_Level1.asset
+  artifactKey: Guid(d24ebaf70d5cd5f4ba9324d843a61973) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Inventory/Items/MagicStaff_Level1.asset using Guid(d24ebaf70d5cd5f4ba9324d843a61973) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7fec68f44ae1e7aba222ca216c3db59') in 0.054019 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Scripts/Inventory/Items/MagicStaff_Level7.asset
+  artifactKey: Guid(c8eda16d6f03bd246ac872536d1e1614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Inventory/Items/MagicStaff_Level7.asset using Guid(c8eda16d6f03bd246ac872536d1e1614) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86ddd6a085357761a75791d1cc0dbde1') in 0.002731 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Scripts/Inventory/Items/MagicStaff_Level8.asset
+  artifactKey: Guid(b90267cba2c50de4eb81cf8ef6620aee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Inventory/Items/MagicStaff_Level8.asset using Guid(b90267cba2c50de4eb81cf8ef6620aee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9887bd6c6f02774d41450d6f4fdc631') in 0.004159 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Scripts/Inventory/Items/MagicStaff_Level4.asset
+  artifactKey: Guid(e6baafd0c48505d408c0240745fd2013) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Inventory/Items/MagicStaff_Level4.asset using Guid(e6baafd0c48505d408c0240745fd2013) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cce6d95dafa5152a3ff124be7f491158') in 0.003726 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000030 seconds.
+<<<<<<< HEAD
   path: Assets/Scenes/Level3.unity
   artifactKey: Guid(f94ed5a91c3c95540a6302f19fa10815) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Scenes/Level3.unity using Guid(f94ed5a91c3c95540a6302f19fa10815) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1ad068d83fdaa5e3b5f8c2c80fad02a') in 0.001482 seconds 
@@ -2372,4 +2458,13 @@ AssetImportParameters requested are different than current active one (requested
 =======
 =======
 >>>>>>> Stashed changes
+>>>>>>> Valeriyan
+=======
+  path: Assets/Scripts/Inventory/Items/MagicStaff_Level5.asset
+  artifactKey: Guid(e59354688a5b29845b092c32b5dd314c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Inventory/Items/MagicStaff_Level5.asset using Guid(e59354688a5b29845b092c32b5dd314c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ed0aa7b6a8847fdc6023dc6ed8416ac') in 0.003052 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
 >>>>>>> Valeriyan

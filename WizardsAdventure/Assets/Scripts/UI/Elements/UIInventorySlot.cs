@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 public class UIInventorySlot : UISlot
 {
     [SerializeField] private UIInventoryItem _inventoryItem;
+    
     private bool _isFull;
     private UIInventory _inventory;
 
@@ -14,6 +15,8 @@ public class UIInventorySlot : UISlot
     public UIInventoryItem InventoryItem => _inventoryItem;
     public UIInventorySlot slot { get; private set; }
 
+    public Action SlotStateChanged;
+    
     private void Awake()
     {
         _inventoryItem = GetComponentInChildren<UIInventoryItem>();
@@ -22,7 +25,7 @@ public class UIInventorySlot : UISlot
 
     public override void OnDrop(PointerEventData eventData)
     {
-        var otherItemTransform = eventData.pointerDrag.transform; // поинтерДраг это то что мы тащим
+        var otherItemTransform = eventData.pointerDrag.transform;
         var fromSlotUI = eventData.pointerDrag.GetComponentInParent<UIInventorySlot>();
 
         otherItemTransform.SetParent(transform);
@@ -30,7 +33,7 @@ public class UIInventorySlot : UISlot
 
         var otherItemUI =
             eventData.pointerDrag
-                .GetComponent<UIInventoryItem>(); //когда мы тащим мы забираем инфо о перетаскиваемом обьекте
+                .GetComponent<UIInventoryItem>();
         var toSlotUI = otherItemUI.GetComponentInParent<UIInventorySlot>();
 
         otherItemTransform.SetParent(fromSlotUI.transform);
@@ -46,9 +49,10 @@ public class UIInventorySlot : UISlot
         }
         else
         {
-            toSlotUI.SetItem(otherItemUI.item);
+            toSlotUI.SetItem(otherItemUI.Item);
             fromSlotUI._isFull = false;
             fromSlotUI.InventoryItem.Cleanup();
+            SlotStateChanged?.Invoke();
         }
     }
 
@@ -57,6 +61,7 @@ public class UIInventorySlot : UISlot
         _isFull = true;
         _inventoryItem.SetItem(item);
         _inventoryItem.Refresh(this);
+        SlotStateChanged?.Invoke();
     }
 
     public void Refresh()

@@ -1,5 +1,6 @@
 using System;
 using Enemy;
+using UI;
 using UnityEngine;
 
 namespace Infrastructure.Logic
@@ -7,6 +8,7 @@ namespace Infrastructure.Logic
     public class ActorUI : MonoBehaviour
     {
         [SerializeField] private HpBar _hpBar;
+        [SerializeField] private UIInventory _inventory;
 
         private IHealth _health;
 
@@ -24,10 +26,18 @@ namespace Infrastructure.Logic
                 Construct(health);
         }
 
-        private void OnDestroy() => 
+        private void OnDestroy() =>
             _health.HealthChanged -= UpdateHpBar;
 
-        private void UpdateHpBar() => 
+        public void SwithOnInventorySlots()
+        {
+            if (_inventory.gameObject.activeSelf == false)
+                _inventory.gameObject.SetActive(true);
+            else
+                _inventory.gameObject.SetActive(false);
+        }
+        
+        private void UpdateHpBar() =>
             _hpBar.SetValue(_health.CurrentHealth, _health.MaxHealth);
     }
 }
