@@ -27,13 +27,14 @@ namespace Wizards
         private void SetupAttackRange(ItemInfo item) => 
             _checkAttackRange.ChangeAttackRange(item.AttackRange);
 
-        private void SetupAttackValue(ItemInfo item)
-        {
-            _attack.Weapon ;
-        }
+        private void SetupWeapon() => 
+            _attack.Weapon = _weapon;
 
-        private void SetWeapon(ItemInfo item) => 
+        private void SetWeapon(ItemInfo item)
+        {
             _weapon = new Weapon(transform, item);
+            SetupWeapon();
+        }
 
         private void SetArmor(ItemInfo item) =>
             _armor = new Armor(item);
