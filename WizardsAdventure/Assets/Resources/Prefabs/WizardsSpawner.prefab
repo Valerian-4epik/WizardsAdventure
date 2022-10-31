@@ -88,6 +88,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b512ba91a24d124cb7ddb97aec29394, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1865941128539130680
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7682391817625496369}
+  m_Layer: 0
+  m_Name: BuyWizard
+  m_TagString: Untagged
+  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7682391817625496369
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865941128539130680}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2385907415911697359}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2777484227186782804
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,6 +334,8 @@ Transform:
   - {fileID: 3016727757675108464}
   - {fileID: 7954374262722138242}
   - {fileID: 7965754459347611405}
+  - {fileID: 2656407930853207229}
+  - {fileID: 7682391817625496369}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -320,6 +353,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _initPoints: []
   _wizard: {fileID: 8147777223720408602, guid: 4c26f38795dea0241b28d152e5f8700a, type: 3}
+  _wizardForViewingADS: {fileID: 2522686743303930251, guid: 9009ca544b1e1a441acc8a75c1f23924, type: 3}
+  _wizardForMoney: {fileID: 2522686743303930251, guid: 5d483a0334524954fb4858d5fa42d2a4, type: 3}
+  _wizardForViewingADSPoint: {fileID: 2656407930853207229}
+  _wizardForMoneyPoint: {fileID: 7682391817625496369}
 --- !u!1 &6248357852486350946
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,6 +401,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b512ba91a24d124cb7ddb97aec29394, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &6454937348318354448
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2656407930853207229}
+  m_Layer: 0
+  m_Name: WizardForViewingADS
+  m_TagString: Untagged
+  m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2656407930853207229
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6454937348318354448}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 7.5, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2385907415911697359}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6685369229873342981
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,6 +7,8 @@ namespace Enemy
 {
     public class Attack : MonoBehaviour
     {
+        private const float BASE_DAMAGE = 5;
+
         [Range(0, 10)] [SerializeField] private float _attackCooldown;
 
         private Transform _targetTransform;
@@ -14,11 +16,19 @@ namespace Enemy
         private float _cooldown;
         private bool _attackIsActive;
         private Weapon _weapon;
+        private float _damage;
 
         public Weapon Weapon
         {
             get => _weapon;
-            set => _weapon = value;
+            set
+            {
+                _weapon = value;
+                if (_weapon != null)
+                    _damage = _weapon.Info.Damage;
+                else
+                    _damage = BASE_DAMAGE;
+            }
         }
 
         private void Update()
@@ -57,7 +67,6 @@ namespace Enemy
             transform.LookAt(_targetTransform);
             _isAttacking = true;
             _cooldown = _attackCooldown;
-            // Debug.Log("Attack");
             OnAttack(_damage);
         }
 
@@ -72,6 +81,7 @@ namespace Enemy
             else
             {
                 Debug.Log("Атака без оружия");
+                damage = BASE_DAMAGE;
                 GetTargetHealth().TakeDamage(damage);
                 _isAttacking = false;
             }

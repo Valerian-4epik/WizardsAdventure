@@ -25,22 +25,28 @@ namespace Infrastructure.States
     
         public void Enter(string nameScene)
         {
-            _loadingCurtain.Show(); //перед загрузкой покажем.
+            _loadingCurtain.Show();
             _sceneLoader.Load(nameScene, OnLoaded);
         }
 
         public void Exit() => 
             _loadingCurtain.Hide();
 
-        private void OnLoaded()//тут я зягружаю все обьекты и поведения которые должны быть на сцене 
+        private void OnLoaded()
         {
+            GameObject cameraFollower = _gameFactory.CreateCameraFollower();
             GameObject heroesSpawner = _gameFactory.CreateWizardsSpawner(GameObject.FindWithTag(Initialpointspawner));// at где создать
             GameObject shopInterface = _gameFactory.CreateShopInterface();
+            var uiInventory = shopInterface.GetComponent<UIInventory>();
             GameObject arenaDisposer = _gameFactory.CreateArenaDisposer();
-            arenaDisposer.GetComponent<ArenaDisposer>().SetShopInterface(shopInterface.GetComponent<UIInventory>());
-        
-            //cameraFolower
-            _stateMachine.Enter<GameLoopState>();
+            var disposer = arenaDisposer.GetComponent<ArenaDisposer>();
+            disposer.SetWizardSpawner(heroesSpawner);
+            disposer.SetShopInterface(uiInventory);
+            cameraFollower.GetComponent<CameraFollower>().SetShopInterface(uiInventory);
+            GameObject levelFinishInterface = _gameFactory.CreateLevelFinishInterface();
+            disposer.SetLevelFinishInterface(levelFinishInterface);
+            
+            _stateMachine.Enter<GameLoopState, GameObject>(levelFinishInterface);
         }
     }
 }

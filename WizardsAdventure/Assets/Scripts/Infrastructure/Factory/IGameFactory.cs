@@ -8,5 +8,7 @@ namespace Infrastructure.Factory
         GameObject CreateWizardsSpawner(GameObject at);
         GameObject CreateShopInterface();
         GameObject CreateArenaDisposer();
+        GameObject CreateCameraFollower();
+        GameObject CreateLevelFinishInterface();
     }
 }

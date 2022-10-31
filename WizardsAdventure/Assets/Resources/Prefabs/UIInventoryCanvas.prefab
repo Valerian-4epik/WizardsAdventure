@@ -90,6 +90,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8ac013c245213147b7b53c3e1da155e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _targetMask:
+    serializedVersion: 2
+    m_Bits: 0
   _inventoryItem: {fileID: 1314517830272382470}
 --- !u!1 &2902631283819898402
 GameObject:
@@ -614,6 +617,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8ac013c245213147b7b53c3e1da155e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _targetMask:
+    serializedVersion: 2
+    m_Bits: 0
   _inventoryItem: {fileID: 1661541811320345639}
 --- !u!1 &5212051241210011077
 GameObject:
@@ -1044,7 +1050,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1.783, y: 0.598}
+  m_AnchoredPosition: {x: 1.7829895, y: 0.5980072}
   m_SizeDelta: {x: 2, y: 2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &5212051241888320257
@@ -1090,7 +1096,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &5212051241888320263
 MonoBehaviour:
   m_ObjectHideFlags: 0

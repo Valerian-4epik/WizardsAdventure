@@ -24,16 +24,27 @@ namespace Wizards
             _inventory.ArmorDressed -= SetArmor;
         }
 
-        private void SetupAttackRange(ItemInfo item) => 
+        private void SetupAttackRange(ItemInfo item) =>
             _checkAttackRange.ChangeAttackRange(item.AttackRange);
 
-        private void SetupWeapon() => 
+        private void SetupWeapon()
+        {
             _attack.Weapon = _weapon;
+            SetupAttackRange(_weapon.Info);
+        }
 
         private void SetWeapon(ItemInfo item)
         {
-            _weapon = new Weapon(transform, item);
-            SetupWeapon();
+            if (item != null)
+            {
+                _weapon = new Weapon(transform, item);
+                SetupWeapon();
+            }
+            else
+            {
+                _attack.Weapon = null;
+                _checkAttackRange.SetupDefaultRange();
+            }
         }
 
         private void SetArmor(ItemInfo item) =>

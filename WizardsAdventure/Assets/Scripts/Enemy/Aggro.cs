@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-using ParadoxNotion;
 using UnityEngine;
+using ParadoxNotion;
 
 namespace Enemy
 {
