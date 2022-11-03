@@ -10,5 +10,6 @@ namespace Infrastructure.Factory
         GameObject CreateArenaDisposer();
         GameObject CreateCameraFollower();
         GameObject CreateLevelFinishInterface();
+        GameObject CreatePlayerProgress();
     }
 }

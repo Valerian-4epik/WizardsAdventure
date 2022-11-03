@@ -1,14 +1,17 @@
+using Data;
 using Infrastructure.Logic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace Infrastructure.States
 {
-    public class GameLoopState : IPayloadedState<GameObject>
+    public class GameLoopState : IPayloadedState2<GameObject, GameObject>
     {
         private readonly GameStateMachine _gameStateMachine;
         private readonly SceneLoader _sceneLoader;
         private readonly LoadingCurtain _loadingCurtain;
         private GameObject _levelFinishInterface;
+        private PlayerProgress _playerProgress;
 
         public GameLoopState(GameStateMachine gameStateMachine, SceneLoader sceneLoader, LoadingCurtain loadingCurtain)
         {
@@ -17,9 +20,10 @@ namespace Infrastructure.States
             _loadingCurtain = loadingCurtain;
         }
 
-        public void Enter(GameObject levelFinishInterface)
+        public void Enter(GameObject levelFinishInterface, GameObject playerProgress)
         {
             _levelFinishInterface = levelFinishInterface;
+            _playerProgress = playerProgress.GetComponent<PlayerProgress>();
             SubscribeToCompletion();
         }
 
@@ -28,14 +32,13 @@ namespace Infrastructure.States
         
         }
 
-        private void SubscribeToCompletion()
-        {
-            _levelFinishInterface.GetComponent<LevelFinishInterface>().LevelEnded += LoadNewLevel;
-        }
+        private void SubscribeToCompletion() => 
+            _levelFinishInterface.GetComponent<LevelFinishInterface>().LevelEnded += LoadNextLevel;
 
-        private void LoadNewLevel()
+        private void LoadNextLevel()
         {
-            _gameStateMachine.Enter<LoadLevelState, string>("Level2");
+            _playerProgress.SaveCurrentSceneNumber();
+            _gameStateMachine.Enter<LoadLevelState, int>(_playerProgress.GetNextScene());
         }
     }
 }

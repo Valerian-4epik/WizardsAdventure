@@ -12,11 +12,14 @@ public class ItemInfo : ScriptableObject
     [SerializeField] private Sprite _icon;
     [SerializeField] private AttackType _attackType;
     [SerializeField] private ItemType _itemType;
+    [SerializeField] private TypeOfObject _typeOfObject;
     [SerializeField] private float _damage;
     [SerializeField] private float _attackSpeed;
     [SerializeField] private float _attackRange;
     [SerializeField] private GameObject _projectile;
+    [field: SerializeField] private float Armor { get; set; }
 
+    public TypeOfObject TypeOfObject => _typeOfObject;
     public string ID => _id;
     public string Name => _name;
     public int Level => _level;

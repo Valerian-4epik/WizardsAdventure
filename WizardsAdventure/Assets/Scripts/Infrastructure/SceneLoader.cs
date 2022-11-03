@@ -12,13 +12,13 @@ namespace Infrastructure
         public SceneLoader(ICoroutineRunner coroutineRunner) // нам нужно получить внешней зависимостью корутин раннер
             => _coroutineRunner = coroutineRunner;
 
-        public void Load(string name, Action onLoaded = null) =>
-            _coroutineRunner.StartCoroutine(LoadScene(name, onLoaded));
+        public void Load(int buildIndexNumber, Action onLoaded = null) =>
+            _coroutineRunner.StartCoroutine(LoadScene(buildIndexNumber, onLoaded));
         
         //но чтобы перейти на новую сцену нам нужен sceneLoader
-        private IEnumerator LoadScene(string nextSceneName, Action onLoaded = null) //чтобы вызвать корутину нужен бехивер
+        private IEnumerator LoadScene(int nextSceneName, Action onLoaded = null) //чтобы вызвать корутину нужен бехивер
         {
-            if (SceneManager.GetActiveScene().name == nextSceneName) // проверка 
+            if (SceneManager.GetActiveScene().buildIndex == nextSceneName) // проверка 
             {
                 onLoaded?.Invoke();//если да то мы вызовем каллбак чтобы удостовериться что все впорядке
                 yield break; //и прерываем выполнение корутины брейк потомучто ниже уже есть ретерн

@@ -1,9 +1,8 @@
 using System;
 using System.Collections.Generic;
-using System.Data.Common;
 using System.Linq;
+using Data;
 using Enemy;
-using Infrastructure;
 using UI;
 using UnityEngine;
 
@@ -15,6 +14,7 @@ public class ArenaDisposer : MonoBehaviour
     private UIInventory _shopInterface;
     private GameObject _levelFinishInterface;
     private WizardsSpawner _wizardsSpawner;
+    private PlayerProgress _playerProgress;
     private List<GameObject> _wizards = new List<GameObject>();
     private List<GameObject> _enemies = new List<GameObject>();
 
@@ -37,6 +37,9 @@ public class ArenaDisposer : MonoBehaviour
         _levelFinishInterface = finishInterface;
         _levelFinishInterface.GetComponent<LevelFinishInterface>().SubscribeToEndFight(this);
     }
+
+    public void SetPlayerProgress(PlayerProgress progress) => 
+        _playerProgress = progress;
 
     public void SetWizardSpawner(GameObject wizardSpawner)
     {
@@ -62,7 +65,7 @@ public class ArenaDisposer : MonoBehaviour
         _wizards.Add(wizard);
         SubscribeToDeath(wizard);
     }
-    
+
     private void SubscribeToDeath(GameObject gameObject) => 
         gameObject.GetComponent<Death>().Happened += RemoveWizard;
 
@@ -73,6 +76,20 @@ public class ArenaDisposer : MonoBehaviour
         if (_enemies.Count == 0)
         {
             _levelFinishInterface.SetActive(true);
+
+            var itemList = new List<string>();
+            foreach (var wizard in _wizards)
+            {
+                var inventoryFighter = wizard.gameObject.GetComponent<InventoryFighter>();
+
+                foreach (var id in inventoryFighter.GetItemsID())
+                {
+                    itemList.Add(id);
+                }
+                
+                _playerProgress.SaveSquadItems(itemList);
+            }  
+            
             EndFight?.Invoke(true);
         }
     }
@@ -80,6 +97,8 @@ public class ArenaDisposer : MonoBehaviour
     private void RemoveWizard(GameObject fighter)
     {
         _wizards.Remove(fighter);
+        _playerProgress.PlayerWizardsAmount = _wizards.Count;
+        ES3.Save("mySquad", _playerProgress.PlayerWizardsAmount, "Squad.es3");
 
         if (_wizards.Count == 0)
         {
@@ -117,7 +136,7 @@ public class ArenaDisposer : MonoBehaviour
 
     private GameObject Fighter(GameObject fighter)
     { 
-       fighter.GetComponent<Idle>().SwitchOnStartFight();
-       return fighter;
+        fighter.GetComponent<Idle>().SwitchOnStartFight();
+        return fighter;
     }
 }

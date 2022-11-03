@@ -34,6 +34,12 @@ namespace Infrastructure.States
             TState state = ChangeState<TState>();
             state.Enter(payload); //пайловад передаваемый параметр
         }
+        
+        public void Enter<TState, TPayload, TPayload1>(TPayload payload, TPayload1 payload2) where TState : class, IPayloadedState2<TPayload, TPayload1> // TPayload передаваемый параметр, дженериковый параметр
+        {
+            TState state = ChangeState<TState>();
+            state.Enter(payload, payload2);
+        }
 
         private TState ChangeState<TState>() where TState : class, IExitableState
         {

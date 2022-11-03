@@ -118,6 +118,7 @@
 -define:ENABLE_TILEMAP
 -define:ENABLE_TIMELINE
 -define:ENABLE_LEGACY_INPUT_MANAGER
+-define:UNITY_VISUAL_SCRIPTING
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -r:"Assets/Plugins/Demigiant/DOTween/DOTween.dll"
@@ -395,8 +396,9 @@
 "Assets/Epic Toon FX/Scripts/ETFXPitchRandomizer.cs"
 "Assets/Epic Toon FX/Scripts/ETFXRotation.cs"
 "Assets/GUI Kit Casual Game/Extensions/UIParticle/UIParticleSystem.cs"
+"Assets/GUI Kit Casual Game/Scripts/Panel.cs"
+"Assets/GUI Kit Casual Game/Scripts/PanelControl.cs"
 "Assets/Scripts/Data/PlayerProgress.cs"
-"Assets/Scripts/Data/PlayerStats.cs"
 "Assets/Scripts/Enemy/AgentMoveTo.cs"
 "Assets/Scripts/Enemy/Aggro.cs"
 "Assets/Scripts/Enemy/Attack.cs"
@@ -426,9 +428,6 @@
 "Assets/Scripts/Infrastructure/SceneLoader.cs"
 "Assets/Scripts/Infrastructure/Services/AllServices.cs"
 "Assets/Scripts/Infrastructure/Services/IService.cs"
-"Assets/Scripts/Infrastructure/Services/PersistentProgress/IPersistentProgressService.cs"
-"Assets/Scripts/Infrastructure/Services/PersistentProgress/ISavedProgress.cs"
-"Assets/Scripts/Infrastructure/Services/PersistentProgress/PersistentProgressService.cs"
 "Assets/Scripts/Infrastructure/States/BootstrapState.cs"
 "Assets/Scripts/Infrastructure/States/GameLoopState.cs"
 "Assets/Scripts/Infrastructure/States/GameStateMachine.cs"
@@ -436,6 +435,8 @@
 "Assets/Scripts/InitPoint.cs"
 "Assets/Scripts/Inventory/Items/ItemInfo.cs"
 "Assets/Scripts/Inventory/Items/ItemType.cs"
+"Assets/Scripts/Inventory/Items/MagicStaffs.cs"
+"Assets/Scripts/Inventory/Items/TypeOfObject.cs"
 "Assets/Scripts/UI/Elements/UIInventory.cs"
 "Assets/Scripts/UI/Elements/UIInventoryItem.cs"
 "Assets/Scripts/UI/Elements/UIInventorySlot.cs"

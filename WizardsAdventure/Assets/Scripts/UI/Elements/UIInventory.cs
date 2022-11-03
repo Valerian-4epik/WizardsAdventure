@@ -1,21 +1,25 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Data;
+using NodeCanvas.Tasks.Actions;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace UI
 {
     public class UIInventory : MonoBehaviour
     {
         [SerializeField] private UIInventorySlot[] _slots;
-        [SerializeField] private List<ItemInfo> _items = new List<ItemInfo>();
+        [SerializeField] private List<ItemInfo> _itemsData = new List<ItemInfo>();
 
         private RaycastDetecter _raycastDetecter;
-        
+        private PlayerProgress _playerProgress;
+
         public UIInventorySlot[] Slots => _slots;
-        
+
         public event Action Fight;
-        
+
         private void Awake()
         {
             var slots = GetComponentsInChildren<UIInventorySlot>();
@@ -29,37 +33,55 @@ namespace UI
             SetRaycastDetecter();
         }
 
-        public void OnFight() => 
+        public void OnFight()
+        {
+            _playerProgress.SaveCurrentItems(ConvertListItemsToItemID(ConvertListSlotsToItem()));
             Fight?.Invoke();
+        }
 
-        public void BuyItem(ItemInfo item)
+        public void BuyItem(ItemInfo item) =>
+            FillSlot(item);
+        
+        public void Merge(UIInventorySlot fromSlot, UIInventorySlot toSlot)
+        {
+            if (GetItemLevel(fromSlot) == GetItemLevel(toSlot) &&
+                GetItemTypeOfObject(fromSlot) == GetItemTypeOfObject(toSlot))
+            {
+                foreach (var item in _itemsData.Where(item =>
+                             toSlot.InventoryItem.Item.Level + 1 == item.Level &&
+                             GetItemTypeOfObject(toSlot) == item.TypeOfObject))
+                {
+                    toSlot.SetItem(item);
+                    fromSlot.Refresh();
+                    return;
+                }
+            }
+        }
+
+        public void SetPlayerProgress(PlayerProgress playerProgress)
+        {
+            _playerProgress = playerProgress;
+            LoadCurrentItems();
+        }
+
+        private void LoadCurrentItems()
+        {
+            if (GetItemList() != null)
+            {
+                Debug.Log(GetItemList().Count);
+                foreach (var item in GetItemList())
+                {
+                    FillSlot(item);
+                }
+            }
+        }
+
+        private void FillSlot(ItemInfo item)
         {
             if (GetEmptySlots().Length != 0)
             {
                 UIInventorySlot slot = GetEmptySlots()[0];
                 slot.SetItem(item);
-            }
-        }
-
-        public UIInventorySlot[] GetFullSlots()
-        {
-            var emptySlot = from slot in _slots where slot.IsFull select slot;
-            return emptySlot.ToArray();
-        }
-
-        public void Merge(UIInventorySlot fromSlot, UIInventorySlot toSlot)
-        {
-            if (fromSlot.InventoryItem.Item.Level == toSlot.InventoryItem.Item.Level)
-            {
-                foreach (var item in _items)
-                {
-                    if (toSlot.InventoryItem.Item.Level+1 == item.Level)
-                    {
-                        toSlot.SetItem(item);
-                        fromSlot.Refresh();
-                        return;
-                    }
-                }
             }
         }
 
@@ -69,11 +91,26 @@ namespace UI
                 _raycastDetecter = Camera.main.gameObject.GetComponent<RaycastDetecter>();
             _raycastDetecter.SetShopInterface(this);
         }
-            
-        private UIInventorySlot[] GetEmptySlots()
-        {
-            var emptySlot = from slot in _slots where !slot.IsFull select slot;
-            return emptySlot.ToArray();
-        }
+
+        private List<ItemInfo> GetItemList() =>
+            (from itemID in _playerProgress.GetItems() from item in _itemsData where item.ID == itemID select item).ToList();
+
+        private TypeOfObject GetItemTypeOfObject(UIInventorySlot fromSlot) =>
+            fromSlot.InventoryItem.Item.TypeOfObject;
+
+        private int GetItemLevel(UIInventorySlot fromSlot) => 
+            fromSlot.InventoryItem.Item.Level;
+
+        private UIInventorySlot[] GetEmptySlots() => 
+            (from slot in _slots where !slot.IsFull select slot).ToArray();
+
+        private List<UIInventorySlot> GetFullSlots() =>
+            (from slot in _slots where slot.IsFull select slot).ToList();
+
+        private List<ItemInfo> ConvertListSlotsToItem() =>
+            (GetFullSlots().Select(slot => slot.InventoryItem.Item).ToList());
+
+        private List<string> ConvertListItemsToItemID(List<ItemInfo> items) =>
+            (items.Select(item => item.ID)).ToList();
     }
 }

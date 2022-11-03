@@ -15,9 +15,12 @@ namespace Wizards
             LaunchPoint = launchPoint;
             Info = item;
             Type = item.AttackType.ToString();
-            _projectile = item.Projectile;
-            _projectile.GetComponent<ETFXProjectileScript>().Damage = item.Damage;
-            ProjecttileRig = _projectile.GetComponent<Rigidbody>();
+            if (Type == AttackType.RangeAttack.ToString())
+            {
+                _projectile = item.Projectile;
+                _projectile.GetComponent<ETFXProjectileScript>().Damage = item.Damage;
+                ProjecttileRig = _projectile.GetComponent<Rigidbody>();
+            }
         }
     }
 
@@ -25,7 +28,6 @@ namespace Wizards
     {
         public Armor(ItemInfo itemInfo)
         {
-            
         }
     }
 }

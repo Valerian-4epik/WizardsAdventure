@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UI;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -44,12 +45,26 @@ public class InventoryFighter : MonoBehaviour
             _armor = null;
             ArmorDressed?.Invoke(_armor);
         }
+
         if (_weapon != null)
         {
             shopInterface.BuyItem(_weapon);
             _weapon = null;
             WeaponDressed?.Invoke(_weapon);
         }
+    }
+
+    public List<string> GetItemsID()
+    {
+        var listID = new List<string>();
+        
+        if (_weapon != null)
+            listID.Add(_weapon.ID);
+        
+        if (_armor != null)
+            listID.Add(_armor.ID);
+        
+        return listID;
     }
 
     private void Refresh(UIInventoryItem item) =>

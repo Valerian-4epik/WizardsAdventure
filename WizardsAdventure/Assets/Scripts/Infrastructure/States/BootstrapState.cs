@@ -1,17 +1,20 @@
+using Data;
 using Infrastructure.AssetManagement;
 using Infrastructure.Factory;
 using Infrastructure.Services;
-using Infrastructure.Services.PersistentProgress;
 using UnityEngine;
 
 namespace Infrastructure.States
 {
     public class BootstrapState : IState //начальный стейт с которого все начинается.
     {
-        private const string Initial = "Initial";
+        private const int INITIAL_SCENE = 0;
+
         private readonly GameStateMachine _gameStateMachine;
         private readonly SceneLoader _sceneLoader;
-        private readonly AllServices _services; //по факту это конченая статика
+        private readonly AllServices _services;
+
+        private IGameFactory _gameFactory;
 
         //бутстрапу нужна сылка на стейт машну чтобы после завершение своего функцианала сообщить машине поехали дальше
         public BootstrapState(GameStateMachine gameStateMachine, SceneLoader sceneLoader, AllServices services)
@@ -19,31 +22,37 @@ namespace Infrastructure.States
             _gameStateMachine = gameStateMachine;
             _sceneLoader = sceneLoader;
             _services = services;
-            
+
             RegisterServices();
         }
 
         public void Enter() //задача бутстрапа привести нас в началло и регистрировать сервисы 
         {
-            _sceneLoader.Load(Initial, onLoaded: EnterLoadLevel);
+            _sceneLoader.Load(INITIAL_SCENE, onLoaded: EnterLoadLevel);
         }
 
         public void Exit()
         {
         }
 
-        private void EnterLoadLevel() // этот переход в следующий стейт
-            => _gameStateMachine.Enter<LoadLevelState, string>("Main");
+        private void EnterLoadLevel()
+        {
+             var nextSceneNumber = GetScene();
+            _gameStateMachine.Enter<LoadLevelState, int>(nextSceneNumber);
+        }
+
+        private int GetScene()
+        {
+            _gameFactory = _services.Single<IGameFactory>();
+            GameObject playerProgress = _gameFactory.CreatePlayerProgress();
+            var nextScene = playerProgress.GetComponent<PlayerProgress>().GetNextScene();
+            return nextScene;
+        }
 
         private void RegisterServices()
         {
-            Debug.Log("Я зарегестрировал сервисы");
-            //допустим зарегестрировать импут сервис если он у вас есть
-
             _services.RegisterSingle<IAssets>(new AssetProvider());
-            _services.RegisterSingle<IPersistentProgressService>(new PersistentProgressService());
             _services.RegisterSingle<IGameFactory>(new GameFactory(AllServices.Container.Single<IAssets>()));
-            //регистрируем сервис как сингл инстанс сервис
         }
     }
 }

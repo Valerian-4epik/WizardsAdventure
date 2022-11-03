@@ -26,5 +26,8 @@ namespace Infrastructure.Factory
         
         public GameObject CreateLevelFinishInterface() => 
             _assetses.Instantiate(AssetPath.LevelFinishInterface);
+
+        public GameObject CreatePlayerProgress() => 
+            _assetses.Instantiate(AssetPath.PlayerProgressPath);
     }
 }
