@@ -17,13 +17,30 @@ public class ArenaDisposer : MonoBehaviour
     private PlayerProgress _playerProgress;
     private List<GameObject> _wizards = new List<GameObject>();
     private List<GameObject> _enemies = new List<GameObject>();
+    private Dictionary<int, List<string>> _wizardsInventory = new Dictionary<int, List<string>>();
 
     public event Action<bool> EndFight;
-    
-    
+
     private void OnEnable()
     {
         FindAllFighters();
+    }
+
+    private void GiveItems()
+    {
+        for (int i = 0; i < _wizards.Count; i++)
+        {
+            if (_playerProgress.LoadSquadItems() != null)
+            {
+                for (int j = 0; j < _playerProgress.LoadSquadItems().Count; j++)
+                {
+                    if (i == j)
+                    {
+                        _wizards[i].GetComponent<InventoryFighter>().SetWeapon(_playerProgress.LoadSquadItems()[j]);
+                    }
+                }
+            }
+        }
     }
 
     public void SetShopInterface(UIInventory inventory)
@@ -38,8 +55,11 @@ public class ArenaDisposer : MonoBehaviour
         _levelFinishInterface.GetComponent<LevelFinishInterface>().SubscribeToEndFight(this);
     }
 
-    public void SetPlayerProgress(PlayerProgress progress) => 
+    public void SetPlayerProgress(PlayerProgress progress)
+    {
         _playerProgress = progress;
+        GiveItems();
+    }
 
     public void SetWizardSpawner(GameObject wizardSpawner)
     {
@@ -66,7 +86,7 @@ public class ArenaDisposer : MonoBehaviour
         SubscribeToDeath(wizard);
     }
 
-    private void SubscribeToDeath(GameObject gameObject) => 
+    private void SubscribeToDeath(GameObject gameObject) =>
         gameObject.GetComponent<Death>().Happened += RemoveWizard;
 
     private void RemoveEnemy(GameObject fighter)
@@ -77,22 +97,19 @@ public class ArenaDisposer : MonoBehaviour
         {
             _levelFinishInterface.SetActive(true);
 
-            var itemList = new List<string>();
-            foreach (var wizard in _wizards)
+            for (int i = 0; i < _wizards.Count; i++)
             {
-                var inventoryFighter = wizard.gameObject.GetComponent<InventoryFighter>();
+                AddWizardInventory(i, _wizards[i].GetComponent<InventoryFighter>().GetItemsID());
+            }
 
-                foreach (var id in inventoryFighter.GetItemsID())
-                {
-                    itemList.Add(id);
-                }
-                
-                _playerProgress.SaveSquadItems(itemList);
-            }  
-            
+            _playerProgress.SaveSquadItems(_wizardsInventory);
             EndFight?.Invoke(true);
         }
     }
+
+    private void AddWizardInventory(int key, List<string> itemsID) =>
+        _wizardsInventory.Add(key, itemsID);
+
 
     private void RemoveWizard(GameObject fighter)
     {
@@ -113,18 +130,19 @@ public class ArenaDisposer : MonoBehaviour
             _wizards.Add(wizard);
         foreach (var enemy in GameObject.FindGameObjectsWithTag(Enemy))
             _enemies.Add(enemy);
-        
+
         SubscribeToDeath();
     }
 
     private void ActiveBattleState()
     {
         var activeFighters = _wizards.Concat(_enemies);
-        
+
         foreach (var fighter in activeFighters)
         {
             fighter.GetComponent<Idle>().SwitchOnStartFight();
         }
+
         DisableShopInterface();
     }
 
@@ -135,7 +153,7 @@ public class ArenaDisposer : MonoBehaviour
     }
 
     private GameObject Fighter(GameObject fighter)
-    { 
+    {
         fighter.GetComponent<Idle>().SwitchOnStartFight();
         return fighter;
     }

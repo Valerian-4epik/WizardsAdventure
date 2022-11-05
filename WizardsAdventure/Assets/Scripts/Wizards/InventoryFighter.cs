@@ -7,12 +7,32 @@ using Wizards;
 
 public class InventoryFighter : MonoBehaviour
 {
+    [SerializeField] private List<ItemInfo> _allItems;
+        
     private ItemInfo _weapon;
     private ItemInfo _armor;
 
     public event Action<ItemInfo> WeaponDressed;
     public event Action<ItemInfo> ArmorDressed;
 
+    public void SetWeapon(List<string> itemsID)
+    {
+        foreach (var id in itemsID)
+        {
+            foreach (var item in _allItems)
+            {
+                if (id == item.ID)
+                {
+                    if (item.ItemType == ItemType.Armor)
+                        _armor = item;
+                    else
+                        _weapon = item;
+                }
+            }
+        }
+    }
+    
+    
     public void SetWeapon(UIItem uiItem)
     {
         var item = uiItem as UIInventoryItem;

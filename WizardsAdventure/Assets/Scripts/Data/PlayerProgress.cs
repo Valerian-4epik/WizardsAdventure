@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,7 +10,7 @@ namespace Data
         private int _money;
         private int _currentLevel;
         private List<string> _itemsInShop = new List<string>();
-        private List<string> _itemsInSquad = new List<string>();
+        private Dictionary<int, List<string>> _itemsInSquad = new Dictionary<int, List<string>>();
 
         public int PlayerWizardsAmount { get; set; }
         
@@ -46,14 +47,17 @@ namespace Data
             _itemsInShop = ES3.Load("myItemsList", "MyItemsList.es3", _itemsInShop);
             return _itemsInShop;
         }
-
-        public void SaveSquadItems(List<string> itemID)
+        
+        public void SaveSquadItems(Dictionary<int, List<string>> itemIDs)
         {
-            _itemsInSquad = itemID;
-            ES3.Save("myItemListInSquad", _itemsInSquad, "MyItemListSquad.es3");
+            _itemsInSquad = itemIDs;
+            ES3.Save("myItemDictionaryInSquad", _itemsInSquad, "MyItemDictionaryInSquad.es3");
         }
 
-        public List<string> LoadSquadItems() => 
-            _itemsInSquad = ES3.Load("myItemListInSquad", "MyItemListSquad.es3", _itemsInSquad);
+        public Dictionary<int, List<string>> LoadSquadItems()
+        { 
+            _itemsInSquad = ES3.Load("myItemDictionaryInSquad", "MyItemDictionaryInSquad.es3", _itemsInSquad);
+            return _itemsInSquad;
+        }
     }
 }
