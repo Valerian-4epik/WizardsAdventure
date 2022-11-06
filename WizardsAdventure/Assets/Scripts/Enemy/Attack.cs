@@ -9,6 +9,7 @@ namespace Enemy
     {
         private const float BASE_DAMAGE = 5;
 
+        [SerializeField] private WizardAnimator _animator;
         [Range(0, 10)] [SerializeField] private float _attackCooldown;
 
         private Transform _targetTransform;
@@ -41,6 +42,9 @@ namespace Enemy
             }
         }
 
+        private void OnPunch() =>
+            Debug.Log("РОМАН САКУТИН");
+
         public void SetTarget(Transform target) =>
             _targetTransform = target;
 
@@ -65,6 +69,11 @@ namespace Enemy
         private void StartAttack()
         {
             transform.LookAt(_targetTransform);
+            if (_animator != null)
+            {
+                _animator.PlayAttack();
+            }
+
             _isAttacking = true;
             _cooldown = _attackCooldown;
             OnAttack(_damage);
@@ -74,13 +83,13 @@ namespace Enemy
         {
             if (_weapon != null)
             {
-                Debug.Log("Атака с оружием");
+                // Debug.Log("Атака с оружием");
                 RangeAttack(_targetTransform);
                 _isAttacking = false;
             }
             else
             {
-                Debug.Log("Атака без оружия");
+                // Debug.Log("Атака без оружия");
                 damage = BASE_DAMAGE;
                 GetTargetHealth().TakeDamage(damage);
                 _isAttacking = false;

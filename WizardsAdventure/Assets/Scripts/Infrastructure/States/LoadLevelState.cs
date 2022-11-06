@@ -35,11 +35,7 @@ namespace Infrastructure.States
 
         private void OnLoaded()
         {
-            GameObject playerProgress = _gameFactory.CreatePlayerProgress();
-            GameObject cameraFollower = _gameFactory.CreateCameraFollower();
-            GameObject heroesSpawner = _gameFactory.CreateWizardsSpawner(GameObject.FindWithTag(Initialpointspawner));// at где создать
-            GameObject shopInterface = _gameFactory.CreateShopInterface();
-            var progress = playerProgress.GetComponent<PlayerProgress>();
+            var playerProgress = CreateMainObjects(out var cameraFollower, out var heroesSpawner, out var shopInterface, out var progress);
             heroesSpawner.GetComponent<WizardsSpawner>().SetupPlayerProgress(progress);
             var uiInventory = shopInterface.GetComponent<UIInventory>();
             uiInventory.SetPlayerProgress(progress);
@@ -49,6 +45,17 @@ namespace Infrastructure.States
             cameraFollower.GetComponent<CameraFollower>().SetShopInterface(uiInventory);
             
             _stateMachine.Enter<GameLoopState, GameObject, GameObject>(levelFinishInterface, playerProgress);
+        }
+
+        private GameObject CreateMainObjects(out GameObject cameraFollower, out GameObject heroesSpawner,
+            out GameObject shopInterface, out PlayerProgress progress)
+        {
+            GameObject playerProgress = _gameFactory.CreatePlayerProgress();
+            cameraFollower = _gameFactory.CreateCameraFollower();
+            heroesSpawner = _gameFactory.CreateWizardsSpawner(GameObject.FindWithTag(Initialpointspawner));
+            shopInterface = _gameFactory.CreateShopInterface();
+            progress = playerProgress.GetComponent<PlayerProgress>();
+            return playerProgress;
         }
 
         private void SubscribePayloads(GameObject arenaDisposer, GameObject heroesSpawner, UIInventory uiInventory,

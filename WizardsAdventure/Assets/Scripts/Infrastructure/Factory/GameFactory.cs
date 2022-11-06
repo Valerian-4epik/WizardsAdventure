@@ -8,10 +8,9 @@ namespace Infrastructure.Factory
         private readonly IAssets _assetses;
 
         public GameFactory(IAssets assetses) //IAssetProvider = это по факту зависимость, ассетпровиде предоставляет услуги
-        {
-            _assetses = assetses;
-        }
-        
+            =>
+                _assetses = assetses;
+
         public GameObject CreateWizardsSpawner(GameObject at) => 
             _assetses.Instantiate(AssetPath.WizardsSpawnerPath, at.transform.position);
 

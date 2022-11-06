@@ -15,7 +15,7 @@ D:/UnityGames/WizardsAdventure/WizardsAdventure
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-52129
+64416
 Successfully changed project path to: D:/UnityGames/WizardsAdventure/WizardsAdventure
 D:/UnityGames/WizardsAdventure/WizardsAdventure
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ D:/UnityGames/WizardsAdventure/WizardsAdventure
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 115.09 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 125.17 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.11f1 (0a5ca18544bf)
 [Subsystems] Discovering subsystems at path D:/Unity/2021.3.11f1/Editor/Data/Resources/UnitySubsystems
@@ -63,161 +63,161 @@ Initialize mono
 Mono path[0] = 'D:/Unity/2021.3.11f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity/2021.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'D:/Unity/2021.3.11f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56732
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56584
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Unity/2021.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001609 seconds.
+Registered in 0.002499 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 128.02 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 158.95 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.648 seconds
+- Completed reload, in  0.712 seconds
 Domain Reload Profiling:
-	ReloadAssembly (648ms)
-		BeginReloadAssembly (65ms)
+	ReloadAssembly (713ms)
+		BeginReloadAssembly (73ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (484ms)
-			LoadAssemblies (64ms)
+		EndReloadAssembly (541ms)
+			LoadAssemblies (71ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (99ms)
+			SetupTypeCache (109ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (30ms)
-			SetupLoadedEditorAssemblies (309ms)
+			RebuildScriptCaches (32ms)
+			SetupLoadedEditorAssemblies (352ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (7ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (128ms)
-				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (124ms)
-				ProcessInitializeOnLoadMethodAttributes (48ms)
+				RefreshPlugins (159ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (136ms)
+				ProcessInitializeOnLoadMethodAttributes (47ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003801 seconds.
+Registered in 0.004483 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-0000021DD96F5F60 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file data-00000238DDB2BDE0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD92D7A80 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file data-00000238E0277A60 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD759F420 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file data-00000238DF38DF60 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD92D7A80 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Telemetry.dll
+Symbol file data-00000238DF38DF60 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Telemetry.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD75DB430 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll
+Symbol file data-00000238DFD97030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD973FD90 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll
+Symbol file data-00000238DF393B70 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD973FD90 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file data-00000238DFDAC640 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD751CBF0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file data-00000238DFDAC640 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD753D800 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file data-00000238DF393B70 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Timeline.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD9A2B010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file data-00000238DF3B8010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD9A2B010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file data-00000238DFAC4C30 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TextMeshPro.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD973FD90 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file data-00000238DF416E20 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD9A5A420 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file data-00000238DDB92570 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD7B7C020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Networking.dll
+Symbol file data-00000238DF59CC40 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Networking.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD7B7C020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file data-00000238DFF1AC90 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD8F36850 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file data-00000238DDBBCF80 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD7B7C020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll
+Symbol file data-00000238DFF1AC90 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD90E6020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file data-00000238DFBFC230 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD973FD90 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file data-00000238DFDAC640 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEditor.UI.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD90FB030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file data-00000238DDBBCF80 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD973FD90 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file data-00000238DFC23E50 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Rider.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD973FD90 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Internal.dll
+Symbol file data-00000238DFDAC640 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Internal.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD6D1B390 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file data-00000238DFCB8030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEngine.UI.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD7B7C020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Configuration.dll
+Symbol file data-00000238DFF1AC90 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Configuration.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD7B7C020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.dll
+Symbol file data-00000238DF41EE30 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DDA52D010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file data-00000238DD120010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD7B7C020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
+Symbol file data-00000238DF41EE30 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD78677C0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file data-00000238DFD3C640 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD7B7C020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Configuration.Editor.dll
+Symbol file data-00000238DF41EE30 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Configuration.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD7B7C020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll
+Symbol file data-00000238DF41EE30 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD7B01DF0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Registration.dll
+Symbol file data-00000238DD943B60 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Registration.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD7B01DF0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll
+Symbol file data-00000238DDB85010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD7B01DF0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll
+Symbol file data-00000238DDB85010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD7B01DF0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Settings.Editor.dll
+Symbol file data-00000238DDBFA190 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Settings.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD7B01DF0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Scheduler.dll
+Symbol file data-00000238DDB85010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Scheduler.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD7B01DF0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Environments.Internal.dll
+Symbol file data-00000238DDB85010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Environments.Internal.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DDA52D010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file data-00000238DD120010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DDA52D010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\ParadoxNotion.dll
+Symbol file data-00000238DD120010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\ParadoxNotion.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD9136450 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file data-00000238DD120010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD7B01DF0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Threading.dll
+Symbol file data-00000238DDB85010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Threading.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD6D331B0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll
+Symbol file data-00000238DD137C20 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD6D331B0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file data-00000238DD1072F0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000021DD6D331B0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Device.dll
+Symbol file data-00000238DD83E320 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Device.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Symbol file LoadedFromMemory doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.24 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.20 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.338 seconds
+- Completed reload, in  1.368 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1339ms)
-		BeginReloadAssembly (105ms)
+	ReloadAssembly (1370ms)
+		BeginReloadAssembly (106ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (20ms)
-		EndReloadAssembly (1127ms)
-			LoadAssemblies (75ms)
+			CreateAndSetChildDomain (21ms)
+		EndReloadAssembly (1157ms)
+			LoadAssemblies (99ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (277ms)
+			SetupTypeCache (292ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (87ms)
-			SetupLoadedEditorAssemblies (617ms)
+			RebuildScriptCaches (90ms)
+			SetupLoadedEditorAssemblies (603ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
+				InitializePlatformSupportModulesInManaged (15ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (90ms)
-				ProcessInitializeOnLoadAttributes (393ms)
-				ProcessInitializeOnLoadMethodAttributes (126ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (84ms)
+				ProcessInitializeOnLoadAttributes (388ms)
+				ProcessInitializeOnLoadMethodAttributes (112ms)
 				AfterProcessingInitializeOnLoad (2ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
@@ -225,13 +225,585 @@ Domain Reload Profiling:
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
-Refreshing native plugins compatible for Editor in 2.97 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 1.53 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4203 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 31 unused Assets / (66.9 MB). Loaded Objects now: 4699.
-Memory consumption went from 364.1 MB to 297.2 MB.
-Total: 9.805600 ms (FindLiveObjects: 0.538600 ms CreateObjectMapping: 0.169900 ms MarkObjects: 4.243600 ms  DeleteObjects: 4.852000 ms)
+Unloading 4225 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 31 unused Assets / (67.0 MB). Loaded Objects now: 4721.
+Memory consumption went from 365.5 MB to 298.5 MB.
+Total: 10.363400 ms (FindLiveObjects: 0.585300 ms CreateObjectMapping: 0.346700 ms MarkObjects: 4.457600 ms  DeleteObjects: 4.972400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005200 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000238E0608010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E01FB950 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4396010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E27C68A0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Telemetry.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E0608010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E37EC090 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E27C68A0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2A74010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E13DE020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E29AA030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3391030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E27C68A0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3ABC030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DDFB9620 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Networking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DDFB9620 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3AE6A40 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E37EC090 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E10E4020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E27C68A0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E10E4020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E27C68A0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E27C68A0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Internal.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E10F6C30 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DDFB9620 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Configuration.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DDFB9620 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E0BAE010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DDFB9620 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E27C68A0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DDFB9620 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Configuration.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DDFB9620 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4702220 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Registration.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4702220 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4702220 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E13DE020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Settings.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4702220 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Scheduler.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4702220 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Environments.Internal.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4719010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DF354020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\ParadoxNotion.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3834020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4702220 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Threading.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E31F1430 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E31F1430 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4702220 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Device.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.67 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.245 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2246ms)
+		BeginReloadAssembly (231ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (58ms)
+		EndReloadAssembly (1842ms)
+			LoadAssemblies (201ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (582ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (67ms)
+			SetupLoadedEditorAssemblies (956ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (24ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (3ms)
+				BeforeProcessingInitializeOnLoad (90ms)
+				ProcessInitializeOnLoadAttributes (608ms)
+				ProcessInitializeOnLoadMethodAttributes (225ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 5.14 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4178 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 42 unused Assets / (66.5 MB). Loaded Objects now: 4706.
+Memory consumption went from 364.6 MB to 298.1 MB.
+Total: 13.656500 ms (FindLiveObjects: 0.953400 ms CreateObjectMapping: 0.512400 ms MarkObjects: 5.284700 ms  DeleteObjects: 6.903700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008081 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000238E2846020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DDC01290 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E0B4C010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DDEF65E0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Telemetry.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DDC5D020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD6C20D0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4C13020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E01F3C40 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DF58B050 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DF856030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E33E3830 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E50EE010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DFD5B020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E285B430 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Networking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4701020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E0B4C010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4701020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DDB92570 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4C13020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DDB92570 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4C13020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4C13020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Internal.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DFD5B020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4701020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Configuration.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E285B430 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3EB54A0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E285B430 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4C13020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DDBCF780 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Configuration.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E285B430 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4701020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Registration.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4701020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4701020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD6C20D0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Settings.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4701020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Scheduler.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4701020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Environments.Internal.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2F9F020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DF856030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\ParadoxNotion.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E01F3C40 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4701020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Threading.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E50EE010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3C8C020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4701020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Device.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.21 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.410 seconds
+Domain Reload Profiling:
+	ReloadAssembly (2413ms)
+		BeginReloadAssembly (235ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (76ms)
+		EndReloadAssembly (1968ms)
+			LoadAssemblies (200ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (647ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (212ms)
+			SetupLoadedEditorAssemblies (769ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (19ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (3ms)
+				BeforeProcessingInitializeOnLoad (91ms)
+				ProcessInitializeOnLoadAttributes (510ms)
+				ProcessInitializeOnLoadMethodAttributes (143ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (14ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 4.94 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4179 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 24 unused Assets / (66.5 MB). Loaded Objects now: 4709.
+Memory consumption went from 364.6 MB to 298.1 MB.
+Total: 11.040400 ms (FindLiveObjects: 0.901100 ms CreateObjectMapping: 0.446200 ms MarkObjects: 3.946800 ms  DeleteObjects: 5.743100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005669 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000238E51EB020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DDC01290 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4396010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD6C20D0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Telemetry.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD297710 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3C8C020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DDD821A0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E31EF010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3A7A030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E29A9FB0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E46C5010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E50EE010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E074D010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E5200430 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Networking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E5200430 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E37DAA90 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E5200430 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DDB92570 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DDD821A0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DDB92570 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E075FC20 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E075FC20 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Internal.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E5698010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E5200430 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Configuration.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DDBCF780 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3EB54A0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DDBCF780 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E075FC20 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DDBCF780 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Configuration.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E336D010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E5200430 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Registration.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E5200430 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E5200430 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3C8C020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Settings.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E5200430 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Scheduler.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E5200430 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Environments.Internal.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E54F1030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DF354020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\ParadoxNotion.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000023872775B30 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E0CFA420 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Threading.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DFF13670 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DDEF45D0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E0CFA420 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Device.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.08 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.663 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1677ms)
+		BeginReloadAssembly (191ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (51ms)
+		EndReloadAssembly (1366ms)
+			LoadAssemblies (159ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (343ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (66ms)
+			SetupLoadedEditorAssemblies (724ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (19ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (22ms)
+				BeforeProcessingInitializeOnLoad (80ms)
+				ProcessInitializeOnLoadAttributes (467ms)
+				ProcessInitializeOnLoadMethodAttributes (131ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.46 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4179 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 24 unused Assets / (66.5 MB). Loaded Objects now: 4712.
+Memory consumption went from 364.6 MB to 298.1 MB.
+Total: 11.309500 ms (FindLiveObjects: 1.022800 ms CreateObjectMapping: 0.321900 ms MarkObjects: 5.155800 ms  DeleteObjects: 4.807400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006125 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000238DD2436D0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DDC01290 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E0268030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2C1A870 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Telemetry.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD2436D0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E50EE010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E50EE010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DF9CD020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD221B70 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2F9F020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD2BBEB0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E50EE010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4396010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4C18C30 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Networking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E50EE010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4396010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E50EE010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3391030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E50EE010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E34ECF10 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E50EE010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E50EE010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Internal.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E56CA010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E56AAC20 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Configuration.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E56AAC20 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E46C5010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4C18C30 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E0E4C020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E56AAC20 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Configuration.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E352A120 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E56AAC20 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Registration.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E56AAC20 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E352A120 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DF9CD020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Settings.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E56AAC20 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Scheduler.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E352A120 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Environments.Internal.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4719010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD5D6F70 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\ParadoxNotion.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E542F020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD4A72B0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Threading.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E542F020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E542F020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD4A72B0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Device.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.54 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.631 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1634ms)
+		BeginReloadAssembly (149ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (49ms)
+		EndReloadAssembly (1381ms)
+			LoadAssemblies (137ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (444ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (65ms)
+			SetupLoadedEditorAssemblies (657ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (12ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (66ms)
+				ProcessInitializeOnLoadAttributes (400ms)
+				ProcessInitializeOnLoadMethodAttributes (173ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (13ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.24 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4179 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 24 unused Assets / (66.5 MB). Loaded Objects now: 4715.
+Memory consumption went from 364.6 MB to 298.1 MB.
+Total: 7.772700 ms (FindLiveObjects: 0.354100 ms CreateObjectMapping: 0.124500 ms MarkObjects: 3.466500 ms  DeleteObjects: 3.826000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -246,35 +818,1330 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 128096.794931 seconds.
-  path: Assets/BizulkaProduction/Stickman/Prefabs/Stickman_heads_sphere.prefab
-  artifactKey: Guid(6b5d591dbb72ac04a80d42bbb710cb7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BizulkaProduction/Stickman/Prefabs/Stickman_heads_sphere.prefab using Guid(6b5d591dbb72ac04a80d42bbb710cb7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de80f2499a97825d3a93fcb85df7f08f') in 0.351879 seconds 
+  Time since last request: 229821.096304 seconds.
+  path: Assets/Resources/Prefabs/Wizard Variant.prefab
+  artifactKey: Guid(d0250a6969e5d334285e4d572fc2c81b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Wizard Variant.prefab using Guid(d0250a6969e5d334285e4d572fc2c81b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2376f0e9d26825e7d459f048c72385fb') in 0.397951 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 10.794636 seconds.
-  path: Assets/BizulkaProduction/Stickman/Models/Stickman_heads_sphere.fbx
-  artifactKey: Guid(fa7f36c71b9e8fa4798df3a931c2fd92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BizulkaProduction/Stickman/Models/Stickman_heads_sphere.fbx using Guid(fa7f36c71b9e8fa4798df3a931c2fd92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '456020d13ad2ef14ba3df02055d1fec5') in 0.083163 seconds 
+  Time since last request: 35.165047 seconds.
+  path: Assets/Resources/Prefabs/Wizard Variant.prefab
+  artifactKey: Guid(d0250a6969e5d334285e4d572fc2c81b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Wizard Variant.prefab using Guid(d0250a6969e5d334285e4d572fc2c81b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22bf6b7d58453850a3cc89ee0db38a62') in 0.178959 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005171 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000238E3878020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD940020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E0B4C010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DDEF45D0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Telemetry.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD297710 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD9FEC80 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DDBF6030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000023945FAF070 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3EE53F0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2E31020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD050080 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E50EE010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E0268030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3523720 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Networking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3523720 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E0268030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3523720 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E0ABA040 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DDBF6030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E0DC8040 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DDBF6030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3523720 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Internal.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000023945DC5020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E43A8C20 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Configuration.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E43A8C20 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD46B2A0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E43A8C20 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DDBF6030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DDBF6030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Configuration.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E32D3040 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E50EE010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Registration.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E50EE010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E32D3040 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD64F010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Settings.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD64F010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Scheduler.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E32D3040 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Environments.Internal.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2A0E020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2E31020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\ParadoxNotion.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4076C80 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E0AE2850 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Threading.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD64F010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E54F1030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD655A20 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Device.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.69 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.432 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1433ms)
+		BeginReloadAssembly (160ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (53ms)
+		EndReloadAssembly (1159ms)
+			LoadAssemblies (125ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (368ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (71ms)
+			SetupLoadedEditorAssemblies (556ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (14ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (73ms)
+				ProcessInitializeOnLoadAttributes (362ms)
+				ProcessInitializeOnLoadMethodAttributes (103ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.79 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4179 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 24 unused Assets / (66.6 MB). Loaded Objects now: 4729.
+Memory consumption went from 377.7 MB to 311.1 MB.
+Total: 8.922800 ms (FindLiveObjects: 0.493300 ms CreateObjectMapping: 0.247200 ms MarkObjects: 3.131800 ms  DeleteObjects: 5.048200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003820 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000238E3C06030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E30F8010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E0B4C010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DF9F5030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Telemetry.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD297710 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DF9F5030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DDBF6030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD8C0030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3EE53F0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2CCD010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD050080 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002394673C010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E0268030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238BB8277C0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Networking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238BB8277C0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E0268030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238BB8277C0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3EB54A0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DDBF6030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DF915020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD624030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD624030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Internal.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E5698010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238BB8277C0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Configuration.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238BB8277C0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E0DC8040 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238BB8277C0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD624030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238BB8277C0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Configuration.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238BB8277C0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2A56030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Registration.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2A56030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2A56030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E021BC70 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Settings.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2A56030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Scheduler.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2A56030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Environments.Internal.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E39C8010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2E31020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\ParadoxNotion.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2BE4030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E36B4840 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Threading.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E50EE010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DDC01290 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E36B4840 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Device.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.18 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.274 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1275ms)
+		BeginReloadAssembly (155ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (51ms)
+		EndReloadAssembly (1009ms)
+			LoadAssemblies (144ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (317ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (47ms)
+			SetupLoadedEditorAssemblies (466ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (60ms)
+				ProcessInitializeOnLoadAttributes (297ms)
+				ProcessInitializeOnLoadMethodAttributes (93ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.88 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4179 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 24 unused Assets / (66.5 MB). Loaded Objects now: 4732.
+Memory consumption went from 377.6 MB to 311.1 MB.
+Total: 9.677200 ms (FindLiveObjects: 0.369800 ms CreateObjectMapping: 0.118900 ms MarkObjects: 3.695900 ms  DeleteObjects: 5.490700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004734 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-000002394648E060 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2A74010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2D1B040 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E02235E0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Telemetry.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD2436D0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD9FEC80 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E50EE010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000023946416030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3EE53F0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000023946612020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E368C030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E50EE010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD889240 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E01F3C40 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Networking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E01F3C40 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2D1B040 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E01F3C40 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238BBE86020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E50EE010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000239460C5020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E01F3C40 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E01F3C40 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Internal.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E1104030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E50EE010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Configuration.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E50EE010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DF915020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E50EE010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E50EE010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E50EE010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Configuration.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3A82040 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E50F2220 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Registration.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E50F2220 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3A82040 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E50F2220 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Settings.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E50F2220 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Scheduler.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3A82040 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Environments.Internal.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E39C8010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2E31020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\ParadoxNotion.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3ABC030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E50F2220 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Threading.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E54F1030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E54F1030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E54F1030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Device.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.15 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.244 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1245ms)
+		BeginReloadAssembly (135ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (42ms)
+		EndReloadAssembly (1015ms)
+			LoadAssemblies (99ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (301ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (62ms)
+			SetupLoadedEditorAssemblies (468ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (72ms)
+				ProcessInitializeOnLoadAttributes (285ms)
+				ProcessInitializeOnLoadMethodAttributes (94ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.81 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4179 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 24 unused Assets / (66.6 MB). Loaded Objects now: 4735.
+Memory consumption went from 377.7 MB to 311.1 MB.
+Total: 13.790400 ms (FindLiveObjects: 0.560500 ms CreateObjectMapping: 0.354000 ms MarkObjects: 3.265400 ms  DeleteObjects: 9.608100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.329985 seconds.
-  path: Assets/BizulkaProduction/Stickman/Materials/Stand.mat
-  artifactKey: Guid(19faede41aeee8244be490f3c77390b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BizulkaProduction/Stickman/Materials/Stand.mat using Guid(19faede41aeee8244be490f3c77390b6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'edb3fd9bd8afc798c019a32c7613238c') in 0.020980 seconds 
+  Time since last request: 674.375349 seconds.
+  path: Assets/Resources/Prefabs/Wizard Variant.prefab
+  artifactKey: Guid(d0250a6969e5d334285e4d572fc2c81b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Wizard Variant.prefab using Guid(d0250a6969e5d334285e4d572fc2c81b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce835c1d7ecaeca3eedf9b844033f538') in 0.324630 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005603 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000238E3C06030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD6BB010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4FD3030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002394684C020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Telemetry.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD216010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3A86050 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2994020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2BE4030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3EE53F0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3D48010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E368C030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2994020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD889240 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E1094030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Networking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E1094030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4FD3030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E1094030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E53BB040 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2994020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000023946788010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2994020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD624030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Internal.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E586C030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E1094030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Configuration.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E1094030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DF2D0090 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E1094030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD624030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E1094030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Configuration.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E33CB030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DF4D4690 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Registration.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DF4D4690 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E33CB030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DDC01290 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Settings.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DF4D4690 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Scheduler.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E33CB030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Environments.Internal.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DF7FB010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2E31020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\ParadoxNotion.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E07AD010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E46ED820 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Threading.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E50EE010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD6BB010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E46ED820 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Device.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.92 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.612 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1613ms)
+		BeginReloadAssembly (171ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (54ms)
+		EndReloadAssembly (1309ms)
+			LoadAssemblies (123ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (411ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (59ms)
+			SetupLoadedEditorAssemblies (652ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (16ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (81ms)
+				ProcessInitializeOnLoadAttributes (407ms)
+				ProcessInitializeOnLoadMethodAttributes (142ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (15ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.50 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4179 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 24 unused Assets / (66.6 MB). Loaded Objects now: 4738.
+Memory consumption went from 377.8 MB to 311.2 MB.
+Total: 7.138600 ms (FindLiveObjects: 0.336100 ms CreateObjectMapping: 0.117700 ms MarkObjects: 3.351700 ms  DeleteObjects: 3.332000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004217 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000238DDBE6020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD6BB010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3852050 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E0AE2070 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Telemetry.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD216010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD6BB010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2994020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E0B2A010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3EE53F0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3D48010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E46C5010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2994020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E58CA030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3C2FEA0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Networking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3C2FEA0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3852050 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3C2FEA0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238BBE86020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2994020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DF915020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E53E1020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD624030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Internal.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DDB4BDF0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3C2FEA0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Configuration.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3C2FEA0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000023946788010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3C2FEA0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD624030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3C2FEA0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Configuration.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2A80030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000239461CD020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Registration.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000239461CD020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2A80030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E021BC70 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Settings.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000239461CD020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Scheduler.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2A80030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Environments.Internal.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002394684C020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2E31020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\ParadoxNotion.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E0B2A010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2A5DF60 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Threading.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E50EE010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD6BB010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E0CFA420 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Device.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.35 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.275 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1276ms)
+		BeginReloadAssembly (155ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (52ms)
+		EndReloadAssembly (1018ms)
+			LoadAssemblies (118ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (302ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (51ms)
+			SetupLoadedEditorAssemblies (493ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (11ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (62ms)
+				ProcessInitializeOnLoadAttributes (310ms)
+				ProcessInitializeOnLoadMethodAttributes (106ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 5.49 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4179 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 24 unused Assets / (66.5 MB). Loaded Objects now: 4741.
+Memory consumption went from 377.7 MB to 311.2 MB.
+Total: 14.017900 ms (FindLiveObjects: 0.916800 ms CreateObjectMapping: 0.264100 ms MarkObjects: 5.266400 ms  DeleteObjects: 7.568500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005370 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000238DD2436D0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD6BB010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3852050 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E0AE2070 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Telemetry.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD2436D0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E07CF010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2994020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD60A020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3EE53F0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3D48010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E46C5010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2994020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3391030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E371BF10 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Networking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E371BF10 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3852050 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E371BF10 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3EB54A0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2994020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DDB92570 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E50EE010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E50EE010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Internal.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4CE4010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E371BF10 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Configuration.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E371BF10 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DF915020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E371BF10 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E50EE010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E371BF10 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Configuration.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4357020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3C2FEA0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Registration.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3C2FEA0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4357020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E021BC70 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Settings.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3C2FEA0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Scheduler.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4357020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Environments.Internal.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DF7FB010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2E31020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\ParadoxNotion.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000023872775B30 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2A5DF60 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Threading.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E0DAE010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD6BB010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E0CFA420 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Device.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.77 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.580 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1581ms)
+		BeginReloadAssembly (192ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (62ms)
+		EndReloadAssembly (1240ms)
+			LoadAssemblies (143ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (402ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (64ms)
+			SetupLoadedEditorAssemblies (586ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (16ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (83ms)
+				ProcessInitializeOnLoadAttributes (381ms)
+				ProcessInitializeOnLoadMethodAttributes (101ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.63 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4179 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 24 unused Assets / (66.5 MB). Loaded Objects now: 4744.
+Memory consumption went from 377.7 MB to 311.2 MB.
+Total: 6.542700 ms (FindLiveObjects: 0.467900 ms CreateObjectMapping: 0.128600 ms MarkObjects: 3.004300 ms  DeleteObjects: 2.939500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003887 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-00000238E584A020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3714020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3852050 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E07CF010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Telemetry.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E584A020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3714020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000023969589010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD60A020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3A7A030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238BBD8C850 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E46C5010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2994020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E34A9010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3620020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Networking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002394688E010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3852050 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002394688E010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DF3FA020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000023969589010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E27F2020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E50EE010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E53E1020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Internal.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2790090 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002394688E010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Configuration.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002394688E010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DF915020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002394688E010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E53E1020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002394688E010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Configuration.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E5532FC0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002394688E010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Registration.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002394688E010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E5532FC0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E021BC70 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Settings.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002394688E010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Scheduler.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E5532FC0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Environments.Internal.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DF7FB010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2E31020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\ParadoxNotion.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2BD4020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2A5DF60 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Threading.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000239465B2010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3714020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E0CFA420 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Device.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 2.50 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.859 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1860ms)
+		BeginReloadAssembly (263ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (1ms)
+			CreateAndSetChildDomain (73ms)
+		EndReloadAssembly (1389ms)
+			LoadAssemblies (218ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (451ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (72ms)
+			SetupLoadedEditorAssemblies (625ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (19ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (3ms)
+				BeforeProcessingInitializeOnLoad (72ms)
+				ProcessInitializeOnLoadAttributes (424ms)
+				ProcessInitializeOnLoadMethodAttributes (105ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.43 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4179 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 24 unused Assets / (66.6 MB). Loaded Objects now: 4747.
+Memory consumption went from 377.8 MB to 311.2 MB.
+Total: 10.524500 ms (FindLiveObjects: 0.369900 ms CreateObjectMapping: 0.139400 ms MarkObjects: 3.617400 ms  DeleteObjects: 6.396700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006597 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-000002394648E060 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD940020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3852050 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD612030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Telemetry.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2BD4020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD612030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E0ADE060 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2A4EF90 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3DE7010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3D48010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD287700 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E0561020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E0268030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2FF0E50 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Networking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E371BF10 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3852050 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E371BF10 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DF915020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E0ADE060 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E27F2020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E50EE010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002394673C010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Internal.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000239468D5020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E371BF10 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Configuration.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E371BF10 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3C95A70 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E371BF10 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002394673C010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E371BF10 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Configuration.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4779020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E371BF10 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Registration.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E371BF10 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4779020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000023969A22020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Settings.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E371BF10 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Scheduler.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E4779020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Environments.Internal.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DF7FB010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2E31020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\ParadoxNotion.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000023872775B30 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2FF0E50 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Threading.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E0561020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E021BC70 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3620020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Device.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.86 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.297 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1299ms)
+		BeginReloadAssembly (154ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (50ms)
+		EndReloadAssembly (1048ms)
+			LoadAssemblies (118ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (306ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (52ms)
+			SetupLoadedEditorAssemblies (528ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (16ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (72ms)
+				ProcessInitializeOnLoadAttributes (337ms)
+				ProcessInitializeOnLoadMethodAttributes (96ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.47 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4179 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 24 unused Assets / (66.5 MB). Loaded Objects now: 4750.
+Memory consumption went from 377.8 MB to 311.3 MB.
+Total: 14.181800 ms (FindLiveObjects: 1.230800 ms CreateObjectMapping: 0.983900 ms MarkObjects: 6.539100 ms  DeleteObjects: 5.424000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006120 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-000002394648E060 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD940020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3852050 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3DBEE40 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Telemetry.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2BD4020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3DBEE40 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E0ADE060 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD60A020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E13DE020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3D48010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD287700 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000002394673C010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E0268030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238BBE3AA20 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Networking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000023969BB6020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E3852050 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000023969BB6020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DD2EFB20 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E0ADE060 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E27F2020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000023946907010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000023946907010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Internal.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000239697C9010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000023969BB6020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Configuration.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000023969BB6020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DF915020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000023969BB6020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000023946907010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000023969BB6020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Configuration.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E285F640 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000023969BB6020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Registration.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000023969BB6020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E285F640 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E43A6020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Settings.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000023969BB6020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Scheduler.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E285F640 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Environments.Internal.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238DF7FB010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2E31020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\ParadoxNotion.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2B4A030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E2A5DF60 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Threading.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E0561020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-00000238E32CF030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000023969BB6020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Device.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.93 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.484 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1485ms)
+		BeginReloadAssembly (150ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (45ms)
+		EndReloadAssembly (1240ms)
+			LoadAssemblies (119ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (357ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (62ms)
+			SetupLoadedEditorAssemblies (637ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (17ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (86ms)
+				ProcessInitializeOnLoadAttributes (402ms)
+				ProcessInitializeOnLoadMethodAttributes (126ms)
+				AfterProcessingInitializeOnLoad (3ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.83 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4179 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 24 unused Assets / (66.6 MB). Loaded Objects now: 4753.
+Memory consumption went from 377.8 MB to 311.2 MB.
+Total: 9.548700 ms (FindLiveObjects: 0.485200 ms CreateObjectMapping: 0.143300 ms MarkObjects: 3.798100 ms  DeleteObjects: 5.120700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/BizulkaProduction/Stickman/Materials/Stickman_Gray.mat
-  artifactKey: Guid(0bcdca085445acc4aa21304ffa02deba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BizulkaProduction/Stickman/Materials/Stickman_Gray.mat using Guid(0bcdca085445acc4aa21304ffa02deba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3775debed5c4408090efe93ac7660437') in 0.012236 seconds 
+  Time since last request: 2728.980051 seconds.
+  path: Assets/Resources/Prefabs/Enemy/Enemy.prefab
+  artifactKey: Guid(e29323bd374d20f45a8dcd90d7574736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Enemy/Enemy.prefab using Guid(e29323bd374d20f45a8dcd90d7574736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7100f3bb3935c51c3a941d93e376a088') in 0.127152 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/BizulkaProduction/Stickman/Materials/Stickman_Red.mat
-  artifactKey: Guid(26dde8d170bfa354bbcbd9335444d55f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/BizulkaProduction/Stickman/Materials/Stickman_Red.mat using Guid(26dde8d170bfa354bbcbd9335444d55f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7d170d70f6871085fbf6c6ba1680cae8') in 0.011393 seconds 
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
+  Time since last request: 8.159619 seconds.
+  path: Assets/Resources/Prefabs/Enemy/Enemy.prefab
+  artifactKey: Guid(e29323bd374d20f45a8dcd90d7574736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Enemy/Enemy.prefab using Guid(e29323bd374d20f45a8dcd90d7574736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff1a24f087c344c63974567d597f2721') in 0.034667 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.104765 seconds.
+  path: Assets/Resources/Prefabs/Enemy/Enemy.prefab
+  artifactKey: Guid(e29323bd374d20f45a8dcd90d7574736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Enemy/Enemy.prefab using Guid(e29323bd374d20f45a8dcd90d7574736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfe16d593f99c1104c634306c7d71922') in 0.027606 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 432.632876 seconds.
+  path: Assets/Resources/Prefabs/ADS/WizardForViewingADS.prefab
+  artifactKey: Guid(9009ca544b1e1a441acc8a75c1f23924) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/ADS/WizardForViewingADS.prefab using Guid(9009ca544b1e1a441acc8a75c1f23924) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5cfe17d853e22e4fffaabcf67fc82a5c') in 0.015291 seconds 

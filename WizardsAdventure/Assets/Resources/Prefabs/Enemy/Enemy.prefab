@@ -307,8 +307,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d312805ffd84825ab02117e7ccaba69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animator: {fileID: 0}
   _attackCooldown: 2.5
-  _damage: 15
 --- !u!114 &5733311223642043954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,6 +365,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _hpBar: {fileID: 5733311222757021776}
+  _inventory: {fileID: 0}
 --- !u!114 &4006156062620489861
 MonoBehaviour:
   m_ObjectHideFlags: 0

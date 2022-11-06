@@ -968,7 +968,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 509280931107100479}
-  - component: {fileID: 509280931099588851}
   m_Layer: 0
   m_Name: Stickman_heads_sphere
   m_TagString: Untagged
@@ -984,7 +983,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 509280931106999133}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.574, z: 0}
+  m_LocalPosition: {x: 0, y: -0.563, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -993,26 +992,6 @@ Transform:
   m_Father: {fileID: 8147777223720408607}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &509280931099588851
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 509280931106999133}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: fa7f36c71b9e8fa4798df3a931c2fd92, type: 3}
-  m_Controller: {fileID: 9100000, guid: d3d4674ddb5a38e42bfdc481576124d3, type: 2}
-  m_CullingMode: 1
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &509280931106999135
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,7 +1226,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8147777222427028760
 MonoBehaviour:
@@ -1330,7 +1309,10 @@ GameObject:
   - component: {fileID: 8147777223720408607}
   - component: {fileID: 8147777223720408578}
   - component: {fileID: 8147777223720408604}
+  - component: {fileID: 4993817274667648070}
   - component: {fileID: 8147777223720408603}
+  - component: {fileID: 1995386735554036513}
+  - component: {fileID: 252193204454087799}
   - component: {fileID: 8147777223720408577}
   - component: {fileID: 8147777223720408576}
   - component: {fileID: 8147777223720408580}
@@ -1396,6 +1378,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.52, y: 1.14, z: 0.67}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &4993817274667648070
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8147777223720408602}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: fa7f36c71b9e8fa4798df3a931c2fd92, type: 3}
+  m_Controller: {fileID: 9100000, guid: d3d4674ddb5a38e42bfdc481576124d3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!195 &8147777223720408603
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1418,6 +1420,32 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &1995386735554036513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8147777223720408602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4440f77d21cb2d249bd4fbf9f4fb110c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &252193204454087799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8147777223720408602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01cf68db3f9543f5b7bad59e17ab9e4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _agent: {fileID: 8147777223720408603}
+  _animator: {fileID: 1995386735554036513}
 --- !u!114 &8147777223720408577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1460,6 +1488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d312805ffd84825ab02117e7ccaba69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animator: {fileID: 1995386735554036513}
   _attackCooldown: 2
 --- !u!114 &8147777223720408579
 MonoBehaviour:

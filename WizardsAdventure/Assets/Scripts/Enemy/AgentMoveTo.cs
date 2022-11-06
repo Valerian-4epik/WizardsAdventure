@@ -4,7 +4,7 @@ using UnityEngine.AI;
 
 public class AgentMoveTo : MonoBehaviour
 {
-    private const float MinimalDistance = 2;
+    private const float MinimalDistance = 1;
 
     [SerializeField] private NavMeshAgent _agent;
 
