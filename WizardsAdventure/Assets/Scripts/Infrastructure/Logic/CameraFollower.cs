@@ -17,8 +17,8 @@ public class CameraFollower : MonoBehaviour
     {
         if(Camera.main != null)
             _cameraMain = Camera.main;
-        _cameraPosition = _cameraMain.transform;
-        _cameraPosition.position = _shopTimePosition;
+        // _cameraPosition = _cameraMain.transform;
+        // _cameraPosition.position = _shopTimePosition;
     }
 
     public void SetShopInterface(UIInventory shopInterface)
