@@ -1885,7 +1885,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 900, y: 800}
+  m_SizeDelta: {x: 900, y: 650}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &1885068025117386822
 CanvasRenderer:
@@ -1941,7 +1941,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1885068025135885132
 Transform:
   m_ObjectHideFlags: 0
@@ -2003,6 +2003,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2963ce0d24bb40048b74ceaf73e7f154, type: 2}
   - {fileID: 11400000, guid: 6f23c795cf61e0e488c386d5cef62024, type: 2}
   - {fileID: 11400000, guid: cef46a6a9138dfb4d95a487a7395f9bf, type: 2}
+  - {fileID: 11400000, guid: d571c43d8a8732b43b1a206663169971, type: 2}
+  _canvasGroup: {fileID: 7149678826262682039}
 --- !u!1 &1885068025155208181
 GameObject:
   m_ObjectHideFlags: 0
@@ -2085,7 +2087,7 @@ GameObject:
   - component: {fileID: 1885068025165823364}
   - component: {fileID: 1885068025165823419}
   m_Layer: 5
-  m_Name: Sword
+  m_Name: MeleeWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2200,7 +2202,7 @@ MonoBehaviour:
         m_MethodName: BuyItem
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 77a90a4e3e12b294681732f486ea64bb, type: 2}
+          m_ObjectArgument: {fileID: 11400000, guid: d571c43d8a8732b43b1a206663169971, type: 2}
           m_ObjectArgumentAssemblyTypeName: ItemInfo, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -4543,6 +4545,7 @@ GameObject:
   - component: {fileID: 1885068025804107914}
   - component: {fileID: 1885068025804107913}
   - component: {fileID: 1885068025804107912}
+  - component: {fileID: 7149678826262682039}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -4632,6 +4635,18 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!225 &7149678826262682039
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1885068025804107919}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1885068025805876312
 GameObject:
   m_ObjectHideFlags: 0
@@ -6071,11 +6086,11 @@ RectTransform:
   m_Father: {fileID: 1885068024802837357}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 1}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -86.39}
-  m_SizeDelta: {x: 200, y: 86.39}
-  m_Pivot: {x: 0.5, y: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 202, y: 199.99997}
+  m_SizeDelta: {x: 200, y: 200}
+  m_Pivot: {x: 1, y: 1}
 --- !u!222 &1885068026159542342
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6104,8 +6119,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 69182636b3efa4063b1a80e916b2d312, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: d824c6144488845fcb51139fb8e60bac, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -8159,7 +8174,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 16.61, y: 0}
-  m_SizeDelta: {x: 900, y: 800}
+  m_SizeDelta: {x: 900, y: 650}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1885068026659950834
 MonoBehaviour:

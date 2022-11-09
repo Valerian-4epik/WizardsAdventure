@@ -38,8 +38,8 @@ namespace Enemy
         {
             _currentHealth -= damage;
 
-            if (_animator != null)
-                _animator.PlayHit();
+            // if (_animator != null)
+            //     _animator.PlayHit();
             
             HealthChanged?.Invoke();
         }

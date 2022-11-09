@@ -36,14 +36,21 @@ public class WizardsSpawner : MonoBehaviour
     {
         if (GetEmptyInitPoint() != null)
         {
-            var wizard = Instantiate(_wizard, GetEmptyInitPoint().transform.position, Quaternion.identity);
+            var wizard = InstantiateWizard();
             _playerProgress.PlayerWizardsAmount++;
             ES3.Save("mySquad", _playerProgress.PlayerWizardsAmount, "Squad.es3");
-            GetEmptyInitPoint().IsEmpty = false;
             SquadChanged?.Invoke(wizard);
         }
         else
             _wizardShop.gameObject.SetActive(false);
+    }
+
+    private GameObject InstantiateWizard()
+    {
+        var TransformLookAtCamera = Quaternion.Euler(0, 180, 0);
+        var wizard = Instantiate(_wizard, GetEmptyInitPoint().transform.position, TransformLookAtCamera);
+        GetEmptyInitPoint().IsEmpty = false;
+        return wizard;
     }
 
     private void AddAllInitPoints()
@@ -66,8 +73,7 @@ public class WizardsSpawner : MonoBehaviour
         {
             for (int i = 0; i < _playerProgress.PlayerWizardsAmount; i++)
             {
-                var wizard = Instantiate(_wizard, GetEmptyInitPoint().transform.position, Quaternion.identity);
-                GetEmptyInitPoint().IsEmpty = false;
+                InstantiateWizard();
             }
         }
     }
@@ -76,9 +82,8 @@ public class WizardsSpawner : MonoBehaviour
     {
         for (int i = 0; i < BASE_AMOUNT_WIZARDS; i++)
         {
-            var wizard = Instantiate(_wizard, GetEmptyInitPoint().transform.position, Quaternion.identity);
+            InstantiateWizard();
             _playerProgress.PlayerWizardsAmount = BASE_AMOUNT_WIZARDS;
-            GetEmptyInitPoint().IsEmpty = false;
         }
     }
 
@@ -96,8 +101,9 @@ public class WizardsSpawner : MonoBehaviour
     private void SpawnWizardShop()
     {
         var wizardForMoney = Instantiate(_wizardForMoney, _wizardForMoneyPoint.position, Quaternion.identity);
+        wizardForMoney.gameObject.transform.SetParent(transform);
         var wizardForADS = Instantiate(_wizardForViewingADS, _wizardForViewingADSPoint.position, Quaternion.identity);
-
+        wizardForADS.gameObject.transform.SetParent(transform);
         SetupWizardShop(wizardForMoney);
     }
 

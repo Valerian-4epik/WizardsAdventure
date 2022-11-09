@@ -1,19 +1,33 @@
 using System;
 using System.Collections.Generic;
+using Enemy;
 using UI;
-using Unity.VisualScripting;
 using UnityEngine;
 using Wizards;
 
 public class InventoryFighter : MonoBehaviour
 {
     [SerializeField] private List<ItemInfo> _allItems;
+    [SerializeField] private Transform _handle;
+    [SerializeField] private Attack _attack; //test
         
-    private ItemInfo _weapon;
+    [SerializeField] private ItemInfo _weapon;
     private ItemInfo _armor;
 
     public event Action<ItemInfo> WeaponDressed;
     public event Action<ItemInfo> ArmorDressed;
+
+
+    private void OnEnable() //test
+    {
+        if (_weapon != null)
+        {
+            ShowWeapon(_weapon);
+            _attack.Weapon = new Weapon(transform, _weapon);
+        }
+        if(_armor != null)
+            ShowWeapon(_armor);
+    }
 
     public void SetWeapon(List<string> itemsID)
     {
@@ -51,6 +65,7 @@ public class InventoryFighter : MonoBehaviour
             if (_weapon == null)
             {
                 _weapon = item.Item;
+                ShowWeapon(item.Item);
                 WeaponDressed?.Invoke(_weapon);
                 Refresh(item);
             }
@@ -89,4 +104,10 @@ public class InventoryFighter : MonoBehaviour
 
     private void Refresh(UIInventoryItem item) =>
         item.GetComponentInParent<UIInventorySlot>().Refresh();
+
+    private void ShowWeapon(ItemInfo itemInfo)
+    {
+        var item = Instantiate(itemInfo.Prefab, _handle.position, Quaternion.identity);
+        item.gameObject.transform.SetParent(_handle);
+    }
 }

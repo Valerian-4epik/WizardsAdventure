@@ -9,6 +9,7 @@ namespace Wizards
         private static readonly int Attack = Animator.StringToHash("Attack_1");
         private static readonly int Speed = Animator.StringToHash("Speed");
         private static readonly int IsMoving = Animator.StringToHash("IsMoving");
+        private static readonly int IsVictory = Animator.StringToHash("IsVictory");
         private static readonly int Hit = Animator.StringToHash("Hit");
         private static readonly int Die = Animator.StringToHash("Die");
         
@@ -39,6 +40,8 @@ namespace Wizards
         public void StopMoving() => _animator.SetBool(IsMoving, false);
         
         public void PlayAttack() => _animator.SetTrigger(Attack);
+
+        public void PlayVictory() => _animator.SetBool(IsVictory, true);
         
         public void EnteredState(int stateHash)
         {

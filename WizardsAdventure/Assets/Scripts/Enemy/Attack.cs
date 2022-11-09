@@ -17,19 +17,11 @@ namespace Enemy
         private float _cooldown;
         private bool _attackIsActive;
         private Weapon _weapon;
-        private float _damage;
 
         public Weapon Weapon
         {
             get => _weapon;
-            set
-            {
-                _weapon = value;
-                if (_weapon != null)
-                    _damage = _weapon.Info.Damage;
-                else
-                    _damage = BASE_DAMAGE;
-            }
+            set => _weapon = value;
         }
 
         private void Update()
@@ -41,9 +33,6 @@ namespace Enemy
                 StartAttack();
             }
         }
-
-        private void OnPunch() =>
-            Debug.Log("РОМАН САКУТИН");
 
         public void SetTarget(Transform target) =>
             _targetTransform = target;
@@ -76,22 +65,25 @@ namespace Enemy
 
             _isAttacking = true;
             _cooldown = _attackCooldown;
-            OnAttack(_damage);
+            // OnAttack(_damage);
         }
 
-        private void OnAttack(float damage)
+        private void OnAttack()
         {
             if (_weapon != null)
             {
-                // Debug.Log("Атака с оружием");
-                RangeAttack(_targetTransform);
+                Debug.Log("Атака с оружием");
+                if (_weapon.Info.AttackType == AttackType.MeleeAttack)
+                    GetTargetHealth().TakeDamage(_weapon.Info.Damage);
+                else
+                    RangeAttack(_targetTransform);
+
                 _isAttacking = false;
             }
             else
             {
-                // Debug.Log("Атака без оружия");
-                damage = BASE_DAMAGE;
-                GetTargetHealth().TakeDamage(damage);
+                Debug.Log("Атака без оружия");
+                GetTargetHealth().TakeDamage(BASE_DAMAGE);
                 _isAttacking = false;
             }
         }

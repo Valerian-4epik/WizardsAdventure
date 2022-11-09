@@ -4,9 +4,8 @@ using DG.Tweening;
 
 public class CameraFollower : MonoBehaviour
 {
-    private const int DURATION = 2;
+    private const int DURATION = 9;
     
-    [SerializeField] private Vector3 _shopTimePosition;
     [SerializeField] private Vector3 _fightTimePosition;
     
     private Camera _cameraMain;
@@ -17,8 +16,6 @@ public class CameraFollower : MonoBehaviour
     {
         if(Camera.main != null)
             _cameraMain = Camera.main;
-        // _cameraPosition = _cameraMain.transform;
-        // _cameraPosition.position = _shopTimePosition;
     }
 
     public void SetShopInterface(UIInventory shopInterface)
@@ -28,5 +25,5 @@ public class CameraFollower : MonoBehaviour
     }
 
     public void ChangePosition() => 
-        _cameraPosition.DOMove(_fightTimePosition, DURATION);
+        _cameraMain.gameObject.transform.DOMove(_fightTimePosition, DURATION);
 }

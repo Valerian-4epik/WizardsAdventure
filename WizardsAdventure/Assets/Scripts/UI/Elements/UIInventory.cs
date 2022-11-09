@@ -12,6 +12,7 @@ namespace UI
     {
         [SerializeField] private UIInventorySlot[] _slots;
         [SerializeField] private List<ItemInfo> _itemsData = new List<ItemInfo>();
+        [SerializeField] private CanvasGroup _canvasGroup;
 
         private RaycastDetecter _raycastDetecter;
         private PlayerProgress _playerProgress;
@@ -63,6 +64,9 @@ namespace UI
             _playerProgress = playerProgress;
             LoadCurrentItems();
         }
+
+        public void ShowInventory() =>
+            _canvasGroup.alpha = 1;
 
         private void LoadCurrentItems()
         {

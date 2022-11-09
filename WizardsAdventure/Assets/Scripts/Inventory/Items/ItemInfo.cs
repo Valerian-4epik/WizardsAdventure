@@ -17,6 +17,7 @@ public class ItemInfo : ScriptableObject
     [SerializeField] private float _attackSpeed;
     [SerializeField] private float _attackRange;
     [SerializeField] private GameObject _projectile;
+    [SerializeField] private GameObject _prefab;
     [field: SerializeField] private float Armor { get; set; }
 
     public TypeOfObject TypeOfObject => _typeOfObject;
@@ -30,5 +31,6 @@ public class ItemInfo : ScriptableObject
     public float AttackSpeed => _attackSpeed;
     public float AttackRange => _attackRange;
     public GameObject Projectile => _projectile;
+    public GameObject Prefab => _prefab;
 
 }

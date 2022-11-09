@@ -185,7 +185,8 @@ Transform:
   m_LocalPosition: {x: 0.000000014901161, y: 0.05361091, z: -0.000000048428774}
   m_LocalScale: {x: 0.99999994, y: 0.9999999, z: 0.9999999}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 5434860691250984055}
   m_Father: {fileID: 509280931107100423}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1067,7 +1068,7 @@ SkinnedMeshRenderer:
   m_SortingOrder: 0
   serializedVersion: 2
   m_Quality: 0
-  m_UpdateWhenOffscreen: 0
+  m_UpdateWhenOffscreen: 1
   m_SkinnedMotionVectors: 1
   m_Mesh: {fileID: 4300000, guid: fa7f36c71b9e8fa4798df3a931c2fd92, type: 3}
   m_Bones:
@@ -1106,6 +1107,37 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.00000008940697, y: 0.89193386, z: -0.012163967}
     m_Extent: {x: 0.65829575, y: 0.9524551, z: 0.3219117}
   m_DirtyAABB: 0
+--- !u!1 &5595875536498955537
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5434860691250984055}
+  m_Layer: 0
+  m_Name: HandlePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5434860691250984055
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5595875536498955537}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 509280931107100427}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8147777222279692765
 GameObject:
   m_ObjectHideFlags: 0
@@ -1284,7 +1316,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 30
+  m_Radius: 80
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8147777222635353762
 MonoBehaviour:
@@ -1376,8 +1408,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.52, y: 1.14, z: 0.67}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.85, y: 1.82, z: 0.67}
+  m_Center: {x: 0, y: 0.34, z: 0}
 --- !u!95 &4993817274667648070
 Animator:
   serializedVersion: 4
@@ -1407,17 +1439,17 @@ NavMeshAgent:
   m_GameObject: {fileID: 8147777223720408602}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.53
-  m_Speed: 3
-  m_Acceleration: 15
+  m_Radius: 0.6
+  m_Speed: 6
+  m_Acceleration: 100
   avoidancePriority: 50
   m_AngularSpeed: 1600
-  m_StoppingDistance: 1.5
+  m_StoppingDistance: 0.1
   m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
+  m_AutoBraking: 0
   m_AutoRepath: 1
   m_Height: 1
-  m_BaseOffset: 0.5
+  m_BaseOffset: 0.58
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &1995386735554036513
@@ -1620,6 +1652,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2963ce0d24bb40048b74ceaf73e7f154, type: 2}
   - {fileID: 11400000, guid: 6f23c795cf61e0e488c386d5cef62024, type: 2}
   - {fileID: 11400000, guid: cef46a6a9138dfb4d95a487a7395f9bf, type: 2}
+  _handle: {fileID: 5434860691250984055}
+  _attack: {fileID: 8147777223720408580}
+  _weapon: {fileID: 0}
 --- !u!1 &8147777223884128274
 GameObject:
   m_ObjectHideFlags: 0
@@ -1709,6 +1744,7 @@ GameObject:
   - component: {fileID: 8147777223974165388}
   - component: {fileID: 8147777223974165387}
   - component: {fileID: 8147777223974165390}
+  - component: {fileID: 1185632009923249884}
   m_Layer: 13
   m_Name: HPBarCanvas
   m_TagString: Untagged
@@ -1810,6 +1846,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a8f73680fa24c9fa6ef9aa0bd797c81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!225 &1185632009923249884
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8147777223974165385}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &8147777224043362429
 GameObject:
   m_ObjectHideFlags: 0

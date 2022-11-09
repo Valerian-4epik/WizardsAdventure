@@ -86,4 +86,7 @@ public class RaycastDetecter : MonoBehaviour
 
         return null;
     }
+
+    private void ActivateUIInventory() =>
+        _shopInterface.ShowInventory();
 }

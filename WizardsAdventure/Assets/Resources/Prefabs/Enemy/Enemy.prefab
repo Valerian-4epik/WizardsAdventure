@@ -337,6 +337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ef06ca85cfd40988e1d3293c2e501ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animator: {fileID: 0}
   _maxHealth: 100
 --- !u!114 &5733311223642043956
 MonoBehaviour:
@@ -504,6 +505,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 036fa2ac4ef44825bbb6c78d5122f041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &5733311222851419064 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2446815935933573720, guid: 1c543ceff5ff36944abaeba828025cac, type: 3}
+  m_PrefabInstance: {fileID: 7954489503551607264}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &2437908063188721839
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5733311222851419064}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!224 &5733311222851419067 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2446815935933573723, guid: 1c543ceff5ff36944abaeba828025cac, type: 3}

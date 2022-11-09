@@ -5,6 +5,7 @@ using Data;
 using Enemy;
 using UI;
 using UnityEngine;
+using Wizards;
 
 public class ArenaDisposer : MonoBehaviour
 {
@@ -46,7 +47,7 @@ public class ArenaDisposer : MonoBehaviour
     public void SetShopInterface(UIInventory inventory)
     {
         _shopInterface = inventory;
-        _shopInterface.Fight += ActiveBattleState;
+        _shopInterface.Fight += ActivateBattleState;
     }
 
     public void SetLevelFinishInterface(GameObject finishInterface)
@@ -96,14 +97,24 @@ public class ArenaDisposer : MonoBehaviour
         if (_enemies.Count == 0)
         {
             _levelFinishInterface.SetActive(true);
-
+            
             for (int i = 0; i < _wizards.Count; i++)
             {
                 AddWizardInventory(i, _wizards[i].GetComponent<InventoryFighter>().GetItemsID());
             }
-
+            
             _playerProgress.SaveSquadItems(_wizardsInventory);
+            Debug.Log("Victory");
+            EnterStateVictory();
             EndFight?.Invoke(true);
+        }
+    }
+
+    private void EnterStateVictory()
+    {
+        foreach (var wizard in _wizards)
+        {
+            wizard.GetComponent<WizardAnimator>().PlayVictory();
         }
     }
 
@@ -134,7 +145,7 @@ public class ArenaDisposer : MonoBehaviour
         SubscribeToDeath();
     }
 
-    private void ActiveBattleState()
+    private void ActivateBattleState()
     {
         var activeFighters = _wizards.Concat(_enemies);
 
@@ -143,12 +154,28 @@ public class ArenaDisposer : MonoBehaviour
             fighter.GetComponent<Idle>().SwitchOnStartFight();
         }
 
+        DisableWizardsSpawner();
         DisableShopInterface();
     }
 
+    public void Activate() //test
+    {
+        var activeFighters = _wizards.Concat(_enemies);
+
+        foreach (var fighter in activeFighters)
+        {
+            fighter.GetComponent<Idle>().SwitchOnStartFight();
+        }
+
+        // DisableShopInterface();
+    }
+
+    private void DisableWizardsSpawner() => _wizardsSpawner.gameObject.SetActive(false);
+
+
     private void DisableShopInterface()
     {
-        _shopInterface.Fight -= ActiveBattleState;
+        _shopInterface.Fight -= ActivateBattleState;
         _shopInterface.gameObject.SetActive(false);
     }
 

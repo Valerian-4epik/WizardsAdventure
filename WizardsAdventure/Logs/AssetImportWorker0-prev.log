@@ -15,7 +15,7 @@ D:/UnityGames/WizardsAdventure/WizardsAdventure
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-55253
+51138
 Successfully changed project path to: D:/UnityGames/WizardsAdventure/WizardsAdventure
 D:/UnityGames/WizardsAdventure/WizardsAdventure
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ D:/UnityGames/WizardsAdventure/WizardsAdventure
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 119.99 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 126.69 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.11f1 (0a5ca18544bf)
 [Subsystems] Discovering subsystems at path D:/Unity/2021.3.11f1/Editor/Data/Resources/UnitySubsystems
@@ -63,173 +63,173 @@ Initialize mono
 Mono path[0] = 'D:/Unity/2021.3.11f1/Editor/Data/Managed'
 Mono path[1] = 'D:/Unity/2021.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'D:/Unity/2021.3.11f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56276
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56040
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/Unity/2021.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002713 seconds.
+Registered in 0.001867 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 160.25 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 150.50 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.728 seconds
+- Completed reload, in  0.711 seconds
 Domain Reload Profiling:
-	ReloadAssembly (729ms)
-		BeginReloadAssembly (80ms)
+	ReloadAssembly (712ms)
+		BeginReloadAssembly (73ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (545ms)
-			LoadAssemblies (79ms)
+		EndReloadAssembly (531ms)
+			LoadAssemblies (72ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
 			SetupTypeCache (111ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (30ms)
-			SetupLoadedEditorAssemblies (354ms)
+			RebuildScriptCaches (29ms)
+			SetupLoadedEditorAssemblies (338ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (8ms)
+				InitializePlatformSupportModulesInManaged (7ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (161ms)
+				RefreshPlugins (151ms)
 				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (131ms)
-				ProcessInitializeOnLoadMethodAttributes (52ms)
+				ProcessInitializeOnLoadAttributes (124ms)
+				ProcessInitializeOnLoadMethodAttributes (53ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.004391 seconds.
+Registered in 0.005195 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-000001B25D1D3C50 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file data-000001BEDEF59C70 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B25E058F20 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file data-000001BEE0C21820 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B25B6F5820 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file data-000001BEE09EF820 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B25B6F5820 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Telemetry.dll
+Symbol file data-000001BEE0659060 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Telemetry.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B25D20A460 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll
+Symbol file data-000001BEE09EF820 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B25B6FB430 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll
+Symbol file data-000001BEE0659060 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B25B6FB430 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file data-000001BEE0DB7030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B25B6FB430 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file data-000001BEDEF65280 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B25B6FB430 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file data-000001BEDD659830 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Timeline.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B259D98DD0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file data-000001BEDD659830 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B259D98DD0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file data-000001BEDD6B8640 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TextMeshPro.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B25B6FB430 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file data-000001BEDD6CDA50 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B25AB7CA30 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file data-000001BEDD6CDA50 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B25D77F2E0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Networking.dll
+Symbol file data-000001BEE06F9650 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Networking.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B25B703440 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file data-000001BEE06F9650 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B25AB7CA30 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file data-000001BEDD6CDA50 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B25B703440 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll
+Symbol file data-000001BEE0659060 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B25CA02010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file data-000001BEDE9C6E30 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B25B703440 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file data-000001BEDE9C6E30 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEditor.UI.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B25ADF27F0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file data-000001BEE08F0030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B25B703440 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file data-000001BEE0902C40 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Rider.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B25B703440 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Internal.dll
+Symbol file data-000001BEDD6E2A60 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Internal.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B259DC81E0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file data-000001BEE090F250 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEngine.UI.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B25B703440 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Configuration.dll
+Symbol file data-000001BEE0DD1A40 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Configuration.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B25B703440 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.dll
+Symbol file data-000001BEE0DD1A40 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B25AE2FA00 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file data-000001BEE0B26620 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B25D77F2E0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
+Symbol file data-000001BEE0DD1A40 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B25B703440 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file data-000001BEDEA04040 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B25B703440 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Configuration.Editor.dll
+Symbol file data-000001BEE0DD1A40 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Configuration.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B25DECD020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll
+Symbol file data-000001BEE0DD1A40 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B25B703440 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Registration.dll
+Symbol file data-000001BEDEA04040 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Registration.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B25B703440 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll
+Symbol file data-000001BEDEA04040 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B25CD403F0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll
+Symbol file data-000001BEDEA04040 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B25CA8B030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Settings.Editor.dll
+Symbol file data-000001BEDEA04040 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Settings.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B25CA8B030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Scheduler.dll
+Symbol file data-000001BEDEA04040 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Scheduler.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B25CA8B030 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Environments.Internal.dll
+Symbol file data-000001BEDEA04040 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Environments.Internal.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B25AE2FA00 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file data-000001BEE0B26620 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B259D54E00 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file data-000001BEE0B26620 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B25CA92E60 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Threading.dll
+Symbol file data-000001BEDE2C2A60 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Threading.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B25AE7C6E0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll
+Symbol file data-000001BEE0928470 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B259D6CA10 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file data-000001BEE0928470 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000001B259D6CA10 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Device.dll
+Symbol file data-000001BEE0928470 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Device.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Symbol file LoadedFromMemory doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 1.24 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.27 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.346 seconds
+- Completed reload, in  1.458 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1347ms)
-		BeginReloadAssembly (106ms)
+	ReloadAssembly (1469ms)
+		BeginReloadAssembly (164ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
+			DisableScriptedObjects (9ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (20ms)
-		EndReloadAssembly (1131ms)
-			LoadAssemblies (95ms)
+			CreateAndSetChildDomain (33ms)
+		EndReloadAssembly (1177ms)
+			LoadAssemblies (116ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (301ms)
+			SetupTypeCache (323ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (80ms)
-			SetupLoadedEditorAssemblies (591ms)
+			RebuildScriptCaches (90ms)
+			SetupLoadedEditorAssemblies (598ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (13ms)
+				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (79ms)
-				ProcessInitializeOnLoadAttributes (380ms)
-				ProcessInitializeOnLoadMethodAttributes (114ms)
+				BeforeProcessingInitializeOnLoad (81ms)
+				ProcessInitializeOnLoadAttributes (398ms)
+				ProcessInitializeOnLoadMethodAttributes (111ms)
 				AfterProcessingInitializeOnLoad (2ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
-Refreshing native plugins compatible for Editor in 1.55 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 1.61 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 4225 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 30 unused Assets / (66.7 MB). Loaded Objects now: 4727.
-Memory consumption went from 370.0 MB to 303.3 MB.
-Total: 10.029600 ms (FindLiveObjects: 0.546200 ms CreateObjectMapping: 0.222700 ms MarkObjects: 4.151300 ms  DeleteObjects: 5.107500 ms)
+Unloading 28 unused Assets / (66.6 MB). Loaded Objects now: 4729.
+Memory consumption went from 369.9 MB to 303.3 MB.
+Total: 6.549500 ms (FindLiveObjects: 0.380800 ms CreateObjectMapping: 0.261200 ms MarkObjects: 2.869300 ms  DeleteObjects: 3.036700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -244,127 +244,43 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 304197.848914 seconds.
-  path: Assets/Source/Models/Staffs
-  artifactKey: Guid(c731184783721dd40998b5a835520eae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Source/Models/Staffs using Guid(c731184783721dd40998b5a835520eae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b1ada7811085bf8ae66225bf35f3242') in 0.033035 seconds 
+  Time since last request: 390352.289217 seconds.
+  path: Assets/Scripts/Inventory/Items
+  artifactKey: Guid(28bd28cff55eae74fb6b69c551263f74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Inventory/Items using Guid(28bd28cff55eae74fb6b69c551263f74) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84d57ddebfa00881d3881294123dd7c4') in 0.010232 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 37.072602 seconds.
-  path: Assets/Source/Models/Staffs/Staff_Level_1.fbx
-  artifactKey: Guid(a2a3056471cde89418f35afa674e7ff6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Source/Models/Staffs/Staff_Level_1.fbx using Guid(a2a3056471cde89418f35afa674e7ff6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '232d0efa4e59be71c71c4ab26515fab9') in 0.164563 seconds 
+  Time since last request: 0.000045 seconds.
+  path: Assets/Scripts/Inventory/Items/Swords/Sword4.asset
+  artifactKey: Guid(ee967e458b0606f4786fb11e44b88a81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Inventory/Items/Swords/Sword4.asset using Guid(ee967e458b0606f4786fb11e44b88a81) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9b69b41a023828a2cf125352e7b7b99') in 0.046643 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000070 seconds.
-  path: Assets/Source/Models/Staffs/Staff_Level_3.fbx
-  artifactKey: Guid(c1631351e10d94a4ead6b4bb4cab0b62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Source/Models/Staffs/Staff_Level_3.fbx using Guid(c1631351e10d94a4ead6b4bb4cab0b62) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6eb277fea2515bc1a01654acdcc9f105') in 0.080871 seconds 
+  Time since last request: 0.000039 seconds.
+  path: Assets/Scripts/Inventory/Items/Swords/Sword6.asset
+  artifactKey: Guid(d6df87700a90ebb40912c792778150aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Inventory/Items/Swords/Sword6.asset using Guid(d6df87700a90ebb40912c792778150aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8eef7c47bd822db4410e7d7c6744f2d1') in 0.003253 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 11.901972 seconds.
-  path: Assets/Source/Models/Staffs/sword1.fbx
-  artifactKey: Guid(18140ea22cad83949b98941bbe451c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Source/Models/Staffs/sword1.fbx using Guid(18140ea22cad83949b98941bbe451c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c11834bb655d80b92ea05fa040102dbd') in 0.060051 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 6.937410 seconds.
-  path: Assets/Source/Models/Weapon
-  artifactKey: Guid(2acf229b07dcc724f8975e16b2371755) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Source/Models/Weapon using Guid(2acf229b07dcc724f8975e16b2371755) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '14bbc0e5d040c2b2adab51dc352827df') in 0.002221 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 19.106386 seconds.
-  path: Assets/Source/Materials/Weapon
-  artifactKey: Guid(ed70e50bbc253584ab836469c33537fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Source/Materials/Weapon using Guid(ed70e50bbc253584ab836469c33537fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aab97722b5868268ccbfaf26a77fc6dd') in 0.002695 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 7.607198 seconds.
-  path: Assets/Source/Materials/Weapon/Staffs
-  artifactKey: Guid(4308debc8aede9d4a8070bfc08df5920) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Source/Materials/Weapon/Staffs using Guid(4308debc8aede9d4a8070bfc08df5920) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f677cf78cdbe8ead7a7792d689a05e00') in 0.003238 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 7.685102 seconds.
-  path: Assets/Source/Materials/Weapon/Swords
-  artifactKey: Guid(23f290351d821304fb546e9a3c0e8eb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Source/Materials/Weapon/Swords using Guid(23f290351d821304fb546e9a3c0e8eb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e186a7b236d47e3a1ef9c36a60f1e005') in 0.003315 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 103.947344 seconds.
-  path: Assets/Resources/Prefabs/Weapon/sword1.prefab
-  artifactKey: Guid(36f0da2d2e8f85442bde9d0706b07c4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Weapon/sword1.prefab using Guid(36f0da2d2e8f85442bde9d0706b07c4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df3199a39ad779af84b4dd6530a1024a') in 0.008137 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 3.050735 seconds.
-  path: Assets/Resources/Prefabs/Weapon/Staff_Level_1.prefab
-  artifactKey: Guid(ea9f11e0263d5bb47bd57268968e4d8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Weapon/Staff_Level_1.prefab using Guid(ea9f11e0263d5bb47bd57268968e4d8a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0dd175ee6ebaeb35d739333b0f87eea6') in 0.012127 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 4.513733 seconds.
-  path: Assets/Resources/Prefabs/Weapon/Staffs
-  artifactKey: Guid(034ddeab29182e84eae9d51ac70ee18e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources/Prefabs/Weapon/Staffs using Guid(034ddeab29182e84eae9d51ac70ee18e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '977f1d6a125b25c4507fdea8c4ace2cd') in 0.001902 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 175.513431 seconds.
-  path: Assets/Source/Models/Weapon/Staffs/sword1.fbx
-  artifactKey: Guid(18140ea22cad83949b98941bbe451c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Source/Models/Weapon/Staffs/sword1.fbx using Guid(18140ea22cad83949b98941bbe451c46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a275278bbca498ce20e6ced4fdfbc66') in 0.061464 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 117.530367 seconds.
-  path: Assets/Packages/LowPolyFantasyVillage/Prefabs/Props
-  artifactKey: Guid(3d1064f78cbd5c6448b30cf777e296e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Packages/LowPolyFantasyVillage/Prefabs/Props using Guid(3d1064f78cbd5c6448b30cf777e296e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad750954b731fba1127034af18dcb724') in 0.003413 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 309.713175 seconds.
-  path: Assets/Source/Models/Weapon/Melee
-  artifactKey: Guid(f39c55fc1de9a274785865dc546f31fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Source/Models/Weapon/Melee using Guid(f39c55fc1de9a274785865dc546f31fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c51d58fa78dc0be1c2ad50e7aef84ebd') in 0.002978 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 9.832600 seconds.
-  path: Assets/Source/Models/Weapon/MeleeWeapon
-  artifactKey: Guid(f39c55fc1de9a274785865dc546f31fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Source/Models/Weapon/MeleeWeapon using Guid(f39c55fc1de9a274785865dc546f31fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a695187c842d6e5952d1f19f8208875e') in 0.003063 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 35.176331 seconds.
-  path: Assets/Source/Models/Weapon/MeleeWeapon/StoneAx.fbx
-  artifactKey: Guid(9fc58f498383015498904d02236a5906) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Source/Models/Weapon/MeleeWeapon/StoneAx.fbx using Guid(9fc58f498383015498904d02236a5906) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb341287153ab1524d54c84a4661e75f') in 0.053836 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 149.681694 seconds.
-  path: Assets/Source/Models/Weapon/MeleeWeapon/StoneAx.fbx
-  artifactKey: Guid(9fc58f498383015498904d02236a5906) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Source/Models/Weapon/MeleeWeapon/StoneAx.fbx using Guid(9fc58f498383015498904d02236a5906) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f83abb26ee983157d68edca94d9fe834') in 0.052682 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 324.843976 seconds.
-  path: Assets/Level_1.asset
-  artifactKey: Guid(c00018d05ce98dd4ea7851f1e6b475e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Level_1.asset using Guid(c00018d05ce98dd4ea7851f1e6b475e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The tree Tree_01 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
-The tree Tree_02 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
-The tree Tree_06 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
+  Time since last request: 17.028943 seconds.
+  path: Assets/Resources/Prefabs/Environment/Level_2.prefab
+  artifactKey: Guid(5c0be3ebc3fe0bd46bee023dcd2cd402) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Environment/Level_2.prefab using Guid(5c0be3ebc3fe0bd46bee023dcd2cd402) Importer(815301076,1909f56bfc062723c751e8b465ee728b) The tree Tree_07 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
 The tree Grass_06 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
-The tree Branch must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
-The tree Tree_07 must use the Nature/Soft Occlusion shader. Otherwise billboarding/lighting will not work correctly.
- -> (artifact id: 'dd672b2a35f399061c886bfd929d776a') in 0.037389 seconds 
+ -> (artifact id: '879b782365ea76853d685a34a6aa7698') in 0.252762 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 47.330269 seconds.
-  path: Assets/Source/Materials/Weapon/Swords/sword1 3.mat
-  artifactKey: Guid(f0640c0109a761544a5a1fd5ed2a47b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Source/Materials/Weapon/Swords/sword1 3.mat using Guid(f0640c0109a761544a5a1fd5ed2a47b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6454ab87128f3c479c6e259e2865dc2a') in 0.033461 seconds 
+  Time since last request: 0.995262 seconds.
+  path: Assets/Resources/Prefabs/Enemy/Enemy.prefab
+  artifactKey: Guid(e29323bd374d20f45a8dcd90d7574736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/Enemy/Enemy.prefab using Guid(e29323bd374d20f45a8dcd90d7574736) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e827b8d7d4bcfd9a1bc144c6678b1d45') in 0.059603 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 24.355091 seconds.
-  path: Assets/Source/Materials/Weapon/Swords/sword1 3.mat
-  artifactKey: Guid(f0640c0109a761544a5a1fd5ed2a47b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Source/Materials/Weapon/Swords/sword1 3.mat using Guid(f0640c0109a761544a5a1fd5ed2a47b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c8a8f0c7ebc4dc3c4d48b2e99b0e82d6') in 0.012895 seconds 
+  Time since last request: 2.899661 seconds.
+  path: Assets/Resources/Prefabs/UI/HPBarCanvas.prefab
+  artifactKey: Guid(1c543ceff5ff36944abaeba828025cac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Resources/Prefabs/UI/HPBarCanvas.prefab using Guid(1c543ceff5ff36944abaeba828025cac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '471b2c9ed0b7589c808ccd409089a733') in 0.006560 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
