@@ -10,6 +10,7 @@ public class InventoryFighter : MonoBehaviour
     [SerializeField] private List<ItemInfo> _allItems;
     [SerializeField] private Transform _handle;
     [SerializeField] private Attack _attack; //test
+    [SerializeField] private CheckAttackRange _attackRange;
         
     [SerializeField] private ItemInfo _weapon;
     private ItemInfo _armor;
@@ -17,13 +18,13 @@ public class InventoryFighter : MonoBehaviour
     public event Action<ItemInfo> WeaponDressed;
     public event Action<ItemInfo> ArmorDressed;
 
-
     private void OnEnable() //test
     {
         if (_weapon != null)
         {
             ShowWeapon(_weapon);
             _attack.Weapon = new Weapon(transform, _weapon);
+            _attackRange.ChangeAttackRange(_weapon.AttackRange);
         }
         if(_armor != null)
             ShowWeapon(_armor);
@@ -107,7 +108,11 @@ public class InventoryFighter : MonoBehaviour
 
     private void ShowWeapon(ItemInfo itemInfo)
     {
-        var item = Instantiate(itemInfo.Prefab, _handle.position, Quaternion.identity);
+        var position = _handle.position;
+        var item = Instantiate(itemInfo.Prefab, position, Quaternion.identity);
+        var weaponHandle = item.gameObject.GetComponentInChildren<WeaponHandle>();
         item.gameObject.transform.SetParent(_handle);
+        
+        // weaponHandle.gameObject.transform.position = _handle.position;
     }
 }

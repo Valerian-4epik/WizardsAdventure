@@ -8,7 +8,7 @@ namespace Enemy
     [RequireComponent(typeof(Attack))]
     public class CheckAttackRange : MonoBehaviour
     {
-        private const float BASE_ATTACK_RANGE = 1;
+        private const float BASE_ATTACK_RANGE = 3;
 
         [SerializeField] private Attack _attack;
         [SerializeField] private TriggerObserver _triggerObserver;

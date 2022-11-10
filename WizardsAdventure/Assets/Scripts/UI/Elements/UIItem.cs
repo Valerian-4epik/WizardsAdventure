@@ -23,19 +23,17 @@ namespace UI
             //в общем чтобы перетаскиваться обьект плавно.
         }
 
-        public void OnDrag(PointerEventData eventData)
-        {
+        public void OnDrag(PointerEventData eventData) => 
             _rectTransform.anchoredPosition += eventData.delta / _mainCanvas.scaleFactor;
-        }
 
-        public void OnBeginDrag(PointerEventData eventData)
+        public virtual void OnBeginDrag(PointerEventData eventData)
         {
             var slotTransform = _rectTransform.parent; // достаем родителя
             slotTransform.SetAsLastSibling(); //перемещаем его вниз в ерархии;
             _canvasGroup.blocksRaycasts = false;
         }
 
-        public void OnEndDrag(PointerEventData eventData)
+        public virtual void OnEndDrag(PointerEventData eventData)
         {
             transform.localPosition = Vector3.zero;
             _canvasGroup.blocksRaycasts = true;

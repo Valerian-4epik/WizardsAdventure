@@ -2,11 +2,13 @@ using System;
 using TMPro;
 using UI;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class UIInventoryItem : UIItem
 {
     [SerializeField] private Image _imageIcon;
+    [SerializeField] private CanvasGroup _canvasGroup;
     [SerializeField] private TMP_Text _levelText;
     
     public ItemInfo Item { get; private set; }
@@ -29,6 +31,19 @@ public class UIInventoryItem : UIItem
             _levelText.GetComponentInParent<Image>().enabled = false;
     }
 
+    public override void OnBeginDrag(PointerEventData eventData)
+    {
+        base.OnBeginDrag(eventData);
+        _canvasGroup.alpha = 0;
+        Debug.Log("NEw begin drag");
+    }
+
+    public override void OnEndDrag(PointerEventData eventData)
+    {
+        base.OnEndDrag(eventData);
+        _canvasGroup.alpha = 1;
+    }
+    
     public void SetItem(ItemInfo item)
     {
         Item = item;

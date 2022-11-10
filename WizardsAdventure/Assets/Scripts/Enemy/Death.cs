@@ -28,10 +28,10 @@ namespace Enemy
         private void Die()
         {
             SpawnDeathFx();
-            Debug.Log("Точно подох");
-            StartCoroutine(DestroyTimer());
-            
             Happened?.Invoke(gameObject);
+            gameObject.SetActive(false);
+            // StartCoroutine(DestroyTimer());
+            
         }
 
         private void SpawnDeathFx() => 

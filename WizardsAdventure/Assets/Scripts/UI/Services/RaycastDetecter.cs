@@ -1,5 +1,6 @@
 using UI;
 using UnityEngine;
+using Wizards;
 
 public class RaycastDetecter : MonoBehaviour
 {
@@ -9,9 +10,12 @@ public class RaycastDetecter : MonoBehaviour
     private float _clickTime = 0;
     private float _clickDelay = 0.5f;
     private UIInventory _shopInterface;
+    private Effector _effector;
 
     void Update()
     {
+        ScaleUpWizard();
+        
         if (DoubleClick())
         {
             if (GetWizardInventory() != null)
@@ -85,6 +89,39 @@ public class RaycastDetecter : MonoBehaviour
         }
 
         return null;
+    }
+
+    private void ScaleUpWizard()
+    {
+        if (Camera.main != null)
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            if (Physics.Raycast(ray, out var hit, 1000, _targetMask))
+            {
+                if (hit.collider.TryGetComponent(out Effector effector))
+                {
+                    _effector = effector;
+                    
+                    if(!_effector.ScaleChanged)
+                        _effector.ScaleUp();
+                }
+                else
+                {
+                    if (_effector != null)
+                    {
+                        _effector.NormalizeScale();
+                    }
+                }
+            }
+            else
+            {
+                if (_effector != null)
+                {
+                    _effector.NormalizeScale();
+                }
+            }
+        }
     }
 
     private void ActivateUIInventory() =>
