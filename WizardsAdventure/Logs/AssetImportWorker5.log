@@ -1,0 +1,374 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.11f1 (0a5ca18544bf) revision 679073'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22000) 64bit CoreSingleLanguage' Language: 'ru' Physical Memory: 15741 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+D:\Unity\2021.3.11f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker5
+-projectPath
+D:/UnityGames/WizardsAdventure/WizardsAdventure
+-logFile
+Logs/AssetImportWorker5.log
+-srvPort
+59558
+Successfully changed project path to: D:/UnityGames/WizardsAdventure/WizardsAdventure
+D:/UnityGames/WizardsAdventure/WizardsAdventure
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 152.58 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.11f1 (0a5ca18544bf)
+[Subsystems] Discovering subsystems at path D:/Unity/2021.3.11f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/UnityGames/WizardsAdventure/WizardsAdventure/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon(TM) Graphics (ID=0x1636)
+    Vendor:   ATI
+    VRAM:     7870 MB
+    Driver:   27.20.11032.1001
+Initialize mono
+Mono path[0] = 'D:/Unity/2021.3.11f1/Editor/Data/Managed'
+Mono path[1] = 'D:/Unity/2021.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'D:/Unity/2021.3.11f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56976
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: D:/Unity/2021.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001646 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 174.56 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.763 seconds
+Domain Reload Profiling:
+	ReloadAssembly (763ms)
+		BeginReloadAssembly (85ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (572ms)
+			LoadAssemblies (83ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (114ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (33ms)
+			SetupLoadedEditorAssemblies (364ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (9ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (175ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (129ms)
+				ProcessInitializeOnLoadMethodAttributes (50ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.003980 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-000001DCD92C34B0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD8AED830 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD942B820 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD942B820 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Telemetry.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD942B820 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD9431430 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD9496020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD92C34B0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD9220E00 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD9220E00 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD72DB160 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD72F0570 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD731F980 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD92E40C0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Networking.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD7162430 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD7327990 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.2D.Sprite.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD7162430 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD5E66F40 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD732F9A0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD6FDEA30 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD6F95310 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD732F9A0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Internal.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD8DCB020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD94B0A30 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Configuration.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD94B3440 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD5D64010 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Core.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD94B3440 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD701BC40 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD94B3440 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Configuration.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD94B3440 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Analytics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD8E4F630 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Registration.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD8E52640 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD8E52640 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Environments.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD732F9A0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Settings.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD7331DB0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Scheduler.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD7331DB0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Environments.Internal.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD5D73E20 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD72CA020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD72CA020 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Threading.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD69139D0 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD5DF9320 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.VisualScripting.State.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-000001DCD5DF9320 doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\ScriptAssemblies\Unity.Services.Core.Device.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\UnityGames\WizardsAdventure\WizardsAdventure\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.62 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.263 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1264ms)
+		BeginReloadAssembly (105ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (21ms)
+		EndReloadAssembly (1048ms)
+			LoadAssemblies (75ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (268ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (62ms)
+			SetupLoadedEditorAssemblies (578ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (4ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (83ms)
+				ProcessInitializeOnLoadAttributes (370ms)
+				ProcessInitializeOnLoadMethodAttributes (116ms)
+				AfterProcessingInitializeOnLoad (2ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 1.43 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4263 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 28 unused Assets / (66.6 MB). Loaded Objects now: 4770.
+Memory consumption went from 376.1 MB to 309.5 MB.
+Total: 8.042300 ms (FindLiveObjects: 0.743900 ms CreateObjectMapping: 0.342600 ms MarkObjects: 3.175600 ms  DeleteObjects: 3.778100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 174013.971749 seconds.
+  path: Assets/Packages/GUI Kit Casual Game/ResourcesData/Sprite/Mission/mission_reward_icon_chest.png
+  artifactKey: Guid(14bb7dbe03b4c4f1999e45ec89aafdb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Packages/GUI Kit Casual Game/ResourcesData/Sprite/Mission/mission_reward_icon_chest.png using Guid(14bb7dbe03b4c4f1999e45ec89aafdb5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '02dedf302821ef1cf60ff56306839d97') in 0.118571 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Packages/GUI Kit Casual Game/ResourcesData/Sprite/Common/notification_bg_green.png
+  artifactKey: Guid(7b7ccc812964b4113bcb420b583b6a17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Packages/GUI Kit Casual Game/ResourcesData/Sprite/Common/notification_bg_green.png using Guid(7b7ccc812964b4113bcb420b583b6a17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dccefc8490c8d43d3e18e27c56cf6031') in 0.020971 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000072 seconds.
+  path: Assets/Packages/GUI Kit Casual Game/ResourcesData/Sprite/Mission/mission_reward_icon_gem.png
+  artifactKey: Guid(cda87792b516f4e0d8bf7d3ef5cdbae9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Packages/GUI Kit Casual Game/ResourcesData/Sprite/Mission/mission_reward_icon_gem.png using Guid(cda87792b516f4e0d8bf7d3ef5cdbae9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '645df22b97763a31e00dd387df320cb4') in 0.018799 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Packages/GUI Kit Casual Game/ResourcesData/Sprite/Mission/mission_reward_icon_glove.png
+  artifactKey: Guid(59a6ec29f18a14d9497453eadf418456) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Packages/GUI Kit Casual Game/ResourcesData/Sprite/Mission/mission_reward_icon_glove.png using Guid(59a6ec29f18a14d9497453eadf418456) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1ba83dc419e3f8c7fbfdd617bd6e2b0f') in 0.122267 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.096561 seconds.
+  path: Assets/Packages/GUI Kit Casual Game/ResourcesData/Sprite/Common/notification_small_icon_red.png
+  artifactKey: Guid(d360c761a90c641d9b704106d9dacba1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Packages/GUI Kit Casual Game/ResourcesData/Sprite/Common/notification_small_icon_red.png using Guid(d360c761a90c641d9b704106d9dacba1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef64a770b9b0ac948c541effc297a8eb') in 0.015373 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Packages/GUI Kit Casual Game/ResourcesData/Sprite/OfflineReward/offline_prg_bg.png
+  artifactKey: Guid(a9e8057e4267c4f57875a26c240facbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Packages/GUI Kit Casual Game/ResourcesData/Sprite/OfflineReward/offline_prg_bg.png using Guid(a9e8057e4267c4f57875a26c240facbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc88f14186a12030a003cc0a46b836b8') in 0.013461 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Packages/com.unity.collab-proxy/Editor/PlasticSCM/Assets/Images/ok.png
+  artifactKey: Guid(3238dca1e9ea9fb4aa64b28298ba6dbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.collab-proxy/Editor/PlasticSCM/Assets/Images/ok.png using Guid(3238dca1e9ea9fb4aa64b28298ba6dbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36b2bc72e469a51e5e2b5f0ba115f8f6') in 0.015477 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000085 seconds.
+  path: Assets/Packages/GUI Kit Casual Game/ResourcesData/Sprite/OfflineReward/offline_reward_gold.png
+  artifactKey: Guid(d790827655d49426fb2aec6c6fc9fc18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Packages/GUI Kit Casual Game/ResourcesData/Sprite/OfflineReward/offline_reward_gold.png using Guid(d790827655d49426fb2aec6c6fc9fc18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f6e2cd556eb7f09b9b729002d2b7ff7') in 0.021098 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Packages/GUI Kit Casual Game/ResourcesData/Sprite/OfflineReward/offline_reward_gem.png
+  artifactKey: Guid(b7ae2ab2d0f9048be835ec1542e1ca47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Packages/GUI Kit Casual Game/ResourcesData/Sprite/OfflineReward/offline_reward_gem.png using Guid(b7ae2ab2d0f9048be835ec1542e1ca47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a029a0cc7e077cc3109271cfec6d43f') in 0.021019 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Packages/AdvancedPeopleSystem2/Sprites/MaleOutfitIcons/Pants_04_M.png
+  artifactKey: Guid(b405d017f16c5f640ac2fa4edc522f76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Packages/AdvancedPeopleSystem2/Sprites/MaleOutfitIcons/Pants_04_M.png using Guid(b405d017f16c5f640ac2fa4edc522f76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07268460a56c660900e9797953549b8c') in 0.045479 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Packages/AdvancedPeopleSystem2/Sprites/MaleOutfitIcons/Pants_03_M.png
+  artifactKey: Guid(14cc1edc0ca40614ea619d034c779187) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Packages/AdvancedPeopleSystem2/Sprites/MaleOutfitIcons/Pants_03_M.png using Guid(14cc1edc0ca40614ea619d034c779187) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6fffd3237c5793e8b63c3944ed77791b') in 0.033811 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Packages/AdvancedPeopleSystem2/Sprites/FemaleOutfitIcons/Pants_01_F.png
+  artifactKey: Guid(7afd2d24f31bc74418a6233c488d7b9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Packages/AdvancedPeopleSystem2/Sprites/FemaleOutfitIcons/Pants_01_F.png using Guid(7afd2d24f31bc74418a6233c488d7b9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2d1061569b465381dc9e60f9c6de6b3') in 0.032626 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Packages/GUI Kit Casual Game/ResourcesData/Preview/Offline.png
+  artifactKey: Guid(1fc5ad1073cc549739a6bd84456d6713) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Packages/GUI Kit Casual Game/ResourcesData/Preview/Offline.png using Guid(1fc5ad1073cc549739a6bd84456d6713) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bc31872ffb1b0d32f17e124c2065478') in 0.205602 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Packages/GUI Kit Casual Game/ResourcesData/Sprite/OfflineReward/offline_prg_bar.png
+  artifactKey: Guid(6cc7c4110305e45418586f0466ddd2b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Packages/GUI Kit Casual Game/ResourcesData/Sprite/OfflineReward/offline_prg_bar.png using Guid(6cc7c4110305e45418586f0466ddd2b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66645596be7b01e0a2b319666940774a') in 0.014282 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Packages/AdvancedPeopleSystem2/Sprites/FemaleOutfitIcons/Pants_02_F.png
+  artifactKey: Guid(9387cb187c312c04dbfc1d0647a68811) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Packages/AdvancedPeopleSystem2/Sprites/FemaleOutfitIcons/Pants_02_F.png using Guid(9387cb187c312c04dbfc1d0647a68811) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c7a234c6e5a116001b82033900f5c11') in 0.041652 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 13.456936 seconds.
+  path: Assets/Packages/AdvancedPeopleSystem2/Sprites/MaleOutfitIcons/Pants_08_M.png
+  artifactKey: Guid(0e95ddc79c9d4324a9eee925b00e3bf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Packages/AdvancedPeopleSystem2/Sprites/MaleOutfitIcons/Pants_08_M.png using Guid(0e95ddc79c9d4324a9eee925b00e3bf7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc3b1b8198744bc4286701c09015a376') in 0.041026 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Packages/AdvancedPeopleSystem2/Sprites/MaleOutfitIcons/Pants_10_M.png
+  artifactKey: Guid(24606c1a5fac09b44b8badf116c3cbf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Packages/AdvancedPeopleSystem2/Sprites/MaleOutfitIcons/Pants_10_M.png using Guid(24606c1a5fac09b44b8badf116c3cbf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4b42f8fcdfed5794acb2e6b582cd7c5') in 0.032462 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/Packages/AdvancedPeopleSystem2/Sprites/FemaleOutfitIcons/Pants_Doctor_1_F.png
+  artifactKey: Guid(82830018545eb464a9783db406016d9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Packages/AdvancedPeopleSystem2/Sprites/FemaleOutfitIcons/Pants_Doctor_1_F.png using Guid(82830018545eb464a9783db406016d9a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55374b03bd97d49befc87ccc21e82695') in 0.034412 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000043 seconds.
+  path: Assets/Packages/AdvancedPeopleSystem2/Sprites/FemaleOutfitIcons/Pants_Firefighter_1_F.png
+  artifactKey: Guid(00a747e3abfc6694ebfc781522625d2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Packages/AdvancedPeopleSystem2/Sprites/FemaleOutfitIcons/Pants_Firefighter_1_F.png using Guid(00a747e3abfc6694ebfc781522625d2a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d122ec185d68890782bf109ad9ac701') in 0.035553 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Packages/AdvancedPeopleSystem2/Sprites/MaleOutfitIcons/Pants_Doctor_1_M.png
+  artifactKey: Guid(df036a4870d893b4a8791b2ad053cb79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Packages/AdvancedPeopleSystem2/Sprites/MaleOutfitIcons/Pants_Doctor_1_M.png using Guid(df036a4870d893b4a8791b2ad053cb79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10760269f68a2e72c07df5736be1d049') in 0.029868 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.663166 seconds.
+  path: Assets/Packages/GUI Kit Casual Game/ResourcesData/Sprite/OfflineReward/title_bg_green.png
+  artifactKey: Guid(f143e6b7f1ee14c9c8385475d718d2e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Packages/GUI Kit Casual Game/ResourcesData/Sprite/OfflineReward/title_bg_green.png using Guid(f143e6b7f1ee14c9c8385475d718d2e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68cb90a59946ad2a6d238259f2593cc0') in 0.040840 seconds 
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

@@ -2,9 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Data;
-using NodeCanvas.Tasks.Actions;
+using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace UI
 {
@@ -13,6 +12,7 @@ namespace UI
         [SerializeField] private UIInventorySlot[] _slots;
         [SerializeField] private List<ItemInfo> _itemsData = new List<ItemInfo>();
         [SerializeField] private CanvasGroup _canvasGroup;
+        [SerializeField] private TMP_Text _currentMoney;
 
         private RaycastDetecter _raycastDetecter;
         private PlayerProgress _playerProgress;
@@ -40,8 +40,20 @@ namespace UI
             Fight?.Invoke();
         }
 
-        public void BuyItem(ItemInfo item) =>
+        public void SetupItem(ItemInfo item) =>
             FillSlot(item);
+
+
+        public void BuyItem(ItemInfo item)
+        {
+            if (_playerProgress.LoadCurrentMoney() >= item.Price)
+            {
+                _playerProgress.SaveMoney(_playerProgress.LoadCurrentMoney() - item.Price);
+                FillSlot(item);
+            }
+            else
+                Debug.Log("Недостаточно денег");
+        }
         
         public void Merge(UIInventorySlot fromSlot, UIInventorySlot toSlot)
         {
@@ -63,10 +75,15 @@ namespace UI
         {
             _playerProgress = playerProgress;
             LoadCurrentItems();
+            ShowMoney();
+            _playerProgress.MoneyChanged += ShowMoney;
         }
 
         public void ShowInventory() =>
             _canvasGroup.alpha = 1;
+
+        private void ShowMoney() => 
+            _currentMoney.text = _playerProgress.LoadCurrentMoney().ToString();
 
         private void LoadCurrentItems()
         {

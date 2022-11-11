@@ -7,6 +7,7 @@ namespace Wizards
     public class WizardAnimator : MonoBehaviour, IAnimationStateReader
     {
         private static readonly int Attack = Animator.StringToHash("Attack_1");
+        private static readonly int StaffAttack = Animator.StringToHash("Attack_2");
         private static readonly int Speed = Animator.StringToHash("Speed");
         private static readonly int IsMoving = Animator.StringToHash("IsMoving");
         private static readonly int IsVictory = Animator.StringToHash("IsVictory");
@@ -40,6 +41,7 @@ namespace Wizards
         public void StopMoving() => _animator.SetBool(IsMoving, false);
         
         public void PlayAttack() => _animator.SetTrigger(Attack);
+        public void PlayStaffAttack() => _animator.SetTrigger(StaffAttack);
 
         public void PlayVictory() => _animator.SetBool(IsVictory, true);
         

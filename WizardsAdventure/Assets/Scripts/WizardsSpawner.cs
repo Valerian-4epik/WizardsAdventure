@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class WizardsSpawner : MonoBehaviour
 {
+    private const int WIZARD_PRICE = 150;
     private const int BASE_AMOUNT_WIZARDS = 2;
 
     [SerializeField] private List<InitPoint> _initPoints = new List<InitPoint>();
@@ -34,16 +35,20 @@ public class WizardsSpawner : MonoBehaviour
 
     public void AddWizard()
     {
-        if (GetEmptyInitPoint() != null)
+        if (GetEmptyInitPoint() != null && _playerProgress.LoadCurrentMoney() >= WIZARD_PRICE)
         {
+            _playerProgress.SaveMoney(_playerProgress.LoadCurrentMoney() - WIZARD_PRICE);
             var wizard = InstantiateWizard();
             _playerProgress.PlayerWizardsAmount++;
             ES3.Save("mySquad", _playerProgress.PlayerWizardsAmount, "Squad.es3");
             SquadChanged?.Invoke(wizard);
         }
-        else
+        else if(GetEmptyInitPoint() == null)
             _wizardShop.gameObject.SetActive(false);
+        else
+            Debug.Log("Недостаточно денег");
     }
+
 
     private GameObject InstantiateWizard()
     {

@@ -13,7 +13,7 @@ namespace UI
         private Canvas _mainCanvas;
         private RectTransform _rectTransform;
         
-        protected Wizard inventoryFighter;
+        // protected Wizard inventoryFighter;
 
         private void Start()
         {

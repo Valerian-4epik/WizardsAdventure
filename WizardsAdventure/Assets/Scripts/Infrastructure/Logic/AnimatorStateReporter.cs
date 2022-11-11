@@ -11,7 +11,8 @@ namespace Infrastructure.Logic
             base.OnStateEnter(animator, stateInfo, layerIndex);
             FindReader(animator);
 
-            _stateReader.EnteredState(stateInfo.shortNameHash);
+            if (_stateReader != null)
+                _stateReader.EnteredState(stateInfo.shortNameHash);
         }
 
         public override void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)

@@ -90,6 +90,14 @@ public class ArenaDisposer : MonoBehaviour
     private void SubscribeToDeath(GameObject gameObject) =>
         gameObject.GetComponent<Death>().Happened += RemoveWizard;
 
+    private void EnterStateVictory()
+    {
+        foreach (var wizard in _wizards)
+        {
+            wizard.GetComponent<WizardAnimator>().PlayVictory();
+        }
+    }
+
     private void RemoveEnemy(GameObject fighter)
     {
         _enemies.Remove(fighter);
@@ -102,19 +110,12 @@ public class ArenaDisposer : MonoBehaviour
             {
                 AddWizardInventory(i, _wizards[i].GetComponent<InventoryFighter>().GetItemsID());
             }
-            
+
             _playerProgress.SaveSquadItems(_wizardsInventory);
+            _playerProgress.GetReward();
             Debug.Log("Victory");
             EnterStateVictory();
             EndFight?.Invoke(true);
-        }
-    }
-
-    private void EnterStateVictory()
-    {
-        foreach (var wizard in _wizards)
-        {
-            wizard.GetComponent<WizardAnimator>().PlayVictory();
         }
     }
 

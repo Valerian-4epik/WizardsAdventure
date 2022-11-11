@@ -7,6 +7,7 @@ public class CameraFollower : MonoBehaviour
     private const int DURATION = 9;
     
     [SerializeField] private Vector3 _fightTimePosition;
+    [SerializeField] private Quaternion _fightTimeRotation;
     
     private Camera _cameraMain;
     private Transform _cameraPosition;
@@ -24,6 +25,9 @@ public class CameraFollower : MonoBehaviour
         _shopInterface.Fight += ChangePosition;
     }
 
-    public void ChangePosition() => 
+    public void ChangePosition()
+    {
         _cameraMain.gameObject.transform.DOMove(_fightTimePosition, DURATION);
+        _cameraMain.gameObject.transform.DORotateQuaternion(_fightTimeRotation, DURATION);
+    }
 }

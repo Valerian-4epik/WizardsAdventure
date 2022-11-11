@@ -55,6 +55,7 @@ namespace Infrastructure.States
             heroesSpawner = _gameFactory.CreateWizardsSpawner(GameObject.FindWithTag(Initialpointspawner));
             shopInterface = _gameFactory.CreateShopInterface();
             progress = playerProgress.GetComponent<PlayerProgress>();
+            progress.SaveCurrentSceneNumber();
             return playerProgress;
         }
 

@@ -46,8 +46,7 @@ public class InventoryFighter : MonoBehaviour
             }
         }
     }
-    
-    
+
     public void SetWeapon(UIItem uiItem)
     {
         var item = uiItem as UIInventoryItem;
@@ -77,14 +76,14 @@ public class InventoryFighter : MonoBehaviour
     {
         if (_armor != null)
         {
-            shopInterface.BuyItem(_armor);
+            shopInterface.SetupItem(_armor);
             _armor = null;
             ArmorDressed?.Invoke(_armor);
         }
 
         if (_weapon != null)
         {
-            shopInterface.BuyItem(_weapon);
+            shopInterface.SetupItem(_weapon);
             _weapon = null;
             WeaponDressed?.Invoke(_weapon);
         }
@@ -108,9 +107,7 @@ public class InventoryFighter : MonoBehaviour
 
     private void ShowWeapon(ItemInfo itemInfo)
     {
-        var position = _handle.position;
-        var item = Instantiate(itemInfo.Prefab, position, Quaternion.identity);
-        var weaponHandle = item.gameObject.GetComponentInChildren<WeaponHandle>();
+        var item = Instantiate(itemInfo.Prefab, _handle.position, Quaternion.identity);
         item.gameObject.transform.SetParent(_handle);
         
         // weaponHandle.gameObject.transform.position = _handle.position;

@@ -58,10 +58,10 @@ namespace Enemy
         private void StartAttack()
         {
             transform.LookAt(_targetTransform);
-            if (_animator != null)
-            {
+            if (_animator != null && _weapon != null)
+                ChoiceAttackAnimation(_weapon.Info);
+            else if (_animator != null && _weapon == null)
                 _animator.PlayAttack();
-            }
 
             _isAttacking = true;
             _cooldown = _attackCooldown;
@@ -99,5 +99,20 @@ namespace Enemy
 
         private Health GetTargetHealth() =>
             _targetTransform.gameObject.GetComponent<Health>();
+
+        private void ChoiceAttackAnimation(ItemInfo item)
+        {
+            switch (item.TypeOfObject)
+            {
+                case TypeOfObject.Sword:
+                    _animator.PlayAttack();
+                    break;
+                case TypeOfObject.Staff:
+                    _animator.PlayStaffAttack();
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException();
+            }
+        }
     }
 }
