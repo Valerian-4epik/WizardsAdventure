@@ -1,0 +1,85 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Networking;
+using UnityEngine.UI;
+using Random = UnityEngine.Random;
+
+namespace UI.Roulette
+{
+    public class Roulette : MonoBehaviour
+    {
+        [SerializeField] private GameObject _roulettePlate;
+        [SerializeField] private GameObject _roulettePanel;
+        [SerializeField] private Transform _needle;
+        [SerializeField] private List<Sprite> _itemSprites;
+        [SerializeField] private List<Image> _displayItemSlot;
+        [SerializeField] private Image _resultSprite;
+
+        private List<int> _startList = new List<int>();
+        private List<int> _resultIndexList = new List<int>();
+        private int _itemCount = 8;
+
+        private void OnEnable()
+        {
+            for (int i = 0; i < _itemCount; i++)
+            {
+                _startList.Add(i);
+            }
+ 
+            for (int i = 0; i < _itemCount; i++)
+            {
+                var randomIndex = Random.Range(0, _startList.Count);
+                _resultIndexList.Add(_startList[randomIndex]);
+                _displayItemSlot[i].sprite = _itemSprites[_startList[randomIndex]];
+                _startList.RemoveAt(randomIndex);
+            }
+
+            StartCoroutine(StartRoulette());
+        }
+
+        private IEnumerator StartRoulette()
+        {
+            yield return new WaitForSeconds(2f);
+            var randomRotateSpeed = Random.Range(1f, 5f);
+            var rotateSpeed = 10f * randomRotateSpeed;
+
+            while (true)
+            {
+                yield return null;
+                if (rotateSpeed <= 0.01f) break;
+
+                rotateSpeed = Mathf.Lerp(rotateSpeed, 0, Time.deltaTime * 6f);
+                _roulettePlate.transform.Rotate(0,0,rotateSpeed);
+            }
+
+            yield return new WaitForSeconds(1f);
+            Result();
+        }
+
+        private void Result()
+        {
+            var closeIndex = -1;
+            float closeDistance = 500f;
+            float currentDistance = 0f;
+
+            for (int i = 0; i < _itemCount; i++)
+            {
+                currentDistance = Vector2.Distance(_displayItemSlot[i].transform.position, _needle.position);
+                if (closeDistance > currentDistance)
+                {
+                    closeDistance = currentDistance;
+                    closeIndex = i;
+                }
+                
+                if(closeIndex == -1)
+                    Debug.Log("Something is wrong!");
+
+                _resultSprite.sprite = _displayItemSlot[closeIndex].sprite;
+                
+                Debug.Log(_resultIndexList[closeIndex]);
+            }
+        }
+    }
+}
