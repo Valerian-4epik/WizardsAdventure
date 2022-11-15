@@ -8,6 +8,7 @@ namespace Enemy
     {
         [SerializeField] private WizardAnimator _animator;
         [SerializeField] private float _maxHealth;
+        [SerializeField] private GameObject _hitEffect;
 
         private float _currentHealth;
 
@@ -37,11 +38,17 @@ namespace Enemy
         public void TakeDamage(float damage)
         {
             _currentHealth -= damage;
-
+            PlayHitEffect();
             // if (_animator != null)
             //     _animator.PlayHit();
             
             HealthChanged?.Invoke();
+        }
+
+        private void PlayHitEffect()
+        {
+            var effectObject = Instantiate(_hitEffect, transform.position, Quaternion.identity);
+            effectObject.GetComponent<ParticleSystem>().Play();
         }
     }
 }

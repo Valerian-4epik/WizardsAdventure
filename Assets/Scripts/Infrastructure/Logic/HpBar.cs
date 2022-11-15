@@ -6,9 +6,9 @@ namespace Infrastructure.Logic
 {
     public class HpBar : MonoBehaviour
     {
-        [SerializeField] private Image _image;
+        [SerializeField] private Slider _slider;
 
         public void SetValue(float current, float max) => 
-            _image.fillAmount = current/max;
+            _slider.value = current/max;
     }
 }
