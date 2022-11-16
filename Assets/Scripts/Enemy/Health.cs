@@ -1,4 +1,6 @@
 using System;
+using Infrastructure.Logic;
+using UI;
 using UnityEngine;
 using Wizards;
 
@@ -9,6 +11,7 @@ namespace Enemy
         [SerializeField] private WizardAnimator _animator;
         [SerializeField] private float _maxHealth;
         [SerializeField] private GameObject _hitEffect;
+        [SerializeField] private Transform _popupTextPoint;
 
         private float _currentHealth;
 
@@ -38,17 +41,27 @@ namespace Enemy
         public void TakeDamage(float damage)
         {
             _currentHealth -= damage;
-            PlayHitEffect();
-            // if (_animator != null)
-            //     _animator.PlayHit();
-            
+            PlayHitEffect(damage);
             HealthChanged?.Invoke();
         }
 
-        private void PlayHitEffect()
+        private void PlayHitEffect(float value)
         {
             var effectObject = Instantiate(_hitEffect, transform.position, Quaternion.identity);
             effectObject.GetComponent<ParticleSystem>().Play();
+            PlayPopupText(value);
+        }
+
+        private void PlayPopupText(float value)
+        {
+            var popupText = Instantiate(GetPopupText(), _popupTextPoint.position, Quaternion.identity);
+            popupText.GetComponent<FloatingText>().SetValue(value);
+        }
+
+        private GameObject GetPopupText()
+        {
+            var actorUI = gameObject.GetComponent<ActorUI>();
+            return actorUI.PopupText;
         }
     }
 }

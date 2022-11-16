@@ -13,13 +13,15 @@ namespace UI.Roulette
         [SerializeField] private GameObject _roulettePlate;
         [SerializeField] private GameObject _roulettePanel;
         [SerializeField] private Transform _needle;
-        [SerializeField] private List<Sprite> _itemSprites;
+        [SerializeField] private List<ItemInfo> _itemSprites;
         [SerializeField] private List<Image> _displayItemSlot;
         [SerializeField] private Image _resultSprite;
+        [SerializeField] private ParticleSystem _winEffect;
 
         private List<int> _startList = new List<int>();
         private List<int> _resultIndexList = new List<int>();
         private int _itemCount = 8;
+        private ItemInfo _item; 
 
         private void OnEnable()
         {
@@ -30,10 +32,8 @@ namespace UI.Roulette
  
             for (int i = 0; i < _itemCount; i++)
             {
-                var randomIndex = Random.Range(0, _startList.Count);
-                _resultIndexList.Add(_startList[randomIndex]);
-                _displayItemSlot[i].sprite = _itemSprites[_startList[randomIndex]];
-                _startList.RemoveAt(randomIndex);
+                var randomIndex = Random.Range(0, _itemSprites.Count);
+                _displayItemSlot[i].sprite = _itemSprites[randomIndex].Icon;
             }
 
             StartCoroutine(StartRoulette());
@@ -41,21 +41,26 @@ namespace UI.Roulette
 
         private IEnumerator StartRoulette()
         {
-            yield return new WaitForSeconds(2f);
-            var randomRotateSpeed = Random.Range(1f, 5f);
-            var rotateSpeed = 10f * randomRotateSpeed;
+            var randomRotateSpeed = Random.Range(1f, 5f);   
+            var rotateSpeed = 20f * randomRotateSpeed;
 
             while (true)
             {
                 yield return null;
                 if (rotateSpeed <= 0.01f) break;
 
-                rotateSpeed = Mathf.Lerp(rotateSpeed, 0, Time.deltaTime * 6f);
+                rotateSpeed = Mathf.Lerp(rotateSpeed, 0, Time.deltaTime * 0.6f);
                 _roulettePlate.transform.Rotate(0,0,rotateSpeed);
+                Result();
             }
 
             yield return new WaitForSeconds(1f);
-            Result();
+            WinItemAnimationPlay();
+        }
+
+        private void WinItemAnimationPlay()
+        {
+            _winEffect.Play();
         }
 
         private void Result()
@@ -77,8 +82,6 @@ namespace UI.Roulette
                     Debug.Log("Something is wrong!");
 
                 _resultSprite.sprite = _displayItemSlot[closeIndex].sprite;
-                
-                Debug.Log(_resultIndexList[closeIndex]);
             }
         }
     }

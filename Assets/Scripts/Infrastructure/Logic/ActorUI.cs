@@ -8,9 +8,12 @@ namespace Infrastructure.Logic
     public class ActorUI : MonoBehaviour
     {
         [SerializeField] private HpBar _hpBar;
+        [SerializeField] private GameObject _popupText;
         [SerializeField] private UIInventory _inventory;
 
         private IHealth _health;
+
+        public GameObject PopupText => _popupText;
 
         public void Construct(IHealth health)
         {

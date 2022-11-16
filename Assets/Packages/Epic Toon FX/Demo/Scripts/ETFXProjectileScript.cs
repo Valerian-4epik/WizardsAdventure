@@ -76,8 +76,6 @@ public class ETFXProjectileScript : MonoBehaviour
                 
                 if (hit.collider.gameObject.TryGetComponent(out Health enemy))
                 {
-                    Debug.Log("Hit");
-                    Debug.Log(enemy.name);
                     enemy.TakeDamage(_damage);
                 }
 
