@@ -21,7 +21,8 @@ namespace UI.Roulette
         private List<int> _startList = new List<int>();
         private List<int> _resultIndexList = new List<int>();
         private int _itemCount = 8;
-        private ItemInfo _item; 
+
+        private ItemInfo _item;
 
         private void OnEnable()
         {
@@ -35,9 +36,12 @@ namespace UI.Roulette
                 var randomIndex = Random.Range(0, _itemSprites.Count);
                 _displayItemSlot[i].sprite = _itemSprites[randomIndex].Icon;
             }
-
-            StartCoroutine(StartRoulette());
+            
+            Result();
         }
+
+        public void SpinRoulite() => 
+            StartCoroutine(StartRoulette());
 
         private IEnumerator StartRoulette()
         {
