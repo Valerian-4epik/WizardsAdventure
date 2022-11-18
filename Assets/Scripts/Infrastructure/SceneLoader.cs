@@ -14,6 +14,8 @@ namespace Infrastructure
 
         public void Load(int buildIndexNumber, Action onLoaded = null) =>
             _coroutineRunner.StartCoroutine(LoadScene(buildIndexNumber, onLoaded));
+
+        public void Load(int buildIndexNumber) => _coroutineRunner.StartCoroutine(LoadScene(buildIndexNumber));
         
         //но чтобы перейти на новую сцену нам нужен sceneLoader
         private IEnumerator LoadScene(int nextSceneName, Action onLoaded = null) //чтобы вызвать корутину нужен бехивер

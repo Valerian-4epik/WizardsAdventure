@@ -7,6 +7,7 @@ namespace Data
 {
     public class PlayerProgress : MonoBehaviour
     {
+        private bool _isNewGame = true;
         private int _money = 300;
         private int _currentLevel;
         private List<string> _itemsInShop = new List<string>();
@@ -17,8 +18,34 @@ namespace Data
 
         public event Action MoneyChanged;
 
-        private void Awake() => 
+        private void Awake() =>
             _rewardLevelData = new RewardLevelData();
+
+        public void UpdateStatistics()
+        {
+            _money = 300;
+            PlayerWizardsAmount = 0;
+            _itemsInShop = new List<string>();
+            _itemsInSquad = new Dictionary<int, List<string>>();
+
+            SaveGameStata(true);
+            SaveMoney(_money);
+            SaveCurrentItems(_itemsInShop);
+            SaveSquadItems(_itemsInSquad);
+            SavePlayerWizardsAmount(PlayerWizardsAmount);
+        }
+
+        public void SaveGameStata(bool value)
+        {
+            _isNewGame = value;
+            ES3.Save("gameState", _isNewGame, "GameState.es3");
+        }
+
+        public bool GetGameState()
+        {
+            _isNewGame = ES3.Load("gameState", "GameState.es3", _isNewGame);
+            return _isNewGame;
+        }
 
         public void SaveCurrentSceneNumber()
         {
@@ -26,7 +53,8 @@ namespace Data
             ES3.Save("currentLevelIndex", _currentLevel, "CurrentLevel.es3");
         }
 
-        public int GetCurrentScene() => 
+
+        public int GetCurrentScene() =>
             _currentLevel = SceneManager.GetActiveScene().buildIndex;
 
         public int GetNextScene()
@@ -37,14 +65,25 @@ namespace Data
 
         public void SaveCurrentItems(List<string> items)
         {
+            if (items != null)
+            {
+                FillItemList(items);
+            }
+
+            ES3.Save("myItemsList", _itemsInShop, "MyItemsList.es3");
+        }
+
+        private void SavePlayerWizardsAmount(int value) => 
+            ES3.Save("mySquad", value, "Squad.es3");
+
+        private void FillItemList(List<string> items)
+        {
             _itemsInShop = new List<string>();
-            
+
             foreach (var item in items)
             {
                 _itemsInShop.Add(item);
             }
-            
-            ES3.Save("myItemsList", _itemsInShop, "MyItemsList.es3");
         }
 
         public List<string> GetItems()
@@ -52,7 +91,7 @@ namespace Data
             _itemsInShop = ES3.Load("myItemsList", "MyItemsList.es3", _itemsInShop);
             return _itemsInShop;
         }
-        
+
         public void SaveSquadItems(Dictionary<int, List<string>> itemIDs)
         {
             _itemsInSquad = itemIDs;
@@ -73,7 +112,7 @@ namespace Data
         }
 
         public Dictionary<int, List<string>> LoadSquadItems()
-        { 
+        {
             _itemsInSquad = ES3.Load("myItemDictionaryInSquad", "MyItemDictionaryInSquad.es3", _itemsInSquad);
             return _itemsInSquad;
         }

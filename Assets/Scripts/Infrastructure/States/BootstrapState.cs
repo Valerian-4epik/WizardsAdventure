@@ -6,9 +6,10 @@ using UnityEngine;
 
 namespace Infrastructure.States
 {
-    public class BootstrapState : IState //начальный стейт с которого все начинается.
+    public class BootstrapState : IState
     {
         private const int INITIAL_SCENE = 0;
+        private const int MENU_SCENE = 1;
 
         private readonly GameStateMachine _gameStateMachine;
         private readonly SceneLoader _sceneLoader;
@@ -16,7 +17,6 @@ namespace Infrastructure.States
 
         private IGameFactory _gameFactory;
 
-        //бутстрапу нужна сылка на стейт машну чтобы после завершение своего функцианала сообщить машине поехали дальше
         public BootstrapState(GameStateMachine gameStateMachine, SceneLoader sceneLoader, AllServices services)
         {
             _gameStateMachine = gameStateMachine;
@@ -26,7 +26,7 @@ namespace Infrastructure.States
             RegisterServices();
         }
 
-        public void Enter() //задача бутстрапа привести нас в началло и регистрировать сервисы 
+        public void Enter()
         {
             _sceneLoader.Load(INITIAL_SCENE, onLoaded: EnterLoadLevel);
         }
@@ -37,7 +37,7 @@ namespace Infrastructure.States
 
         private void EnterLoadLevel()
         {
-             var nextSceneNumber = GetScene();
+            var nextSceneNumber = GetScene();
             _gameStateMachine.Enter<LoadLevelState, int>(nextSceneNumber);
         }
 
@@ -45,7 +45,12 @@ namespace Infrastructure.States
         {
             _gameFactory = _services.Single<IGameFactory>();
             GameObject playerProgress = _gameFactory.CreatePlayerProgress();
-            var nextScene = playerProgress.GetComponent<PlayerProgress>().GetNextScene();
+            var progress = playerProgress.GetComponent<PlayerProgress>();
+
+            if (progress.GetGameState())
+                return MENU_SCENE;
+
+            var nextScene = progress.GetNextScene();
             return nextScene;
         }
 

@@ -6,9 +6,13 @@ using UnityEngine;
 
 namespace Infrastructure.States
 {
-    public class LoadLevelState : IPayloadedState<int> //так как интерфейс пайлоадед принимает в себя условие
+    public class LoadLevelState : IPayloadedState<int>
     {
-        private const string Initialpointspawner = "InitialPointHeroesSpawner";
+        private const string INITIAL_POINT_SPAWNER = "InitialPointHeroesSpawner";
+        private const int MENU_SCENE = 1;
+        private const int LEVEL_FIRST = 2;
+        private const int CONTINUE_KODE = 99;
+
 
         private readonly GameStateMachine _stateMachine;
         private readonly SceneLoader _sceneLoader;
@@ -23,19 +27,39 @@ namespace Infrastructure.States
             _loadingCurtain = loadingCurtain;
             _gameFactory = gameFactory;
         }
-        
+
         public void Enter(int payload)
         {
+            // var progress = _gameFactory.CreatePlayerProgress().GetComponent<PlayerProgress>();
             _loadingCurtain.Show();
+
+            // if (payload == MENU_SCENE)
+            // {
+            //     _sceneLoader.Load(payload);
+            //     _loadingCurtain.Hide();
+            // }
+            // else if (payload == LEVEL_FIRST)
+            // {
+            //     progress.UpdateStatistics();
+            //     progress.SaveGameStata(false);
+            //     _sceneLoader.Load(payload, OnLoaded);
+            // }
+            // else if (payload == CONTINUE_KODE)
+            // {
+            //     if (!progress.GetGameState())
+            //         _sceneLoader.Load(progress.GetNextScene(), OnLoaded);
+            // }
+            
             _sceneLoader.Load(payload, OnLoaded);
         }
 
-        public void Exit() => 
+        public void Exit() =>
             _loadingCurtain.Hide();
 
         private void OnLoaded()
         {
-            var playerProgress = CreateMainObjects(out var cameraFollower, out var heroesSpawner, out var shopInterface, out var progress);
+            var playerProgress = CreateMainObjects(out var cameraFollower, out var heroesSpawner, out var shopInterface,
+                out var progress);
             heroesSpawner.GetComponent<WizardsSpawner>().SetupPlayerProgress(progress);
             var uiInventory = shopInterface.GetComponent<UIInventory>();
             uiInventory.SetPlayerProgress(progress);
@@ -43,7 +67,7 @@ namespace Infrastructure.States
             GameObject levelFinishInterface = _gameFactory.CreateLevelFinishInterface();
             SubscribePayloads(arenaDisposer, heroesSpawner, uiInventory, progress, levelFinishInterface);
             cameraFollower.GetComponent<CameraFollower>().SetShopInterface(uiInventory);
-            
+
             _stateMachine.Enter<GameLoopState, GameObject, GameObject>(levelFinishInterface, playerProgress);
         }
 
@@ -52,7 +76,7 @@ namespace Infrastructure.States
         {
             GameObject playerProgress = _gameFactory.CreatePlayerProgress();
             cameraFollower = _gameFactory.CreateCameraFollower();
-            heroesSpawner = _gameFactory.CreateWizardsSpawner(GameObject.FindWithTag(Initialpointspawner));
+            heroesSpawner = _gameFactory.CreateWizardsSpawner(GameObject.FindWithTag(INITIAL_POINT_SPAWNER));
             shopInterface = _gameFactory.CreateShopInterface();
             progress = playerProgress.GetComponent<PlayerProgress>();
             // progress.SaveCurrentSceneNumber();

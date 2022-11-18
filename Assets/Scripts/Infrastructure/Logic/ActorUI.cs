@@ -8,6 +8,7 @@ namespace Infrastructure.Logic
     public class ActorUI : MonoBehaviour
     {
         [SerializeField] private HpBar _hpBar;
+        [SerializeField] private ArmorBar _armorBar;
         [SerializeField] private GameObject _popupText;
         [SerializeField] private UIInventory _inventory;
 
@@ -19,6 +20,7 @@ namespace Infrastructure.Logic
         {
             _health = health;
             _health.HealthChanged += UpdateHpBar;
+            _health.ArmorChanged += UpdateArmorBar;
         }
 
         private void Start()
@@ -29,8 +31,11 @@ namespace Infrastructure.Logic
                 Construct(health);
         }
 
-        private void OnDestroy() =>
+        private void OnDestroy()
+        {
             _health.HealthChanged -= UpdateHpBar;
+            _health.ArmorChanged -= UpdateArmorBar;
+        }
 
         public void SwithOnInventorySlots()
         {
@@ -39,7 +44,10 @@ namespace Infrastructure.Logic
             else
                 _inventory.gameObject.SetActive(false);
         }
-        
+
+        private void UpdateArmorBar() => 
+            _armorBar.SetValue(_health.CurrentArmor, _health.MaxArmor);
+
         private void UpdateHpBar() =>
             _hpBar.SetValue(_health.CurrentHealth, _health.MaxHealth);
     }

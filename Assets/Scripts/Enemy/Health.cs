@@ -10,16 +10,20 @@ namespace Enemy
     {
         [SerializeField] private WizardAnimator _animator;
         [SerializeField] private float _maxHealth;
+        [SerializeField] private float _maxArmor;
         [SerializeField] private GameObject _hitEffect;
         [SerializeField] private Transform _popupTextPoint;
 
         private float _currentHealth;
+        private float _currentArmor;
 
         public event Action HealthChanged;
+        public event Action ArmorChanged;
 
         private void Start()
         {
             _currentHealth = _maxHealth;
+            _currentArmor = _maxArmor;
         }
 
         public float CurrentHealth
@@ -37,6 +41,18 @@ namespace Enemy
             get => _maxHealth;
             set => _maxHealth = value;
         }
+
+        public float CurrentArmor
+        {
+            get => _currentArmor;
+            set
+            {
+                _currentArmor = value;
+                ArmorChanged?.Invoke();
+            }
+        }
+
+        public float MaxArmor { get => _maxArmor; set => _maxArmor = value; }
 
         public void TakeDamage(float damage)
         {
