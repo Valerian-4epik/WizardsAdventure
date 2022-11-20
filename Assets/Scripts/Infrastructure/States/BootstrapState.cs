@@ -46,10 +46,6 @@ namespace Infrastructure.States
             _gameFactory = _services.Single<IGameFactory>();
             GameObject playerProgress = _gameFactory.CreatePlayerProgress();
             var progress = playerProgress.GetComponent<PlayerProgress>();
-
-            if (progress.GetGameState())
-                return MENU_SCENE;
-
             var nextScene = progress.GetNextScene();
             return nextScene;
         }

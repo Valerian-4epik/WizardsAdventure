@@ -1,14 +1,14 @@
 using System;
 using Blobcreate.ProjectileToolkit;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Wizards;
 
 namespace Enemy
 {
     public class Attack : MonoBehaviour
     {
-        private const float BASE_DAMAGE = 5;
-
+        [SerializeField] private float _baseDamage = 5;
         [SerializeField] private WizardAnimator _animator;
         [Range(0, 10)] [SerializeField] private float _attackCooldown;
         [SerializeField] private Aggro _aggroZone;
@@ -84,7 +84,7 @@ namespace Enemy
             else
             {
                 Debug.Log("Атака без оружия");
-                GetTargetHealth().TakeDamage(BASE_DAMAGE);
+                GetTargetHealth().TakeDamage(_baseDamage);
                 _isAttacking = false;
             }
         }

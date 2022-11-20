@@ -19,6 +19,7 @@ namespace Enemy
 
         public event Action HealthChanged;
         public event Action ArmorChanged;
+        public event Action<int> LevelArmorInstalled;
 
         private void Start()
         {
@@ -52,32 +53,73 @@ namespace Enemy
             }
         }
 
-        public float MaxArmor { get => _maxArmor; set => _maxArmor = value; }
+        public float MaxArmor
+        {
+            get => _maxArmor;
+            set => _maxArmor = value;
+        }
+
+        public void AssignArmor(float value, int level)
+        {
+            MaxArmor = value;
+            CurrentArmor = MaxArmor;
+            ArmorChanged?.Invoke();
+            LevelArmorInstalled?.Invoke(level);
+            Debug.Log(gameObject.name + "Включаем");
+        }
+
+        public void RefreshValue() => CurrentArmor = 0;
 
         public void TakeDamage(float damage)
         {
-            _currentHealth -= damage;
-            PlayHitEffect(damage);
+            if (_currentArmor > 0)
+            {
+                _currentArmor -= damage;
+                PlayHitEffect(damage);
+                PlayPopupText(damage, GetArmorPopupText());
+                ArmorChanged?.Invoke();
+            }
+            else
+            {
+                _currentHealth -= damage;
+                PlayHitEffect(damage);
+                PlayPopupText(damage, GetHealthPopupText());
+                HealthChanged?.Invoke();
+            }
+        }
+
+        public void CheckReadiness()
+        {
             HealthChanged?.Invoke();
+            
+            if (_currentArmor == 0)
+            {
+                ArmorChanged?.Invoke();
+            }
         }
 
         private void PlayHitEffect(float value)
         {
             var effectObject = Instantiate(_hitEffect, transform.position, Quaternion.identity);
             effectObject.GetComponent<ParticleSystem>().Play();
-            PlayPopupText(value);
         }
 
-        private void PlayPopupText(float value)
+        private void PlayPopupText(float value, GameObject poputText)
         {
-            var popupText = Instantiate(GetPopupText(), _popupTextPoint.position, Quaternion.identity);
+            var popupText = Instantiate(poputText, _popupTextPoint.position, Quaternion.identity);
             popupText.GetComponent<FloatingText>().SetValue(value);
         }
 
-        private GameObject GetPopupText()
+        private GameObject GetHealthPopupText()
         {
             var actorUI = gameObject.GetComponent<ActorUI>();
-            return actorUI.PopupText;
+            return actorUI.HealthPopupText;
+        }
+
+        private GameObject GetArmorPopupText()
+        {
+            var actorUI = gameObject.GetComponent<ActorUI>();
+            return actorUI.ArmorPopupText;
         }
     }
 }

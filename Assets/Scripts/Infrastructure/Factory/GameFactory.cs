@@ -3,11 +3,11 @@ using UnityEngine;
 
 namespace Infrastructure.Factory
 {
-    public class GameFactory : IGameFactory //задача фактори создавать и инициализировать обьекты
+    public class GameFactory : IGameFactory
     {
         private readonly IAssets _assetses;
 
-        public GameFactory(IAssets assetses) //IAssetProvider = это по факту зависимость, ассетпровиде предоставляет услуги
+        public GameFactory(IAssets assetses)
             =>
                 _assetses = assetses;
 
@@ -28,5 +28,8 @@ namespace Infrastructure.Factory
 
         public GameObject CreatePlayerProgress() => 
             _assetses.Instantiate(AssetPath.PlayerProgressPath);
+
+        public GameObject CreateSDK() => 
+            _assetses.Instantiate(AssetPath.SDK);
     }
 }

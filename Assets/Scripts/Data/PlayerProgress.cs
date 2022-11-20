@@ -16,6 +16,16 @@ namespace Data
 
         public int PlayerWizardsAmount { get; set; }
 
+        public int Money
+        {
+            get => _money;
+            set
+            {
+                _money = value;
+                MoneyChanged?.Invoke();
+            }
+        }
+
         public event Action MoneyChanged;
 
         private void Awake() =>
@@ -50,9 +60,9 @@ namespace Data
         public void SaveCurrentSceneNumber()
         {
             _currentLevel = SceneManager.GetActiveScene().buildIndex;
+            Debug.Log("SaveCuttentLevel");
             ES3.Save("currentLevelIndex", _currentLevel, "CurrentLevel.es3");
         }
-
 
         public int GetCurrentScene() =>
             _currentLevel = SceneManager.GetActiveScene().buildIndex;
@@ -97,6 +107,9 @@ namespace Data
             _itemsInSquad = itemIDs;
             ES3.Save("myItemDictionaryInSquad", _itemsInSquad, "MyItemDictionaryInSquad.es3");
         }
+
+        public void SaveMoney() => 
+            ES3.Save("myMoney", _money, "MyMoney.es3");
 
         public void SaveMoney(int value)
         {

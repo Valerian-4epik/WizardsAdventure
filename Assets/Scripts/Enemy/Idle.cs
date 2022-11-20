@@ -6,6 +6,7 @@ namespace Enemy
     {
         [SerializeField] private GameObject _aggroZone;
         [SerializeField] private GameObject _attackZone;
+        [SerializeField] private Health _health;
 
         private CanvasGroup _hpBar;
         
@@ -20,6 +21,7 @@ namespace Enemy
         {
             _hpBar = gameObject.GetComponentInChildren<CanvasGroup>();
             _hpBar.alpha = 1;
+            _health.CheckReadiness();
         }
     }
 }

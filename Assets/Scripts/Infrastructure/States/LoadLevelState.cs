@@ -1,3 +1,4 @@
+using Agava.YandexGames;
 using Data;
 using Infrastructure.Factory;
 using Infrastructure.Logic;
@@ -49,8 +50,8 @@ namespace Infrastructure.States
             //     if (!progress.GetGameState())
             //         _sceneLoader.Load(progress.GetNextScene(), OnLoaded);
             // }
-            
             _sceneLoader.Load(payload, OnLoaded);
+            InterstitialAd.Show();
         }
 
         public void Exit() =>
@@ -58,6 +59,7 @@ namespace Infrastructure.States
 
         private void OnLoaded()
         {
+            GameObject sdk = _gameFactory.CreateSDK(); 
             var playerProgress = CreateMainObjects(out var cameraFollower, out var heroesSpawner, out var shopInterface,
                 out var progress);
             heroesSpawner.GetComponent<WizardsSpawner>().SetupPlayerProgress(progress);

@@ -11,5 +11,6 @@ namespace Infrastructure.Factory
         GameObject CreateCameraFollower();
         GameObject CreateLevelFinishInterface();
         GameObject CreatePlayerProgress();
+        GameObject CreateSDK();
     }
 }

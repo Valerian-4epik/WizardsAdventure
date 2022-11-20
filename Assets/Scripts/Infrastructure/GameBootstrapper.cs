@@ -10,6 +10,7 @@ namespace Infrastructure
     {
         private const int LEVEL_FIRST = 2;
         private const int CONTINUE_KODE = 99;
+        
         public LoadingCurtain Curtain;
         private Game _game;
 

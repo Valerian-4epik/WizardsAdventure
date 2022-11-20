@@ -48,6 +48,7 @@ public class ArenaDisposer : MonoBehaviour
     {
         _shopInterface = inventory;
         _shopInterface.Fight += ActivateBattleState;
+        _shopInterface.Fight += SaveSquadInventory;
     }
 
     public void SetLevelFinishInterface(GameObject finishInterface)
@@ -66,6 +67,16 @@ public class ArenaDisposer : MonoBehaviour
     {
         _wizardsSpawner = wizardSpawner.GetComponent<WizardsSpawner>();
         _wizardsSpawner.SquadChanged += AddWizard;
+    }
+
+    public void SaveSquadInventory()
+    {
+        for (int i = 0; i < _wizards.Count; i++)
+        {
+            AddWizardInventory(i, _wizards[i].GetComponent<InventoryFighter>().GetItemsID());
+        }
+
+        _playerProgress.SaveSquadItems(_wizardsInventory);
     }
 
     private void SubscribeToDeath()
@@ -106,12 +117,7 @@ public class ArenaDisposer : MonoBehaviour
         {
             _levelFinishInterface.SetActive(true);
             
-            for (int i = 0; i < _wizards.Count; i++)
-            {
-                AddWizardInventory(i, _wizards[i].GetComponent<InventoryFighter>().GetItemsID());
-            }
-
-            _playerProgress.SaveSquadItems(_wizardsInventory);
+            SaveSquadInventory();
             _playerProgress.GetReward();
             Debug.Log("Victory");
             EnterStateVictory();

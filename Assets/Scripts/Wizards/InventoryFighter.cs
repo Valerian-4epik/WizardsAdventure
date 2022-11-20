@@ -12,6 +12,7 @@ public class InventoryFighter : MonoBehaviour
     [SerializeField] private Transform _head;
     [SerializeField] private Attack _attack; //test
     [SerializeField] private CheckAttackRange _attackRange;
+    [SerializeField] private Health _health;
     [SerializeField] private ItemInfo _weapon;
     [SerializeField] private ItemInfo _armor;
 
@@ -77,6 +78,7 @@ public class InventoryFighter : MonoBehaviour
         {
             shopInterface.SetupItem(_armor);
             _armor = null;
+            _health.RefreshValue();
             Destroy(_armorObject);
             ArmorDressed?.Invoke(_armor);
         }
@@ -85,6 +87,7 @@ public class InventoryFighter : MonoBehaviour
         {
             shopInterface.SetupItem(_weapon);
             _weapon = null;
+
             Destroy(_weaponObject);
             WeaponDressed?.Invoke(_weapon);
         }
@@ -113,7 +116,11 @@ public class InventoryFighter : MonoBehaviour
         }
 
         if (_armor != null)
+        {
             ShowArmor(_armor);
+        }
+        else
+            _health.AssignArmor(0, 0);
     }
 
     private void Refresh(UIInventoryItem item) =>
@@ -133,9 +140,15 @@ public class InventoryFighter : MonoBehaviour
     {
         if (itemInfo != null)
         {
-            var item = Instantiate(itemInfo.Prefab, _head.position, Quaternion.identity);
-            _armorObject = item.gameObject;
-            item.gameObject.transform.SetParent(_head);
+            if (itemInfo.TypeOfObject == TypeOfObject.Hat)
+            {
+                var item = Instantiate(itemInfo.Prefab, _head.position, Quaternion.identity);
+                _armorObject = item.gameObject;
+                _health.AssignArmor(_armor.Armor, _armor.Level);
+                item.gameObject.transform.SetParent(_head);
+            }
+            else
+                _health.AssignArmor(_armor.Armor, _armor.Level);
         }
     }
 }

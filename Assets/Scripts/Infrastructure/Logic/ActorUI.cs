@@ -1,4 +1,3 @@
-using System;
 using Enemy;
 using UI;
 using UnityEngine;
@@ -9,21 +8,24 @@ namespace Infrastructure.Logic
     {
         [SerializeField] private HpBar _hpBar;
         [SerializeField] private ArmorBar _armorBar;
-        [SerializeField] private GameObject _popupText;
+        [SerializeField] private GameObject _healthPopupText;
+        [SerializeField] private GameObject _armorPopupText;
         [SerializeField] private UIInventory _inventory;
 
         private IHealth _health;
 
-        public GameObject PopupText => _popupText;
+        public GameObject HealthPopupText => _healthPopupText;
+        public GameObject ArmorPopupText => _armorPopupText;
 
         public void Construct(IHealth health)
         {
             _health = health;
             _health.HealthChanged += UpdateHpBar;
             _health.ArmorChanged += UpdateArmorBar;
+            _health.LevelArmorInstalled += SetupLevelArmor;
         }
 
-        private void Start()
+        private void Awake()
         {
             IHealth health = GetComponent<IHealth>();
 
@@ -45,8 +47,14 @@ namespace Infrastructure.Logic
                 _inventory.gameObject.SetActive(false);
         }
 
-        private void UpdateArmorBar() => 
+        private void UpdateArmorBar()
+        { 
+            Debug.Log("UpdateArmorBarActorUI");
+            _armorBar.gameObject.SetActive(true);
             _armorBar.SetValue(_health.CurrentArmor, _health.MaxArmor);
+        }
+
+        private void SetupLevelArmor(int level) => _armorBar.SetLevelValue(level);
 
         private void UpdateHpBar() =>
             _hpBar.SetValue(_health.CurrentHealth, _health.MaxHealth);
