@@ -65,7 +65,6 @@ namespace Enemy
             CurrentArmor = MaxArmor;
             ArmorChanged?.Invoke();
             LevelArmorInstalled?.Invoke(level);
-            Debug.Log(gameObject.name + "Включаем");
         }
 
         public void RefreshValue() => CurrentArmor = 0;

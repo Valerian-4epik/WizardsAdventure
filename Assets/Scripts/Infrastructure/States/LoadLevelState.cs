@@ -51,7 +51,6 @@ namespace Infrastructure.States
             //         _sceneLoader.Load(progress.GetNextScene(), OnLoaded);
             // }
             _sceneLoader.Load(payload, OnLoaded);
-            InterstitialAd.Show();
         }
 
         public void Exit() =>
@@ -59,7 +58,7 @@ namespace Infrastructure.States
 
         private void OnLoaded()
         {
-            GameObject sdk = _gameFactory.CreateSDK(); 
+            // GameObject sdk = _gameFactory.CreateSDK(); 
             var playerProgress = CreateMainObjects(out var cameraFollower, out var heroesSpawner, out var shopInterface,
                 out var progress);
             heroesSpawner.GetComponent<WizardsSpawner>().SetupPlayerProgress(progress);

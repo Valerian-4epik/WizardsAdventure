@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace Infrastructure.States
 {
-    public class GameStateMachine : MonoBehaviour
+    public class GameStateMachine
     {
         private readonly Dictionary<Type, IExitableState> _states;
         private IExitableState _activeState;

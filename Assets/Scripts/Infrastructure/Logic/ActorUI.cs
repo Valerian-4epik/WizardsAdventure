@@ -49,7 +49,6 @@ namespace Infrastructure.Logic
 
         private void UpdateArmorBar()
         { 
-            Debug.Log("UpdateArmorBarActorUI");
             _armorBar.gameObject.SetActive(true);
             _armorBar.SetValue(_health.CurrentArmor, _health.MaxArmor);
         }

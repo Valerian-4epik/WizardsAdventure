@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Infrastructure;
 using UnityEngine;
 using ParadoxNotion;
 
@@ -23,11 +24,24 @@ namespace Enemy
             _follow.enabled = false;
         }
 
+        private void RemoveTarget(GameObject target)
+        {
+            SwitchFollowOff();
+            _targets.Remove(target);
+            
+            if (_targets.Count != 0)
+            {
+                SwitchFollowOn();
+                _follow.SetTarget(_targets[0].GetComponent<Transform>());
+            }
+        }
+
         private void TriggerEnter(Collider obj)
         {
             if (LayerMask.LayerToName(obj.gameObject.layer) == _targetLayerMask.MaskToString())
             {
                 _targets.Add(obj.gameObject);
+                // obj.gameObject.GetComponent<Death>().Dead += RemoveTarget;
                 SwitchFollowOn();
                 _follow.SetTarget(_targets[0].GetComponent<Transform>());
             }

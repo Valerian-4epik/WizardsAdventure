@@ -8,7 +8,12 @@ namespace Infrastructure.Logic
     {
         [SerializeField] private Slider _slider;
 
-        public void SetValue(float current, float max) => 
-            _slider.value = current/max;
+        public void SetValue(float current, float max)
+        {
+            _slider.value = current / max;
+            
+            if(_slider.value == null)
+                gameObject.SetActive(false);
+        }
     }
 }

@@ -37,13 +37,12 @@ public class WizardsSpawner : MonoBehaviour
     {
         if (GetEmptyInitPoint() != null && _playerProgress.LoadCurrentMoney() >= WIZARD_PRICE)
         {
-            _playerProgress.SaveMoney(_playerProgress.LoadCurrentMoney() - WIZARD_PRICE);
+            _playerProgress.SaveCurrentMoney(_playerProgress.LoadCurrentMoney() - WIZARD_PRICE);
             var wizard = InstantiateWizard();
-            _playerProgress.PlayerWizardsAmount++;
-            ES3.Save("mySquad", _playerProgress.PlayerWizardsAmount, "Squad.es3");
+            _playerProgress.PlayerWizardAmount++;
             SquadChanged?.Invoke(wizard);
         }
-        else if(GetEmptyInitPoint() == null)
+        else if (GetEmptyInitPoint() == null)
             _wizardShop.gameObject.SetActive(false);
         else
             Debug.Log("Недостаточно денег");
@@ -66,17 +65,13 @@ public class WizardsSpawner : MonoBehaviour
 
     private void Spawn()
     {
-        _playerProgress.PlayerWizardsAmount = ES3.Load("mySquad", "Squad.es3", _playerProgress.PlayerWizardsAmount);
-
-        Debug.Log("Spawn");
-        if (_playerProgress.PlayerWizardsAmount == 0)
+        if (_playerProgress.GetPLayerWizardAmount() == 0)
         {
             SpawnStartSquad();
-            ES3.Save("mySquad", _playerProgress.PlayerWizardsAmount, "Squad.es3");
         }
         else
         {
-            for (int i = 0; i < _playerProgress.PlayerWizardsAmount; i++)
+            for (int i = 0; i < _playerProgress.GetPLayerWizardAmount(); i++)
             {
                 InstantiateWizard();
             }
@@ -88,8 +83,10 @@ public class WizardsSpawner : MonoBehaviour
         for (int i = 0; i < BASE_AMOUNT_WIZARDS; i++)
         {
             InstantiateWizard();
-            _playerProgress.PlayerWizardsAmount = BASE_AMOUNT_WIZARDS;
         }
+
+        _playerProgress.PlayerWizardAmount = BASE_AMOUNT_WIZARDS;
+        _playerProgress.SavePlayerWizardsAmount();
     }
 
     private InitPoint GetEmptyInitPoint()

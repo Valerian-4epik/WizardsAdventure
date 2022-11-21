@@ -1,5 +1,5 @@
+using System;
 using System.Collections;
-using System.Collections.Generic;
 using Agava.YandexGames;
 using UnityEngine;
 
@@ -15,7 +15,7 @@ public class SDKInetializator : MonoBehaviour
 #if !UNITY_WEBGL || UNITY_EDITOR
         yield break;
 #endif
-        yield return YandexGamesSdk.Initialize();
+        yield return StartCoroutine(YandexGamesSdk.Initialize());
         if(PlayerAccount.IsAuthorized && !PlayerAccount.HasPersonalProfileDataPermission)
             PlayerAccount.RequestPersonalProfileDataPermission();
     }

@@ -116,11 +116,9 @@ public class ArenaDisposer : MonoBehaviour
         if (_enemies.Count == 0)
         {
             _levelFinishInterface.SetActive(true);
-            
-            SaveSquadInventory();
-            _playerProgress.GetReward();
-            Debug.Log("Victory");
             EnterStateVictory();
+            Debug.Log("Reward");
+            _playerProgress.GetReward();
             EndFight?.Invoke(true);
         }
     }
@@ -132,8 +130,6 @@ public class ArenaDisposer : MonoBehaviour
     private void RemoveWizard(GameObject fighter)
     {
         _wizards.Remove(fighter);
-        _playerProgress.PlayerWizardsAmount = _wizards.Count;
-        ES3.Save("mySquad", _playerProgress.PlayerWizardsAmount, "Squad.es3");
 
         if (_wizards.Count == 0)
         {

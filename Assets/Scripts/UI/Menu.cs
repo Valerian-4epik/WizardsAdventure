@@ -15,8 +15,6 @@ namespace UI
         private void Start()
         {
             var gameBootstrapper = GameObject.FindGameObjectWithTag(GAMEBOOTSTRAPPER);
-            _newGameButton.onClick.AddListener(delegate {gameBootstrapper.GetComponent<GameBootstrapper>().PlayNewGame();});
-            _continueGameButton.onClick.AddListener(delegate {gameBootstrapper.GetComponent<GameBootstrapper>().ContinueGame();});
         }
     }
 }

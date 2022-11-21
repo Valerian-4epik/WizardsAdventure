@@ -1,31 +1,24 @@
 using System;
+using System.Collections;
+using Agava.YandexGames;
 using Infrastructure.Logic;
 using Infrastructure.States;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Infrastructure
 {
     public class GameBootstrapper : MonoBehaviour, ICoroutineRunner
     {
-        private const int LEVEL_FIRST = 2;
-        private const int CONTINUE_KODE = 99;
-        
-        public LoadingCurtain Curtain;
+        [SerializeField] private LoadingCurtain Curtain;
+
         private Game _game;
 
-        private void Awake()
+        private void Start()
         {
             _game = new Game(this, Curtain);
             _game.GameStateMachine.Enter<BootstrapState>();
             
             DontDestroyOnLoad(this);
         }
-        
-        public void PlayNewGame() => 
-            _game.GameStateMachine.Enter<LoadLevelState, int>(LEVEL_FIRST);
-
-        public void ContinueGame() =>
-            _game.GameStateMachine.Enter<LoadLevelState, int>(CONTINUE_KODE);
     }
 }

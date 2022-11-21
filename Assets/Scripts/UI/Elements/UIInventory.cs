@@ -37,8 +37,8 @@ namespace UI
         public void OnFight()
         {
             _playerProgress.SaveCurrentItems(ConvertListItemsToItemID(ConvertListSlotsToItem()));
-            _playerProgress.SaveMoney();
-            
+            _playerProgress.SwitchMoney();
+            _playerProgress.SavePlayerWizardsAmount();
             Fight?.Invoke();
         }
 
@@ -50,11 +50,9 @@ namespace UI
         {
             if (_playerProgress.LoadCurrentMoney() >= item.Price)
             {
-                _playerProgress.Money = _playerProgress.LoadCurrentMoney();
-                _playerProgress.Money -= item.Price;
+                _playerProgress.SaveCurrentMoney(_playerProgress.LoadCurrentMoney() - item.Price);
                 FillSlot(item);
             }
-            
             else
                 Debug.Log("Недостаточно денег");
         }
@@ -79,8 +77,9 @@ namespace UI
         {
             _playerProgress = playerProgress;
             LoadCurrentItems();
-            ShowMoney();
+            _playerProgress.SaveCurrentMoney(_playerProgress.LoadStartMoney());
             _playerProgress.MoneyChanged += ShowMoney;
+            ShowMoney();
         }
 
         public void ShowInventory() =>
@@ -93,7 +92,6 @@ namespace UI
         {
             if (GetItemList() != null)
             {
-                Debug.Log(GetItemList().Count);
                 foreach (var item in GetItemList())
                 {
                     FillSlot(item);
