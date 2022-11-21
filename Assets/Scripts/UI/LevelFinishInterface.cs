@@ -17,6 +17,9 @@ public class LevelFinishInterface : MonoBehaviour
 
     public void NextLevel()
     {
+#if !UNITY_WEBGL || UNITY_EDITOR
+        GoNextLevel(true);
+#endif
         InterstitialAd.Show(null, GoNextLevel, null);
     }
 

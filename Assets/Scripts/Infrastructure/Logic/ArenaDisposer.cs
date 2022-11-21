@@ -118,8 +118,8 @@ public class ArenaDisposer : MonoBehaviour
             _levelFinishInterface.SetActive(true);
             EnterStateVictory();
             Debug.Log("Reward");
-            _playerProgress.GetReward();
             EndFight?.Invoke(true);
+            _playerProgress.GetReward();
         }
     }
 

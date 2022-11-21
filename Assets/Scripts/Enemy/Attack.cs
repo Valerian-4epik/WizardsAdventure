@@ -71,21 +71,22 @@ namespace Enemy
 
         private void OnAttack()
         {
-            if (_weapon != null)
+            if (_targetTransform != null)
             {
-                Debug.Log("Атака с оружием");
-                if (_weapon.Info.AttackType == AttackType.MeleeAttack)
-                    GetTargetHealth().TakeDamage(_weapon.Info.Damage);
-                else
-                    RangeAttack(_targetTransform);
+                if (_weapon != null)
+                {
+                    if (_weapon.Info.AttackType == AttackType.MeleeAttack)
+                        GetTargetHealth().TakeDamage(_weapon.Info.Damage);
+                    else
+                        RangeAttack(_targetTransform);
 
-                _isAttacking = false;
-            }
-            else
-            {
-                Debug.Log("Атака без оружия");
-                GetTargetHealth().TakeDamage(_baseDamage);
-                _isAttacking = false;
+                    _isAttacking = false;
+                }
+                else
+                {
+                    GetTargetHealth().TakeDamage(_baseDamage);
+                    _isAttacking = false;
+                }
             }
         }
 

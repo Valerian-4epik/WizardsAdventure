@@ -4,6 +4,7 @@ using System.Linq;
 using Data;
 using TMPro;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace UI
 {
@@ -13,6 +14,7 @@ namespace UI
         [SerializeField] private List<ItemInfo> _itemsData = new List<ItemInfo>();
         [SerializeField] private CanvasGroup _canvasGroup;
         [SerializeField] private TMP_Text _currentMoney;
+        [SerializeField] private RandomItemADS _adsTrigger;
 
         private RaycastDetecter _raycastDetecter;
         private PlayerProgress _playerProgress;
@@ -32,6 +34,8 @@ namespace UI
             }
             
             SetRaycastDetecter();
+
+            _adsTrigger.SetItem(SetupRandomItem());
         }
 
         public void OnFight()
@@ -56,7 +60,7 @@ namespace UI
             else
                 Debug.Log("Недостаточно денег");
         }
-        
+
         public void Merge(UIInventorySlot fromSlot, UIInventorySlot toSlot)
         {
             if (GetItemLevel(fromSlot) == GetItemLevel(toSlot) &&
@@ -84,6 +88,15 @@ namespace UI
 
         public void ShowInventory() =>
             _canvasGroup.alpha = 1;
+        
+        private ItemInfo SetupRandomItem() => 
+            _itemsData[GetRandomNumber()];
+
+        private int GetRandomNumber()
+        {
+            var randomItem = Random.Range(0, _itemsData.Count-1);
+            return randomItem;
+        }
 
         private void ShowMoney() => 
             _currentMoney.text = _playerProgress.LoadCurrentMoney().ToString();
