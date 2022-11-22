@@ -14,7 +14,7 @@ namespace Data
         private List<string> _itemsInShop = new List<string>();
         private Dictionary<int, List<string>> _itemsInSquad = new Dictionary<int, List<string>>();
         private RewardLevelData _rewardLevelData;
-
+        
         public int PlayerWizardAmount { get; set; }
         
         public event Action MoneyChanged;

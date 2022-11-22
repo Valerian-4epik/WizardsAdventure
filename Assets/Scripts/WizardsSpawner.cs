@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class WizardsSpawner : MonoBehaviour
 {
-    private const int WIZARD_PRICE = 150;
     private const int BASE_AMOUNT_WIZARDS = 2;
 
     [SerializeField] private List<InitPoint> _initPoints = new List<InitPoint>();
@@ -18,28 +17,31 @@ public class WizardsSpawner : MonoBehaviour
 
     private PlayerProgress _playerProgress;
     private WizardForMoney _wizardShop;
+    private WizardPrice _wizardPrice;
 
     public event Action<GameObject> SquadChanged;
 
     private void OnEnable()
     {
+        _wizardPrice = new WizardPrice();
         AddAllInitPoints();
-        SpawnWizardShop();
     }
 
     public void SetupPlayerProgress(PlayerProgress playerProgress)
     {
         _playerProgress = playerProgress;
         Spawn();
+        SpawnWizardShop();
     }
 
     public void AddWizard()
     {
-        if (GetEmptyInitPoint() != null && _playerProgress.LoadCurrentMoney() >= WIZARD_PRICE)
+        if (GetEmptyInitPoint() != null && _playerProgress.LoadCurrentMoney() >= _wizardShop.Price)
         {
-            _playerProgress.SaveCurrentMoney(_playerProgress.LoadCurrentMoney() - WIZARD_PRICE);
+            _playerProgress.SaveCurrentMoney(_playerProgress.LoadCurrentMoney() - _wizardShop.Price);
             var wizard = InstantiateWizard();
             _playerProgress.PlayerWizardAmount++;
+            _wizardShop.Price = _wizardPrice.GetPrice(_playerProgress.PlayerWizardAmount);
             SquadChanged?.Invoke(wizard);
         }
         else if (GetEmptyInitPoint() == null)
@@ -112,6 +114,6 @@ public class WizardsSpawner : MonoBehaviour
     private void SetupWizardShop(GameObject wizardForMoney)
     {
         _wizardShop = wizardForMoney.GetComponent<WizardForMoney>();
-        _wizardShop.SetWizardSpawner(this);
+        _wizardShop.SetWizardSpawner(this, _wizardPrice.GetPrice(_playerProgress.PlayerWizardAmount));
     }
 }
