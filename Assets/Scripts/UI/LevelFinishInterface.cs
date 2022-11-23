@@ -1,14 +1,13 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using Agava.YandexGames;
+using UI.Services;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class LevelFinishInterface : MonoBehaviour
 {
     [SerializeField] private GameObject _winPanel;
     [SerializeField] private GameObject _losePanel;
+    [SerializeField] private RewarADForSpin _rewarAD;
 
     private ArenaDisposer _arenaDisposer;
 
@@ -20,7 +19,7 @@ public class LevelFinishInterface : MonoBehaviour
 #if !UNITY_WEBGL || UNITY_EDITOR
         GoNextLevel(true);
 #endif
-        InterstitialAd.Show(null, GoNextLevel, null);
+        InterstitialAd.Show(null, GoNextLevel, GoNextLevel);
     }
 
     public void RestartLevel() =>
@@ -40,10 +39,15 @@ public class LevelFinishInterface : MonoBehaviour
         }
     }
 
+    private void GoNextLevel(string value) => LevelEnded?.Invoke();
+
     private void ActivatePanel(bool isWin)
     {
         if (isWin)
-            _winPanel.SetActive(true);
+        {
+            _winPanel.SetActive(true); 
+            _rewarAD.SetPalayerProgress(_arenaDisposer.PlayerProgress);
+        }
         else
             _losePanel.SetActive(true);
     }

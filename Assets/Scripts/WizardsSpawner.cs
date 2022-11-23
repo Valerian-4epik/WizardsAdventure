@@ -17,6 +17,7 @@ public class WizardsSpawner : MonoBehaviour
 
     private PlayerProgress _playerProgress;
     private WizardForMoney _wizardShop;
+    private WizardForADS _wizardADSShop;
     private WizardPrice _wizardPrice;
 
     public event Action<GameObject> SquadChanged;
@@ -48,6 +49,17 @@ public class WizardsSpawner : MonoBehaviour
             _wizardShop.gameObject.SetActive(false);
         else
             Debug.Log("Недостаточно денег");
+    }
+
+    public void AddWizardForADS()
+    {
+        if (GetEmptyInitPoint() != null)
+        {
+            var wizard = InstantiateWizard();
+            _playerProgress.PlayerWizardAmount++;
+            _wizardShop.Price = _wizardPrice.GetPrice(_playerProgress.PlayerWizardAmount);
+            SquadChanged?.Invoke(wizard);
+        }
     }
 
 
@@ -108,12 +120,14 @@ public class WizardsSpawner : MonoBehaviour
         wizardForMoney.gameObject.transform.SetParent(transform);
         var wizardForADS = Instantiate(_wizardForViewingADS, _wizardForViewingADSPoint.position, Quaternion.identity);
         wizardForADS.gameObject.transform.SetParent(transform);
-        SetupWizardShop(wizardForMoney);
+        SetupWizardShop(wizardForMoney, wizardForADS);
     }
 
-    private void SetupWizardShop(GameObject wizardForMoney)
+    private void SetupWizardShop(GameObject wizardForMoney, GameObject wizardForADS)
     {
         _wizardShop = wizardForMoney.GetComponent<WizardForMoney>();
         _wizardShop.SetWizardSpawner(this, _wizardPrice.GetPrice(_playerProgress.PlayerWizardAmount));
+        _wizardADSShop = wizardForADS.GetComponent<WizardForADS>();
+        _wizardADSShop.SetupSpawner(this);
     }
 }

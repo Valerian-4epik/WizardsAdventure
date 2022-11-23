@@ -1764,7 +1764,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -30.875, y: 0, z: 303.7495, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2281,7 +2281,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 790187158290084319}
-  - component: {fileID: 2269238635540625764}
   m_Layer: 5
   m_Name: Lobby_Popup_Setting
   m_TagString: Untagged
@@ -2296,10 +2295,10 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 790187158290084316}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 790187159697166846}
   - {fileID: 790187158442256485}
@@ -2311,20 +2310,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2269238635540625764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 790187158290084316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cf7b71be768da14c89dab2fcd9f0c59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _soundFXGroup: {fileID: 0}
-  _musicGroup: {fileID: 0}
 --- !u!1 &790187158322182070
 GameObject:
   m_ObjectHideFlags: 0
@@ -2652,7 +2637,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -32.042786, y: 0, z: 277.46985, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2745,6 +2730,7 @@ GameObject:
   - component: {fileID: 790187158442256485}
   - component: {fileID: 790187158442256487}
   - component: {fileID: 790187158442256484}
+  - component: {fileID: 34988708991374748}
   m_Layer: 5
   m_Name: Popup
   m_TagString: Untagged
@@ -2762,7 +2748,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 790187158428523584}
   - {fileID: 790187159324077875}
@@ -2815,6 +2801,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!111 &34988708991374748
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 790187158442256482}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: d454caf4b062d5f4a964de781cd26ffe, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: d454caf4b062d5f4a964de781cd26ffe, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &790187158508715415
 GameObject:
   m_ObjectHideFlags: 0
@@ -4200,7 +4202,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 790187158442256485}
   m_RootOrder: 1
@@ -6749,11 +6751,11 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.46
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2269238635540625764}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AudioSettings, Assembly-CSharp
         m_MethodName: ChangeSoundVolume
         m_Mode: 0
@@ -9927,11 +9929,11 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2269238635540625764}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: AudioSettings, Assembly-CSharp
         m_MethodName: ChangeMusicVolume
         m_Mode: 0

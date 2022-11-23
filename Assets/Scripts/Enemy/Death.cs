@@ -9,7 +9,7 @@ namespace Enemy
     public class Death : MonoBehaviour
     {
         private const string DEAD_LAYER = "Deadboy";
-        
+
         [SerializeField] private Health _health;
         [SerializeField] private GameObject _deathFx;
         [SerializeField] private Animator _animator;
@@ -17,12 +17,11 @@ namespace Enemy
         [SerializeField] private Material _deadMaterial;
 
         public event Action<GameObject> Happened;
-        public event Action<GameObject> Dead;
 
-        private void Start() => 
+        private void Start() =>
             _health.HealthChanged += HealthChanged;
 
-        private void OnDestroy() => 
+        private void OnDestroy() =>
             _health.HealthChanged -= HealthChanged;
 
         private void HealthChanged()
@@ -33,23 +32,19 @@ namespace Enemy
 
         private void Die()
         {
-            gameObject.GetComponent<BoxCollider>().enabled = false;
-            Dead?.Invoke(gameObject);
             PlayDead();
-            
-            // SpawnDeathFx();
             Happened?.Invoke(gameObject);
-            // gameObject.SetActive(false);
         }
 
         private void PlayDead()
         {
+            gameObject.GetComponent<BoxCollider>().enabled = false;
             gameObject.layer = LayerMask.NameToLayer(DEAD_LAYER);
             _animator.enabled = false;
             _mesh.material = _deadMaterial;
         }
 
-        private void SpawnDeathFx() => 
+        private void SpawnDeathFx() =>
             Instantiate(_deathFx, transform.position, Quaternion.identity);
     }
 }

@@ -19,6 +19,7 @@ namespace UI
         private RaycastDetecter _raycastDetecter;
         private PlayerProgress _playerProgress;
 
+        public PlayerProgress PlayerProgress => _playerProgress;
         public UIInventorySlot[] Slots => _slots;
 
         public event Action Fight;

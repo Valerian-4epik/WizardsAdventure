@@ -90,11 +90,7 @@ namespace Enemy
         public void CheckReadiness()
         {
             HealthChanged?.Invoke();
-            
-            if (_currentArmor == 0)
-            {
-                ArmorChanged?.Invoke();
-            }
+            ArmorChanged?.Invoke();
         }
 
         private void PlayHitEffect(float value)

@@ -20,6 +20,7 @@ public class ArenaDisposer : MonoBehaviour
     private List<GameObject> _enemies = new List<GameObject>();
     private Dictionary<int, List<string>> _wizardsInventory = new Dictionary<int, List<string>>();
 
+    public PlayerProgress PlayerProgress => _playerProgress;
     public event Action<bool> EndFight;
 
     private void OnEnable()
@@ -111,7 +112,10 @@ public class ArenaDisposer : MonoBehaviour
 
     private void RemoveEnemy(GameObject fighter)
     {
-        _enemies.Remove(fighter);
+        if (_enemies.Count != 0)
+        {
+            _enemies.Remove(fighter);
+        }
 
         if (_enemies.Count == 0)
         {
@@ -129,7 +133,10 @@ public class ArenaDisposer : MonoBehaviour
 
     private void RemoveWizard(GameObject fighter)
     {
-        _wizards.Remove(fighter);
+        if (_wizards.Count != 0)
+        {
+            _wizards.Remove(fighter);
+        }
 
         if (_wizards.Count == 0)
         {

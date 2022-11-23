@@ -29,6 +29,14 @@ public class RaycastDetecter : MonoBehaviour
                 GetWizardShop().BuyWizard();
             }
         }
+        
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (GetWizardForADS() != null)
+            {
+                GetWizardForADS().BuyWizard();
+            }
+        }
     }
 
     public void SetShopInterface(UIInventory shopInterface) =>
@@ -82,6 +90,26 @@ public class RaycastDetecter : MonoBehaviour
                 if (hit.collider.TryGetComponent(out WizardForMoney wizardShop))
                 {
                     return wizardShop;
+                }
+            }
+
+            return null;
+        }
+
+        return null;
+    }
+    
+    private WizardForADS GetWizardForADS()
+    {
+        if (Camera.main != null)
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            if (Physics.Raycast(ray, out var hit, 1000, _targetMask))
+            {
+                if (hit.collider.TryGetComponent(out WizardForADS wizardForAds))
+                {
+                    return wizardForAds;
                 }
             }
 

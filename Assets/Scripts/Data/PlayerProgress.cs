@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -69,7 +70,6 @@ namespace Data
         public void SaveCurrentSceneNumber()
         {
             _currentLevel = SceneManager.GetActiveScene().buildIndex;
-            Debug.Log("SaveCuttentLevel");
             ES3.Save("currentLevelIndex", _currentLevel, "CurrentLevel.es3");
         }
 
@@ -92,6 +92,19 @@ namespace Data
             ES3.Save("myItemsList", _itemsInShop, "MyItemsList.es3");
         }
 
+        public List<string> GetItems()
+        {
+            _itemsInShop = ES3.Load("myItemsList", "MyItemsList.es3", _itemsInShop);
+            return _itemsInShop;
+        }
+
+        public void AddItemToCurrentItems(ItemInfo item)
+        {
+            _itemsInShop = GetItems();
+            _itemsInShop.Add(item.ID);
+            ES3.Save("myItemsList", _itemsInShop, "MyItemsList.es3");
+        }
+        
         private void SavePlayerWizardsAmount(int value) => 
             ES3.Save("mySquad", value, "Squad.es3");
 
@@ -109,12 +122,6 @@ namespace Data
             ES3.Save("mySquad", PlayerWizardAmount, "Squad.es3");
 
         public int GetPLayerWizardAmount() => PlayerWizardAmount = ES3.Load("mySquad", "Squad.es3", PlayerWizardAmount);
-            
-        public List<string> GetItems()
-        {
-            _itemsInShop = ES3.Load("myItemsList", "MyItemsList.es3", _itemsInShop);
-            return _itemsInShop;
-        }
 
         public void SaveSquadItems(Dictionary<int, List<string>> itemIDs)
         {

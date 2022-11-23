@@ -47,15 +47,12 @@ namespace Infrastructure.Logic
                 _inventory.gameObject.SetActive(false);
         }
 
-        private void UpdateArmorBar()
-        { 
-            _armorBar.gameObject.SetActive(true);
+        private void UpdateArmorBar() => 
             _armorBar.SetValue(_health.CurrentArmor, _health.MaxArmor);
-        }
-
-        private void SetupLevelArmor(int level) => _armorBar.SetLevelValue(level);
 
         private void UpdateHpBar() =>
             _hpBar.SetValue(_health.CurrentHealth, _health.MaxHealth);
+
+        private void SetupLevelArmor(int level) => _armorBar.SetLevelValue(level);
     }
 }

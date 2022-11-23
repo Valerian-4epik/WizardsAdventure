@@ -71,7 +71,6 @@ namespace Enemy
 
         private void OnAttack()
         {
-            if (_targetTransform != null)
             {
                 if (_weapon != null)
                 {
