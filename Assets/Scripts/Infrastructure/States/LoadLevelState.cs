@@ -58,17 +58,18 @@ namespace Infrastructure.States
 
         private void OnLoaded()
         {
-            // GameObject sdk = _gameFactory.CreateSDK(); 
             var playerProgress = CreateMainObjects(out var cameraFollower, out var heroesSpawner, out var shopInterface,
                 out var progress);
-            heroesSpawner.GetComponent<WizardsSpawner>().SetupPlayerProgress(progress);
+            var follower = cameraFollower.GetComponent<CameraFollower>();
+            var wizardsSpawner = heroesSpawner.GetComponent<WizardsSpawner>();
+            wizardsSpawner.SetCameraFollower(follower);
+            wizardsSpawner.SetupPlayerProgress(progress);
             var uiInventory = shopInterface.GetComponent<UIInventory>();
+            follower.SetShopInterface(uiInventory);
             uiInventory.SetPlayerProgress(progress);
             GameObject arenaDisposer = _gameFactory.CreateArenaDisposer();
             GameObject levelFinishInterface = _gameFactory.CreateLevelFinishInterface();
             SubscribePayloads(arenaDisposer, heroesSpawner, uiInventory, progress, levelFinishInterface);
-            cameraFollower.GetComponent<CameraFollower>().SetShopInterface(uiInventory);
-
             _stateMachine.Enter<GameLoopState, GameObject, GameObject>(levelFinishInterface, playerProgress);
         }
 

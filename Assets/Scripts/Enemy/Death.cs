@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Experimental.AI;
 using UnityEngine.Serialization;
+using Wizards;
 
 namespace Enemy
 {
@@ -14,7 +15,6 @@ namespace Enemy
 
         [SerializeField] private Health _health;
         [SerializeField] private GameObject _deathFx;
-        [SerializeField] private Animator _animator;
         [SerializeField] private SkinnedMeshRenderer _mesh;
         [SerializeField] private Material _deadMaterial;
 
@@ -24,9 +24,11 @@ namespace Enemy
         private BoxCollider _boxCollider;
         private NavMeshAgent _navMeshAgent;
         private AnimateAlongAgent _animateAlongAgent;
+        private WizardAnimator _wizardAnimator;
 
         private void Start()
         {
+            _wizardAnimator = gameObject.GetComponent<WizardAnimator>();
             _animateAlongAgent = gameObject.GetComponent<AnimateAlongAgent>();
             _navMeshAgent = gameObject.GetComponent<NavMeshAgent>();
             _boxCollider = gameObject.GetComponent<BoxCollider>();
@@ -50,7 +52,7 @@ namespace Enemy
             Happened?.Invoke(gameObject);
         }
 
-        private void PlayExplosion() => _animator.PlayDie();
+        private void PlayExplosion() => _wizardAnimator.PlayDie();
 
         private void PlayDead()
         {

@@ -13,6 +13,7 @@ namespace Enemy
         [SerializeField] private float _maxArmor;
         [SerializeField] private GameObject _hitEffect;
         [SerializeField] private Transform _popupTextPoint;
+        [SerializeField] private AudioPlayerForWizard _audioPlayer;
 
         private float _currentHealth;
         private float _currentArmor;
@@ -75,6 +76,7 @@ namespace Enemy
             {
                 _currentArmor -= damage;
                 PlayHitEffect(damage);
+                _audioPlayer.PLayHitArmorSound();
                 PlayPopupText(damage, GetArmorPopupText());
                 ArmorChanged?.Invoke();
             }
@@ -82,6 +84,7 @@ namespace Enemy
             {
                 _currentHealth -= damage;
                 PlayHitEffect(damage);
+                _audioPlayer.PLayHitSound();
                 PlayPopupText(damage, GetHealthPopupText());
                 HealthChanged?.Invoke();
             }

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Data;
+using Infrastructure.Logic;
 using UnityEngine;
 
 public class WizardsSpawner : MonoBehaviour
@@ -19,6 +20,7 @@ public class WizardsSpawner : MonoBehaviour
     private WizardForMoney _wizardShop;
     private WizardForADS _wizardADSShop;
     private WizardPrice _wizardPrice;
+    private CameraFollower _cameraFollower;
 
     public event Action<GameObject> SquadChanged;
 
@@ -48,7 +50,7 @@ public class WizardsSpawner : MonoBehaviour
         else if (GetEmptyInitPoint() == null)
             _wizardShop.gameObject.SetActive(false);
         else
-            Debug.Log("Недостаточно денег");
+            Debug.Log("Недостаточно денег");//вот тут нужно добавить звук
     }
 
     public void AddWizardForADS()
@@ -62,7 +64,8 @@ public class WizardsSpawner : MonoBehaviour
         }
     }
 
-
+    public void SetCameraFollower(CameraFollower cameraFollower) => _cameraFollower = cameraFollower;
+    
     private GameObject InstantiateWizard()
     {
         var transformLookAtCamera = Quaternion.Euler(0, 180, 0);
@@ -87,7 +90,12 @@ public class WizardsSpawner : MonoBehaviour
         {
             for (int i = 0; i < _playerProgress.GetPLayerWizardAmount(); i++)
             {
-                InstantiateWizard();
+                
+                var wizardStandardBearer = InstantiateWizard();
+                if (i == BASE_AMOUNT_WIZARDS - 1)
+                {
+                    _cameraFollower.SetTarget(wizardStandardBearer.transform);
+                }
             }
         }
     }
@@ -96,7 +104,11 @@ public class WizardsSpawner : MonoBehaviour
     {
         for (int i = 0; i < BASE_AMOUNT_WIZARDS; i++)
         {
-            InstantiateWizard();
+            var wizardStandardBearer = InstantiateWizard();
+            if (i == BASE_AMOUNT_WIZARDS - 1)
+            {
+                _cameraFollower.SetTarget(wizardStandardBearer.transform);
+            }
         }
 
         _playerProgress.PlayerWizardAmount = BASE_AMOUNT_WIZARDS;

@@ -13,6 +13,7 @@ namespace Enemy
         [SerializeField] private WizardAnimator _animator;
         [Range(0, 10)] [SerializeField] private float _attackCooldown;
         [SerializeField] private Aggro _aggroZone;
+        [SerializeField] private AudioPlayerForWizard _audioPlayer;
 
         private Transform _targetTransform;
         private bool _isAttacking;
@@ -67,6 +68,7 @@ namespace Enemy
 
         private void OnAttack()
         {
+            if (GetTargetHealth() != null)
             {
                 if (_weapon != null)
                 {
@@ -78,6 +80,7 @@ namespace Enemy
                 else
                 {
                     GetTargetHealth().TakeDamage(_baseDamage);
+                    _audioPlayer.PlayAttackSoundWithoutWeapon();
                 }
             }
         }

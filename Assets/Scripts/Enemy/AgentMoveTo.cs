@@ -26,14 +26,16 @@ public class AgentMoveTo : MonoBehaviour
 
     private void Update()
     {
-        if (Initialized() && HeroNotReached() && !_isTargetInAttackZone)
+        if (_agent.enabled)
         {
-            _agent.destination = _targetTransform.position;
-        }
-        else
-        {
-            if (_agent.enabled)
+            if (Initialized() && HeroNotReached() && !_isTargetInAttackZone)
+            {
+                _agent.destination = _targetTransform.position;
+            }
+            else
+            {
                 _agent.destination = transform.position;
+            }
         }
     }
 

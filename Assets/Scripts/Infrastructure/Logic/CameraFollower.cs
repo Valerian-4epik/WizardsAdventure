@@ -1,33 +1,102 @@
+using DG.Tweening;
 using UI;
 using UnityEngine;
-using DG.Tweening;
 
-public class CameraFollower : MonoBehaviour
+namespace Infrastructure.Logic
 {
-    private const int DURATION = 9;
-    
-    [SerializeField] private Vector3 _fightTimePosition;
-    [SerializeField] private Quaternion _fightTimeRotation;
-    
-    private Camera _cameraMain;
-    private Transform _cameraPosition;
-    private UIInventory _shopInterface;
-    
-    private void OnEnable()
+    public class CameraFollower : MonoBehaviour
     {
-        if(Camera.main != null)
-            _cameraMain = Camera.main;
-    }
+        private const int DURATION = 9;
 
-    public void SetShopInterface(UIInventory shopInterface)
-    {
-        _shopInterface = shopInterface;
-        _shopInterface.Fight += ChangePosition;
-    }
+        // [SerializeField] private Vector3 _fightTimePosition;
+        // [SerializeField] private Quaternion _fightTimeRotation;
+        [SerializeField] private float _smooth;
+        [SerializeField] private Vector3 _offset;
 
-    public void ChangePosition()
-    {
-        _cameraMain.gameObject.transform.DOMove(_fightTimePosition, DURATION);
-        _cameraMain.gameObject.transform.DORotateQuaternion(_fightTimeRotation, DURATION);
+        private Transform _target;
+        private Camera _cameraMain;
+        private Transform _cameraPosition;
+        private UIInventory _shopInterface;
+        private float _deltaX;
+        private bool _canFollowing = false;
+
+        private void OnEnable()
+        {
+            if (Camera.main != null)
+                _cameraMain = Camera.main;
+        }
+
+        private void Update()
+        {
+            if (_canFollowing)
+            {
+                var position = _cameraMain.transform.position;
+                var targetPosition = new Vector3(position.x, _target.position.y, position.z);
+                position = new Vector3(position.x, position.y, _target.position.z - _deltaX);
+                position = Vector3.Lerp(position, targetPosition + _offset, Time.deltaTime * _smooth);
+                _cameraMain.transform.position = position;
+            }
+        }
+
+        public void SetShopInterface(UIInventory shopInterface)
+        {
+            _shopInterface = shopInterface;
+            _shopInterface.Fight += ActivateTargetFollower;
+        }
+
+        public void SetTarget(Transform target) => _target = target;
+
+        // public void ChangePosition()
+        // {
+        //     _cameraMain.gameObject.transform.DOMove(_fightTimePosition, DURATION);
+        //     _cameraMain.gameObject.transform.DORotateQuaternion(_fightTimeRotation, DURATION);
+        // }
+
+        private void ActivateTargetFollower()
+        {
+            SetupDeltaX();
+            _canFollowing = true;
+        }
+
+        private void SetupDeltaX() => _deltaX = transform.position.x - _target.position.x;
     }
 }
+
+// public class CameraFollowe: MonoBehaviour
+//     {
+//         [SerializeField] private Transform _target;
+//         [SerializeField] private float _smooth;
+//         [SerializeField] private Vector3 _offset;
+//
+//         private float _deltaX;
+//         private bool _isFinishPositionActive;
+//     
+//         public bool IsFinishPositionActive
+//         {
+//             set => _isFinishPositionActive = value;
+//         }
+//
+//         private void Start()
+//         {
+//             _deltaX = transform.position.x - _target.position.x;
+//         }
+//
+//         private void Update()
+//         {
+//             var position = transform.position;
+//             var targetPosition = new Vector3(position.x, _target.position.y, position.z); 
+//             position = new Vector3(_target.position.x + _deltaX, position.y, position.z);
+//             position = Vector3.Lerp(position, targetPosition + _offset, Time.deltaTime * _smooth);
+//             transform.position = position;
+//
+//             if (!_isFinishPositionActive) return;
+//             const int yDistance = 18;
+//             const int duration = 10;
+//             SetYOffset(yDistance,duration);
+//         }
+//
+//         private void SetYOffset(float yDistance, float duration)
+//         {
+//             _offset = Vector3.MoveTowards(_offset, new Vector3(_offset.x, yDistance, _offset.z),
+//                 duration * Time.deltaTime);
+//         }

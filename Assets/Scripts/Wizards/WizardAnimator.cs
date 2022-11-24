@@ -13,7 +13,7 @@ namespace Wizards
         private static readonly int IsVictory = Animator.StringToHash("IsVictory");
         private static readonly int TakeWeapon = Animator.StringToHash("TakeWeapon");
         private static readonly int Hit = Animator.StringToHash("Hit");
-        private static readonly int Die = Animator.StringToHash("Die");
+        private static readonly int Die = Animator.StringToHash("Dead");
         
         private readonly int _idleStateHash = Animator.StringToHash("idle");
         private readonly int _attackStateHash = Animator.StringToHash("attack01");
@@ -44,8 +44,10 @@ namespace Wizards
         public void PlayAttack() => _animator.SetBool(Attack, true);
         public void PlayStaffAttack() => _animator.SetBool(StaffAttack, true);
         public void ExitRangeAttack() => _animator.SetBool(StaffAttack, false);
-        public void PlayTakeWeapon() => _animator.SetTrigger(TakeWeapon);
         public void PlayVictory() => _animator.SetBool(IsVictory, true);
+        public void PlayTakeWeapon() => _animator.SetTrigger(TakeWeapon);
+        public void PlayDie() => _animator.SetTrigger(Die);
+        
         public void EnteredState(int stateHash)
         {
             State = StateFor(stateHash);
@@ -71,5 +73,6 @@ namespace Wizards
         
             return state;
         }
+
     }
 }

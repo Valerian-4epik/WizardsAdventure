@@ -13,7 +13,7 @@ namespace Infrastructure.Logic
         private void Update()
         {
             Quaternion rotattion = _mainCamera.transform.rotation;
-            transform.LookAt(transform.position + rotattion * Vector3.back, rotattion * Vector3.up);
+            transform.LookAt(transform.position + rotattion * Vector3.forward, rotattion * Vector3.up);
         }
     }
 }

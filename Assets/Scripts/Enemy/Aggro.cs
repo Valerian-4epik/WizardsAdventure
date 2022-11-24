@@ -10,7 +10,6 @@ namespace Enemy
         [SerializeField] private LayerMask _targetLayerMask;
         [SerializeField] private TriggerObserver _triggerObserver;
         [SerializeField] private AgentMoveTo _follow;
-        [SerializeField] private WizardAnimator _animator;
 
         private List<GameObject> _targets = new List<GameObject>();
 

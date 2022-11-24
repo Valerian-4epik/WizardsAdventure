@@ -131,11 +131,7 @@ public class InventoryFighter : MonoBehaviour
             _health.AssignArmor(0, 0);
     }
 
-    private void OnStartRejoices()
-    {
-        Debug.Log("орет"); 
-        _audioPlayer.PlayRejoicedEmotion();
-    }
+    private void OnStartRejoices() => _audioPlayer.PlayRejoicedEmotion();
 
     private void Refresh(UIInventoryItem item) =>
         item.GetComponentInParent<UIInventorySlot>().Refresh();
