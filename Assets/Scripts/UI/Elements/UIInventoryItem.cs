@@ -35,7 +35,6 @@ public class UIInventoryItem : UIItem
     {
         base.OnBeginDrag(eventData);
         _canvasGroup.alpha = 0;
-        Debug.Log("NEw begin drag");
     }
 
     public override void OnEndDrag(PointerEventData eventData)

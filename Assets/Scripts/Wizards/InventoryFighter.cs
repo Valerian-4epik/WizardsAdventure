@@ -16,14 +16,18 @@ public class InventoryFighter : MonoBehaviour
     [SerializeField] private ItemInfo _weapon;
     [SerializeField] private ItemInfo _armor;
 
+    private AudioPlayerForWizard _audioPlayer;
     private GameObject _weaponObject;
     private GameObject _armorObject;
+    private WizardAnimator _animator;
 
     public event Action<ItemInfo> WeaponDressed;
     public event Action<ItemInfo> ArmorDressed;
 
     private void OnEnable() //test
     {
+        _audioPlayer = gameObject.GetComponentInChildren<AudioPlayerForWizard>();
+        _animator = gameObject.GetComponent<WizardAnimator>();
         SetupWeapon();
     }
 
@@ -56,6 +60,7 @@ public class InventoryFighter : MonoBehaviour
             {
                 _armor = item.Item;
                 ShowArmor(item.Item);
+                PlayAnimatiom();
                 ArmorDressed?.Invoke(_armor);
                 Refresh(item);
             }
@@ -66,6 +71,7 @@ public class InventoryFighter : MonoBehaviour
             {
                 _weapon = item.Item;
                 ShowWeapon(item.Item);
+                PlayAnimatiom();
                 WeaponDressed?.Invoke(_weapon);
                 Refresh(item);
             }
@@ -106,6 +112,8 @@ public class InventoryFighter : MonoBehaviour
         return listID;
     }
 
+    private void PlayAnimatiom() => _animator.PlayTakeWeapon();
+
     private void SetupWeapon()
     {
         if (_weapon != null)
@@ -121,6 +129,12 @@ public class InventoryFighter : MonoBehaviour
         }
         else
             _health.AssignArmor(0, 0);
+    }
+
+    private void OnStartRejoices()
+    {
+        Debug.Log("орет"); 
+        _audioPlayer.PlayRejoicedEmotion();
     }
 
     private void Refresh(UIInventoryItem item) =>

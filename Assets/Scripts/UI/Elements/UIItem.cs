@@ -2,25 +2,27 @@ using System;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.Serialization;
 
 namespace UI
 {
     public class UIItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
     {
         [SerializeField] private LayerMask _targetMask;
+        [SerializeField] private AudioClip _onBeginDragSoundFx;
+        [SerializeField] private AudioClip _dropSoundFx;
 
         private CanvasGroup _canvasGroup;
         private Canvas _mainCanvas;
         private RectTransform _rectTransform;
+        private AudioSource _audioSource;
         
-        // protected Wizard inventoryFighter;
-
         private void Start()
         {
             _canvasGroup = GetComponent<CanvasGroup>();
             _rectTransform = GetComponent<RectTransform>();
-            _mainCanvas = GetComponentInParent<Canvas>(); // чтобы добраться до канвас скейлера и переменная скейл фактор она определяет разницу в разрешении
-            //в общем чтобы перетаскиваться обьект плавно.
+            _mainCanvas = GetComponentInParent<Canvas>();
+            _audioSource = GetComponent<AudioSource>();
         }
 
         public void OnDrag(PointerEventData eventData) => 
@@ -28,16 +30,24 @@ namespace UI
 
         public virtual void OnBeginDrag(PointerEventData eventData)
         {
-            var slotTransform = _rectTransform.parent; // достаем родителя
-            slotTransform.SetAsLastSibling(); //перемещаем его вниз в ерархии;
+            PlaySoundFx(_onBeginDragSoundFx);
+            var slotTransform = _rectTransform.parent;
+            slotTransform.SetAsLastSibling();
             _canvasGroup.blocksRaycasts = false;
+        }
+
+        private void PlaySoundFx(AudioClip soundFx)
+        {
+            _audioSource.clip = soundFx;
+            _audioSource.Play();
         }
 
         public virtual void OnEndDrag(PointerEventData eventData)
         {
             transform.localPosition = Vector3.zero;
             _canvasGroup.blocksRaycasts = true;
-            
+            PlaySoundFx(_dropSoundFx);
+
             if (Camera.main != null)
             {
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);

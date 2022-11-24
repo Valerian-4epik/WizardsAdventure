@@ -15,6 +15,9 @@ namespace UI
         [SerializeField] private CanvasGroup _canvasGroup;
         [SerializeField] private TMP_Text _currentMoney;
         [SerializeField] private RandomItemADS _adsTrigger;
+        [SerializeField] private AudioSource _audioSource;
+        [SerializeField] private AudioClip _successfulBuy;
+        [SerializeField] private AudioClip _successfulMerge;
 
         private RaycastDetecter _raycastDetecter;
         private PlayerProgress _playerProgress;
@@ -33,7 +36,7 @@ namespace UI
             {
                 slot.Refresh();
             }
-            
+
             SetRaycastDetecter();
 
             _adsTrigger.SetItem(SetupRandomItem());
@@ -55,6 +58,7 @@ namespace UI
         {
             if (_playerProgress.LoadCurrentMoney() >= item.Price)
             {
+                PLaySoundFx(_successfulBuy);
                 _playerProgress.SaveCurrentMoney(_playerProgress.LoadCurrentMoney() - item.Price);
                 FillSlot(item);
             }
@@ -72,6 +76,7 @@ namespace UI
                              GetItemTypeOfObject(toSlot) == item.TypeOfObject))
                 {
                     toSlot.SetItem(item);
+                    PLaySoundFx(_successfulMerge);
                     fromSlot.Refresh();
                     return;
                 }
@@ -89,17 +94,25 @@ namespace UI
 
         public void ShowInventory() =>
             _canvasGroup.alpha = 1;
-        
-        private ItemInfo SetupRandomItem() => 
+
+        private void PLaySoundFx(AudioClip audioClip)
+        {
+            _audioSource.clip = audioClip;
+            
+            if (!_audioSource.isPlaying)
+                _audioSource.Play();
+        }
+
+        private ItemInfo SetupRandomItem() =>
             _itemsData[GetRandomNumber()];
 
         private int GetRandomNumber()
         {
-            var randomItem = Random.Range(0, _itemsData.Count-1);
+            var randomItem = Random.Range(0, _itemsData.Count - 1);
             return randomItem;
         }
 
-        private void ShowMoney() => 
+        private void ShowMoney() =>
             _currentMoney.text = _playerProgress.LoadCurrentMoney().ToString();
 
         private void LoadCurrentItems()
@@ -130,15 +143,16 @@ namespace UI
         }
 
         private List<ItemInfo> GetItemList() =>
-            (from itemID in _playerProgress.GetItems() from item in _itemsData where item.ID == itemID select item).ToList();
+            (from itemID in _playerProgress.GetItems() from item in _itemsData where item.ID == itemID select item)
+            .ToList();
 
         private TypeOfObject GetItemTypeOfObject(UIInventorySlot fromSlot) =>
             fromSlot.InventoryItem.Item.TypeOfObject;
 
-        private int GetItemLevel(UIInventorySlot fromSlot) => 
+        private int GetItemLevel(UIInventorySlot fromSlot) =>
             fromSlot.InventoryItem.Item.Level;
 
-        private UIInventorySlot[] GetEmptySlots() => 
+        private UIInventorySlot[] GetEmptySlots() =>
             (from slot in _slots where !slot.IsFull select slot).ToArray();
 
         private List<UIInventorySlot> GetFullSlots() =>

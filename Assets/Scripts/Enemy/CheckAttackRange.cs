@@ -37,11 +37,10 @@ namespace Enemy
         {
             if (IsEnemy(obj))
             {
+                _agentMoveTo.IsTargetInAttackZone = true;
                 _targets.Add(obj.gameObject);
                 _attack.enabled = true;
-                _attack.SetTarget(_targets[0].transform);
-                _agentMoveTo.IsTargetInAttackZone = true;
-                _attack.EnableAttack();
+                _attack.EnableAttack(_targets[0].transform);
             }
         }
 
@@ -51,10 +50,7 @@ namespace Enemy
             _targets.Remove(obj.gameObject);
 
             if (_targets.Count != 0)
-            {
-                _attack.SetTarget(_targets[0].transform);
-                _attack.EnableAttack();
-            }
+                _attack.EnableAttack(_targets[0].transform);
             else
                 _agentMoveTo.IsTargetInAttackZone = false;
         }

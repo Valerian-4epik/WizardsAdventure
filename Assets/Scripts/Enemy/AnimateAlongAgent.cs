@@ -24,6 +24,8 @@ namespace Enemy
             }
         }
 
+        public void StopMoving() => _animator.StopMoving();
+        
         private bool ShouldMove() =>
             _agent.velocity.magnitude > MinimalVelocity && _agent.remainingDistance > _agent.radius;
     }

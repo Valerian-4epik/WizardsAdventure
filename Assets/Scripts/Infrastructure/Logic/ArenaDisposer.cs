@@ -12,6 +12,9 @@ public class ArenaDisposer : MonoBehaviour
     private const string Wizard = "Wizard";
     private const string Enemy = "Enemy";
 
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip _startFightSoundFx;
+    
     private UIInventory _shopInterface;
     private GameObject _levelFinishInterface;
     private WizardsSpawner _wizardsSpawner;
@@ -121,7 +124,6 @@ public class ArenaDisposer : MonoBehaviour
         {
             _levelFinishInterface.SetActive(true);
             EnterStateVictory();
-            Debug.Log("Reward");
             EndFight?.Invoke(true);
             _playerProgress.GetReward();
         }
@@ -157,6 +159,7 @@ public class ArenaDisposer : MonoBehaviour
 
     private void ActivateBattleState()
     {
+        PLaySoundFx(_startFightSoundFx);
         var activeFighters = _wizards.Concat(_enemies);
 
         foreach (var fighter in activeFighters)
@@ -187,6 +190,14 @@ public class ArenaDisposer : MonoBehaviour
     {
         _shopInterface.Fight -= ActivateBattleState;
         _shopInterface.gameObject.SetActive(false);
+    }
+    
+    private void PLaySoundFx(AudioClip audioClip)
+    {
+        _audioSource.clip = audioClip;
+            
+        if (!_audioSource.isPlaying)
+            _audioSource.Play();
     }
 
     private GameObject Fighter(GameObject fighter)

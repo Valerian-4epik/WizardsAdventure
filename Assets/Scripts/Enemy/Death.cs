@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.AI;
+using UnityEngine.Experimental.AI;
 using UnityEngine.Serialization;
 
 namespace Enemy
@@ -18,8 +20,19 @@ namespace Enemy
 
         public event Action<GameObject> Happened;
 
-        private void Start() =>
+        private AgentMoveTo _agentMoveTo;
+        private BoxCollider _boxCollider;
+        private NavMeshAgent _navMeshAgent;
+        private AnimateAlongAgent _animateAlongAgent;
+
+        private void Start()
+        {
+            _animateAlongAgent = gameObject.GetComponent<AnimateAlongAgent>();
+            _navMeshAgent = gameObject.GetComponent<NavMeshAgent>();
+            _boxCollider = gameObject.GetComponent<BoxCollider>();
+            _agentMoveTo = gameObject.GetComponent<AgentMoveTo>();
             _health.HealthChanged += HealthChanged;
+    }
 
         private void OnDestroy() =>
             _health.HealthChanged -= HealthChanged;
@@ -32,16 +45,26 @@ namespace Enemy
 
         private void Die()
         {
+            PlayExplosion();
             PlayDead();
             Happened?.Invoke(gameObject);
         }
 
+        private void PlayExplosion() => _animator.PlayDie();
+
         private void PlayDead()
         {
-            gameObject.GetComponent<BoxCollider>().enabled = false;
+            DisableCompanents();
             gameObject.layer = LayerMask.NameToLayer(DEAD_LAYER);
-            _animator.enabled = false;
             _mesh.material = _deadMaterial;
+        }
+
+        private void DisableCompanents()
+        {
+            _agentMoveTo.enabled = false;
+            _boxCollider.enabled = false;
+            _navMeshAgent.enabled = false;
+            _animateAlongAgent.enabled = false;
         }
 
         private void SpawnDeathFx() =>

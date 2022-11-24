@@ -22,8 +22,7 @@ namespace Infrastructure.Logic
             }
             else
                 _slider.value = 0;
-            
-            Debug.Log(_slider.value);
+
             if (_slider.value == 0)
                 _canvasGroup.alpha = 0;
         }

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using ParadoxNotion;
+using Wizards;
 
 namespace Enemy
 {
@@ -9,6 +10,7 @@ namespace Enemy
         [SerializeField] private LayerMask _targetLayerMask;
         [SerializeField] private TriggerObserver _triggerObserver;
         [SerializeField] private AgentMoveTo _follow;
+        [SerializeField] private WizardAnimator _animator;
 
         private List<GameObject> _targets = new List<GameObject>();
 
@@ -58,8 +60,7 @@ namespace Enemy
             }
         }
 
-        private bool SwitchFollowOn() =>
-            _follow.enabled = true;
+        private void SwitchFollowOn() => _follow.enabled = true;
 
         private bool SwitchFollowOff() =>
             _follow.enabled = false;

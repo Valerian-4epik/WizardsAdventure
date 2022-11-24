@@ -1,6 +1,7 @@
 using System;
 using Blobcreate.ProjectileToolkit;
 using UnityEngine;
+using UnityEngine.Localization.SmartFormat.Utilities;
 using UnityEngine.Serialization;
 using Wizards;
 
@@ -25,36 +26,35 @@ namespace Enemy
             set => _weapon = value;
         }
 
-        private void Update()
+        public void EnableAttack(Transform target)
         {
-            UpdateCooldown();
-
-            if (CanAttack())
-            {
-                StartAttack();
-            }
+            SetTarget(target);
+            _attackIsActive = true;
         }
 
-        public void SetTarget(Transform target) =>
-            _targetTransform = target;
-
-        public void EnableAttack() =>
-            _attackIsActive = true;
-
-        public void DisableAttack() =>
+        public void DisableAttack()
+        {
+            ResetTarget();
             _attackIsActive = false;
 
-        private void UpdateCooldown()
-        {
-            if (!CooldownIsUp())
-                _cooldown -= Time.deltaTime;
+            if (_weapon != null)
+            {
+                if (_weapon.Info.AttackType != AttackType.RangeAttack)
+                    _animator.ExitAttack();
+                else
+                    _animator.ExitRangeAttack();
+            }
+            else
+                _animator.ExitAttack();
         }
 
-        private bool CanAttack() =>
-            _attackIsActive && !_isAttacking && CooldownIsUp();
+        private void ResetTarget() => _targetTransform = null;
 
-        private bool CooldownIsUp() =>
-            _cooldown <= 0;
+        private void SetTarget(Transform target)
+        {
+            _targetTransform = target;
+            StartAttack();
+        }
 
         private void StartAttack()
         {
@@ -63,10 +63,6 @@ namespace Enemy
                 ChoiceAttackAnimation(_weapon.Info);
             else if (_animator != null && _weapon == null)
                 _animator.PlayAttack();
-
-            _isAttacking = true;
-            _cooldown = _attackCooldown;
-            // OnAttack(_damage);
         }
 
         private void OnAttack()
@@ -78,13 +74,10 @@ namespace Enemy
                         GetTargetHealth().TakeDamage(_weapon.Info.Damage);
                     else
                         RangeAttack(_targetTransform);
-
-                    _isAttacking = false;
                 }
                 else
                 {
                     GetTargetHealth().TakeDamage(_baseDamage);
-                    _isAttacking = false;
                 }
             }
         }

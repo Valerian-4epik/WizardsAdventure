@@ -10,6 +10,8 @@ public class RandomItemADS : MonoBehaviour
     [SerializeField] private Button _button;
     [SerializeField] private GameObject _doneImage;
     [SerializeField] private GameObject _description;
+    [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private AudioClip _successfuleSoundFx;
 
     private ItemInfo _item;
     
@@ -28,9 +30,16 @@ public class RandomItemADS : MonoBehaviour
 
     public void BlockButton()
     {
+        PlaySoudFx();
         _button.enabled = false;
         _image.gameObject.SetActive(false);
         _description.SetActive(false);
         _doneImage.SetActive(true);
+    }
+
+    private void PlaySoudFx()
+    {
+        _audioSource.clip = _successfuleSoundFx;
+        _audioSource.Play();
     }
 }

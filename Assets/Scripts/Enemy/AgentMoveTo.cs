@@ -1,12 +1,15 @@
+using Enemy;
 using Infrastructure.Factory;
 using UnityEngine;
 using UnityEngine.AI;
+using Wizards;
 
 public class AgentMoveTo : MonoBehaviour
 {
     private const float MinimalDistance = 1;
 
     [SerializeField] private NavMeshAgent _agent;
+    [SerializeField] private AnimateAlongAgent _animateAlongAgent;
 
     private Transform _targetTransform;
     private IGameFactory _gameFactory;
@@ -14,23 +17,32 @@ public class AgentMoveTo : MonoBehaviour
 
     public bool IsTargetInAttackZone
     {
-        set => _isTargetInAttackZone = value;
+        set
+        {
+            _isTargetInAttackZone = value;
+            _animateAlongAgent.StopMoving();
+        }
     }
-    
+
     private void Update()
     {
         if (Initialized() && HeroNotReached() && !_isTargetInAttackZone)
+        {
             _agent.destination = _targetTransform.position;
+        }
         else
-            _agent.destination = transform.position;
+        {
+            if (_agent.enabled)
+                _agent.destination = transform.position;
+        }
     }
 
-    public void SetTarget(Transform target) => 
+    public void SetTarget(Transform target) =>
         _targetTransform = target;
 
-    private bool Initialized() => 
+    private bool Initialized() =>
         _targetTransform != null;
 
-    private bool HeroNotReached() => 
+    private bool HeroNotReached() =>
         Vector3.Distance(_agent.transform.position, _targetTransform.position) >= MinimalDistance;
 }

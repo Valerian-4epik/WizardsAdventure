@@ -6,11 +6,12 @@ namespace Wizards
 {
     public class WizardAnimator : MonoBehaviour, IAnimationStateReader
     {
-        private static readonly int Attack = Animator.StringToHash("Attack_1");
-        private static readonly int StaffAttack = Animator.StringToHash("Attack_2");
+        private static readonly int Attack = Animator.StringToHash("Attack_1_bool");
+        private static readonly int StaffAttack = Animator.StringToHash("Attack_2_bool");
         private static readonly int Speed = Animator.StringToHash("Speed");
         private static readonly int IsMoving = Animator.StringToHash("IsMoving");
         private static readonly int IsVictory = Animator.StringToHash("IsVictory");
+        private static readonly int TakeWeapon = Animator.StringToHash("TakeWeapon");
         private static readonly int Hit = Animator.StringToHash("Hit");
         private static readonly int Die = Animator.StringToHash("Die");
         
@@ -39,21 +40,21 @@ namespace Wizards
         }
         
         public void StopMoving() => _animator.SetBool(IsMoving, false);
-        
-        public void PlayAttack() => _animator.SetTrigger(Attack);
-        public void PlayStaffAttack() => _animator.SetTrigger(StaffAttack);
-
+        public void ExitAttack() => _animator.SetBool(Attack, false);
+        public void PlayAttack() => _animator.SetBool(Attack, true);
+        public void PlayStaffAttack() => _animator.SetBool(StaffAttack, true);
+        public void ExitRangeAttack() => _animator.SetBool(StaffAttack, false);
+        public void PlayTakeWeapon() => _animator.SetTrigger(TakeWeapon);
         public void PlayVictory() => _animator.SetBool(IsVictory, true);
-        
         public void EnteredState(int stateHash)
         {
             State = StateFor(stateHash);
             StateEntered?.Invoke(State);
         }
-        
+
         public void ExitedState(int stateHash) =>
             StateExited?.Invoke(StateFor(stateHash));
-        
+
         private AnimatorState StateFor(int stateHash)
         {
             AnimatorState state;
