@@ -20,11 +20,15 @@ namespace Enemy
         private float _cooldown;
         private bool _attackIsActive;
         private Weapon _weapon;
+        private Transform _projectileShootPoint;
 
         public Weapon Weapon
         {
             get => _weapon;
-            set => _weapon = value;
+            set
+            {
+                _weapon = value;
+            }
         }
 
         public void EnableAttack(Transform target)
@@ -33,6 +37,8 @@ namespace Enemy
             _attackIsActive = true;
         }
 
+        public void SetProjectileShootPoint(Transform shootPoint) => _projectileShootPoint = shootPoint;  
+        
         public void DisableAttack()
         {
             ResetTarget();
@@ -87,7 +93,7 @@ namespace Enemy
 
         private void RangeAttack(Transform target)
         {
-            var projectile = Instantiate(_weapon.ProjecttileRig, transform.position, Quaternion.identity);
+            var projectile = Instantiate(_weapon.ProjecttileRig, _projectileShootPoint.position, Quaternion.identity);
             var etfxProjectileScript = projectile.gameObject.GetComponent<ETFXProjectileScript>();
             etfxProjectileScript.TargetMask = _aggroZone.TargetMask;
             etfxProjectileScript.Damage = _weapon.Info.Damage;

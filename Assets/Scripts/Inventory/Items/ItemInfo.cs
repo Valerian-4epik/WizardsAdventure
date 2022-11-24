@@ -35,5 +35,4 @@ public class ItemInfo : ScriptableObject
     public GameObject Projectile => _projectile;
     public GameObject Prefab => _prefab;
     public float Armor => _armor;
-
 }

@@ -141,6 +141,10 @@ public class InventoryFighter : MonoBehaviour
         if (itemInfo != null)
         {
             var item = Instantiate(itemInfo.Prefab, _handle.position, Quaternion.identity);
+            
+            if (itemInfo.AttackType == AttackType.RangeAttack)
+                _attack.SetProjectileShootPoint(item.gameObject.GetComponentInChildren<ProjectileShootPoint>().gameObject.transform);
+            
             _weaponObject = item.gameObject;
             item.gameObject.transform.SetParent(_handle);
         }
