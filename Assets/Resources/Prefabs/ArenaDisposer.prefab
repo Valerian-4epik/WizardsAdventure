@@ -433,6 +433,7 @@ GameObject:
   - component: {fileID: 3195151643860955248}
   - component: {fileID: 2938932827228522502}
   - component: {fileID: 1269641127950177841}
+  - component: {fileID: 3727129664130816669}
   m_Layer: 0
   m_Name: ArenaDisposer
   m_TagString: Untagged
@@ -566,6 +567,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3727129664130816669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4524770044899570232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caebb219b2f74acaac75d84f3851e5b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _chest: {fileID: 5432956319605289871, guid: 6477ae7b5b6e8c54c9f1b3f5cae2a4a0, type: 3}
 --- !u!1 &8608429315600608149
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,12 +11,12 @@ namespace Enemy
         [SerializeField] private WizardAnimator _animator;
         [SerializeField] private float _maxHealth;
         [SerializeField] private float _maxArmor;
-        [SerializeField] private GameObject _hitEffect;
         [SerializeField] private Transform _popupTextPoint;
         [SerializeField] private AudioPlayerForWizard _audioPlayer;
 
         private float _currentHealth;
         private float _currentArmor;
+        private Effector _effector;
 
         public event Action HealthChanged;
         public event Action ArmorChanged;
@@ -24,6 +24,7 @@ namespace Enemy
 
         private void Start()
         {
+            _effector = GetComponent<Effector>();
             _currentHealth = _maxHealth;
             _currentArmor = _maxArmor;
         }
@@ -75,7 +76,7 @@ namespace Enemy
             if (_currentArmor > 0)
             {
                 _currentArmor -= damage;
-                PlayHitEffect(damage);
+                _effector.PlayArmorDefenceEffect();
                 _audioPlayer.PLayHitArmorSound();
                 PlayPopupText(damage, GetArmorPopupText());
                 ArmorChanged?.Invoke();
@@ -83,7 +84,7 @@ namespace Enemy
             else
             {
                 _currentHealth -= damage;
-                PlayHitEffect(damage);
+                _effector.PlayHitEffect();
                 _audioPlayer.PLayHitSound();
                 PlayPopupText(damage, GetHealthPopupText());
                 HealthChanged?.Invoke();
@@ -95,13 +96,7 @@ namespace Enemy
             HealthChanged?.Invoke();
             ArmorChanged?.Invoke();
         }
-
-        private void PlayHitEffect(float value)
-        {
-            var effectObject = Instantiate(_hitEffect, transform.position, Quaternion.identity);
-            effectObject.GetComponent<ParticleSystem>().Play();
-        }
-
+        
         private void PlayPopupText(float value, GameObject poputText)
         {
             var popupText = Instantiate(poputText, _popupTextPoint.position, Quaternion.identity);

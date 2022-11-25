@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Data;
 using Enemy;
+using Props;
 using UI;
 using UnityEngine;
 using Wizards;
@@ -16,6 +17,7 @@ public class ArenaDisposer : MonoBehaviour
     [SerializeField] private AudioClip _startFightSoundFx;
     
     private UIInventory _shopInterface;
+    private RewardSystem _rewardSystem;
     private GameObject _levelFinishInterface;
     private WizardsSpawner _wizardsSpawner;
     private PlayerProgress _playerProgress;
@@ -28,6 +30,7 @@ public class ArenaDisposer : MonoBehaviour
 
     private void OnEnable()
     {
+        _rewardSystem = GetComponent<RewardSystem>();
         FindAllFighters();
     }
 
@@ -122,6 +125,7 @@ public class ArenaDisposer : MonoBehaviour
 
         if (_enemies.Count == 0)
         {
+            _rewardSystem.GetInstantiatePoint(fighter.transform);
             _levelFinishInterface.SetActive(true);
             EnterStateVictory();
             EndFight?.Invoke(true);

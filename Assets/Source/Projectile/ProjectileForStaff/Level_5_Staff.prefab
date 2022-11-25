@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 13576440}
   - component: {fileID: 5479992}
   - component: {fileID: 11464288}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Level_5_Staff
   m_TagString: Missile
   m_Icon: {fileID: 0}
@@ -75,9 +75,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acd27932048c3254597a02078fa2cb26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetMask:
-    serializedVersion: 2
-    m_Bits: 8192
   impactParticle: {fileID: 102006, guid: ded43eaee385aa94eafade73f78babdb, type: 3}
   projectileParticle: {fileID: 146404, guid: 41fc6e40715949e47aa61f8001df94fe, type: 3}
   muzzleParticle: {fileID: 141046, guid: 700d344a1e4cee64589e8071ee3fb12b, type: 3}

@@ -1932,7 +1932,6 @@ MonoBehaviour:
   _animator: {fileID: 1995386735554036513}
   _maxHealth: 100
   _maxArmor: 0
-  _hitEffect: {fileID: 193062, guid: f966948b2df3ccc409412e7d6cda1002, type: 3}
   _popupTextPoint: {fileID: 1216413694212562237}
   _audioPlayer: {fileID: 537246510235704664}
 --- !u!114 &8147777223720408581
@@ -2065,6 +2064,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _point: {fileID: 6985078576043542819}
   _graderEffect: {fileID: 156674, guid: f00c4533dd5576649a6860bfb56326dd, type: 3}
+  _hitEffect: {fileID: 193062, guid: f966948b2df3ccc409412e7d6cda1002, type: 3}
+  _armorDefenceFx: {fileID: 1135644536747142, guid: e2e0bb5acd030e8438d6562c2817e1f3, type: 3}
   _inventory: {fileID: 960986080973558923}
 --- !u!1 &8147777223884128274
 GameObject:
