@@ -1,4 +1,5 @@
 using Cinemachine.Utility;
+using Infrastructure.Logic;
 using UnityEngine;
 
 namespace Props
@@ -8,22 +9,31 @@ namespace Props
         [SerializeField] private GameObject _chest;
 
         private Transform _instantiatePoint;
+        private ArenaDisposer _arenaDisposer;
+        private Transform _chestTransform;
 
-        public void GetInstantiatePoint(Transform transform)
+        public Transform ChestTransform => _chestTransform;
+
+        public void GetInstantiatePoint(Transform transform, ArenaDisposer arenaDisposer)
         {
-            var offset = new Vector3(0, 0, -5);
             _instantiatePoint = transform;
-            _instantiatePoint.position += offset;
-            ChestInstantiate(_instantiatePoint, Quaternion.identity);
+            _arenaDisposer = arenaDisposer;
+            _arenaDisposer.EndFight += CheckGameEnded;
         }
 
-        private GameObject ChestInstantiate(Transform transform, Quaternion rotation)
+        private void CheckGameEnded(bool value)
         {
-            var chest = Instantiate(_chest, transform.position, rotation);
+            if (value)
+                ChestInstantiate();
+        }
+        
+        private GameObject ChestInstantiate()
+        {
+            var chest = Instantiate(_chest, _instantiatePoint.position, Quaternion.LookRotation(Vector3.back));
+            _chestTransform = chest.transform;
             return chest;
-        }  
+        }
         
         
-            
     }
 }

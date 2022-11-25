@@ -3,15 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using Data;
 using Enemy;
+using ES3Types;
+using Infrastructure.Logic;
 using Props;
 using UI;
+using Unity.VisualScripting;
 using UnityEngine;
 using Wizards;
+using Wizard = Wizards.Wizard;
 
 public class ArenaDisposer : MonoBehaviour
 {
-    private const string Wizard = "Wizard";
-    private const string Enemy = "Enemy";
+    private const string WIZARD = "Wizard";
+    private const string ENEMY = "Enemy";
+    private const string REWARD_POINT = "RewardPoint";
 
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip _startFightSoundFx;
@@ -24,6 +29,7 @@ public class ArenaDisposer : MonoBehaviour
     private List<GameObject> _wizards = new List<GameObject>();
     private List<GameObject> _enemies = new List<GameObject>();
     private Dictionary<int, List<string>> _wizardsInventory = new Dictionary<int, List<string>>();
+    private CameraFollower _cameraFollower;
 
     public PlayerProgress PlayerProgress => _playerProgress;
     public event Action<bool> EndFight;
@@ -32,24 +38,9 @@ public class ArenaDisposer : MonoBehaviour
     {
         _rewardSystem = GetComponent<RewardSystem>();
         FindAllFighters();
+        FindRewardPoint();
     }
 
-    private void GiveItems()
-    {
-        for (int i = 0; i < _wizards.Count; i++)
-        {
-            if (_playerProgress.LoadSquadItems() != null)
-            {
-                for (int j = 0; j < _playerProgress.LoadSquadItems().Count; j++)
-                {
-                    if (i == j)
-                    {
-                        _wizards[i].GetComponent<InventoryFighter>().SetWeapon(_playerProgress.LoadSquadItems()[j]);
-                    }
-                }
-            }
-        }
-    }
 
     public void SetShopInterface(UIInventory inventory)
     {
@@ -74,6 +65,7 @@ public class ArenaDisposer : MonoBehaviour
     {
         _wizardsSpawner = wizardSpawner.GetComponent<WizardsSpawner>();
         _wizardsSpawner.SquadChanged += AddWizard;
+        _cameraFollower = _wizardsSpawner.CameraFollower;
     }
 
     public void SaveSquadInventory()
@@ -86,6 +78,26 @@ public class ArenaDisposer : MonoBehaviour
         _playerProgress.SaveSquadItems(_wizardsInventory);
     }
 
+    private void FindRewardPoint() =>
+        _rewardSystem.GetInstantiatePoint(GameObject.FindGameObjectWithTag(REWARD_POINT).transform, this);
+
+    private void GiveItems()
+    {
+        for (int i = 0; i < _wizards.Count; i++)
+        {
+            if (_playerProgress.LoadSquadItems() != null)
+            {
+                for (int j = 0; j < _playerProgress.LoadSquadItems().Count; j++)
+                {
+                    if (i == j)
+                    {
+                        _wizards[i].GetComponent<InventoryFighter>().SetWeapon(_playerProgress.LoadSquadItems()[j]);
+                    }
+                }
+            }
+        }
+    }
+    
     private void SubscribeToDeath()
     {
         foreach (var enemy in _enemies)
@@ -125,10 +137,10 @@ public class ArenaDisposer : MonoBehaviour
 
         if (_enemies.Count == 0)
         {
-            _rewardSystem.GetInstantiatePoint(fighter.transform);
-            _levelFinishInterface.SetActive(true);
             EnterStateVictory();
             EndFight?.Invoke(true);
+            RunToRewardChest();
+            // _levelFinishInterface.SetActive(true);
             _playerProgress.GetReward();
         }
     }
@@ -142,6 +154,9 @@ public class ArenaDisposer : MonoBehaviour
         if (_wizards.Count != 0)
         {
             _wizards.Remove(fighter);
+            
+            if(IsWizardStandardBearer(fighter))
+                _cameraFollower.SetTarget(_wizards[0].transform);
         }
 
         if (_wizards.Count == 0)
@@ -151,11 +166,29 @@ public class ArenaDisposer : MonoBehaviour
         }
     }
 
+    private void RunToRewardChest()
+    {
+        var chestTransform = _rewardSystem.ChestTransform;
+        foreach (var wizard in _wizards)
+        {
+            if (wizard.GetComponent<Wizard>().IsStandardBearer)
+            {
+                wizard.GetComponent<AgentMoveTo>().SetTarget(chestTransform);
+            }
+        }
+    }
+    
+    private bool IsWizardStandardBearer(GameObject wizard)
+    {
+        var isWizardStandardBearer = wizard.GetComponent<Wizard>().IsStandardBearer;
+        return isWizardStandardBearer;
+    }
+
     private void FindAllFighters()
     {
-        foreach (var wizard in GameObject.FindGameObjectsWithTag(Wizard))
+        foreach (var wizard in GameObject.FindGameObjectsWithTag(WIZARD))
             _wizards.Add(wizard);
-        foreach (var enemy in GameObject.FindGameObjectsWithTag(Enemy))
+        foreach (var enemy in GameObject.FindGameObjectsWithTag(ENEMY))
             _enemies.Add(enemy);
 
         SubscribeToDeath();

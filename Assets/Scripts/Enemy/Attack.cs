@@ -1,8 +1,6 @@
 using System;
 using Blobcreate.ProjectileToolkit;
 using UnityEngine;
-using UnityEngine.Localization.SmartFormat.Utilities;
-using UnityEngine.Serialization;
 using Wizards;
 
 namespace Enemy

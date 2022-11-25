@@ -1597,6 +1597,7 @@ GameObject:
   - component: {fileID: 8147777222427028762}
   - component: {fileID: 8147777222427028761}
   - component: {fileID: 8147777222427028760}
+  - component: {fileID: 5517973075686122323}
   m_Layer: 15
   m_Name: AttackZone
   m_TagString: Untagged
@@ -1642,6 +1643,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8132e8956744c9db93140be689d70b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5517973075686122323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8147777222427028759}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 660e732f9b6c72c40bcb8c0328798ae9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8147777222635353761

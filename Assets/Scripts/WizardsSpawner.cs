@@ -4,6 +4,7 @@ using System.Linq;
 using Data;
 using Infrastructure.Logic;
 using UnityEngine;
+using Wizards;
 
 public class WizardsSpawner : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class WizardsSpawner : MonoBehaviour
     private WizardPrice _wizardPrice;
     private CameraFollower _cameraFollower;
 
+    public CameraFollower CameraFollower => _cameraFollower;
     public event Action<GameObject> SquadChanged;
 
     private void OnEnable()
@@ -90,16 +92,16 @@ public class WizardsSpawner : MonoBehaviour
         {
             for (int i = 0; i < _playerProgress.GetPLayerWizardAmount(); i++)
             {
-                
                 var wizardStandardBearer = InstantiateWizard();
                 if (i == BASE_AMOUNT_WIZARDS - 1)
                 {
                     _cameraFollower.SetTarget(wizardStandardBearer.transform);
+                    wizardStandardBearer.GetComponent<Wizard>().IsStandardBearer = true;
                 }
             }
         }
     }
-
+    
     private void SpawnStartSquad()
     {
         for (int i = 0; i < BASE_AMOUNT_WIZARDS; i++)
@@ -108,6 +110,7 @@ public class WizardsSpawner : MonoBehaviour
             if (i == BASE_AMOUNT_WIZARDS - 1)
             {
                 _cameraFollower.SetTarget(wizardStandardBearer.transform);
+                wizardStandardBearer.GetComponent<Wizard>().IsStandardBearer = true;
             }
         }
 

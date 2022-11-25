@@ -11,6 +11,13 @@ namespace Wizards
 
         private Weapon _weapon;
         private Armor _armor;
+        private bool _isStandardBearer = false;
+
+        public bool IsStandardBearer
+        {
+            get => _isStandardBearer;
+            set => _isStandardBearer = value;
+        }
 
         private void OnEnable()
         {

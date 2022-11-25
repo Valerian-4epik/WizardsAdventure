@@ -6,10 +6,6 @@ namespace Infrastructure.Logic
 {
     public class CameraFollower : MonoBehaviour
     {
-        private const int DURATION = 9;
-
-        // [SerializeField] private Vector3 _fightTimePosition;
-        // [SerializeField] private Quaternion _fightTimeRotation;
         [SerializeField] private float _smooth;
         [SerializeField] private Vector3 _offset;
 
