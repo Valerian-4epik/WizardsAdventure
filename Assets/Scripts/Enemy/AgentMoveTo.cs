@@ -6,7 +6,7 @@ using Wizards;
 
 public class AgentMoveTo : MonoBehaviour
 {
-    private const float MinimalDistance = 1;
+    private const float MINIMAL_DISTANCE = 1;
 
     [SerializeField] private NavMeshAgent _agent;
     [SerializeField] private AnimateAlongAgent _animateAlongAgent;
@@ -14,7 +14,7 @@ public class AgentMoveTo : MonoBehaviour
     private Transform _targetTransform;
     private IGameFactory _gameFactory;
     private bool _isTargetInAttackZone;
-
+    
     public bool IsTargetInAttackZone
     {
         set
@@ -46,5 +46,5 @@ public class AgentMoveTo : MonoBehaviour
         _targetTransform != null;
 
     private bool HeroNotReached() =>
-        Vector3.Distance(_agent.transform.position, _targetTransform.position) >= MinimalDistance;
+        Vector3.Distance(_agent.transform.position, _targetTransform.position) >= MINIMAL_DISTANCE;
 }

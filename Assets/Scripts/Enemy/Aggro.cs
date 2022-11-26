@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using ParadoxNotion;
+using Unity.VisualScripting;
 using Wizards;
 
 namespace Enemy
@@ -24,6 +25,12 @@ namespace Enemy
             _follow.enabled = false;
         }
 
+        public void SetTarget(Transform target)
+        {
+            SwitchFollowOn();
+            _targets.Add(target.gameObject);
+            _follow.SetTarget(_targets[0].GetComponent<Transform>());
+        }
         private void RemoveTarget(GameObject target)
         {
             SwitchFollowOff();

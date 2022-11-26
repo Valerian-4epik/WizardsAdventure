@@ -148,10 +148,16 @@ namespace Data
             return _itemsInSquad;
         }
         
-        public void GetReward()
+        public void AddReward()
         {
             var currentLevelNumber = ES3.Load("currentLevelIndex", "CurrentLevel.es3", _currentLevel);
             SaveStartMoney(LoadStartMoney() + _rewardLevelData.Rewards[currentLevelNumber]);
+        }
+
+        public int GetRewardAmount()
+        {
+            var currentLevelNumber = ES3.Load("currentLevelIndex", "CurrentLevel.es3", _currentLevel);
+            return _rewardLevelData.Rewards[currentLevelNumber];
         }
     }
 }

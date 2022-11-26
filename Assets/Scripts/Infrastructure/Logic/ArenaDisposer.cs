@@ -22,7 +22,7 @@ public class ArenaDisposer : MonoBehaviour
     [SerializeField] private AudioClip _startFightSoundFx;
     
     private UIInventory _shopInterface;
-    private RewardSystem _rewardSystem;
+    private RewardToChestFollower _rewardToChestFollower;
     private GameObject _levelFinishInterface;
     private WizardsSpawner _wizardsSpawner;
     private PlayerProgress _playerProgress;
@@ -36,7 +36,7 @@ public class ArenaDisposer : MonoBehaviour
 
     private void OnEnable()
     {
-        _rewardSystem = GetComponent<RewardSystem>();
+        _rewardToChestFollower = GetComponent<RewardToChestFollower>();
         FindAllFighters();
         FindRewardPoint();
     }
@@ -78,8 +78,15 @@ public class ArenaDisposer : MonoBehaviour
         _playerProgress.SaveSquadItems(_wizardsInventory);
     }
 
+    public void ActivateFinishInterface()
+    {
+        _levelFinishInterface.SetActive(true);
+        _levelFinishInterface.GetComponent<LevelFinishInterface>().ActivatePanel(true);
+        // _playerProgress.AddReward();
+    }
+
     private void FindRewardPoint() =>
-        _rewardSystem.GetInstantiatePoint(GameObject.FindGameObjectWithTag(REWARD_POINT).transform, this);
+        _rewardToChestFollower.GetInstantiatePoint(GameObject.FindGameObjectWithTag(REWARD_POINT).transform, this);
 
     private void GiveItems()
     {
@@ -140,8 +147,6 @@ public class ArenaDisposer : MonoBehaviour
             EnterStateVictory();
             EndFight?.Invoke(true);
             RunToRewardChest();
-            // _levelFinishInterface.SetActive(true);
-            _playerProgress.GetReward();
         }
     }
 
@@ -161,19 +166,19 @@ public class ArenaDisposer : MonoBehaviour
 
         if (_wizards.Count == 0)
         {
-            _levelFinishInterface.SetActive(true);
-            EndFight?.Invoke(false);
+            // _levelFinishInterface.SetActive(true);
+            // EndFight?.Invoke(false);
         }
     }
 
     private void RunToRewardChest()
     {
-        var chestTransform = _rewardSystem.ChestTransform;
+        var chestTransform = _rewardToChestFollower.ChestTransform;
         foreach (var wizard in _wizards)
         {
             if (wizard.GetComponent<Wizard>().IsStandardBearer)
             {
-                wizard.GetComponent<AgentMoveTo>().SetTarget(chestTransform);
+                wizard.GetComponent<Aggro>().SetTarget(chestTransform);
             }
         }
     }

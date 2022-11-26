@@ -1,9 +1,6 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using Enemy;
 using UnityEngine;
-using Wizards;
 
 public class BigGoldChest : MonoBehaviour
 {
@@ -17,6 +14,8 @@ public class BigGoldChest : MonoBehaviour
     private Rigidbody _rigidbody;
     private BoxCollider _boxCollider;
 
+    public event Action ChestStateEnded;
+    
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.GetComponent<ChestOpener>())
@@ -34,7 +33,25 @@ public class BigGoldChest : MonoBehaviour
         _rigidbody = GetComponent<Rigidbody>();
         _boxCollider = GetComponent<BoxCollider>();
     }
-    // private void Start() =>_animation = GetComponent<Animation>();
+    
+    public void OpenChest() => _animation.Play();
+
+    private void EndAnimation()
+    {
+        StartCoroutine(SlowLevelEnded());
+    }
+
+    private IEnumerator SlowLevelEnded()
+    {
+        yield return new WaitForSeconds(1.5f);
+        ChestStateEnded?.Invoke();
+    }
+    
+    private void PlayApperFx() => _apperChestFx.GetComponent<ParticleSystem>().Play();
+
+    private void PlayShineFx() => _shineFx.GetComponent<ParticleSystem>().Play();
+
+    private void PlayExplosionCoinsFx() => _explosionCoinsFx.GetComponent<ParticleSystem>().Play();
 
     private IEnumerator Delay()
     {
@@ -42,9 +59,4 @@ public class BigGoldChest : MonoBehaviour
         OpenChest();
         _boxCollider.enabled = false;
     }
-    public void OpenChest() => _animation.Play();
-
-    private void PlayApperFx() => _apperChestFx.GetComponent<ParticleSystem>().Play();
-    private void PlayShineFx() => _shineFx.GetComponent<ParticleSystem>().Play();
-    private void PlayExplosionCoinsFx() => _explosionCoinsFx.GetComponent<ParticleSystem>().Play();
 }

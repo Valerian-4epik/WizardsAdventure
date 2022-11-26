@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
+using Wizards;
 
 namespace Enemy
 {
@@ -14,6 +14,7 @@ namespace Enemy
         [SerializeField] private TriggerObserver _triggerObserver;
         [SerializeField] private AgentMoveTo _agentMoveTo;
         [SerializeField] private Aggro _aggro;
+        [SerializeField] private WizardAnimator _wizardAnimator;
 
         private float _attackRange;
         private List<GameObject> _targets = new List<GameObject>();
@@ -23,7 +24,6 @@ namespace Enemy
             get => _attackRange;
             set => _attackRange = value;
         }
-
 
         private void Start()
         {
@@ -41,6 +41,12 @@ namespace Enemy
                 _targets.Add(obj.gameObject);
                 _attack.enabled = true;
                 _attack.EnableAttack(_targets[0].transform);
+            }
+
+            if (IsChest(obj))
+            {
+                _agentMoveTo.IsTargetInAttackZone = true;
+                _targets.Add(obj.gameObject);
             }
         }
 
@@ -63,5 +69,7 @@ namespace Enemy
 
         private bool IsEnemy(Collider obj) =>
             LayerMask.LayerToName(obj.gameObject.layer) == _aggro.Target;
+        private bool IsChest(Collider obj) =>
+            LayerMask.LayerToName(obj.gameObject.layer) == LayerMask.LayerToName(18);
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Props
 {
-    public class RewardSystem : MonoBehaviour
+    public class RewardToChestFollower : MonoBehaviour
     {
         [SerializeField] private GameObject _chest;
 
@@ -31,9 +31,8 @@ namespace Props
         {
             var chest = Instantiate(_chest, _instantiatePoint.position, Quaternion.LookRotation(Vector3.back));
             _chestTransform = chest.transform;
+            chest.GetComponent<BigGoldChest>().ChestStateEnded += _arenaDisposer.ActivateFinishInterface;
             return chest;
         }
-        
-        
     }
 }

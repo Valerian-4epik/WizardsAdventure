@@ -1,6 +1,10 @@
 using System;
+using System.Collections.Generic;
 using Agava.YandexGames;
+using Data;
+using RewardSystem;
 using UI.Services;
+using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
 
 public class LevelFinishInterface : MonoBehaviour
@@ -10,6 +14,10 @@ public class LevelFinishInterface : MonoBehaviour
     [SerializeField] private RewarADForSpin _rewarAD;
 
     private ArenaDisposer _arenaDisposer;
+    private PlayerProgress _playerProgress;
+    private List<ItemInfo> _rewardItems = new List<ItemInfo>();
+
+    public List<ItemInfo> RewardItems => _rewardItems;
 
     public event Action LevelEnded;
     public event Action LevelDefeat;
@@ -25,30 +33,49 @@ public class LevelFinishInterface : MonoBehaviour
     public void RestartLevel() =>
         LevelDefeat?.Invoke();
 
+
     public void SubscribeToEndFight(ArenaDisposer arenaDisposer)
     {
         _arenaDisposer = arenaDisposer;
-        _arenaDisposer.EndFight += ActivatePanel;
+        GetPlayerProgress();
+        // _arenaDisposer.EndFight += ActivatePanel;
     }
+
+    public void ActivatePanel(bool isWin)
+    {
+        if (isWin)
+        {
+            _winPanel.SetActive(true);
+            _winPanel.GetComponent<RewardItemGenerator>().GetPlayerProgress(_arenaDisposer.PlayerProgress);
+            _rewarAD.SetPalayerProgress(_arenaDisposer.PlayerProgress);
+        }
+        else
+            _losePanel.SetActive(true);
+    }
+
+    private void GetPlayerProgress() => _playerProgress = _arenaDisposer.PlayerProgress;
 
     private void GoNextLevel(bool value)
     {
+        SaveRewardItems();
         if (value == true)
         {
             LevelEnded?.Invoke();
         }
     }
 
-    private void GoNextLevel(string value) => LevelEnded?.Invoke();
-
-    private void ActivatePanel(bool isWin)
+    private void SaveRewardItems(Action onEndedCallback = null)
     {
-        if (isWin)
+        foreach (var item in _rewardItems)
         {
-            _winPanel.SetActive(true); 
-            _rewarAD.SetPalayerProgress(_arenaDisposer.PlayerProgress);
+            _playerProgress.AddItemToCurrentItems(item);
         }
-        else
-            _losePanel.SetActive(true);
+
+        AddRewardMoney();
+        Debug.Log("Сохранил предметы");
+        onEndedCallback?.Invoke();
     }
+    
+    private void AddRewardMoney() => _playerProgress.AddReward();
+    private void GoNextLevel(string value) => LevelEnded?.Invoke();
 }
