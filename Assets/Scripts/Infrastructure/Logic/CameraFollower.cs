@@ -8,12 +8,13 @@ namespace Infrastructure.Logic
     {
         [SerializeField] private float _smooth;
         [SerializeField] private Vector3 _offset;
+        [SerializeField] private Quaternion _rotation;
 
         private Transform _target;
         private Camera _cameraMain;
         private Transform _cameraPosition;
         private UIInventory _shopInterface;
-        private float _deltaX;
+        private float _deltaZ;
         private bool _canFollowing = false;
 
         private void OnEnable()
@@ -26,11 +27,11 @@ namespace Infrastructure.Logic
         {
             if (_canFollowing)
             {
-                var position = _cameraMain.transform.position;
-                var targetPosition = new Vector3(position.x, _target.position.y, position.z);
-                position = new Vector3(position.x, position.y, _target.position.z - _deltaX);
-                position = Vector3.Lerp(position, targetPosition + _offset, Time.deltaTime * _smooth);
-                _cameraMain.transform.position = position;
+                var cameraPosition = _cameraMain.transform.position;
+                var targetPosition = new Vector3(cameraPosition.x, _target.position.y, _target.position.z);
+                // cameraPosition = new Vector3(cameraPosition.x, cameraPosition.z, _target.position.z + _deltaZ);
+                cameraPosition = Vector3.Lerp(cameraPosition, targetPosition + _offset, Time.deltaTime * _smooth);
+                _cameraMain.transform.position = cameraPosition;
             }
         }
 
@@ -50,11 +51,13 @@ namespace Infrastructure.Logic
 
         private void ActivateTargetFollower()
         {
-            SetupDeltaX();
             _canFollowing = true;
+            SetupRotate();
         }
 
-        private void SetupDeltaX() => _deltaX = transform.position.x - _target.position.x;
+        private void SetupRotate() => _cameraMain.transform.DORotateQuaternion(_rotation, 2);
+
+        // private void SetupDeltaZ() => _deltaZ = _cameraMain.transform.position.z - _target.position.z;
     }
 }
 
