@@ -10,17 +10,13 @@ namespace Infrastructure.States
     public class LoadLevelState : IPayloadedState<int>
     {
         private const string INITIAL_POINT_SPAWNER = "InitialPointHeroesSpawner";
-        private const int MENU_SCENE = 1;
-        private const int LEVEL_FIRST = 2;
-        private const int CONTINUE_KODE = 99;
-
 
         private readonly GameStateMachine _stateMachine;
         private readonly SceneLoader _sceneLoader;
-        private readonly LoadingCurtain _loadingCurtain;
+        private readonly Curtain _loadingCurtain;
         private readonly IGameFactory _gameFactory;
 
-        public LoadLevelState(GameStateMachine stateMachine, SceneLoader sceneLoader, LoadingCurtain loadingCurtain,
+        public LoadLevelState(GameStateMachine stateMachine, SceneLoader sceneLoader, Curtain loadingCurtain,
             IGameFactory gameFactory)
         {
             _stateMachine = stateMachine;
@@ -31,25 +27,7 @@ namespace Infrastructure.States
 
         public void Enter(int payload)
         {
-            // var progress = _gameFactory.CreatePlayerProgress().GetComponent<PlayerProgress>();
             _loadingCurtain.Show();
-
-            // if (payload == MENU_SCENE)
-            // {
-            //     _sceneLoader.Load(payload);
-            //     _loadingCurtain.Hide();
-            // }
-            // else if (payload == LEVEL_FIRST)
-            // {
-            //     progress.UpdateStatistics();
-            //     progress.SaveGameStata(false);
-            //     _sceneLoader.Load(payload, OnLoaded);
-            // }
-            // else if (payload == CONTINUE_KODE)
-            // {
-            //     if (!progress.GetGameState())
-            //         _sceneLoader.Load(progress.GetNextScene(), OnLoaded);
-            // }
             _sceneLoader.Load(payload, OnLoaded);
         }
 

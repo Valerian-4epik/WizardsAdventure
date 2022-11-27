@@ -12,7 +12,7 @@ namespace Infrastructure.States
         private readonly Dictionary<Type, IExitableState> _states;
         private IExitableState _activeState;
 
-        public GameStateMachine(SceneLoader sceneLoader, LoadingCurtain loadingCurtain, AllServices services) // sceneloader понадобиться в нескольких сценах поэтому мы прокиним его сразу
+        public GameStateMachine(SceneLoader sceneLoader, Curtain loadingCurtain, AllServices services) // sceneloader понадобиться в нескольких сценах поэтому мы прокиним его сразу
         {
             _states = new Dictionary<Type, IExitableState>
             {

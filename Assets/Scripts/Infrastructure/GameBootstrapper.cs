@@ -9,7 +9,7 @@ namespace Infrastructure
 {
     public class GameBootstrapper : MonoBehaviour, ICoroutineRunner
     {
-        [SerializeField] private LoadingCurtain Curtain;
+        [SerializeField] private Curtain Curtain;
 
         private Game _game;
 

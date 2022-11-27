@@ -9,11 +9,11 @@ namespace Infrastructure.States
     {
         private readonly GameStateMachine _gameStateMachine;
         private readonly SceneLoader _sceneLoader;
-        private readonly LoadingCurtain _loadingCurtain;
+        private readonly Curtain _loadingCurtain;
         private GameObject _levelFinishInterface;
         private PlayerProgress _playerProgress;
 
-        public GameLoopState(GameStateMachine gameStateMachine, SceneLoader sceneLoader, LoadingCurtain loadingCurtain)
+        public GameLoopState(GameStateMachine gameStateMachine, SceneLoader sceneLoader, Curtain loadingCurtain)
         {
             _gameStateMachine = gameStateMachine;
             _sceneLoader = sceneLoader;
