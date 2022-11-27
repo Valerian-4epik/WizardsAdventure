@@ -9,6 +9,7 @@ namespace Wizards
         [SerializeField] private AudioClip _attackSound;
         [SerializeField] private AudioClip _hitSound;
         [SerializeField] private AudioClip _hitArmorSound;
+        [SerializeField] private AudioClip _sadEmotion;
         
         private AudioSource _audioSource;
         
@@ -18,7 +19,8 @@ namespace Wizards
         public void PlayAttackSoundWithoutWeapon() => PlaySound(_attackSound);
         public void PLayHitSound() => PlaySound(_hitSound);
         public void PLayHitArmorSound() => PlaySound(_hitArmorSound);
-        
+        public void PlaySadEmotion() => PlaySound(_sadEmotion);
+
         private void PlaySound(AudioClip audioClip)
         {
             _audioSource.clip = audioClip;

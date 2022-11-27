@@ -39,10 +39,11 @@ public class WizardsSpawner : MonoBehaviour
         SpawnWizardShop();
     }
 
-    public void AddWizard()
+    public void AddWizard(Action<bool> onCompleteCallBack = null, Action<bool> onErrorCallBack = null)
     {
         if (GetEmptyInitPoint() != null && _playerProgress.LoadCurrentMoney() >= _wizardShop.Price)
         {
+            onCompleteCallBack?.Invoke(true);
             _playerProgress.SaveCurrentMoney(_playerProgress.LoadCurrentMoney() - _wizardShop.Price);
             var wizard = InstantiateWizard();
             _playerProgress.PlayerWizardAmount++;
@@ -52,7 +53,7 @@ public class WizardsSpawner : MonoBehaviour
         else if (GetEmptyInitPoint() == null)
             _wizardShop.gameObject.SetActive(false);
         else
-            Debug.Log("Недостаточно денег");//вот тут нужно добавить звук
+            onErrorCallBack?.Invoke(false);
     }
 
     public void AddWizardForADS()

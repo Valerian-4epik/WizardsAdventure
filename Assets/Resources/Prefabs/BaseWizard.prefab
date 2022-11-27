@@ -1930,6 +1930,7 @@ MonoBehaviour:
   _triggerObserver: {fileID: 8147777222427028760}
   _agentMoveTo: {fileID: 8147777223720408577}
   _aggro: {fileID: 8147777223720408576}
+  _wizardAnimator: {fileID: 0}
 --- !u!114 &8147777223720408582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3394,6 +3395,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2109642918646416756, guid: 702bfab19618b8f42ba11f0bec1269c4, type: 3}
+      propertyPath: _sadEmotion
+      value: 
+      objectReference: {fileID: 8300000, guid: e00885e4750cc9d44b75830387baaad1, type: 3}
     - target: {fileID: 4513397909855925491, guid: 702bfab19618b8f42ba11f0bec1269c4, type: 3}
       propertyPath: m_Name
       value: AudioPlayer

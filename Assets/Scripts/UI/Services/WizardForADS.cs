@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using Agava.YandexGames;
 using UI;
 using UnityEngine;
@@ -5,6 +7,8 @@ using UnityEngine.Serialization;
 
 public class WizardForADS : MonoBehaviour
 {
+    [SerializeField] private AudioSource _audioSource;
+    
     private WizardsSpawner _spawner;
 
     public void SetupSpawner(WizardsSpawner spawner) => _spawner = spawner;
@@ -28,7 +32,19 @@ public class WizardForADS : MonoBehaviour
         return;
     }
 
-    private void CloseButton() => gameObject.SetActive(false);
+    private void CloseButton() => StartCoroutine(PlaySoundFx(Deactivate));
+    
+    private void Deactivate() => gameObject.SetActive(false);
+    
+    private IEnumerator PlaySoundFx(Action onCallBack = null)
+    {
+        var length = _audioSource.clip.length;
+        
+        if (!_audioSource.isPlaying)
+            _audioSource.Play();
 
-
+        yield return new WaitForSeconds(length);
+        
+        onCallBack?.Invoke();
+    }
 }

@@ -60,7 +60,7 @@ public class InventoryFighter : MonoBehaviour
             {
                 _armor = item.Item;
                 ShowArmor(item.Item);
-                PlayAnimatiom();
+                PlayTakeWeaponAnimation();
                 ArmorDressed?.Invoke(_armor);
                 Refresh(item);
             }
@@ -71,7 +71,7 @@ public class InventoryFighter : MonoBehaviour
             {
                 _weapon = item.Item;
                 ShowWeapon(item.Item);
-                PlayAnimatiom();
+                PlayTakeWeaponAnimation();
                 WeaponDressed?.Invoke(_weapon);
                 Refresh(item);
             }
@@ -80,22 +80,27 @@ public class InventoryFighter : MonoBehaviour
 
     public void ReturnItems(UIInventory shopInterface)
     {
-        if (_armor != null)
+        if (_armor != null || _weapon != null)
         {
-            shopInterface.SetupItem(_armor);
-            _armor = null;
-            _health.RefreshValue();
-            Destroy(_armorObject);
-            ArmorDressed?.Invoke(_armor);
-        }
+            if (_armor != null)
+            {
+                shopInterface.SetupItem(_armor);
+                _armor = null;
+                _health.RefreshValue();
+                Destroy(_armorObject);
+                ArmorDressed?.Invoke(_armor);
+            }
 
-        if (_weapon != null)
-        {
-            shopInterface.SetupItem(_weapon);
-            _weapon = null;
+            if (_weapon != null)
+            {
+                shopInterface.SetupItem(_weapon);
+                _weapon = null;
 
-            Destroy(_weaponObject);
-            WeaponDressed?.Invoke(_weapon);
+                Destroy(_weaponObject);
+                WeaponDressed?.Invoke(_weapon);
+            }
+
+            PlayReturnWeaponAnimation();
         }
     }
 
@@ -112,7 +117,8 @@ public class InventoryFighter : MonoBehaviour
         return listID;
     }
 
-    private void PlayAnimatiom() => _animator.PlayTakeWeapon();
+    private void PlayTakeWeaponAnimation() => _animator.PlayTakeWeapon();
+    private void PlayReturnWeaponAnimation() => _animator.PlayReturnWeapon();
 
     private void SetupWeapon()
     {
@@ -132,6 +138,7 @@ public class InventoryFighter : MonoBehaviour
     }
 
     private void OnStartRejoices() => _audioPlayer.PlayRejoicedEmotion();
+    private void OnStartSad() => _audioPlayer.PlaySadEmotion();
 
     private void Refresh(UIInventoryItem item) =>
         item.GetComponentInParent<UIInventorySlot>().Refresh();
@@ -141,10 +148,11 @@ public class InventoryFighter : MonoBehaviour
         if (itemInfo != null)
         {
             var item = Instantiate(itemInfo.Prefab, _handle.position, Quaternion.identity);
-            
+
             if (itemInfo.AttackType == AttackType.RangeAttack)
-                _attack.SetProjectileShootPoint(item.gameObject.GetComponentInChildren<ProjectileShootPoint>().gameObject.transform);
-            
+                _attack.SetProjectileShootPoint(item.gameObject.GetComponentInChildren<ProjectileShootPoint>()
+                    .gameObject.transform);
+
             _weaponObject = item.gameObject;
             item.gameObject.transform.SetParent(_handle);
         }

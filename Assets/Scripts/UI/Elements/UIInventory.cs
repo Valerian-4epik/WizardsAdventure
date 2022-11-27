@@ -18,6 +18,7 @@ namespace UI
         [SerializeField] private AudioSource _audioSource;
         [SerializeField] private AudioClip _successfulBuy;
         [SerializeField] private AudioClip _successfulMerge;
+        [SerializeField] private AudioClip _worngFxSound;
 
         private RaycastDetecter _raycastDetecter;
         private PlayerProgress _playerProgress;
@@ -56,14 +57,17 @@ namespace UI
 
         public void BuyItem(ItemInfo item)
         {
-            if (_playerProgress.LoadCurrentMoney() >= item.Price)
+            if (_playerProgress.LoadCurrentMoney() >= item.Price && GetEmptySlots().Length != 0)
             {
                 PLaySoundFx(_successfulBuy);
                 _playerProgress.SaveCurrentMoney(_playerProgress.LoadCurrentMoney() - item.Price);
                 FillSlot(item);
             }
             else
+            {
+                PLaySoundFx(_worngFxSound);
                 Debug.Log("Недостаточно денег");
+            }
         }
 
         public void Merge(UIInventorySlot fromSlot, UIInventorySlot toSlot)
@@ -80,6 +84,11 @@ namespace UI
                     fromSlot.Refresh();
                     return;
                 }
+            }
+            else
+            {
+                PLaySoundFx(_worngFxSound);
+                Debug.Log("wrong");
             }
         }
 
@@ -132,6 +141,11 @@ namespace UI
             {
                 UIInventorySlot slot = GetEmptySlots()[0];
                 slot.SetItem(item);
+            }
+            else
+            {
+                PLaySoundFx(_worngFxSound);
+                Debug.Log("wrong");
             }
         }
 
