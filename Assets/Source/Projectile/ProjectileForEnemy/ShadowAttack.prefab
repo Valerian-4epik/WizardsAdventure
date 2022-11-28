@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5479992}
   - component: {fileID: 11464288}
   m_Layer: 16
-  m_Name: Level_3_staff
+  m_Name: ShadowAttack
   m_TagString: Missile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,8 +75,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acd27932048c3254597a02078fa2cb26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  impactParticle: {fileID: 195742, guid: 86a71da0d37a1c44eb70b277f977ecf2, type: 3}
-  projectileParticle: {fileID: 193226, guid: 36bcae9ef85e8e24b9579101ac42d442, type: 3}
-  muzzleParticle: {fileID: 152484, guid: d015b512d836ea049a218af0145f8b07, type: 3}
+  impactParticle: {fileID: 133642, guid: 721ed883392764d42a3957861e7752c0, type: 3}
+  projectileParticle: {fileID: 150356, guid: a9286d9ebf8c6b947917ec3f20e96819, type: 3}
+  muzzleParticle: {fileID: 150312, guid: da454a5cc69c9464aa8eae6b8492536e, type: 3}
   colliderRadius: 0.1
   collideOffset: 0.1

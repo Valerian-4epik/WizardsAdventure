@@ -15,10 +15,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2678374090500838242, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
+      propertyPath: _weapon
+      value: 
+      objectReference: {fileID: 11400000, guid: 20cd0defde069f8429d2ff0ed811fcc3, type: 2}
     - target: {fileID: 3417160068980556250, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 71ad8ec8c8649bc47bb009bf8f6acd38, type: 2}
+    - target: {fileID: 4072470961172279151, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.884
+      objectReference: {fileID: 0}
     - target: {fileID: 4177226676466584803, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -35,6 +43,10 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 40
       objectReference: {fileID: 0}
+    - target: {fileID: 6444612051044143594, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
+      propertyPath: _wizardAnimator
+      value: 
+      objectReference: {fileID: 3652466804063554806}
     - target: {fileID: 6444612051044143597, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
       propertyPath: _baseDamage
       value: 8
@@ -53,15 +65,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6444612051044143606, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 6444612051044143606, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 6444612051044143606, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 6444612051044143606, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -107,5 +119,20 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6476982190091874873, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
+--- !u!114 &3652466804063554806 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3732478163902923976, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
+  m_PrefabInstance: {fileID: 107037636166371390}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4440f77d21cb2d249bd4fbf9f4fb110c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

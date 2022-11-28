@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using EpicToonFX;
 using UnityEngine;
 using Wizards;
 
@@ -11,12 +12,12 @@ namespace Enemy
         private const float BASE_ATTACK_RANGE = 1.6f;
 
         [SerializeField] private Attack _attack;
+        [SerializeField] private float _attackRange;
         [SerializeField] private TriggerObserver _triggerObserver;
         [SerializeField] private AgentMoveTo _agentMoveTo;
         [SerializeField] private Aggro _aggro;
         [SerializeField] private WizardAnimator _wizardAnimator;
 
-        private float _attackRange;
         private List<GameObject> _targets = new List<GameObject>();
 
         public float AttackRange
@@ -36,11 +37,15 @@ namespace Enemy
 
         private void CheckWeaponDressed()
         {
-            if (_attack.Weapon == null)
+            if (_attack.Weapon == null && _attackRange == 0)
             {
                 _attackRange = BASE_ATTACK_RANGE;
                 ChangeAttackRange(_attackRange);
             }
+            // else if (_attack.Weapon == null && _attackRange != 0)
+            // {
+            //     ChangeAttackRange(_attackRange);
+            // }
         }
 
         private void TriggerEnter(Collider obj)

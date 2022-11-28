@@ -72,6 +72,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2111749003969839672, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2193885404260014180, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -196,6 +200,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6444612051044143594, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
+      propertyPath: _attackRange
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6444612051044143597, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
       propertyPath: _baseDamage
       value: 11
@@ -203,7 +211,7 @@ PrefabInstance:
     - target: {fileID: 6444612051044143598, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
       propertyPath: _armorBar
       value: 
-      objectReference: {fileID: 755005799540596841}
+      objectReference: {fileID: 698977481806847678}
     - target: {fileID: 6444612051044143599, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
       propertyPath: _maxArmor
       value: 0
@@ -292,6 +300,10 @@ PrefabInstance:
       propertyPath: m_Alpha
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7743238692573672335, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.206
+      objectReference: {fileID: 0}
     - target: {fileID: 7868068851209585583, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
       propertyPath: m_Avatar
       value: 
@@ -322,9 +334,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
---- !u!114 &755005799540596841 stripped
+--- !u!114 &698977481806847678 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8435724413565961695, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8563774179677223688, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
   m_PrefabInstance: {fileID: 9181686727663330742}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}

@@ -20,14 +20,16 @@ public class InventoryFighter : MonoBehaviour
     private GameObject _weaponObject;
     private GameObject _armorObject;
     private WizardAnimator _animator;
+    private Vector3 _currentScale;
 
     public event Action<ItemInfo> WeaponDressed;
     public event Action<ItemInfo> ArmorDressed;
 
     private void OnEnable() //test
     {
-        _audioPlayer = gameObject.GetComponentInChildren<AudioPlayerForWizard>();
-        _animator = gameObject.GetComponent<WizardAnimator>();
+        _audioPlayer = GetComponentInChildren<AudioPlayerForWizard>();
+        _animator = GetComponent<WizardAnimator>();
+        _currentScale = gameObject.transform.localScale;
         SetupWeapon();
     }
 
@@ -119,6 +121,8 @@ public class InventoryFighter : MonoBehaviour
 
     private void PlayTakeWeaponAnimation() => _animator.PlayTakeWeapon();
     private void PlayReturnWeaponAnimation() => _animator.PlayReturnWeapon();
+    private void OnStartRejoices() => _audioPlayer.PlayRejoicedEmotion();
+    private void OnStartSad() => _audioPlayer.PlaySadEmotion();
 
     private void SetupWeapon()
     {
@@ -137,9 +141,6 @@ public class InventoryFighter : MonoBehaviour
             _health.AssignArmor(0, 0);
     }
 
-    private void OnStartRejoices() => _audioPlayer.PlayRejoicedEmotion();
-    private void OnStartSad() => _audioPlayer.PlaySadEmotion();
-
     private void Refresh(UIInventoryItem item) =>
         item.GetComponentInParent<UIInventorySlot>().Refresh();
 
@@ -150,7 +151,8 @@ public class InventoryFighter : MonoBehaviour
             NormalizeScale();
             var item = Instantiate(itemInfo.Prefab, _handle.position, Quaternion.identity);
             item.gameObject.transform.SetParent(_handle);
-
+            SetCurrentScale();
+            
             if (itemInfo.AttackType == AttackType.RangeAttack)
                 _attack.SetProjectileShootPoint(item.gameObject.GetComponentInChildren<ProjectileShootPoint>()
                     .gameObject.transform);
@@ -168,6 +170,8 @@ public class InventoryFighter : MonoBehaviour
                 NormalizeScale();
                 var item = Instantiate(itemInfo.Prefab, _head.position, Quaternion.identity);
                 item.gameObject.transform.SetParent(_head);
+                SetCurrentScale();
+
                 _armorObject = item.gameObject;
                 _health.AssignArmor(_armor.Armor, _armor.Level);
             }
@@ -176,5 +180,6 @@ public class InventoryFighter : MonoBehaviour
         }
     }
 
-    private Vector3 NormalizeScale() => gameObject.transform.localScale = new Vector3(1,1,1);
+    private Vector3 NormalizeScale() => gameObject.transform.localScale = new Vector3(1, 1, 1);
+    private void SetCurrentScale() => gameObject.transform.localScale = _currentScale;
 }

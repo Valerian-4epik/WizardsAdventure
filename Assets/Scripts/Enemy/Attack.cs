@@ -23,10 +23,7 @@ namespace Enemy
         public Weapon Weapon
         {
             get => _weapon;
-            set
-            {
-                _weapon = value;
-            }
+            set { _weapon = value; }
         }
 
         public void EnableAttack(Transform target)
@@ -35,8 +32,8 @@ namespace Enemy
             _attackIsActive = true;
         }
 
-        public void SetProjectileShootPoint(Transform shootPoint) => _projectileShootPoint = shootPoint;  
-        
+        public void SetProjectileShootPoint(Transform shootPoint) => _projectileShootPoint = shootPoint;
+
         public void DisableAttack()
         {
             ResetTarget();
@@ -100,8 +97,20 @@ namespace Enemy
             projectile.AddForce(direction, ForceMode.VelocityChange);
         }
 
-        private Health GetTargetHealth() =>
-            _targetTransform.gameObject.GetComponent<Health>();
+        private Health GetTargetHealth()
+        {
+            if (_targetTransform != null)
+            {
+                var health = _targetTransform.gameObject.GetComponent<Health>();
+
+                if (health.IsDead)
+                    return null;
+                else
+                    return health;
+            }
+
+            return null;
+        }
 
         private void ChoiceAttackAnimation(ItemInfo item)
         {

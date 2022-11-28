@@ -10,8 +10,10 @@ namespace Infrastructure.Logic
         [SerializeField] private TMP_Text _text;
         [SerializeField] private CanvasGroup _canvasGroup;
 
-        public void SetLevelValue(int value) =>
+        public void SetLevelValue(int value)
+        {
             _text.text = value.ToString();
+        }
 
         public void SetValue(float current, float max)
         {

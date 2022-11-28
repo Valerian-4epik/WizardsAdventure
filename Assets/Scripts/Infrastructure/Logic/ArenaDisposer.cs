@@ -214,7 +214,7 @@ public class ArenaDisposer : MonoBehaviour
         {
             fighter.GetComponent<Idle>().SwitchOnStartFight();
         }
-
+        
         DisableWizardsSpawner();
         DisableShopInterface();
     }

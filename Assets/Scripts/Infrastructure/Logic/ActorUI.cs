@@ -30,7 +30,9 @@ namespace Infrastructure.Logic
             IHealth health = GetComponent<IHealth>();
 
             if (health != null)
+            {
                 Construct(health);
+            }
         }
 
         private void OnDestroy()
@@ -53,6 +55,6 @@ namespace Infrastructure.Logic
         private void UpdateHpBar() =>
             _hpBar.SetValue(_health.CurrentHealth, _health.MaxHealth);
 
-        private void SetupLevelArmor(int level) => _armorBar.SetLevelValue(level);
+        public void SetupLevelArmor(int level) => _armorBar.SetLevelValue(level);
     }
 }
