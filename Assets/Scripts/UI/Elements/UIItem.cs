@@ -54,7 +54,6 @@ namespace UI
 
                 if (Physics.Raycast(ray, out var hit, 1000, _targetMask))
                 {
-                    Debug.Log(hit.collider);
                     hit.collider.GetComponent<InventoryFighter>().SetWeapon(this);
                 }
             }

@@ -6,7 +6,7 @@ using Wizards;
 
 public class AgentMoveTo : MonoBehaviour
 {
-    private const float MINIMAL_DISTANCE = 1;
+    private const float MINIMAL_DISTANCE = 1.5f;
 
     [SerializeField] private NavMeshAgent _agent;
     [SerializeField] private AnimateAlongAgent _animateAlongAgent;

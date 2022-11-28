@@ -8,7 +8,7 @@ namespace Enemy
     [RequireComponent(typeof(Attack))]
     public class CheckAttackRange : MonoBehaviour
     {
-        private const float BASE_ATTACK_RANGE = 3;
+        private const float BASE_ATTACK_RANGE = 1.6f;
 
         [SerializeField] private Attack _attack;
         [SerializeField] private TriggerObserver _triggerObserver;
@@ -30,7 +30,17 @@ namespace Enemy
             _triggerObserver.TriggerEnter += TriggerEnter;
             _triggerObserver.TriggerExit += TriggerExit;
 
+            CheckWeaponDressed();
             _attack.enabled = false;
+        }
+
+        private void CheckWeaponDressed()
+        {
+            if (_attack.Weapon == null)
+            {
+                _attackRange = BASE_ATTACK_RANGE;
+                ChangeAttackRange(_attackRange);
+            }
         }
 
         private void TriggerEnter(Collider obj)

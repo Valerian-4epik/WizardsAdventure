@@ -27,6 +27,7 @@ namespace Infrastructure.States
 
         public void Enter(int payload)
         {
+            _loadingCurtain.enabled = true;
             _loadingCurtain.Show();
             _sceneLoader.Load(payload, OnLoaded);
         }

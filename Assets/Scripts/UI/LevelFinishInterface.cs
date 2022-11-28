@@ -72,7 +72,6 @@ public class LevelFinishInterface : MonoBehaviour
         }
 
         AddRewardMoney();
-        Debug.Log("Сохранил предметы");
         onEndedCallback?.Invoke();
     }
     

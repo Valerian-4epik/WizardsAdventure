@@ -147,14 +147,15 @@ public class InventoryFighter : MonoBehaviour
     {
         if (itemInfo != null)
         {
+            NormalizeScale();
             var item = Instantiate(itemInfo.Prefab, _handle.position, Quaternion.identity);
+            item.gameObject.transform.SetParent(_handle);
 
             if (itemInfo.AttackType == AttackType.RangeAttack)
                 _attack.SetProjectileShootPoint(item.gameObject.GetComponentInChildren<ProjectileShootPoint>()
                     .gameObject.transform);
 
             _weaponObject = item.gameObject;
-            item.gameObject.transform.SetParent(_handle);
         }
     }
 
@@ -164,13 +165,16 @@ public class InventoryFighter : MonoBehaviour
         {
             if (itemInfo.TypeOfObject == TypeOfObject.Hat)
             {
+                NormalizeScale();
                 var item = Instantiate(itemInfo.Prefab, _head.position, Quaternion.identity);
+                item.gameObject.transform.SetParent(_head);
                 _armorObject = item.gameObject;
                 _health.AssignArmor(_armor.Armor, _armor.Level);
-                item.gameObject.transform.SetParent(_head);
             }
             else
                 _health.AssignArmor(_armor.Armor, _armor.Level);
         }
     }
+
+    private Vector3 NormalizeScale() => gameObject.transform.localScale = new Vector3(1,1,1);
 }

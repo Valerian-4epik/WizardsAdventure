@@ -82,7 +82,6 @@ public class ArenaDisposer : MonoBehaviour
     {
         _levelFinishInterface.SetActive(true);
         _levelFinishInterface.GetComponent<LevelFinishInterface>().ActivatePanel(true);
-        // _playerProgress.AddReward();
     }
 
     private void FindRewardPoint() =>
@@ -159,9 +158,13 @@ public class ArenaDisposer : MonoBehaviour
         if (_wizards.Count != 0)
         {
             _wizards.Remove(fighter);
-            
-            if(IsWizardStandardBearer(fighter))
+
+            if (IsWizardStandardBearer(fighter) && _wizards.Count != 0)
+            {
+                SwitchIsStandardBearer(fighter, false);
                 _cameraFollower.SetTarget(_wizards[0].transform);
+                SwitchIsStandardBearer(_wizards[0], true);
+            }
         }
 
         if (_wizards.Count == 0)
@@ -170,6 +173,9 @@ public class ArenaDisposer : MonoBehaviour
             // EndFight?.Invoke(false);
         }
     }
+
+    private void SwitchIsStandardBearer(GameObject fighter, bool value) => 
+        fighter.GetComponent<Wizard>().IsStandardBearer = value;
 
     private void RunToRewardChest()
     {

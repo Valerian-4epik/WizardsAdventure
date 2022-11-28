@@ -46,7 +46,7 @@ public class Curtain : MonoBehaviour
         while (_slider.value < 100)
         {
             var delay = Random.Range(0.05f, 0.1f);
-            _slider.value += 1.1f;
+            _slider.value += 2.1f;
             _sliderText.text = ($"Loading...{Math.Round(_slider.value, 1)}%");
             yield return new WaitForSeconds(delay);
         }
@@ -54,9 +54,16 @@ public class Curtain : MonoBehaviour
         _camera = Camera.main;
         _playableDirector = _camera.gameObject.GetComponent<PlayableDirector>();
         _playableDirector.Play();
-        gameObject.SetActive(false);
+        DisableCartain();
     }
-    
+
+    private void DisableCartain()
+    {
+        _slider.value = 0;
+        _canvasGroup.alpha = 0;
+        // gameObject.SetActive(false);
+    }
+
     private int GetRandomNumber(int maxValue)
     {
         var number = Random.Range(0, maxValue - 1);
