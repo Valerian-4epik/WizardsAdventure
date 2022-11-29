@@ -45,6 +45,7 @@ public class WizardsSpawner : MonoBehaviour
         {
             onCompleteCallBack?.Invoke(true);
             _playerProgress.SaveCurrentMoney(_playerProgress.LoadCurrentMoney() - _wizardShop.Price);
+            // _playerProgress.SaveCurrentMoney(_playerProgress.LoadCurrentMoney() - _wizardShop.Price);
             var wizard = InstantiateWizard();
             _playerProgress.PlayerWizardAmount++;
             _wizardShop.Price = _wizardPrice.GetPrice(_playerProgress.PlayerWizardAmount);

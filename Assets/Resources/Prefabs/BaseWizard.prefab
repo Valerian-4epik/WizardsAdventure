@@ -1544,7 +1544,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d312805ffd84825ab02117e7ccaba69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _baseDamage: 20
+  _baseDamage: 7
   _animator: {fileID: 1995386735554036513}
   _attackCooldown: 2
   _aggroZone: {fileID: 8147777223720408576}
@@ -1566,7 +1566,7 @@ MonoBehaviour:
   _triggerObserver: {fileID: 8147777222427028760}
   _agentMoveTo: {fileID: 8147777223720408577}
   _aggro: {fileID: 8147777223720408576}
-  _wizardAnimator: {fileID: 0}
+  _wizardAnimator: {fileID: 1995386735554036513}
 --- !u!114 &8147777223720408582
 MonoBehaviour:
   m_ObjectHideFlags: 0

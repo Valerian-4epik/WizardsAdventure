@@ -96,13 +96,15 @@ namespace UI
         {
             _playerProgress = playerProgress;
             LoadCurrentItems();
-            _playerProgress.SaveCurrentMoney(_playerProgress.LoadStartMoney());
+            _playerProgress.SaveCurrentMoney(_playerProgress.LoadAllMoney());
             _playerProgress.MoneyChanged += ShowMoney;
             ShowMoney();
         }
 
         public void ShowInventory() =>
             _canvasGroup.alpha = 1;
+
+        public void PlayGoldBuy() => PLaySoundFx(_successfulBuy);
 
         private void PLaySoundFx(AudioClip audioClip)
         {

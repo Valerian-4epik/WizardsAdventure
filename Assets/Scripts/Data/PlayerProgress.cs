@@ -8,53 +8,52 @@ namespace Data
 {
     public class PlayerProgress : MonoBehaviour
     {
+        private const int NEW_GAME_MONEY = 300;
+
         private bool _isNewGame = true;
-        private int _startMoneyInLevel = 300;
+        private int _allmoney;
         private int _currentMoney;
         private int _currentLevel;
         private List<string> _itemsInShop = new List<string>();
         private Dictionary<int, List<string>> _itemsInSquad = new Dictionary<int, List<string>>();
         private RewardLevelData _rewardLevelData;
-        
+        private int _countNumberSaveMoney;
+
         public int PlayerWizardAmount { get; set; }
-        
+
         public event Action MoneyChanged;
 
         private void Awake() =>
             _rewardLevelData = new RewardLevelData();
 
-        public void UpdateStatistics()
-        {
-            _currentMoney = 300;
-            PlayerWizardAmount = 0;
-            _itemsInShop = new List<string>();
-            _itemsInSquad = new Dictionary<int, List<string>>();
 
-            SaveGameStata(true);
-            SaveCurrentMoney(_currentMoney);
-            SaveCurrentItems(_itemsInShop);
-            SaveSquadItems(_itemsInSquad);
-            SavePlayerWizardsAmount(PlayerWizardAmount);
+        public void SaveAllMoney(int value)
+        {
+            _allmoney = value;
+            ES3.Save("allMoney", _allmoney, "AllMoney.es3");
         }
 
-        public void SaveStartMoney(int value)
+        public int LoadAllMoney()
         {
-            _startMoneyInLevel = value;
-            ES3.Save("startMoney",_startMoneyInLevel, "StartMoney.es3");
-        }
-
-        public int LoadStartMoney()
-        {
-            _startMoneyInLevel = ES3.Load("startMoney", "StartMoney.es3", _startMoneyInLevel);
-            return _startMoneyInLevel;
+            if (GetCountNumber() == 0)
+            {
+                _allmoney = ES3.Load("allMoney", "AllMoney.es3", NEW_GAME_MONEY);
+                SaveCountNumber();
+                return _allmoney;
+            }
+            else
+            {
+                _allmoney = ES3.Load("allMoney", "AllMoney.es3", NEW_GAME_MONEY);
+                return _allmoney;
+            }
         }
 
         public void SwitchMoney()
         {
-            _startMoneyInLevel = LoadCurrentMoney();
-            SaveStartMoney(_startMoneyInLevel);
+            _allmoney = LoadCurrentMoney();
+            SaveAllMoney(_allmoney);
         }
-        
+
         public void SaveGameStata(bool value)
         {
             _isNewGame = value;
@@ -104,19 +103,6 @@ namespace Data
             _itemsInShop.Add(item.ID);
             ES3.Save("myItemsList", _itemsInShop, "MyItemsList.es3");
         }
-        
-        private void SavePlayerWizardsAmount(int value) => 
-            ES3.Save("mySquad", value, "Squad.es3");
-
-        private void FillItemList(List<string> items)
-        {
-            _itemsInShop = new List<string>();
-
-            foreach (var item in items)
-            {
-                _itemsInShop.Add(item);
-            }
-        }
 
         public void SavePlayerWizardsAmount() =>
             ES3.Save("mySquad", PlayerWizardAmount, "Squad.es3");
@@ -128,7 +114,7 @@ namespace Data
             _itemsInSquad = itemIDs;
             ES3.Save("myItemDictionaryInSquad", _itemsInSquad, "MyItemDictionaryInSquad.es3");
         }
-        
+
         public void SaveCurrentMoney(int value)
         {
             _currentMoney = value;
@@ -141,23 +127,48 @@ namespace Data
             _currentMoney = ES3.Load("myMoney", "MyMoney.es3", _currentMoney);
             return _currentMoney;
         }
-        
+
         public Dictionary<int, List<string>> LoadSquadItems()
         {
             _itemsInSquad = ES3.Load("myItemDictionaryInSquad", "MyItemDictionaryInSquad.es3", _itemsInSquad);
             return _itemsInSquad;
         }
-        
+
         public void AddReward()
         {
             var currentLevelNumber = ES3.Load("currentLevelIndex", "CurrentLevel.es3", _currentLevel);
-            SaveStartMoney(LoadStartMoney() + _rewardLevelData.Rewards[currentLevelNumber]);
+            SaveAllMoney(LoadAllMoney() + _rewardLevelData.Rewards[currentLevelNumber]);
         }
 
         public int GetRewardAmount()
         {
             var currentLevelNumber = ES3.Load("currentLevelIndex", "CurrentLevel.es3", _currentLevel);
             return _rewardLevelData.Rewards[currentLevelNumber];
+        }
+
+        private void SavePlayerWizardsAmount(int value) =>
+            ES3.Save("mySquad", value, "Squad.es3");
+
+        private void FillItemList(List<string> items)
+        {
+            _itemsInShop = new List<string>();
+
+            foreach (var item in items)
+            {
+                _itemsInShop.Add(item);
+            }
+        }
+
+        private void SaveCountNumber()
+        {
+            _countNumberSaveMoney++;
+            ES3.Save("countNumber", _countNumberSaveMoney, "countNumber.es3");
+        }
+
+        private int GetCountNumber()
+        {
+            var countNumber = ES3.Load("countNumber", "countNumber.es", _countNumberSaveMoney);
+            return countNumber;
         }
     }
 }

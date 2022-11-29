@@ -78,10 +78,10 @@ public class ArenaDisposer : MonoBehaviour
         _playerProgress.SaveSquadItems(_wizardsInventory);
     }
 
-    public void ActivateFinishInterface()
+    public void ActivateFinishInterface(bool value)
     {
         _levelFinishInterface.SetActive(true);
-        _levelFinishInterface.GetComponent<LevelFinishInterface>().ActivatePanel(true);
+        _levelFinishInterface.GetComponent<LevelFinishInterface>().ActivatePanel(value);
     }
 
     private void FindRewardPoint() =>
@@ -169,8 +169,7 @@ public class ArenaDisposer : MonoBehaviour
 
         if (_wizards.Count == 0)
         {
-            // _levelFinishInterface.SetActive(true);
-            // EndFight?.Invoke(false);
+            ActivateFinishInterface(false);
         }
     }
 

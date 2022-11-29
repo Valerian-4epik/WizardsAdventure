@@ -14,7 +14,7 @@ public class BigGoldChest : MonoBehaviour
     private Rigidbody _rigidbody;
     private BoxCollider _boxCollider;
 
-    public event Action ChestStateEnded;
+    public event Action<bool> ChestStateEnded;
     
     private void OnTriggerEnter(Collider other)
     {
@@ -44,7 +44,7 @@ public class BigGoldChest : MonoBehaviour
     private IEnumerator SlowLevelEnded()
     {
         yield return new WaitForSeconds(1.5f);
-        ChestStateEnded?.Invoke();
+        ChestStateEnded?.Invoke(true);
     }
     
     private void PlayApperFx() => _apperChestFx.GetComponent<ParticleSystem>().Play();

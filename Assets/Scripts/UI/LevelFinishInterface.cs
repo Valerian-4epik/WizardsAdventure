@@ -18,6 +18,7 @@ public class LevelFinishInterface : MonoBehaviour
     private List<ItemInfo> _rewardItems = new List<ItemInfo>();
 
     public List<ItemInfo> RewardItems => _rewardItems;
+    public PlayerProgress PlayerProgress => _playerProgress;
 
     public event Action LevelEnded;
     public event Action LevelDefeat;
@@ -38,7 +39,6 @@ public class LevelFinishInterface : MonoBehaviour
     {
         _arenaDisposer = arenaDisposer;
         GetPlayerProgress();
-        // _arenaDisposer.EndFight += ActivatePanel;
     }
 
     public void ActivatePanel(bool isWin)
