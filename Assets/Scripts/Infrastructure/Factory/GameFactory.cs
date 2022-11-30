@@ -13,6 +13,9 @@ namespace Infrastructure.Factory
 
         public GameObject CreateWizardsSpawner(GameObject at) => 
             _assetses.Instantiate(AssetPath.WizardsSpawnerPath, at.transform.position);
+        
+        public GameObject CreateLevelGenerator() => 
+            _assetses.Instantiate(AssetPath.LevelGenerator);
 
         public GameObject CreateShopInterface() => 
             _assetses.Instantiate(AssetPath.ShopInterface);

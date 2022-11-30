@@ -38,7 +38,7 @@ namespace Infrastructure.States
         private void OnLoaded()
         {
             var playerProgress = CreateMainObjects(out var cameraFollower, out var heroesSpawner, out var shopInterface,
-                out var progress);
+                out var progress, out var levelGenerator);
             var follower = cameraFollower.GetComponent<CameraFollower>();
             var wizardsSpawner = heroesSpawner.GetComponent<WizardsSpawner>();
             wizardsSpawner.SetCameraFollower(follower);
@@ -46,32 +46,36 @@ namespace Infrastructure.States
             var uiInventory = shopInterface.GetComponent<UIInventory>();
             follower.SetShopInterface(uiInventory);
             uiInventory.SetPlayerProgress(progress);
-            GameObject arenaDisposer = _gameFactory.CreateArenaDisposer();
             GameObject levelFinishInterface = _gameFactory.CreateLevelFinishInterface();
-            SubscribePayloads(arenaDisposer, heroesSpawner, uiInventory, progress, levelFinishInterface);
+            GameObject arenaDisposer = _gameFactory.CreateArenaDisposer();
+            SubscribePayloads(arenaDisposer, heroesSpawner, uiInventory, progress, levelFinishInterface, levelGenerator);
             _stateMachine.Enter<GameLoopState, GameObject, GameObject>(levelFinishInterface, playerProgress);
         }
 
         private GameObject CreateMainObjects(out GameObject cameraFollower, out GameObject heroesSpawner,
-            out GameObject shopInterface, out PlayerProgress progress)
+            out GameObject shopInterface, out PlayerProgress progress, out LevelGenerator levelGenerator)
         {
             GameObject playerProgress = _gameFactory.CreatePlayerProgress();
+            progress = playerProgress.GetComponent<PlayerProgress>();
+            GameObject generator = _gameFactory.CreateLevelGenerator();
+            levelGenerator = generator.GetComponent<LevelGenerator>(); 
+            levelGenerator.SetLevelProgress(progress);
             cameraFollower = _gameFactory.CreateCameraFollower();
             heroesSpawner = _gameFactory.CreateWizardsSpawner(GameObject.FindWithTag(INITIAL_POINT_SPAWNER));
             shopInterface = _gameFactory.CreateShopInterface();
-            progress = playerProgress.GetComponent<PlayerProgress>();
             // progress.SaveCurrentSceneNumber();
             return playerProgress;
         }
 
         private void SubscribePayloads(GameObject arenaDisposer, GameObject heroesSpawner, UIInventory uiInventory,
-            PlayerProgress progress, GameObject levelFinishInterface)
+            PlayerProgress progress, GameObject levelFinishInterface, LevelGenerator levelGenerator)
         {
             var disposer = arenaDisposer.GetComponent<ArenaDisposer>();
             disposer.SetWizardSpawner(heroesSpawner);
             disposer.SetShopInterface(uiInventory);
             disposer.SetPlayerProgress(progress);
             disposer.SetLevelFinishInterface(levelFinishInterface);
+            levelGenerator.GenerateCompleted += disposer.FindAllFighters;
         }
     }
 }

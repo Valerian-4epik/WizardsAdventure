@@ -4,7 +4,6 @@ using Agava.YandexGames;
 using Data;
 using RewardSystem;
 using UI.Services;
-using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
 
 public class LevelFinishInterface : MonoBehaviour

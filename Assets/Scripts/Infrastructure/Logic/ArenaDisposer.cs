@@ -30,6 +30,7 @@ public class ArenaDisposer : MonoBehaviour
     private List<GameObject> _enemies = new List<GameObject>();
     private Dictionary<int, List<string>> _wizardsInventory = new Dictionary<int, List<string>>();
     private CameraFollower _cameraFollower;
+    private RaycastDetecter _raycastDetecter;
 
     public PlayerProgress PlayerProgress => _playerProgress;
     public event Action<bool> EndFight;
@@ -37,7 +38,6 @@ public class ArenaDisposer : MonoBehaviour
     private void OnEnable()
     {
         _rewardToChestFollower = GetComponent<RewardToChestFollower>();
-        FindAllFighters();
         FindRewardPoint();
     }
 
@@ -83,6 +83,14 @@ public class ArenaDisposer : MonoBehaviour
         _levelFinishInterface.SetActive(true);
         _levelFinishInterface.GetComponent<LevelFinishInterface>().ActivatePanel(value);
     }
+
+    public void DisableRaycaster()
+    {
+        _raycastDetecter = Camera.main.GetComponent<RaycastDetecter>();
+        _raycastDetecter.enabled = false;
+    }
+
+    public void ActivateRaycaste() => _raycastDetecter.enabled = true; 
 
     private void FindRewardPoint() =>
         _rewardToChestFollower.GetInstantiatePoint(GameObject.FindGameObjectWithTag(REWARD_POINT).transform, this);
@@ -194,7 +202,7 @@ public class ArenaDisposer : MonoBehaviour
         return isWizardStandardBearer;
     }
 
-    private void FindAllFighters()
+    public void FindAllFighters()
     {
         foreach (var wizard in GameObject.FindGameObjectsWithTag(WIZARD))
             _wizards.Add(wizard);

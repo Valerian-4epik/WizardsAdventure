@@ -1,6 +1,5 @@
 using Agava.YandexGames;
 using Data;
-using UI;
 using UnityEngine;
 using UnityEngine.UI;
 

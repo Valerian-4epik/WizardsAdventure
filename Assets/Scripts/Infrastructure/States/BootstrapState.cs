@@ -37,18 +37,18 @@ namespace Infrastructure.States
 
         private void EnterLoadLevel()
         {
-            var nextSceneNumber = GetScene();
-            _gameStateMachine.Enter<LoadLevelState, int>(nextSceneNumber);
+            // var nextSceneNumber = GetScene();
+            _gameStateMachine.Enter<LoadLevelState, int>(1);
         }
 
-        private int GetScene()
-        {
-            _gameFactory = _services.Single<IGameFactory>();
-            GameObject playerProgress = _gameFactory.CreatePlayerProgress();
-            var progress = playerProgress.GetComponent<PlayerProgress>();
-            var nextScene = progress.GetNextScene();
-            return nextScene;
-        }
+        // private int GetScene()
+        // {
+        //     _gameFactory = _services.Single<IGameFactory>();
+        //     GameObject playerProgress = _gameFactory.CreatePlayerProgress();
+        //     var progress = playerProgress.GetComponent<PlayerProgress>();
+        //     var nextScene = progress.GetNextScene();
+        //     return nextScene;
+        // }
 
         private void RegisterServices()
         {

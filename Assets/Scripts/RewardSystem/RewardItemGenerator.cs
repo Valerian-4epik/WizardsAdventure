@@ -1,8 +1,6 @@
 using System.Collections.Generic;
 using Data;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 namespace RewardSystem

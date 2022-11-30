@@ -12,5 +12,6 @@ namespace Infrastructure.Factory
         GameObject CreateLevelFinishInterface();
         GameObject CreatePlayerProgress();
         GameObject CreateSDK();
+        GameObject CreateLevelGenerator();
     }
 }

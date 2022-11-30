@@ -47,7 +47,7 @@ public class Curtain : MonoBehaviour
         {
             var delay = Random.Range(0.05f, 0.1f);
             _slider.value += 2.1f;
-            _sliderText.text = ($"Loading...{Math.Round(_slider.value, 1)}%");
+            _sliderText.text = ($"...{Math.Round(_slider.value, 1)}%");
             yield return new WaitForSeconds(delay);
         }
         

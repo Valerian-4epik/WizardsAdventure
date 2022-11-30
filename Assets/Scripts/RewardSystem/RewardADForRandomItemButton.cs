@@ -1,7 +1,6 @@
 using Agava.YandexGames;
 using UI;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class RewardADForRandomItemButton : MonoBehaviour
 {

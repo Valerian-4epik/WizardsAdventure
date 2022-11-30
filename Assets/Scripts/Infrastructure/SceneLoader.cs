@@ -13,7 +13,7 @@ namespace Infrastructure
             => _coroutineRunner = coroutineRunner;
 
         public void Load(int buildIndexNumber, Action onLoaded = null) =>
-            _coroutineRunner.StartCoroutine(LoadScene(buildIndexNumber, onLoaded));
+            _coroutineRunner.StartCoroutine(LoadScene(1, onLoaded));
 
         public void Load(int buildIndexNumber) => _coroutineRunner.StartCoroutine(LoadScene(buildIndexNumber));
         
