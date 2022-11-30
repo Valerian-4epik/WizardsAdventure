@@ -42,14 +42,13 @@ namespace Infrastructure.States
 
         private void LoadNextLevel()
         {
-            _playerProgress.SaveCurrentSceneNumber();
-            _gameStateMachine.Enter<LoadLevelState, int>(_playerProgress.GetNextScene());
+            _playerProgress.SaveLevel(_playerProgress.GetLevel()+1);
+            _gameStateMachine.Enter<LoadLevelState, int>(1);
         }
 
         private void LoadCurrentLevel()
         {
-            _sceneLoader.Load(0);
-            // _gameStateMachine.Enter<LoadLevelState, int>(_playerProgress.GetCurrentScene());
+            _gameStateMachine.Enter<LoadLevelState, int>(1);
         }
     }
 }

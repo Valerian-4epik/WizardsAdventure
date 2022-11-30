@@ -38,6 +38,7 @@ public class ArenaDisposer : MonoBehaviour
     private void OnEnable()
     {
         _rewardToChestFollower = GetComponent<RewardToChestFollower>();
+        FindAlLWizards();
         FindRewardPoint();
     }
 
@@ -204,12 +205,16 @@ public class ArenaDisposer : MonoBehaviour
 
     public void FindAllFighters()
     {
-        foreach (var wizard in GameObject.FindGameObjectsWithTag(WIZARD))
-            _wizards.Add(wizard);
         foreach (var enemy in GameObject.FindGameObjectsWithTag(ENEMY))
             _enemies.Add(enemy);
 
         SubscribeToDeath();
+    }
+
+    private void FindAlLWizards()
+    {
+        foreach (var wizard in GameObject.FindGameObjectsWithTag(WIZARD))
+            _wizards.Add(wizard);
     }
 
     private void ActivateBattleState()

@@ -36,13 +36,14 @@ public class LevelGenerator : MonoBehaviour
     {
         var levelData = GetLevelData(GetLevelIndex());
         SetLevelInfo(levelData);
+        RenderSettings.skybox = _levelInfo.Skybox;
         var map = Instantiate(levelData.Map, transform.position, Quaternion.identity);
         _map = map.GetComponent<Map>();
     }
 
     private void CompleteLevelGenerate() => GenerateCompleted?.Invoke();
     private void SetLevelInfo(LevelData levelInfo) => _levelInfo = levelInfo;
-    private int GetLevelIndex() => _playerProgress.GetNextScene();
+    private int GetLevelIndex() => _playerProgress.GetLevel();
 
     private LevelData GetLevelData(int index)
     {

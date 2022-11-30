@@ -16,6 +16,7 @@ namespace DefaultNamespace
         [SerializeField] private int _numberOfEnemy2; 
         [SerializeField] private GameObject _enemy3;
         [SerializeField] private int _numberOfEnemy3;
+        [SerializeField] private Material _skybox;
 
         public string ID => _iD;
         public int Level => _level;
@@ -26,5 +27,6 @@ namespace DefaultNamespace
         public int NumberOfEnemy2 => _numberOfEnemy2;
         public GameObject Enemy3 => _enemy3;
         public int NumberOfEnemy3 => _numberOfEnemy3;
+        public Material Skybox => _skybox;
     }
 }

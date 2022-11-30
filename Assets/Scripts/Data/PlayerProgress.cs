@@ -12,7 +12,7 @@ namespace Data
         private bool _isNewGame = true;
         private int _allmoney;
         private int _currentMoney;
-        private int _currentLevel;
+        private int _currentLevel = 1;
         private List<string> _itemsInShop = new List<string>();
         private Dictionary<int, List<string>> _itemsInSquad = new Dictionary<int, List<string>>();
         private RewardLevelData _rewardLevelData;
@@ -53,32 +53,13 @@ namespace Data
             SaveAllMoney(_allmoney);
         }
 
-        public void SaveGameStata(bool value)
+        public void SaveLevel(int level)
         {
-            _isNewGame = value;
-            ES3.Save("gameState", _isNewGame, "GameState.es3");
+            _currentLevel = level;
+            ES3.Save("currentLevel", _currentLevel, "CurrentLevel.es3");
         }
 
-        public bool GetGameState()
-        {
-            _isNewGame = ES3.Load("gameState", "GameState.es3", _isNewGame);
-            return _isNewGame;
-        }
-
-        public void SaveCurrentSceneNumber()
-        {
-            _currentLevel = SceneManager.GetActiveScene().buildIndex;
-            ES3.Save("currentLevelIndex", _currentLevel, "CurrentLevel.es3");
-        }
-
-        public int GetCurrentScene() =>
-            _currentLevel = SceneManager.GetActiveScene().buildIndex;
-
-        public int GetNextScene()
-        {
-            _currentLevel = ES3.Load("currentLevelIndex", "CurrentLevel.es3", _currentLevel);
-            return _currentLevel + 1;
-        }
+        public int GetLevel() => _currentLevel = ES3.Load("currentLevel", "CurrentLevel.es3", _currentLevel);
 
         public void SaveCurrentItems(List<string> items)
         {
@@ -114,6 +95,12 @@ namespace Data
             ES3.Save("myItemDictionaryInSquad", _itemsInSquad, "MyItemDictionaryInSquad.es3");
         }
 
+        public Dictionary<int, List<string>> LoadSquadItems()
+        {
+            _itemsInSquad = ES3.Load("myItemDictionaryInSquad", "MyItemDictionaryInSquad.es3", _itemsInSquad);
+            return _itemsInSquad;
+        }
+
         public void SaveCurrentMoney(int value)
         {
             _currentMoney = value;
@@ -127,12 +114,6 @@ namespace Data
             return _currentMoney;
         }
 
-        public Dictionary<int, List<string>> LoadSquadItems()
-        {
-            _itemsInSquad = ES3.Load("myItemDictionaryInSquad", "MyItemDictionaryInSquad.es3", _itemsInSquad);
-            return _itemsInSquad;
-        }
-
         public void AddReward()
         {
             var currentLevelNumber = ES3.Load("currentLevelIndex", "CurrentLevel.es3", _currentLevel);
@@ -141,8 +122,8 @@ namespace Data
 
         public int GetRewardAmount()
         {
-            var currentLevelNumber = ES3.Load("currentLevelIndex", "CurrentLevel.es3", _currentLevel);
-            return _rewardLevelData.Rewards[currentLevelNumber];
+            var currentLevel = GetLevel();
+            return _rewardLevelData.Rewards[currentLevel];
         }
 
         private void SavePlayerWizardsAmount(int value) =>

@@ -20,11 +20,11 @@ namespace Infrastructure
         //но чтобы перейти на новую сцену нам нужен sceneLoader
         private IEnumerator LoadScene(int nextSceneName, Action onLoaded = null) //чтобы вызвать корутину нужен бехивер
         {
-            if (SceneManager.GetActiveScene().buildIndex == nextSceneName) // проверка 
-            {
-                onLoaded?.Invoke();//если да то мы вызовем каллбак чтобы удостовериться что все впорядке
-                yield break; //и прерываем выполнение корутины брейк потомучто ниже уже есть ретерн
-            }
+            // if (SceneManager.GetActiveScene().buildIndex == nextSceneName) // проверка 
+            // {
+            //     onLoaded?.Invoke();//если да то мы вызовем каллбак чтобы удостовериться что все впорядке
+            //     yield break; //и прерываем выполнение корутины брейк потомучто ниже уже есть ретерн
+            // }
             AsyncOperation waitNextScene = SceneManager.LoadSceneAsync(nextSceneName);//мы запросили загрузку сцены
             //waitNextScene.completed += _ => onLoaded?.Invoke(); // это называется задискардить _ тоже самое что и default,
             while (!waitNextScene.isDone) //второй способ проверять что операция завершилась isDone
