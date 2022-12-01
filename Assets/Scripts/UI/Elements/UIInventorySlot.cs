@@ -2,13 +2,17 @@ using System;
 using UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class UIInventorySlot : UISlot
 {
     [SerializeField] private UIInventoryItem _inventoryItem;
+    [SerializeField] private Button _infoButton;
+    [SerializeField] private InfoPanel _infoPanel;
     
     private bool _isFull;
     private UIInventory _inventory;
+    private ItemInfo _item;
 
     public bool IsFull => _isFull;
     public UIInventoryItem InventoryItem => _inventoryItem;
@@ -59,7 +63,9 @@ public class UIInventorySlot : UISlot
     {
         _isFull = true;
         _inventoryItem.SetItem(item);
+        _item = item;
         _inventoryItem.Refresh(this);
+        ActivateButtonInfo(true);
         SlotStateChanged?.Invoke();
     }
 
@@ -67,5 +73,15 @@ public class UIInventorySlot : UISlot
     {
         _isFull = false;
         _inventoryItem.Refresh(this);
+        _infoButton.gameObject.SetActive(false);
     }
+
+    private void ActivateButtonInfo(bool value)
+    {
+        _infoButton.gameObject.SetActive(value);
+        // if(value == true)
+        //     _infoButton.onClick.AddListener(SpendItemInfo);
+    }
+
+    public void SpendItemInfo() => _infoPanel.FillPanel(_item);
 }

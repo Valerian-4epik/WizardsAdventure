@@ -8,7 +8,7 @@ namespace Wizards
     {
         private static readonly int Attack = Animator.StringToHash("Attack_1_bool");
         private static readonly int StaffAttack = Animator.StringToHash("Attack_2_bool");
-        private static readonly int Speed = Animator.StringToHash("Speed");
+        private static readonly int AttackSpeed = Animator.StringToHash("AttackSpeed");
         private static readonly int IsMoving = Animator.StringToHash("IsMoving");
         private static readonly int IsVictory = Animator.StringToHash("IsVictory");
         private static readonly int TakeWeapon = Animator.StringToHash("TakeWeapon");
@@ -49,6 +49,7 @@ namespace Wizards
         public void PlayTakeWeapon() => _animator.SetTrigger(TakeWeapon);
         public void PlayReturnWeapon() => _animator.SetTrigger(ReturnWeapon);
         public void PlayDie() => _animator.SetTrigger(Die);
+        public void SetSpeed(float value) => _animator.SetFloat(AttackSpeed, value);
 
 
         public void EnteredState(int stateHash)

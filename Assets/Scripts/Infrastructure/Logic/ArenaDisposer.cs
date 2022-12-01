@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using Data;
 using Enemy;
-using ES3Types;
 using Infrastructure.Logic;
 using Props;
 using UI;
-using Unity.VisualScripting;
 using UnityEngine;
 using Wizards;
 using Wizard = Wizards.Wizard;
@@ -229,10 +227,11 @@ public class ArenaDisposer : MonoBehaviour
         
         DisableWizardsSpawner();
         DisableShopInterface();
-    }
+    } 
 
     public void Activate() //test
     {
+        FindAllFighters();
         var activeFighters = _wizards.Concat(_enemies);
 
         foreach (var fighter in activeFighters)

@@ -93,7 +93,7 @@ namespace Enemy
             etfxProjectileScript.TargetMask = _aggroZone.TargetMask;
             etfxProjectileScript.Damage = _weapon.Info.Damage;
             var direction = Projectile.VelocityByTime(projectile.position,
-                target.position, _weapon.Info.AttackSpeed);
+                target.position, 1);
             projectile.AddForce(direction, ForceMode.VelocityChange);
         }
 
@@ -117,14 +117,26 @@ namespace Enemy
             switch (item.TypeOfObject)
             {
                 case TypeOfObject.Sword:
-                    _animator.PlayAttack();
+                    PLayAttack(item.AttackSpeed);
                     break;
                 case TypeOfObject.Staff:
-                    _animator.PlayStaffAttack();
+                    PlayStaffAttack(item.AttackSpeed);
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
             }
+        }
+
+        private void PLayAttack(float speed)
+        {
+            _animator.SetSpeed(speed);
+            _animator.PlayAttack();
+        }
+
+        private void PlayStaffAttack(float speed)
+        {
+            _animator.SetSpeed(speed);
+            _animator.PlayStaffAttack();
         }
     }
 }
