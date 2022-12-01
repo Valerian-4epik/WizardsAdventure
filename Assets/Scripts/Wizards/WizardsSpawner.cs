@@ -36,7 +36,6 @@ public class WizardsSpawner : MonoBehaviour
     {
         _playerProgress = playerProgress;
         Spawn();
-        Debug.Log("SpawnWizard");
         SpawnWizardShop();
     }
 

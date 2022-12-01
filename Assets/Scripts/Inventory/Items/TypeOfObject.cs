@@ -4,4 +4,5 @@ public enum TypeOfObject
     Sword,
     Hat,
     Skin,
+    Shield,
 }

@@ -101,8 +101,11 @@ namespace UI
             ShowMoney();
         }
 
-        public void ShowInventory() =>
+        public void ShowInventory()
+        {
             _canvasGroup.alpha = 1;
+            _canvasGroup.interactable = true;
+        }
 
         public void PlayGoldBuy() => PLaySoundFx(_successfulBuy);
 

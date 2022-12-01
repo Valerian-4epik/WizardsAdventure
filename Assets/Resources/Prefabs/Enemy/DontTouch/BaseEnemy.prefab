@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &151342855157464996
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5784885141156891930}
+  m_Layer: 0
+  m_Name: left_handle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5784885141156891930
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151342855157464996}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3417160068992028918}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2693372640323601597
 GameObject:
   m_ObjectHideFlags: 0
@@ -1027,6 +1058,7 @@ Transform:
   m_Children:
   - {fileID: 3417160068992028904}
   - {fileID: 3417160068992028878}
+  - {fileID: 5784885141156891930}
   m_Father: {fileID: 3417160068992028896}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1616,7 +1648,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2963ce0d24bb40048b74ceaf73e7f154, type: 2}
   - {fileID: 11400000, guid: 6f23c795cf61e0e488c386d5cef62024, type: 2}
   - {fileID: 11400000, guid: cef46a6a9138dfb4d95a487a7395f9bf, type: 2}
-  _handle: {fileID: 7138739446703207326}
+  - {fileID: 11400000, guid: 0aebe468c03b8d040a87d387c90fa207, type: 2}
+  - {fileID: 11400000, guid: d571c43d8a8732b43b1a206663169971, type: 2}
+  - {fileID: 11400000, guid: 83f9a698006242e45976cf99ed4036f9, type: 2}
+  - {fileID: 11400000, guid: 98d2c4307a7fd254d8c11ab1aae4c0d5, type: 2}
+  _handleRight: {fileID: 7138739446703207326}
+  _handleLeft: {fileID: 5784885141156891930}
   _head: {fileID: 5824609215763266059}
   _attack: {fileID: 6444612051044143597}
   _attackRange: {fileID: 6444612051044143594}
@@ -1712,7 +1749,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7138739446703207326}
   m_Layer: 0
-  m_Name: HandlePoint
+  m_Name: right_handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

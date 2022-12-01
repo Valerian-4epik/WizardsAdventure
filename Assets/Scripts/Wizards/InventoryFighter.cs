@@ -8,7 +8,8 @@ using Wizards;
 public class InventoryFighter : MonoBehaviour
 {
     [SerializeField] private List<ItemInfo> _allItems;
-    [SerializeField] private Transform _handle;
+    [SerializeField] private Transform _handleRight;
+    [SerializeField] private Transform _handleLeft;
     [SerializeField] private Transform _head;
     [SerializeField] private Attack _attack; //test
     [SerializeField] private CheckAttackRange _attackRange;
@@ -148,11 +149,8 @@ public class InventoryFighter : MonoBehaviour
     {
         if (itemInfo != null)
         {
-            NormalizeScale();
-            var item = Instantiate(itemInfo.Prefab, _handle.position, Quaternion.identity);
-            item.gameObject.transform.SetParent(_handle);
-            SetCurrentScale();
-            
+            var item = SetupItem(itemInfo, _handleRight);
+
             if (itemInfo.AttackType == AttackType.RangeAttack)
                 _attack.SetProjectileShootPoint(item.gameObject.GetComponentInChildren<ProjectileShootPoint>()
                     .gameObject.transform);
@@ -166,18 +164,29 @@ public class InventoryFighter : MonoBehaviour
         if (itemInfo != null)
         {
             if (itemInfo.TypeOfObject == TypeOfObject.Hat)
-            {
-                NormalizeScale();
-                var item = Instantiate(itemInfo.Prefab, _head.position, Quaternion.identity);
-                item.gameObject.transform.SetParent(_head);
-                SetCurrentScale();
-
-                _armorObject = item.gameObject;
-                _health.AssignArmor(_armor.Armor, _armor.Level);
-            }
+                SetupArmorItem(itemInfo, _head);
+            else if (itemInfo.TypeOfObject == TypeOfObject.Shield)
+                SetupArmorItem(itemInfo, _handleLeft);
             else
                 _health.AssignArmor(_armor.Armor, _armor.Level);
         }
+    }
+
+    private void SetupArmorItem(ItemInfo itemInfo, Transform point)
+    {
+        var item = SetupItem(itemInfo, point);
+
+        _armorObject = item.gameObject;
+        _health.AssignArmor(_armor.Armor, _armor.Level);
+    }
+
+    private GameObject SetupItem(ItemInfo itemInfo, Transform point)
+    {
+        NormalizeScale();
+        var item = Instantiate(itemInfo.Prefab, point.position, Quaternion.identity);
+        item.gameObject.transform.SetParent(point);
+        SetCurrentScale();
+        return item;
     }
 
     private Vector3 NormalizeScale() => gameObject.transform.localScale = new Vector3(1, 1, 1);
