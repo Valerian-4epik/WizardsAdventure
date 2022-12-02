@@ -236,6 +236,10 @@ PrefabInstance:
       propertyPath: _baseDamage
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 6444612051044143597, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
+      propertyPath: _attackCooldown
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6444612051044143598, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
       propertyPath: _armorBar
       value: 
@@ -246,7 +250,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6444612051044143599, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
       propertyPath: _maxHealth
-      value: 350
+      value: 550
       objectReference: {fileID: 0}
     - target: {fileID: 6444612051044143602, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
       propertyPath: m_Radius
