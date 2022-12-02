@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Data.LevelData;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
