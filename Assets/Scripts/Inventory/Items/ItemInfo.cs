@@ -11,6 +11,7 @@ public class ItemInfo : ScriptableObject
     [SerializeField] private int _level;
     [SerializeField] private int _price;
     [SerializeField] private Sprite _icon;
+    [SerializeField] private Sprite _back;
     [SerializeField] private AttackType _attackType;
     [SerializeField] private ItemType _itemType;
     [SerializeField] private TypeOfObject _typeOfObject;
@@ -27,6 +28,7 @@ public class ItemInfo : ScriptableObject
     public int Level => _level;
     public int Price => _price;
     public Sprite Icon => _icon;
+    public Sprite Back => _back;
     public AttackType AttackType => _attackType;
     public ItemType ItemType => _itemType;
     public float Damage => _damage;

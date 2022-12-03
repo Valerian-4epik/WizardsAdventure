@@ -52,8 +52,12 @@ namespace Infrastructure.States
             _stateMachine.Enter<GameLoopState, GameObject, GameObject>(levelFinishInterface, playerProgress);
         }
 
-        private GameObject CreateMainObjects(out GameObject cameraFollower, out GameObject heroesSpawner,
-            out GameObject shopInterface, out PlayerProgress progress, out LevelGenerator levelGenerator)
+        private GameObject CreateMainObjects(
+            out GameObject cameraFollower,
+            out GameObject heroesSpawner,
+            out GameObject shopInterface,
+            out PlayerProgress progress,
+            out LevelGenerator levelGenerator)
         {
             GameObject playerProgress = _gameFactory.CreatePlayerProgress();
             progress = playerProgress.GetComponent<PlayerProgress>();
@@ -63,12 +67,16 @@ namespace Infrastructure.States
             cameraFollower = _gameFactory.CreateCameraFollower();
             heroesSpawner = _gameFactory.CreateWizardsSpawner(GameObject.FindWithTag(INITIAL_POINT_SPAWNER));
             shopInterface = _gameFactory.CreateShopInterface();
-            // progress.SaveCurrentSceneNumber();
             return playerProgress;
         }
 
-        private void SubscribePayloads(GameObject arenaDisposer, GameObject heroesSpawner, UIInventory uiInventory,
-            PlayerProgress progress, GameObject levelFinishInterface, LevelGenerator levelGenerator)
+        private void SubscribePayloads(
+            GameObject arenaDisposer,
+            GameObject heroesSpawner,
+            UIInventory uiInventory,
+            PlayerProgress progress,
+            GameObject levelFinishInterface,
+            LevelGenerator levelGenerator)
         {
             var disposer = arenaDisposer.GetComponent<ArenaDisposer>();
             disposer.SetWizardSpawner(heroesSpawner);

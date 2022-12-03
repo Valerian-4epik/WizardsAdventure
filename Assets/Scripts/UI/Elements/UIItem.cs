@@ -17,7 +17,7 @@ namespace UI
         private RectTransform _rectTransform;
         private AudioSource _audioSource;
         
-        private void Start()
+        public virtual void Start()
         {
             _canvasGroup = GetComponent<CanvasGroup>();
             _rectTransform = GetComponent<RectTransform>();

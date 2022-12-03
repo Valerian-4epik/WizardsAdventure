@@ -1,6 +1,7 @@
 using System;
 using UI;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -8,8 +9,7 @@ public class UIInventorySlot : UISlot
 {
     [SerializeField] private UIInventoryItem _inventoryItem;
     [SerializeField] private Button _infoButton;
-    [SerializeField] private InfoPanel _infoPanel;
-    
+
     private bool _isFull;
     private UIInventory _inventory;
     private ItemInfo _item;
@@ -19,7 +19,7 @@ public class UIInventorySlot : UISlot
     public UIInventorySlot slot { get; private set; }
 
     public Action SlotStateChanged;
-    
+
     private void Awake()
     {
         _inventoryItem = GetComponentInChildren<UIInventoryItem>();
@@ -43,9 +43,10 @@ public class UIInventorySlot : UISlot
 
         if (toSlotUI == fromSlotUI)
         {
-          return;
+            _inventoryItem.ActivateInfoButton();
+            return;
         }
-        
+
         if (toSlotUI.IsFull)
         {
             _inventory.Merge(fromSlotUI, toSlotUI);
@@ -82,6 +83,4 @@ public class UIInventorySlot : UISlot
         // if(value == true)
         //     _infoButton.onClick.AddListener(SpendItemInfo);
     }
-
-    public void SpendItemInfo() => _infoPanel.FillPanel(_item);
 }

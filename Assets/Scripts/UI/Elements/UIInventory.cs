@@ -109,6 +109,17 @@ namespace UI
 
         public void PlayGoldBuy() => PLaySoundFx(_successfulBuy);
 
+        public ItemInfo GetNextItem(ItemInfo currentItem)
+        {
+            foreach (var item in _itemsData)
+            {
+                if (item.Level == currentItem.Level + 1 && item.TypeOfObject == currentItem.TypeOfObject)
+                    return item;
+            }
+
+            return null;
+        }
+
         private void PLaySoundFx(AudioClip audioClip)
         {
             _audioSource.clip = audioClip;
