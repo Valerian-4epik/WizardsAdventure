@@ -2,6 +2,8 @@ using System;
 using System.Collections.Generic;
 using Enemy;
 using UI;
+using UnityEditor;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using Wizards;
 
@@ -62,10 +64,17 @@ public class InventoryFighter : MonoBehaviour
             if (_armor == null)
             {
                 _armor = item.Item;
-                ShowArmor(item.Item);
-                PlayTakeWeaponAnimation();
-                ArmorDressed?.Invoke(_armor);
+                DressArmor(item);
                 Refresh(item);
+            }
+            else
+            {
+                var currentArmor = _armor;
+                Destroy(_armorObject);
+                _armor = item.Item;
+                DressArmor(item);
+                Refresh(item);
+                SwitchItem(item, currentArmor);
             }
         }
         else
@@ -73,12 +82,33 @@ public class InventoryFighter : MonoBehaviour
             if (_weapon == null)
             {
                 _weapon = item.Item;
-                ShowWeapon(item.Item);
-                PlayTakeWeaponAnimation();
-                WeaponDressed?.Invoke(_weapon);
+                DressWeapon(item);
                 Refresh(item);
             }
+            else
+            {
+                var currentWeapon = _weapon;
+                Destroy(_weaponObject);
+                _weapon = item.Item;
+                DressWeapon(item);
+                Refresh(item);
+                SwitchItem(item, currentWeapon);
+            }
         }
+    }
+
+    private void DressArmor(UIInventoryItem item)
+    {
+        ShowArmor(item.Item);
+        PlayTakeWeaponAnimation();
+        ArmorDressed?.Invoke(_armor);
+    }
+
+    private void DressWeapon(UIInventoryItem item)
+    {
+        ShowWeapon(item.Item);
+        PlayTakeWeaponAnimation();
+        WeaponDressed?.Invoke(_weapon);
     }
 
     public void ReturnItems(UIInventory shopInterface)
@@ -132,11 +162,13 @@ public class InventoryFighter : MonoBehaviour
             ShowWeapon(_weapon);
             _attack.Weapon = new Weapon(transform, _weapon);
             _attackRange.ChangeAttackRange(_weapon.AttackRange);
+            WeaponDressed.Invoke(_weapon);
         }
 
         if (_armor != null)
         {
             ShowArmor(_armor);
+            ArmorDressed.Invoke(_armor);
         }
         else
             _health.AssignArmor(0, 0);
@@ -144,6 +176,9 @@ public class InventoryFighter : MonoBehaviour
 
     private void Refresh(UIInventoryItem item) =>
         item.GetComponentInParent<UIInventorySlot>().Refresh();
+    
+    private void SwitchItem(UIInventoryItem item, ItemInfo itemInfo) =>
+        item.GetComponentInParent<UIInventorySlot>().SetItem(itemInfo);
 
     private void ShowWeapon(ItemInfo itemInfo)
     {

@@ -15,6 +15,7 @@ public class InfoPanel : MonoBehaviour
     [SerializeField] private TMP_Text _damage;
     [SerializeField] private TMP_Text _attackSpeed;
     [SerializeField] private Sprite _magicAttackIcon;
+    [SerializeField] private Sprite _meleeAttackIcon;
     [SerializeField] private Image _currentItem;
     [SerializeField] private Image _nextItem;
     [SerializeField] private TMP_Text _currentLevel;
@@ -37,6 +38,7 @@ public class InfoPanel : MonoBehaviour
         {
             if (itemInfo.AttackType == AttackType.MeleeAttack)
             {
+                _damageTypeIcon.sprite = _meleeAttackIcon;
                 FillTextInfo(itemInfo);
             }
             else if (itemInfo.AttackType == AttackType.RangeAttack)
@@ -49,7 +51,7 @@ public class InfoPanel : MonoBehaviour
         {
             _attackPanel.SetActive(false);
             _armorPanel.SetActive(true);
-            _armor.text = ($"  -  {itemInfo.Armor.ToString()}");
+            _armor.text = ($"- {itemInfo.Armor.ToString()}");
         }
 
         FillSlotsItemInfo(itemInfo);
