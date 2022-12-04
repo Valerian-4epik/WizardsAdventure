@@ -123,7 +123,7 @@ namespace UI
         private void PLaySoundFx(AudioClip audioClip)
         {
             _audioSource.clip = audioClip;
-            
+
             if (!_audioSource.isPlaying)
                 _audioSource.Play();
         }
@@ -168,8 +168,10 @@ namespace UI
         private void SetRaycastDetecter()
         {
             if (Camera.main != null)
+            {
                 _raycastDetecter = Camera.main.gameObject.GetComponent<RaycastDetecter>();
-            _raycastDetecter.SetShopInterface(this);
+                _raycastDetecter.SetShopInterface(this);
+            }
         }
 
         private List<ItemInfo> GetItemList() =>

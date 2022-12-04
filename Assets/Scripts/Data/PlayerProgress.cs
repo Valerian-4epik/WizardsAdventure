@@ -18,6 +18,7 @@ namespace Data
         private Dictionary<int, List<string>> _itemsInSquad = new Dictionary<int, List<string>>();
         private RewardLevelData _rewardLevelData;
         private int _countNumberSaveMoney;
+        private bool _isTutorialStart = true;
 
         public int PlayerWizardAmount { get; set; }
 
@@ -47,6 +48,15 @@ namespace Data
                 return _allmoney;
             }
         }
+
+        public void SaveTutorialStartState(bool value)
+        {
+            _isTutorialStart = value;
+            ES3.Save("tutorialState", _isTutorialStart, "tutorialState.es3");
+        }
+
+        public bool GetStartTutorialInfo() => 
+            _isTutorialStart = ES3.Load("tutorialState", "tutorialState.es3", _isTutorialStart);
 
         public void SwitchMoney()
         {
