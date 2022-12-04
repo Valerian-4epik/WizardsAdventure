@@ -40,8 +40,10 @@ namespace Infrastructure.Logic
                 Construct(health);
             }
 
+
             _armorText = _armorPanel.GetComponentInChildren<TMP_Text>();
             _weaponText = _weaponPanel.GetComponentInChildren<TMP_Text>();
+
             _inventoryFighter.ArmorDressed += ShowArmorLevel;
             _inventoryFighter.WeaponDressed += ShowWeaponLevel;
         }

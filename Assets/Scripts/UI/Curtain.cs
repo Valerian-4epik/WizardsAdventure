@@ -20,22 +20,26 @@ public class Curtain : MonoBehaviour
     private CanvasGroup _canvasGroup;
     private Camera _camera;
     private PlayableDirector _playableDirector;
-    
+
     private void Awake()
     {
         _canvasGroup = GetComponent<CanvasGroup>();
-        
+
         DontDestroyOnLoad(this);
     }
 
     private void Start()
     {
-        foreach (var slot in _slots)
+        if (_slots.Count != null)
         {
-            slot.FillSlot(GetRandomSprite(_backgroundsSlot), GetRandomSprite(_backgroundsLevelNumber), GetRandomItem());
+            foreach (var slot in _slots)
+            {
+                slot.FillSlot(GetRandomSprite(_backgroundsSlot), GetRandomSprite(_backgroundsLevelNumber),
+                    GetRandomItem());
+            }
         }
     }
-    
+
     public void Show() => _canvasGroup.alpha = 1;
 
     public void Hide() =>
@@ -50,7 +54,7 @@ public class Curtain : MonoBehaviour
             _sliderText.text = ($"...{Math.Round(_slider.value, 1)}%");
             yield return new WaitForSeconds(delay);
         }
-        
+
         _camera = Camera.main;
         _playableDirector = _camera.gameObject.GetComponent<PlayableDirector>();
         _playableDirector.Play();

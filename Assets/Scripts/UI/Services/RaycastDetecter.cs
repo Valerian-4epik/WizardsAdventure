@@ -42,6 +42,9 @@ public class RaycastDetecter : MonoBehaviour
     public void SetShopInterface(UIInventory shopInterface) =>
         _shopInterface = shopInterface;
 
+    public void ActivateUIInventory() =>
+        _shopInterface.ShowInventory();
+
     private bool DoubleClick()
     {
         if (Input.GetMouseButtonDown(0))
@@ -98,7 +101,7 @@ public class RaycastDetecter : MonoBehaviour
 
         return null;
     }
-    
+
     private WizardForADS GetWizardForADS()
     {
         if (Camera.main != null)
@@ -151,7 +154,4 @@ public class RaycastDetecter : MonoBehaviour
             }
         }
     }
-
-    private void ActivateUIInventory() =>
-        _shopInterface.ShowInventory();
 }

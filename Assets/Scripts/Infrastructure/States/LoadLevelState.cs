@@ -29,11 +29,13 @@ namespace Infrastructure.States
         {
             _loadingCurtain.enabled = true;
             _loadingCurtain.Show();
-            _sceneLoader.Load(1, OnLoaded);
+            _sceneLoader.Load(2, OnLoaded);
         }
 
-        public void Exit() =>
+        public void Exit()
+        {
             _loadingCurtain.Hide();
+        }
 
         private void OnLoaded()
         {
@@ -48,7 +50,8 @@ namespace Infrastructure.States
             uiInventory.SetPlayerProgress(progress);
             GameObject levelFinishInterface = _gameFactory.CreateLevelFinishInterface();
             GameObject arenaDisposer = _gameFactory.CreateArenaDisposer();
-            SubscribePayloads(arenaDisposer, heroesSpawner, uiInventory, progress, levelFinishInterface, levelGenerator);
+            SubscribePayloads(arenaDisposer, heroesSpawner, uiInventory, progress, levelFinishInterface,
+                levelGenerator);
             _stateMachine.Enter<GameLoopState, GameObject, GameObject>(levelFinishInterface, playerProgress);
         }
 
@@ -62,7 +65,7 @@ namespace Infrastructure.States
             GameObject playerProgress = _gameFactory.CreatePlayerProgress();
             progress = playerProgress.GetComponent<PlayerProgress>();
             GameObject generator = _gameFactory.CreateLevelGenerator();
-            levelGenerator = generator.GetComponent<LevelGenerator>(); 
+            levelGenerator = generator.GetComponent<LevelGenerator>();
             levelGenerator.SetLevelProgress(progress);
             cameraFollower = _gameFactory.CreateCameraFollower();
             heroesSpawner = _gameFactory.CreateWizardsSpawner(GameObject.FindWithTag(INITIAL_POINT_SPAWNER));

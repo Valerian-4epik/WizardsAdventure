@@ -89,8 +89,8 @@ public class ArenaDisposer : MonoBehaviour
         _raycastDetecter.enabled = false;
     }
 
-    public void ActivateRaycaste() => _raycastDetecter.enabled = true; 
-
+    public void ActivateRaycaste() => _raycastDetecter.enabled = true;
+    
     private void FindRewardPoint() =>
         _rewardToChestFollower.GetInstantiatePoint(GameObject.FindGameObjectWithTag(REWARD_POINT).transform, this);
 
