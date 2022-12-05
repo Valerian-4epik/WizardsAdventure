@@ -31,6 +31,8 @@ public class ArenaDisposer : MonoBehaviour
     private RaycastDetecter _raycastDetecter;
 
     public PlayerProgress PlayerProgress => _playerProgress;
+    public List<GameObject> Wizards => _wizards;
+
     public event Action<bool> EndFight;
 
     private void OnEnable()

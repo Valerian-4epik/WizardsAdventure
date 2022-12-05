@@ -1,29 +1,107 @@
+using System.Collections.Generic;
+using ES3Types;
 using UI;
 using UnityEngine;
+using UnityEngine.Playables;
+using UnityEngine.Timeline;
+using UnityEngine.UI;
 
-public class TutorialLogic : MonoBehaviour
+namespace Tutorial.Scripts
 {
-    private UIInventory _inventoryItem;
-    private RaycastDetecter _raycastDetecter;
-    private ArenaDisposer _arenaDisposer;
-
-    public void FindAllObjects()
+    public class TutorialLogic : MonoBehaviour
     {
-        Debug.Log("Ищем обьекты");
-        _inventoryItem = FindObjectOfType<UIInventory>();
-        _raycastDetecter = FindObjectOfType<RaycastDetecter>();
-        _arenaDisposer = FindObjectOfType<ArenaDisposer>();
-    }
+        [SerializeField] private PlayableDirector _playableDirector;
+        [SerializeField] private PlayableAsset _mergeBranch;
+        [SerializeField] private TimelineAsset _returnItems;
+        [SerializeField] private TimelineAsset _goodluckHero;
+        
+        private Button _branchButton;
+        private UIInventory _inventory;
+        private RaycastDetecter _raycastDetecter;
+        private ArenaDisposer _arenaDisposer;
+        private BoxCollider2D _trigger;
+        private int _amountButtonClick;
+        private List<InventoryFighter> _inventoryFighters = new List<InventoryFighter>();
 
-    public void ActivateInventory()
-    {
-        Debug.Log("Активируем Инвентарь");
-        _raycastDetecter.ActivateUIInventory();
-    }
+        public void FindAllObjects()
+        {
+            Debug.Log("Ищем обьекты");
+            _inventory = FindObjectOfType<UIInventory>();
+            _raycastDetecter = FindObjectOfType<RaycastDetecter>();
+            _arenaDisposer = FindObjectOfType<ArenaDisposer>();
+        }
 
-    public void DisableAllObject()
-    {
-        _raycastDetecter.enabled = true;
-        _arenaDisposer.DisableRaycaster();
+        public void ActivateInventory()
+        {
+            Debug.Log("Активируем Инвентарь");
+            _raycastDetecter.ActivateUIInventory();
+            _inventory.CanvasGroup.interactable = false;
+            _branchButton = _inventory.BranchButton;
+            _branchButton.onClick.AddListener(AddAmount);
+        }
+
+        public void DisableAllObject()
+        {
+            _raycastDetecter.enabled = true;
+            _arenaDisposer.DisableRaycaster();
+        }
+
+        public void ActivateBranchButton()
+        {
+            _inventory.CanvasGroup.interactable = true;
+            _inventory.ActivateBranchButtonForTutor();
+        }
+
+        public void ActivateTrigger()
+        {
+            _trigger.enabled = true;
+        }
+
+        public void SubscribToWeaponChanged()
+        {
+            var wizards = _arenaDisposer.Wizards;
+            foreach (var wizard in wizards)
+            {
+                wizard.GetComponent<InventoryFighter>().WeaponDressed += NextReturnItemState;
+            }
+        }
+        
+        public void SubscribToWeaponReturn()
+        {
+            var wizards = _arenaDisposer.Wizards;
+            foreach (var wizard in wizards)
+            {
+                wizard.GetComponent<InventoryFighter>().WeaponDressed += NextGoodluckHeroState;
+            }
+        }
+        
+
+        private void AddAmount()
+        {
+            _amountButtonClick++;
+            if (_amountButtonClick >= 2)
+            {
+                _inventory.BranchButton.interactable = false;
+                ChangePlayableTrack(_mergeBranch);
+            }
+        }
+
+        private void ChangePlayableTrack(PlayableAsset playableTrack)
+        {
+            _playableDirector.playableAsset = playableTrack;
+            _playableDirector.Play();
+        }
+
+        private void NextReturnItemState(ItemInfo item)
+        {
+            var wizards = _arenaDisposer.Wizards;
+            foreach (var wizard in wizards)
+            {
+                wizard.GetComponent<InventoryFighter>().WeaponDressed -= NextReturnItemState;
+            }
+            ChangePlayableTrack(_returnItems);
+        }
+
+        private void NextGoodluckHeroState(ItemInfo item) => ChangePlayableTrack(_goodluckHero);
     }
 }

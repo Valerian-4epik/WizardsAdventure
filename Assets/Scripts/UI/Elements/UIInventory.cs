@@ -4,6 +4,7 @@ using System.Linq;
 using Data;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 namespace UI
@@ -19,12 +20,16 @@ namespace UI
         [SerializeField] private AudioClip _successfulBuy;
         [SerializeField] private AudioClip _successfulMerge;
         [SerializeField] private AudioClip _worngFxSound;
+        [SerializeField] private List<Button> _buttonsForTutor;
+        [SerializeField] private Button _branchButton;
 
         private RaycastDetecter _raycastDetecter;
         private PlayerProgress _playerProgress;
 
         public PlayerProgress PlayerProgress => _playerProgress;
         public UIInventorySlot[] Slots => _slots;
+        public Button BranchButton => _branchButton;
+        public CanvasGroup CanvasGroup => _canvasGroup;
 
         public event Action Fight;
 
@@ -92,6 +97,15 @@ namespace UI
             }
         }
 
+        public void ActivateBranchButtonForTutor()
+        {
+            _canvasGroup.interactable = true;
+            foreach (var button in _buttonsForTutor)
+            {
+                button.interactable = false;
+            }
+        }
+            
         public void SetPlayerProgress(PlayerProgress playerProgress)
         {
             _playerProgress = playerProgress;

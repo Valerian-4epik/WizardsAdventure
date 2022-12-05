@@ -3287,6 +3287,12 @@ MonoBehaviour:
   _successfulBuy: {fileID: 8300000, guid: cdf748ccffe4548f9a9239250becbe6a, type: 3}
   _successfulMerge: {fileID: 8300000, guid: 78419f98379502c4dbfb2774bc94e7c1, type: 3}
   _worngFxSound: {fileID: 8300000, guid: d850bd081eda5b14c978355de126d02e, type: 3}
+  _buttonsForTutor:
+  - {fileID: 1885068026159542340}
+  - {fileID: 7842554403286836330}
+  - {fileID: 1831207209963273401}
+  - {fileID: 919004453408245496}
+  _branchButton: {fileID: 1885068026555132258}
 --- !u!1 &1885068025508351945
 GameObject:
   m_ObjectHideFlags: 0
@@ -14549,6 +14555,10 @@ PrefabInstance:
     - target: {fileID: 6634227948996068428, guid: 0920219e529c9344d998e7803e1e7a9c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8779397190159612995, guid: 0920219e529c9344d998e7803e1e7a9c, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 31.099998
       objectReference: {fileID: 0}
     - target: {fileID: 8896809348763830931, guid: 0920219e529c9344d998e7803e1e7a9c, type: 3}
       propertyPath: _inventory
