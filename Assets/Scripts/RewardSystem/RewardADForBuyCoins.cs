@@ -7,7 +7,7 @@ namespace UI.Services
 {
     public class RewardADForBuyCoins : MonoBehaviour
     {
-        private const int REWARD_MONEY = 300;
+        private const int REWARD_MONEY = 200;
 
         [SerializeField] private Button _button;
         [SerializeField] private UIInventory _inventory;

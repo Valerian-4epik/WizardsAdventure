@@ -8,12 +8,12 @@ namespace Data
 {
     public class PlayerProgress : MonoBehaviour
     {
-        private const int NEW_GAME_MONEY = 300;
+        private const int NEW_GAME_MONEY = 30;
 
         private bool _isNewGame = true;
         private int _allmoney;
         private int _currentMoney;
-        private int _currentLevel = 0;
+        private int _currentLevel = 1;
         private List<string> _itemsInShop = new List<string>();
         private Dictionary<int, List<string>> _itemsInSquad = new Dictionary<int, List<string>>();
         private RewardLevelData _rewardLevelData;

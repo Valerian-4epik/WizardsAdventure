@@ -75,5 +75,5 @@ public class LevelFinishInterface : MonoBehaviour
     }
     
     private void AddRewardMoney() => _playerProgress.AddReward();
-    private void GoNextLevel(string value) => LevelEnded?.Invoke();
+    public void GoNextLevel(string value) => LevelEnded?.Invoke();
 }

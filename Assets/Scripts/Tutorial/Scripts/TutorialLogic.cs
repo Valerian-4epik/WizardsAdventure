@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Data;
 using ES3Types;
 using UI;
 using UnityEngine;
@@ -12,9 +13,11 @@ namespace Tutorial.Scripts
     {
         [SerializeField] private PlayableDirector _playableDirector;
         [SerializeField] private PlayableAsset _mergeBranch;
-        [SerializeField] private TimelineAsset _returnItems;
-        [SerializeField] private TimelineAsset _goodluckHero;
-        
+        [SerializeField] private PlayableAsset _returnItems;
+        [SerializeField] private PlayableAsset _goodluckHero;
+
+        private PlayerProgress _playerProgress;
+        private LevelFinishInterface _levelFinishInterface;
         private Button _branchButton;
         private UIInventory _inventory;
         private RaycastDetecter _raycastDetecter;
@@ -29,6 +32,7 @@ namespace Tutorial.Scripts
             _inventory = FindObjectOfType<UIInventory>();
             _raycastDetecter = FindObjectOfType<RaycastDetecter>();
             _arenaDisposer = FindObjectOfType<ArenaDisposer>();
+            _playerProgress = FindObjectOfType<PlayerProgress>();
         }
 
         public void ActivateInventory()
@@ -74,8 +78,16 @@ namespace Tutorial.Scripts
                 wizard.GetComponent<InventoryFighter>().WeaponDressed += NextGoodluckHeroState;
             }
         }
-        
 
+        public void FinishTutor()
+        {
+            _playerProgress.SaveTutorialStartState(false);
+            _arenaDisposer.ActivateFinishInterface(false);
+            _levelFinishInterface = FindObjectOfType<LevelFinishInterface>();
+            _levelFinishInterface.gameObject.SetActive(true);
+            _levelFinishInterface.GoNextLevel("FinishTutorial");
+        }
+        
         private void AddAmount()
         {
             _amountButtonClick++;

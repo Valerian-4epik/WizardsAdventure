@@ -29,7 +29,7 @@ namespace Infrastructure.States
         {
             _loadingCurtain.enabled = true;
             _loadingCurtain.Show();
-            _sceneLoader.Load(2, OnLoaded);
+            _sceneLoader.Load(payload, OnLoaded);
         }
 
         public void Exit()

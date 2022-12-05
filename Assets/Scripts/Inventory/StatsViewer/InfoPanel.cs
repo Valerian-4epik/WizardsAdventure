@@ -33,16 +33,18 @@ public class InfoPanel : MonoBehaviour
     public void FillPanel(ItemInfo itemInfo)
     {
         _item = itemInfo;
-        
+
         if (itemInfo.Armor == 0)
         {
             if (itemInfo.AttackType == AttackType.MeleeAttack)
             {
+                SwithPanels();
                 _damageTypeIcon.sprite = _meleeAttackIcon;
                 FillTextInfo(itemInfo);
             }
             else if (itemInfo.AttackType == AttackType.RangeAttack)
             {
+                SwithPanels();
                 _damageTypeIcon.sprite = _magicAttackIcon;
                 FillTextInfo(itemInfo);
             }
@@ -55,6 +57,12 @@ public class InfoPanel : MonoBehaviour
         }
 
         FillSlotsItemInfo(itemInfo);
+    }
+
+    private void SwithPanels()
+    {
+        _armorPanel.SetActive(false);
+        _attackPanel.SetActive(true);
     }
 
     private void FillSlotsItemInfo(ItemInfo itemInfo)

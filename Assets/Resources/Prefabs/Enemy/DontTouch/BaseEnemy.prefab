@@ -1609,7 +1609,7 @@ MonoBehaviour:
   _aggroZone: {fileID: 6444612049964986696}
   _attackZone: {fileID: 6444612049718192894}
   _health: {fileID: 6444612051044143599}
-  _inventoryCanvas: {fileID: 0}
+  _inventoryCanvas: {fileID: 6951932241508994256}
 --- !u!114 &2678374090500838242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2211,6 +2211,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: InventoryCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8169771171539647961, guid: 5bf07cfea40addd42b78f283a6bf3d73, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5bf07cfea40addd42b78f283a6bf3d73, type: 3}
 --- !u!1 &3790048340113502086 stripped
@@ -2223,6 +2227,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2457120521575216966, guid: 5bf07cfea40addd42b78f283a6bf3d73, type: 3}
   m_PrefabInstance: {fileID: 7558831741562049956}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &6951932241508994256 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 620481769513834868, guid: 5bf07cfea40addd42b78f283a6bf3d73, type: 3}
+  m_PrefabInstance: {fileID: 7558831741562049956}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 354c995271287a3438390e4f6a7e888f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &7582311574038044550 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 134990751281842722, guid: 5bf07cfea40addd42b78f283a6bf3d73, type: 3}
