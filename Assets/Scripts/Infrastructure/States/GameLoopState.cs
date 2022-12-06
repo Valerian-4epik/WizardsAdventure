@@ -1,5 +1,6 @@
 using Data;
 using Infrastructure.Logic;
+using NodeCanvas.Tasks.Actions;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -36,7 +37,7 @@ namespace Infrastructure.States
         {
             var levelFinishInterface = _levelFinishInterface.GetComponent<LevelFinishInterface>();
             levelFinishInterface.LevelEnded += LoadNextLevel;
-            levelFinishInterface.LevelDefeat += LoadCurrentLevel;
+            levelFinishInterface.LevelDefeat += LoadLevel;
         }
 
 
@@ -46,8 +47,22 @@ namespace Infrastructure.States
             _gameStateMachine.Enter<LoadLevelState, int>(1);
         }
 
+        private void LoadLevel(bool value)
+        {
+            if(value)
+                LoadCurrentLevel();
+            else
+                LoadOneLevelBack();
+        }
+        
         private void LoadCurrentLevel()
         {
+            _gameStateMachine.Enter<LoadLevelState, int>(1);
+        }
+        
+        private void LoadOneLevelBack()
+        {
+            _playerProgress.SaveLevel(_playerProgress.GetLevel()-1);
             _gameStateMachine.Enter<LoadLevelState, int>(1);
         }
     }

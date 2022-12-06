@@ -30,7 +30,11 @@ public class WizardForMoney : MonoBehaviour
         Show();
     }
 
-    public void BuyWizard() => _wizardsSpawner.AddWizard(PLaySoundFx, PLaySoundFx);
+    public void BuyWizard()
+    {
+        _wizardsSpawner.AddWizard(PLaySoundFx, PLaySoundFx);
+        
+    }
 
     private void PLaySoundFx(bool value)
     {

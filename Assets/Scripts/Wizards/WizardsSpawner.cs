@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using Data;
 using Infrastructure.Logic;
+using UI.Services;
+using Unity.VisualScripting;
 using UnityEngine;
-using Wizards;
+using Wizard = Wizards.Wizard;
 
 public class WizardsSpawner : MonoBehaviour
 {
@@ -14,6 +16,8 @@ public class WizardsSpawner : MonoBehaviour
     [SerializeField] private GameObject _wizard;
     [SerializeField] private GameObject _wizardForViewingADS;
     [SerializeField] private GameObject _wizardForMoney;
+    [SerializeField] private GameObject _additionalyHP;
+    [SerializeField] private GameObject _additionalyAttackSpeed;
     [SerializeField] private Transform _wizardForViewingADSPoint;
     [SerializeField] private Transform _wizardForMoneyPoint;
 
@@ -21,9 +25,11 @@ public class WizardsSpawner : MonoBehaviour
     private WizardForMoney _wizardShop;
     private WizardForADS _wizardADSShop;
     private WizardPrice _wizardPrice;
+    
     private CameraFollower _cameraFollower;
 
     public CameraFollower CameraFollower => _cameraFollower;
+    public PlayerProgress PlayerProgress => _playerProgress;
     public event Action<GameObject> SquadChanged;
 
     private void OnEnable()
@@ -52,7 +58,12 @@ public class WizardsSpawner : MonoBehaviour
             SquadChanged?.Invoke(wizard);
         }
         else if (GetEmptyInitPoint() == null)
+        {
             _wizardShop.gameObject.SetActive(false);
+            _wizardForViewingADS.gameObject.SetActive(false);
+            CreateAdditionalyHpTrigger();
+            CreateAdditionalyAttackSpeedTrigger();
+        }
         else
             onErrorCallBack?.Invoke(false);
     }
@@ -69,7 +80,7 @@ public class WizardsSpawner : MonoBehaviour
     }
 
     public void SetCameraFollower(CameraFollower cameraFollower) => _cameraFollower = cameraFollower;
-    
+
     private GameObject InstantiateWizard()
     {
         var transformLookAtCamera = Quaternion.Euler(0, 180, 0);
@@ -103,7 +114,7 @@ public class WizardsSpawner : MonoBehaviour
             }
         }
     }
-    
+
     private void SpawnStartSquad()
     {
         for (int i = 0; i < BASE_AMOUNT_WIZARDS; i++)
@@ -133,11 +144,21 @@ public class WizardsSpawner : MonoBehaviour
 
     private void SpawnWizardShop()
     {
-        var wizardForMoney = Instantiate(_wizardForMoney, _wizardForMoneyPoint.position, Quaternion.identity);
-        wizardForMoney.gameObject.transform.SetParent(transform);
-        var wizardForADS = Instantiate(_wizardForViewingADS, _wizardForViewingADSPoint.position, Quaternion.identity);
-        wizardForADS.gameObject.transform.SetParent(transform);
-        SetupWizardShop(wizardForMoney, wizardForADS);
+        if (_playerProgress.PlayerWizardAmount < 10)
+        {
+            var wizardForMoney = Instantiate(_wizardForMoney, _wizardForMoneyPoint.position, Quaternion.identity);
+            wizardForMoney.gameObject.transform.SetParent(transform);
+            var wizardForADS = Instantiate(_wizardForViewingADS, _wizardForViewingADSPoint.position,
+                Quaternion.identity);
+            wizardForADS.gameObject.transform.SetParent(transform);
+            SetupWizardShop(wizardForMoney, wizardForADS);
+        }
+        else
+        {
+            CreateAdditionalyHpTrigger();
+            CreateAdditionalyAttackSpeedTrigger();
+        }
+
     }
 
     private void SetupWizardShop(GameObject wizardForMoney, GameObject wizardForADS)
@@ -146,5 +167,20 @@ public class WizardsSpawner : MonoBehaviour
         _wizardShop.SetWizardSpawner(this, _wizardPrice.GetPrice(_playerProgress.PlayerWizardAmount));
         _wizardADSShop = wizardForADS.GetComponent<WizardForADS>();
         _wizardADSShop.SetupSpawner(this);
+    }
+    
+    private void CreateAdditionalyAttackSpeedTrigger()
+    {
+        var additionalyAttackSpeedTrigger = Instantiate(_additionalyAttackSpeed, _wizardForViewingADSPoint.position,
+            Quaternion.identity);
+        additionalyAttackSpeedTrigger.gameObject.transform.SetParent(transform);
+        additionalyAttackSpeedTrigger.GetComponent<AdditionalyAttackSpeedTrigger>().SetWizardSpawner(this);
+    }
+
+    private void CreateAdditionalyHpTrigger()
+    {
+        var additionalyHpTrigger = Instantiate(_additionalyHP, _wizardForMoneyPoint.position, Quaternion.identity);
+        additionalyHpTrigger.gameObject.transform.SetParent(transform);
+        additionalyHpTrigger.GetComponent<AdditionalyHpForMoney>().SetWizardSpawner(this);
     }
 }

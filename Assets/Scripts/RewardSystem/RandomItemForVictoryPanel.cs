@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Agava.YandexGames;
 using Data;
+using Inventory;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,9 +20,11 @@ namespace RewardSystem
 
         private PlayerProgress _playerProgress;
         private Button _button;
+        private RandomGenerator _randomGenerator;
 
         private void OnEnable()
         {
+            _randomGenerator = new RandomGenerator();
             _button = GetComponent<Button>();
             _button.onClick.AddListener(Show);
             _playerProgress = _levelFinishInterface.PlayerProgress;
@@ -38,8 +41,8 @@ namespace RewardSystem
         
         private ItemInfo GetRandomItem()
         {
-            var number = Random.Range(0, _items.Count-1);
-            return _items[number];
+            var item = _randomGenerator.GetRandomItem(_items);
+            return item;
         }
 
         private void FillCell()

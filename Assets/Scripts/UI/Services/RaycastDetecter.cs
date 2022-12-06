@@ -1,4 +1,6 @@
+using NodeCanvas.Tasks.Actions;
 using UI;
+using UI.Services;
 using UnityEngine;
 using Wizards;
 
@@ -35,6 +37,15 @@ public class RaycastDetecter : MonoBehaviour
             if (GetWizardForADS() != null)
             {
                 GetWizardForADS().BuyWizard();
+            }
+        }
+        
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (GetAdditionalyHpTrigger() != null)
+            {
+                Debug.Log("sada");
+                GetAdditionalyHpTrigger().BuyHP();
             }
         }
     }
@@ -113,6 +124,26 @@ public class RaycastDetecter : MonoBehaviour
                 if (hit.collider.TryGetComponent(out WizardForADS wizardForAds))
                 {
                     return wizardForAds;
+                }
+            }
+
+            return null;
+        }
+
+        return null;
+    }
+    
+    private AdditionalyHpForMoney GetAdditionalyHpTrigger()
+    {
+        if (Camera.main != null)
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            if (Physics.Raycast(ray, out var hit, 1000, _targetMask))
+            {
+                if (hit.collider.TryGetComponent(out AdditionalyHpForMoney trigger))
+                {
+                    return trigger;
                 }
             }
 

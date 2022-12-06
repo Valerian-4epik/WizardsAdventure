@@ -14,6 +14,7 @@ namespace Enemy
         [SerializeField] private AudioPlayerForWizard _audioPlayer;
 
         private Transform _targetTransform;
+        private float _additionaluAttackSpeed;
         private bool _isAttacking;
         private float _cooldown;
         private bool _attackIsActive;
@@ -25,6 +26,8 @@ namespace Enemy
             get => _weapon;
             set { _weapon = value; }
         }
+
+        public void SetAdditionalyAttackSpeed(float value) => _additionaluAttackSpeed = value;
 
         public void EnableAttack(Transform target)
         {
@@ -64,7 +67,8 @@ namespace Enemy
             if (_animator != null && _weapon != null)
                 ChoiceAttackAnimation(_weapon.Info);
             else if (_animator != null && _weapon == null)
-                _animator.PlayAttack();
+                PlayOrdinaryAttack();
+                
         }
 
         private void OnAttack()
@@ -129,14 +133,43 @@ namespace Enemy
 
         private void PLayAttack(float speed)
         {
-            _animator.SetSpeed(speed);
-            _animator.PlayAttack();
+            if (_additionaluAttackSpeed != 0)
+            {
+                var allSpeed = speed + _additionaluAttackSpeed;
+                _animator.SetSpeed(allSpeed);
+                _animator.PlayAttack();
+            }
+            else
+            {
+                _animator.SetSpeed(speed);
+                _animator.PlayAttack();
+            }
         }
 
-        private void PlayStaffAttack(float speed)
+        private void PlayStaffAttack(float speed)//посмотреть если различие межну обычной аттакой и стафф аттакой
         {
-            _animator.SetSpeed(speed);
-            _animator.PlayStaffAttack();
+            if (_additionaluAttackSpeed != 0)
+            {
+                var allSpeed = speed + _additionaluAttackSpeed;
+                _animator.SetSpeed(allSpeed);
+                _animator.PlayStaffAttack();
+            }
+            else
+            {
+                _animator.SetSpeed(speed);
+                _animator.PlayStaffAttack();
+            }
+        }
+
+        private void PlayOrdinaryAttack()
+        {
+            if(_additionaluAttackSpeed != 0)
+                _animator.PlayAttack();
+            else
+            {
+                _animator.SetSpeed(1.5f + _additionaluAttackSpeed);//вот тут залипуху сделаю потом нужно будет исправить 
+                _animator.PlayAttack();
+            }
         }
     }
 }

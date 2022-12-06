@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Data;
+using Inventory;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -25,6 +26,7 @@ namespace UI
 
         private RaycastDetecter _raycastDetecter;
         private PlayerProgress _playerProgress;
+        private RandomGenerator _randomGenerator;
 
         public PlayerProgress PlayerProgress => _playerProgress;
         public UIInventorySlot[] Slots => _slots;
@@ -45,6 +47,7 @@ namespace UI
 
             SetRaycastDetecter();
 
+            _randomGenerator = new RandomGenerator();
             _adsTrigger.SetItem(SetupRandomItem());
         }
 
@@ -141,14 +144,11 @@ namespace UI
             if (!_audioSource.isPlaying)
                 _audioSource.Play();
         }
-
-        private ItemInfo SetupRandomItem() =>
-            _itemsData[GetRandomNumber()];
-
-        private int GetRandomNumber()
+        
+        private ItemInfo SetupRandomItem()
         {
-            var randomItem = Random.Range(0, _itemsData.Count - 1);
-            return randomItem;
+            var item = _randomGenerator.GetRandomItem(_itemsData);
+            return item;
         }
 
         private void ShowMoney() =>

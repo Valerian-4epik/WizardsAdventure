@@ -18,7 +18,7 @@ public class ArenaDisposer : MonoBehaviour
 
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip _startFightSoundFx;
-    
+
     private UIInventory _shopInterface;
     private RewardToChestFollower _rewardToChestFollower;
     private GameObject _levelFinishInterface;
@@ -42,7 +42,44 @@ public class ArenaDisposer : MonoBehaviour
         FindRewardPoint();
     }
 
-
+    public void SetAdditionalyAttackSpeed()
+    {
+        var additionalyAttackSpeed = _playerProgress.LoadAdditionalAttackSpeed();
+        if (_playerProgress.AdditionalyAttackSpeed != 0)
+        {
+            foreach (var wizard in _wizards)
+            {
+                wizard.GetComponent<Attack>().SetAdditionalyAttackSpeed(_playerProgress.AdditionalyAttackSpeed);
+            }
+        }
+        else
+        {
+            foreach (var wizard in _wizards)
+            {
+                wizard.GetComponent<Attack>().SetAdditionalyAttackSpeed(additionalyAttackSpeed);
+            }
+        }
+    }
+    
+    public void SetAdditionalyHp()
+    {
+        var additionalyHp = _playerProgress.LoadAdditionalHP();
+        if (_playerProgress.AdditionalyHp != 0)
+        {
+            foreach (var wizard in _wizards)
+            {
+                wizard.GetComponent<Health>().SetHealth(_playerProgress.AdditionalyHp);
+            }
+        }
+        else
+        {
+            foreach (var wizard in _wizards)
+            {
+                wizard.GetComponent<Health>().SetHealth(additionalyHp);
+            }
+        }
+    }
+    
     public void SetShopInterface(UIInventory inventory)
     {
         _shopInterface = inventory;
@@ -92,7 +129,7 @@ public class ArenaDisposer : MonoBehaviour
     }
 
     public void ActivateRaycaste() => _raycastDetecter.enabled = true;
-    
+
     private void FindRewardPoint() =>
         _rewardToChestFollower.GetInstantiatePoint(GameObject.FindGameObjectWithTag(REWARD_POINT).transform, this);
 
@@ -112,7 +149,7 @@ public class ArenaDisposer : MonoBehaviour
             }
         }
     }
-    
+
     private void SubscribeToDeath()
     {
         foreach (var enemy in _enemies)
@@ -182,7 +219,7 @@ public class ArenaDisposer : MonoBehaviour
         }
     }
 
-    private void SwitchIsStandardBearer(GameObject fighter, bool value) => 
+    private void SwitchIsStandardBearer(GameObject fighter, bool value) =>
         fighter.GetComponent<Wizard>().IsStandardBearer = value;
 
     private void RunToRewardChest()
@@ -196,7 +233,7 @@ public class ArenaDisposer : MonoBehaviour
             }
         }
     }
-    
+
     private bool IsWizardStandardBearer(GameObject wizard)
     {
         var isWizardStandardBearer = wizard.GetComponent<Wizard>().IsStandardBearer;
@@ -226,10 +263,20 @@ public class ArenaDisposer : MonoBehaviour
         {
             fighter.GetComponent<Idle>().SwitchOnStartFight();
         }
+
+        if(_playerProgress.AdditionalyAttackSpeed != 0)
+            _playerProgress.SaveAdditionalAttackSpeed(_playerProgress.AdditionalyAttackSpeed);
+        
+        SetAdditionalyAttackSpeed();
+        
+        if(_playerProgress.AdditionalyHp != 0)
+            _playerProgress.SaveAdditionalHP(_playerProgress.AdditionalyHp);
+        
+        SetAdditionalyHp();
         
         DisableWizardsSpawner();
         DisableShopInterface();
-    } 
+    }
 
     public void Activate() //test
     {
@@ -252,11 +299,11 @@ public class ArenaDisposer : MonoBehaviour
         _shopInterface.Fight -= ActivateBattleState;
         _shopInterface.gameObject.SetActive(false);
     }
-    
+
     private void PLaySoundFx(AudioClip audioClip)
     {
         _audioSource.clip = audioClip;
-            
+
         if (!_audioSource.isPlaying)
             _audioSource.Play();
     }

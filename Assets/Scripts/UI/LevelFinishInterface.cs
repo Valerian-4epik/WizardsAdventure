@@ -11,6 +11,7 @@ public class LevelFinishInterface : MonoBehaviour
     [SerializeField] private GameObject _winPanel;
     [SerializeField] private GameObject _losePanel;
     [SerializeField] private RewarADForSpin _rewarAD;
+    [SerializeField] private GameObject _oneLevelBack;
 
     private ArenaDisposer _arenaDisposer;
     private PlayerProgress _playerProgress;
@@ -20,7 +21,7 @@ public class LevelFinishInterface : MonoBehaviour
     public PlayerProgress PlayerProgress => _playerProgress;
 
     public event Action LevelEnded;
-    public event Action LevelDefeat;
+    public event Action<bool> LevelDefeat;
 
     public void NextLevel()
     {
@@ -31,9 +32,11 @@ public class LevelFinishInterface : MonoBehaviour
     }
 
     public void RestartLevel() =>
-        LevelDefeat?.Invoke();
-
-
+        LevelDefeat?.Invoke(true);
+    
+    public void OneLevelBack() =>
+        LevelDefeat?.Invoke(false);
+    
     public void SubscribeToEndFight(ArenaDisposer arenaDisposer)
     {
         _arenaDisposer = arenaDisposer;
@@ -49,7 +52,12 @@ public class LevelFinishInterface : MonoBehaviour
             _rewarAD.SetPalayerProgress(_arenaDisposer.PlayerProgress);
         }
         else
+        {
             _losePanel.SetActive(true);
+
+            if (_playerProgress.GetLevel() == 1)
+                _oneLevelBack.SetActive(false);
+        }
     }
 
     private void GetPlayerProgress() => _playerProgress = _arenaDisposer.PlayerProgress;

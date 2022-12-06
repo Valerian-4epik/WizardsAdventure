@@ -19,14 +19,40 @@ namespace Data
         private RewardLevelData _rewardLevelData;
         private int _countNumberSaveMoney;
         private bool _isTutorialStart = true;
+        private int _additionalyHP;
+        private float _additionalyAttackSpeed;
 
         public int PlayerWizardAmount { get; set; }
+
+        public float AdditionalyAttackSpeed => _additionalyAttackSpeed;
+        public int AdditionalyHp => _additionalyHP;
 
         public event Action MoneyChanged;
 
         private void Awake() =>
             _rewardLevelData = new RewardLevelData();
 
+        public void SaveAdditionalHP(int hp)
+        {
+            _additionalyHP = hp;
+            ES3.Save("additionalHP", _additionalyHP, "AdditionalHP.es3");
+        }
+        
+        public int LoadAdditionalHP() => _additionalyHP = ES3.Load("currentLevel", "AdditionalHP.es3", _additionalyHP);
+        
+        public void SaveAdditionalAttackSpeed(float attackSpeed)
+        {
+            _additionalyAttackSpeed = attackSpeed;
+            ES3.Save("additionalAttackSpeed", _additionalyAttackSpeed, "AdditionalAttackSpeed.es3");
+        }
+        
+        public float LoadAdditionalAttackSpeed() => _additionalyAttackSpeed = ES3.Load("additionalAttackSpeed","AdditionalAttackSpeed.es3", _additionalyAttackSpeed);
+
+        public void AddAdditionalHP(int value)
+        {
+            _additionalyHP = LoadAdditionalHP();
+            _additionalyHP += value;
+        }
 
         public void SaveAllMoney(int value)
         {
