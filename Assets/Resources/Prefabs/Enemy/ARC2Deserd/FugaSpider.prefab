@@ -67,6 +67,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Spider_Fuga_Baby
       objectReference: {fileID: 0}
+    - target: {fileID: 704311356597086252, guid: f6375608ef2fac84883705cb3904515f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 704311356608652652, guid: f6375608ef2fac84883705cb3904515f, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 4300000, guid: 17f2f54fedc2dd246828d6a328855293, type: 3}
     m_RemovedComponents:
     - {fileID: 3925426068140610437, guid: f6375608ef2fac84883705cb3904515f, type: 3}
     - {fileID: 2973003079236226442, guid: f6375608ef2fac84883705cb3904515f, type: 3}
@@ -92,16 +100,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2111749003969839672, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.36
+      value: 0.47
       objectReference: {fileID: 0}
     - target: {fileID: 2111749003969839672, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 3.85
+      value: 2.35
       objectReference: {fileID: 0}
     - target: {fileID: 2678374090500838242, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
       propertyPath: _armor
       value: 
-      objectReference: {fileID: 11400000, guid: 6001e296b6438684c843a4bacaa80138, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 2678374090500838242, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
       propertyPath: _weapon
       value: 
@@ -128,7 +136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4795760813077201833, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.52
+      value: 0.71
       objectReference: {fileID: 0}
     - target: {fileID: 6444612049718192880, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
       propertyPath: m_Radius
@@ -164,7 +172,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6444612051044143602, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
       propertyPath: m_Radius
-      value: 4
+      value: 2.86
       objectReference: {fileID: 0}
     - target: {fileID: 6444612051044143603, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
       propertyPath: m_Name
@@ -172,15 +180,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6444612051044143605, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
       propertyPath: m_Size.x
-      value: 9.07
+      value: 5.3
       objectReference: {fileID: 0}
     - target: {fileID: 6444612051044143605, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
       propertyPath: m_Size.y
-      value: 1.93
+      value: 3.78
       objectReference: {fileID: 0}
     - target: {fileID: 6444612051044143605, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
       propertyPath: m_Size.z
-      value: 8.16
+      value: 5.78
       objectReference: {fileID: 0}
     - target: {fileID: 6444612051044143606, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
       propertyPath: m_RootOrder
@@ -226,13 +234,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7582311574038044550, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7743238692573672335, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.84
+      value: 0.92
       objectReference: {fileID: 0}
     - target: {fileID: 7743238692573672335, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.69
+      value: 0.91
       objectReference: {fileID: 0}
     - target: {fileID: 7868068851209585583, guid: 4ab67caf79b46ed48a95841b88de8a7f, type: 3}
       propertyPath: m_Avatar
