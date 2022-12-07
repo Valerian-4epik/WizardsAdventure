@@ -1271,7 +1271,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8147777222427028762
 Transform:
   m_ObjectHideFlags: 0
@@ -1298,7 +1298,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 2.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8147777222427028760
 MonoBehaviour:
@@ -1464,7 +1464,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.85, y: 1.82, z: 0.67}
+  m_Size: {x: 0.45, y: 1, z: 0.3}
   m_Center: {x: 0, y: 0.34, z: 0}
 --- !u!95 &4993817274667648070
 Animator:
@@ -1495,7 +1495,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 8147777223720408602}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.6
+  m_Radius: 0.3
   m_Speed: 3
   m_Acceleration: 100
   avoidancePriority: 50
@@ -1595,7 +1595,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _attack: {fileID: 8147777223720408580}
-  _attackRange: 1.5
+  _attackRange: 2.5
   _triggerObserver: {fileID: 8147777222427028760}
   _agentMoveTo: {fileID: 8147777223720408577}
   _aggro: {fileID: 8147777223720408576}

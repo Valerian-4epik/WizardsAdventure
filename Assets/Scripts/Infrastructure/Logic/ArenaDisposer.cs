@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using Data;
 using Enemy;
@@ -64,6 +65,7 @@ public class ArenaDisposer : MonoBehaviour
     public void SetAdditionalyHp()
     {
         var additionalyHp = _playerProgress.LoadAdditionalHP();
+        Debug.Log(additionalyHp);
         if (_playerProgress.AdditionalyHp != 0)
         {
             foreach (var wizard in _wizards)
@@ -258,19 +260,22 @@ public class ArenaDisposer : MonoBehaviour
     {
         PLaySoundFx(_startFightSoundFx);
         var activeFighters = _wizards.Concat(_enemies);
-
+        
         foreach (var fighter in activeFighters)
         {
             fighter.GetComponent<Idle>().SwitchOnStartFight();
         }
 
+
         if(_playerProgress.AdditionalyAttackSpeed != 0)
             _playerProgress.SaveAdditionalAttackSpeed(_playerProgress.AdditionalyAttackSpeed);
         
         SetAdditionalyAttackSpeed();
-        
-        if(_playerProgress.AdditionalyHp != 0)
+
+        if (_playerProgress.AdditionalyHp != 0)
+        {
             _playerProgress.SaveAdditionalHP(_playerProgress.AdditionalyHp);
+        }
         
         SetAdditionalyHp();
         

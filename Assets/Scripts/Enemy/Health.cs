@@ -61,7 +61,7 @@ namespace Enemy
         private void Start()
         {
             _effector = GetComponent<Effector>();
-            _maxHealth = _currentHealth;
+            _currentHealth = _maxHealth;
             _currentArmor = _maxArmor;
         }
 

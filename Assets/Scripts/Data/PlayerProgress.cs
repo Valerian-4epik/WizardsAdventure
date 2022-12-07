@@ -13,7 +13,7 @@ namespace Data
         private bool _isNewGame = true;
         private int _allmoney;
         private int _currentMoney;
-        private int _currentLevel = 1;
+        private int _currentLevel = 60;
         private List<string> _itemsInShop = new List<string>();
         private Dictionary<int, List<string>> _itemsInSquad = new Dictionary<int, List<string>>();
         private RewardLevelData _rewardLevelData;
@@ -37,21 +37,35 @@ namespace Data
             _additionalyHP = hp;
             ES3.Save("additionalHP", _additionalyHP, "AdditionalHP.es3");
         }
-        
-        public int LoadAdditionalHP() => _additionalyHP = ES3.Load("currentLevel", "AdditionalHP.es3", _additionalyHP);
-        
+
+        public int LoadAdditionalHP() => _additionalyHP = ES3.Load("additionalHP", "AdditionalHP.es3", _additionalyHP);
+
         public void SaveAdditionalAttackSpeed(float attackSpeed)
         {
             _additionalyAttackSpeed = attackSpeed;
             ES3.Save("additionalAttackSpeed", _additionalyAttackSpeed, "AdditionalAttackSpeed.es3");
         }
-        
-        public float LoadAdditionalAttackSpeed() => _additionalyAttackSpeed = ES3.Load("additionalAttackSpeed","AdditionalAttackSpeed.es3", _additionalyAttackSpeed);
+
+        public float LoadAdditionalAttackSpeed() => _additionalyAttackSpeed =
+            ES3.Load("additionalAttackSpeed", "AdditionalAttackSpeed.es3", _additionalyAttackSpeed);
 
         public void AddAdditionalHP(int value)
         {
             _additionalyHP = LoadAdditionalHP();
             _additionalyHP += value;
+        }
+
+        public void AddAdditionalAttackSpeed(float value)
+        {
+            if (_additionalyAttackSpeed == 0)
+            {
+                _additionalyAttackSpeed = LoadAdditionalAttackSpeed();
+                _additionalyAttackSpeed += value;
+            }
+            else
+            {
+                _additionalyAttackSpeed += value;
+            }
         }
 
         public void SaveAllMoney(int value)
@@ -80,8 +94,8 @@ namespace Data
             _isTutorialStart = value;
             ES3.Save("tutorialState", _isTutorialStart, "tutorialState.es3");
         }
-        
-        public bool GetStartTutorialInfo() => 
+
+        public bool GetStartTutorialInfo() =>
             _isTutorialStart = ES3.Load("tutorialState", "tutorialState.es3", _isTutorialStart);
 
         public void SwitchMoney()

@@ -13,6 +13,7 @@ public class RaycastDetecter : MonoBehaviour
     private float _clickDelay = 0.5f;
     private UIInventory _shopInterface;
     private Effector _effector;
+    private AdditionalyAttackSpeedTrigger _additionalyAttackSpeedTrigger;
 
     void Update()
     {
@@ -44,9 +45,14 @@ public class RaycastDetecter : MonoBehaviour
         {
             if (GetAdditionalyHpTrigger() != null)
             {
-                Debug.Log("sada");
                 GetAdditionalyHpTrigger().BuyHP();
             }
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (GetAdditionalAttackSpeedTrigger() != null)
+                _additionalyAttackSpeedTrigger.Show();
         }
     }
 
@@ -152,7 +158,28 @@ public class RaycastDetecter : MonoBehaviour
 
         return null;
     }
+    
+    private AdditionalyAttackSpeedTrigger GetAdditionalAttackSpeedTrigger()
+    {
+        if (Camera.main != null)
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
+            if (Physics.Raycast(ray, out var hit, 1000, _targetMask))
+            {
+                if (hit.collider.TryGetComponent(out AdditionalyAttackSpeedTrigger trigger))
+                {
+                    _additionalyAttackSpeedTrigger = trigger;
+                    return trigger;
+                }
+            }
+
+            return null;
+        }
+
+        return null;
+    }
+    
     private void ScaleUpWizard()
     {
         if (Camera.main != null)

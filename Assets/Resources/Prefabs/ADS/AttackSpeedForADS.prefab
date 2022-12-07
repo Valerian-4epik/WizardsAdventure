@@ -265,7 +265,6 @@ GameObject:
   - component: {fileID: 5015493006869790679}
   - component: {fileID: 6701473968305092599}
   - component: {fileID: 1087782570723478331}
-  - component: {fileID: 259277015278012203}
   - component: {fileID: 2832855401661667607}
   - component: {fileID: 6976475022732584365}
   m_Layer: 12
@@ -343,19 +342,6 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &259277015278012203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2522686743303930251}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9b16ce0cf264c05ae0418381f3aa8e7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _audioSource: {fileID: 2832855401661667607}
 --- !u!82 &2832855401661667607
 AudioSource:
   m_ObjectHideFlags: 0
@@ -464,6 +450,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ab47b4fb6b9463ab8cfe3edda5b2306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioSource: {fileID: 2832855401661667607}
+  _successfulBuyWizard: {fileID: 8300000, guid: b1b9c1f0ea1fcae439ed1a4d44ff05fd, type: 3}
+  _unsuccessfulBuyWizard: {fileID: 0}
 --- !u!1 &4680419188817147348
 GameObject:
   m_ObjectHideFlags: 0

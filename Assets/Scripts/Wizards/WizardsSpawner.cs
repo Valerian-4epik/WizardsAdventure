@@ -57,7 +57,7 @@ public class WizardsSpawner : MonoBehaviour
             _wizardShop.Price = _wizardPrice.GetPrice(_playerProgress.PlayerWizardAmount);
             SquadChanged?.Invoke(wizard);
         }
-        else if (GetEmptyInitPoint() == null)
+        if (GetEmptyInitPoint() == null)
         {
             _wizardShop.gameObject.SetActive(false);
             _wizardForViewingADS.gameObject.SetActive(false);
