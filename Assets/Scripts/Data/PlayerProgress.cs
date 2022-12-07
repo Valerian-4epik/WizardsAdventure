@@ -13,7 +13,7 @@ namespace Data
         private bool _isNewGame = true;
         private int _allmoney;
         private int _currentMoney;
-        private int _currentLevel = 60;
+        private int _currentLevel = 0;
         private List<string> _itemsInShop = new List<string>();
         private Dictionary<int, List<string>> _itemsInSquad = new Dictionary<int, List<string>>();
         private RewardLevelData _rewardLevelData;

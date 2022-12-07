@@ -19,6 +19,7 @@ namespace Tutorial.Scripts
         private PlayerProgress _playerProgress;
         private LevelFinishInterface _levelFinishInterface;
         private Button _branchButton;
+        private WizardsSpawner _wizardsSpawner;
         private UIInventory _inventory;
         private RaycastDetecter _raycastDetecter;
         private ArenaDisposer _arenaDisposer;
@@ -33,6 +34,7 @@ namespace Tutorial.Scripts
             _raycastDetecter = FindObjectOfType<RaycastDetecter>();
             _arenaDisposer = FindObjectOfType<ArenaDisposer>();
             _playerProgress = FindObjectOfType<PlayerProgress>();
+            _wizardsSpawner = FindObjectOfType<WizardsSpawner>();
         }
 
         public void ActivateInventory()
@@ -46,8 +48,9 @@ namespace Tutorial.Scripts
 
         public void DisableAllObject()
         {
-            _raycastDetecter.enabled = true;
+            _raycastDetecter.enabled = false;
             _arenaDisposer.DisableRaycaster();
+            _wizardsSpawner.DisableWizardShop();
         }
 
         public void ActivateBranchButton()

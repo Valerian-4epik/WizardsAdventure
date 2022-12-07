@@ -37,11 +37,11 @@ namespace Infrastructure.States
 
         private void EnterLoadLevel()
         {
-            _gameStateMachine.Enter<LoadLevelState, int>(1);
-            // if (IsTutorialStart())
-            //     _gameStateMachine.Enter<LoadLevelState, int>(2);
-            // else
-            //     _gameStateMachine.Enter<LoadLevelState, int>(1);
+            // _gameStateMachine.Enter<LoadLevelState, int>(1);
+            if (IsTutorialStart())
+                _gameStateMachine.Enter<LoadLevelState, int>(2);
+            else
+                _gameStateMachine.Enter<LoadLevelState, int>(1);
         }
 
         private bool IsTutorialStart()

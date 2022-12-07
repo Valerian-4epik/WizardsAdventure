@@ -45,6 +45,12 @@ public class WizardsSpawner : MonoBehaviour
         SpawnWizardShop();
     }
 
+    public void DisableWizardShop()
+    {
+        _wizardShop.gameObject.SetActive(false);
+        _wizardADSShop.gameObject.SetActive(false);
+    }
+
     public void AddWizard(Action<bool> onCompleteCallBack = null, Action<bool> onErrorCallBack = null)
     {
         if (GetEmptyInitPoint() != null && _playerProgress.LoadCurrentMoney() >= _wizardShop.Price)

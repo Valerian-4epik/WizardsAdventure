@@ -12,25 +12,96 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8432f073d8bd4f31ac7938767451fe90, type: 3}
   m_Name: DialogInfo
   m_EditorClassIdentifier: 
-  _helpHero: "\u041F\u043E\u043C\u043E\u0433\u0438 \u0433\u0435\u0440\u043E\u0439
-    \u043D\u0430 \u043D\u0430\u0441 \u043D\u0430\u043F\u0430\u043B\u0438 \u0440\u0430\u0437\u0431\u043E\u0439\u043D\u0438\u043A\u0438!"
-  _money: "\u0417\u0430\u0440\u0430\u0431\u0430\u0442\u044B\u0432\u0430\u0439 \u043C\u043E\u043D\u0435\u0442\u044B
-    \u0437\u0430 \u043F\u043E\u0431\u0435\u0434\u044B \u0432\u0440\u0430\u0433\u043E\u0432,
-    \u0442\u0440\u0430\u0442\u044C \u0438\u0445 \u0441 \u0443\u043C\u043E\u043C."
-  _fighters: "\u0422\u0435\u0431\u0435 \u043D\u0443\u0436\u043D\u043E \u0441\u043E\u0431\u0440\u0430\u0442\u044C
-    \u0441\u0432\u043E\u044E \u043A\u043E\u043C\u0430\u043D\u0434\u0443 \u0438 \u043F\u043E\u0431\u0435\u0434\u0438\u0442\u044C
-    \u0438\u0445!"
-  _buyWeapon: "\u041C\u0430\u0433\u0430\u043C \u043D\u0443\u0436\u043D\u043E \u043E\u0440\u0443\u0436\u0438\u0435
-    \u0438 \u0431\u0440\u043E\u043D\u044F."
-  _buyTwoBranches: "\u041A\u0443\u043F\u0438 \u0434\u0432\u0435 \u0432\u0435\u0442\u043A\u0438."
-  _mergeWeapon: "\u0427\u0435\u043C \u0441\u0438\u043B\u044C\u043D\u0435\u0435 \u043E\u0440\u0443\u0436\u0438\u0435
-    \u0442\u0435\u043C \u0431\u043E\u043B\u044C\u0448\u0435 \u0443\u0440\u043E\u043D\u0430."
-  _dragAndDropWeapon: "\u0421\u043D\u0430\u0440\u044F\u0434\u0438 \u0441\u0432\u043E\u0438\u0445
-    \u0431\u043E\u0439\u0446\u043E\u0432."
-  _returnItems: "\u0427\u0442\u043E\u0431\u044B \u0432\u0435\u0440\u043D\u0443\u0442\u044C
-    \u0441\u043D\u0430\u0440\u044F\u0436\u0435\u043D\u0438\u0435 \u043D\u0430\u0436\u043C\u0438
-    \u0434\u0432\u0430 \u0440\u0430\u0437\u0430."
-  _goodLuckHero: "\u042D\u0442\u043E \u0432\u0441\u0435, \u043D\u0435\u0442 \u0432\u0440\u0435\u043C\u0435\u043D\u0438, 
-    \u0423\u0434\u0430\u0447\u0438 \u0433\u0435\u0440\u043E\u0439!"
-  _pleseSaveUs: "\u0422\u044B \u043D\u0430\u0448\u0430 \u043F\u043E\u0441\u043B\u0435\u0434\u043D\u044F\u044F
-    \u043D\u0430\u0434\u0435\u0436\u0434\u0430."
+  _helpHero:
+    m_TableReference:
+      m_TableCollectionName: GUID:f7d4501693b0212409e2959f83252f5d
+    m_TableEntryReference:
+      m_KeyId: 5057575225073664
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _money:
+    m_TableReference:
+      m_TableCollectionName: GUID:f7d4501693b0212409e2959f83252f5d
+    m_TableEntryReference:
+      m_KeyId: 5058091518730240
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _fighters:
+    m_TableReference:
+      m_TableCollectionName: GUID:f7d4501693b0212409e2959f83252f5d
+    m_TableEntryReference:
+      m_KeyId: 5058702901452800
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _buyWeapon:
+    m_TableReference:
+      m_TableCollectionName: GUID:f7d4501693b0212409e2959f83252f5d
+    m_TableEntryReference:
+      m_KeyId: 5059189893701632
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _buyTwoBranches:
+    m_TableReference:
+      m_TableCollectionName: GUID:f7d4501693b0212409e2959f83252f5d
+    m_TableEntryReference:
+      m_KeyId: 5059724503883776
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _mergeWeapon:
+    m_TableReference:
+      m_TableCollectionName: GUID:f7d4501693b0212409e2959f83252f5d
+    m_TableEntryReference:
+      m_KeyId: 5060517420277760
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _dragAndDropWeapon:
+    m_TableReference:
+      m_TableCollectionName: GUID:f7d4501693b0212409e2959f83252f5d
+    m_TableEntryReference:
+      m_KeyId: 5061236349149184
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _returnItems:
+    m_TableReference:
+      m_TableCollectionName: GUID:f7d4501693b0212409e2959f83252f5d
+    m_TableEntryReference:
+      m_KeyId: 5061797937094656
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _goodLuckHero:
+    m_TableReference:
+      m_TableCollectionName: GUID:f7d4501693b0212409e2959f83252f5d
+    m_TableEntryReference:
+      m_KeyId: 5062184496734208
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _pleseSaveUs:
+    m_TableReference:
+      m_TableCollectionName: GUID:f7d4501693b0212409e2959f83252f5d
+    m_TableEntryReference:
+      m_KeyId: 5062474457358336
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  references:
+    version: 2
+    RefIds: []

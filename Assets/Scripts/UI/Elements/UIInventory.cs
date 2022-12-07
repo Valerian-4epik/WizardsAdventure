@@ -59,9 +59,13 @@ namespace UI
             Fight?.Invoke();
         }
 
-        public void SetupItem(ItemInfo item) =>
-            FillSlot(item);
-
+        public void SetupItem(ItemInfo item)
+        {
+            if (GetEmptySlots().Length != 0)
+                FillSlot(item);
+            else
+                ReturnMoneyForItem(item);
+        }
 
         public void BuyItem(ItemInfo item)
         {
@@ -108,13 +112,14 @@ namespace UI
                 button.interactable = false;
             }
         }
-            
+
         public void SetPlayerProgress(PlayerProgress playerProgress)
         {
             _playerProgress = playerProgress;
-            LoadCurrentItems();
-            _playerProgress.SaveCurrentMoney(_playerProgress.LoadAllMoney());
             _playerProgress.MoneyChanged += ShowMoney;
+            _playerProgress.SaveCurrentMoney(_playerProgress.LoadAllMoney());
+            LoadCurrentItems();
+            Debug.Log("Подписался");
             ShowMoney();
         }
 
@@ -137,6 +142,12 @@ namespace UI
             return null;
         }
 
+        private void ReturnMoneyForItem(ItemInfo item)
+        {
+            Debug.Log($"Сохранил {item.Price}");
+            _playerProgress.SaveCurrentMoney(_playerProgress.LoadCurrentMoney() + item.Price);
+        }
+
         private void PLaySoundFx(AudioClip audioClip)
         {
             _audioSource.clip = audioClip;
@@ -144,7 +155,7 @@ namespace UI
             if (!_audioSource.isPlaying)
                 _audioSource.Play();
         }
-        
+
         private ItemInfo SetupRandomItem()
         {
             var item = _randomGenerator.GetRandomItem(_itemsData);
@@ -158,6 +169,7 @@ namespace UI
         {
             if (GetItemList() != null)
             {
+                Debug.Log(GetItemList().Count);
                 foreach (var item in GetItemList())
                 {
                     FillSlot(item);
@@ -174,8 +186,9 @@ namespace UI
             }
             else
             {
+                Debug.Log("Wrong");
+                ReturnMoneyForItem(item);
                 PLaySoundFx(_worngFxSound);
-                Debug.Log("wrong");
             }
         }
 
