@@ -169,7 +169,6 @@ namespace UI
         {
             if (GetItemList() != null)
             {
-                Debug.Log(GetItemList().Count);
                 foreach (var item in GetItemList())
                 {
                     FillSlot(item);

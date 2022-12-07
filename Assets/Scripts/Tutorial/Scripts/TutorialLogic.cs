@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Data;
 using ES3Types;
+using Infrastructure.Logic;
 using UI;
 using UnityEngine;
 using UnityEngine.Playables;
@@ -23,6 +24,7 @@ namespace Tutorial.Scripts
         private UIInventory _inventory;
         private RaycastDetecter _raycastDetecter;
         private ArenaDisposer _arenaDisposer;
+        private CameraFollower _cameraFollower;
         private BoxCollider2D _trigger;
         private int _amountButtonClick;
         private List<InventoryFighter> _inventoryFighters = new List<InventoryFighter>();
@@ -35,6 +37,7 @@ namespace Tutorial.Scripts
             _arenaDisposer = FindObjectOfType<ArenaDisposer>();
             _playerProgress = FindObjectOfType<PlayerProgress>();
             _wizardsSpawner = FindObjectOfType<WizardsSpawner>();
+            _cameraFollower = FindObjectOfType<CameraFollower>();
         }
 
         public void ActivateInventory()
@@ -48,7 +51,7 @@ namespace Tutorial.Scripts
 
         public void DisableAllObject()
         {
-            _raycastDetecter.enabled = false;
+            _cameraFollower.DisableButtons();
             _arenaDisposer.DisableRaycaster();
             _wizardsSpawner.DisableWizardShop();
         }
@@ -57,6 +60,7 @@ namespace Tutorial.Scripts
         {
             _inventory.CanvasGroup.interactable = true;
             _inventory.ActivateBranchButtonForTutor();
+            _raycastDetecter.enabled = true;
         }
 
         public void ActivateTrigger()

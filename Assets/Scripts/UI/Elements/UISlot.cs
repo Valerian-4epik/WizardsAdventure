@@ -8,6 +8,7 @@ namespace UI
         [SerializeField] private LayerMask _targetMask;
             
         protected InventoryFighter inventoryFighter;
+        protected SellSlot sellSlot;
 
         public virtual void OnDrop(PointerEventData eventData)
         {
@@ -15,16 +16,16 @@ namespace UI
             otherItemTransform.SetParent(transform);
             otherItemTransform.localPosition = Vector3.zero;
             
-            if (Camera.main != null)
-            {
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-                if (Physics.Raycast(ray, out var hit, 1000, _targetMask))
-                {
-                    Debug.Log(hit.collider);
-                    inventoryFighter = hit.collider.GetComponent<InventoryFighter>();
-                }
-            }
+            // if (Camera.main != null)
+            // {
+            //     Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            //
+            //     if (Physics.Raycast(ray, out var hit, 1000, _targetMask))
+            //     {
+            //         inventoryFighter = hit.collider.GetComponent<InventoryFighter>();
+            //         sellSlot = hit.collider.GetComponent<SellSlot>();
+            //     }
+            // }
         }
     }
 }

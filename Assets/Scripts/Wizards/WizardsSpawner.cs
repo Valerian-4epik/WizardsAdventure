@@ -20,6 +20,8 @@ public class WizardsSpawner : MonoBehaviour
     [SerializeField] private GameObject _additionalyAttackSpeed;
     [SerializeField] private Transform _wizardForViewingADSPoint;
     [SerializeField] private Transform _wizardForMoneyPoint;
+    [SerializeField] private Transform _sellSlotPoint;
+    [SerializeField] private GameObject _sellSlotTrigger;
 
     private PlayerProgress _playerProgress;
     private WizardForMoney _wizardShop;
@@ -43,6 +45,7 @@ public class WizardsSpawner : MonoBehaviour
         _playerProgress = playerProgress;
         Spawn();
         SpawnWizardShop();
+        SpawnSellSlot(playerProgress);
     }
 
     public void DisableWizardShop()
@@ -83,9 +86,23 @@ public class WizardsSpawner : MonoBehaviour
             _wizardShop.Price = _wizardPrice.GetPrice(_playerProgress.PlayerWizardAmount);
             SquadChanged?.Invoke(wizard);
         }
+        if (GetEmptyInitPoint() == null)
+        {
+            _wizardShop.gameObject.SetActive(false);
+            _wizardForViewingADS.gameObject.SetActive(false);
+            CreateAdditionalyHpTrigger();
+            CreateAdditionalyAttackSpeedTrigger();
+        }
     }
 
     public void SetCameraFollower(CameraFollower cameraFollower) => _cameraFollower = cameraFollower;
+
+    private void SpawnSellSlot(PlayerProgress playerProgress)
+    {
+        var sellTrigger = Instantiate(_sellSlotTrigger, _sellSlotPoint.position, Quaternion.identity);
+        sellTrigger.gameObject.transform.SetParent(transform);
+        sellTrigger.GetComponent<SellSlot>().SetPlayerProgress(playerProgress);
+    }
 
     private GameObject InstantiateWizard()
     {

@@ -16,7 +16,7 @@ namespace UI
         private Canvas _mainCanvas;
         private RectTransform _rectTransform;
         private AudioSource _audioSource;
-        
+
         public virtual void Start()
         {
             _canvasGroup = GetComponent<CanvasGroup>();
@@ -25,7 +25,7 @@ namespace UI
             _audioSource = GetComponent<AudioSource>();
         }
 
-        public void OnDrag(PointerEventData eventData) => 
+        public void OnDrag(PointerEventData eventData) =>
             _rectTransform.anchoredPosition += eventData.delta / _mainCanvas.scaleFactor;
 
         public virtual void OnBeginDrag(PointerEventData eventData)
@@ -54,7 +54,14 @@ namespace UI
 
                 if (Physics.Raycast(ray, out var hit, 1000, _targetMask))
                 {
-                    hit.collider.GetComponent<InventoryFighter>().SetWeapon(this);
+                    if (hit.collider.TryGetComponent(out InventoryFighter inventory))
+                    {
+                        inventory.SetWeapon(this);
+                    }
+                    else if (hit.collider.TryGetComponent(out SellSlot sellSlot))
+                    {
+                        sellSlot.SellItem(this);
+                    }
                 }
             }
         }

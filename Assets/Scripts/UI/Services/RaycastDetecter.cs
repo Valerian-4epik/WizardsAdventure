@@ -1,3 +1,5 @@
+using System;
+using Infrastructure.Logic;
 using NodeCanvas.Tasks.Actions;
 using UI;
 using UI.Services;
@@ -12,10 +14,11 @@ public class RaycastDetecter : MonoBehaviour
     private float _clickTime = 0;
     private float _clickDelay = 0.5f;
     private UIInventory _shopInterface;
+    private CameraFollower _cameraFollower;
     private Effector _effector;
     private AdditionalyAttackSpeedTrigger _additionalyAttackSpeedTrigger;
-
-    void Update()
+    
+    private void Update()
     {
         ScaleUpWizard();
         
@@ -56,11 +59,16 @@ public class RaycastDetecter : MonoBehaviour
         }
     }
 
-    public void SetShopInterface(UIInventory shopInterface) =>
+    public void SetShopInterface(UIInventory shopInterface) => 
         _shopInterface = shopInterface;
 
-    public void ActivateUIInventory() =>
+    public void ActivateUIInventory()
+    {
         _shopInterface.ShowInventory();
+        _cameraFollower = FindObjectOfType<CameraFollower>();
+        _cameraFollower.ActivateEnemyButton();
+    }
+
 
     private bool DoubleClick()
     {

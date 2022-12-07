@@ -13,6 +13,7 @@ public class BigGoldChest : MonoBehaviour
     private Animation _animation;
     private Rigidbody _rigidbody;
     private BoxCollider _boxCollider;
+    private bool isOpen = false;
 
     public event Action<bool> ChestStateEnded;
     
@@ -32,14 +33,24 @@ public class BigGoldChest : MonoBehaviour
         _animation = GetComponent<Animation>();
         _rigidbody = GetComponent<Rigidbody>();
         _boxCollider = GetComponent<BoxCollider>();
+        StartCoroutine(SpareСheck());
     }
-    
-    public void OpenChest() => _animation.Play();
 
-    private void EndAnimation()
+    private IEnumerator SpareСheck()
     {
-        StartCoroutine(SlowLevelEnded());
+        yield return new WaitForSeconds(10f);
+        if(!isOpen)
+            OpenChest();
     }
+
+    public void OpenChest()
+    {
+        isOpen = true;
+        _animation.Play();
+    }
+
+
+    private void EndAnimation() => StartCoroutine(SlowLevelEnded());
 
     private IEnumerator SlowLevelEnded()
     {

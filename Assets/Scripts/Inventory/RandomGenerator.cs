@@ -1,7 +1,4 @@
 using System.Collections.Generic;
-using InfinityCode.UltimateEditorEnhancer.Windows;
-using NodeCanvas.Tasks.Actions;
-using UnityEditor.Localization.Plugins.XLIFF.V12;
 using UnityEngine;
 
 namespace Inventory
