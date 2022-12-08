@@ -1,9 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -11,8 +9,9 @@ namespace UI.Roulette
 {
     public class RewardRoulette : MonoBehaviour
     {
+        [SerializeField] private Animation _winAnimations;
+        [SerializeField] private AudioSource _audioSource;
         [SerializeField] private GameObject _roulettePlate;
-        [SerializeField] private GameObject _roulettePanel;
         [SerializeField] private Transform _needle;
         [SerializeField] private List<ItemInfo> _items = new ();
         [SerializeField] private List<Image> _displayItemSlot = new();
@@ -54,14 +53,14 @@ namespace UI.Roulette
         private IEnumerator StartRoulette()
         {
             var randomRotateSpeed = Random.Range(1f, 5f);   
-            var rotateSpeed = 20f * randomRotateSpeed;
+            var rotateSpeed = 15f * randomRotateSpeed;
 
             while (true)
             {
                 yield return null;
                 if (rotateSpeed <= 0.01f) break;
 
-                rotateSpeed = Mathf.Lerp(rotateSpeed, 0, Time.deltaTime * 0.6f);
+                rotateSpeed = Mathf.Lerp(rotateSpeed, 0, Time.deltaTime * 0.9f);
                 _roulettePlate.transform.Rotate(0,0,rotateSpeed);
                 Result();
             }
@@ -69,10 +68,17 @@ namespace UI.Roulette
             yield return new WaitForSeconds(0.3f);
             
             WinItemAnimationPlay();
+            
+            yield return new WaitForSeconds(2f);
             ItemWined?.Invoke();
         }
 
-        private void WinItemAnimationPlay() => _winEffect.Play();
+        private void WinItemAnimationPlay()
+        {
+            _audioSource.Play();
+            _winAnimations.Play();
+            _winEffect.Play();
+        }
 
         private void Result()
         {

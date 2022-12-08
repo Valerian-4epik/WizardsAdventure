@@ -21,6 +21,9 @@ public class InfoPanel : MonoBehaviour
     [SerializeField] private GameObject _attackPanel;
     [SerializeField] private GameObject _armorPanel;
     [SerializeField] private TMP_Text _armor;
+    [SerializeField] private GameObject _nextLevelPanel;
+    [SerializeField] private GameObject _nextLevelPanelText;
+    
 
     private ItemInfo _item;
 
@@ -67,9 +70,17 @@ public class InfoPanel : MonoBehaviour
         _currentLevel.text = itemInfo.Level.ToString();
         _currentBack.sprite = itemInfo.Back;
         var nextItem = GetNextItemInfo(itemInfo);
-        _nextItem.sprite = nextItem.Icon;
-        _nextLevel.text = nextItem.Level.ToString();
-        _nextBack.sprite = nextItem.Back;
+        if (nextItem != null)
+        {
+            _nextItem.sprite = nextItem.Icon;
+            _nextLevel.text = nextItem.Level.ToString();
+            _nextBack.sprite = nextItem.Back;
+        }
+        else
+        {
+            _nextLevelPanelText.SetActive(false);
+            _nextLevelPanel.SetActive(false);
+        }
     }
 
     private ItemInfo GetNextItemInfo(ItemInfo itemInfo) => _inventory.GetNextItem(itemInfo);

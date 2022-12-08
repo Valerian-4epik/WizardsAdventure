@@ -8,6 +8,7 @@ using UnityEngine.Serialization;
 public class WizardForADS : MonoBehaviour
 {
     [SerializeField] private AudioSource _audioSource;
+    [SerializeField] private BoxCollider _boxCollider;
     
     private WizardsSpawner _spawner;
 
@@ -29,11 +30,15 @@ public class WizardForADS : MonoBehaviour
 
     private void Return(string value)
     {
-        return;
+        Deactivate();
     }
 
-    private void CloseButton() => StartCoroutine(PlaySoundFx(Deactivate));
-    
+    private void CloseButton()
+    {
+        _boxCollider.enabled = false;
+        StartCoroutine(PlaySoundFx(Deactivate));
+    }
+
     private void Deactivate() => gameObject.SetActive(false);
     
     private IEnumerator PlaySoundFx(Action onCallBack = null)

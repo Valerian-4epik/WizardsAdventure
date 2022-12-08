@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
-using System.Data.Common;
 using System.Linq;
 using Data;
 using Enemy;
 using Infrastructure.Logic;
 using Props;
+using TMPro;
 using UI;
 using UnityEngine;
 using Wizards;
@@ -19,6 +19,7 @@ public class ArenaDisposer : MonoBehaviour
 
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip _startFightSoundFx;
+    [SerializeField] private TMP_Text _currentLevel;
 
     private UIInventory _shopInterface;
     private RewardToChestFollower _rewardToChestFollower;
@@ -99,6 +100,7 @@ public class ArenaDisposer : MonoBehaviour
     {
         _playerProgress = progress;
         GiveItems();
+        _currentLevel.text = _playerProgress.GetLevel().ToString();
     }
 
     public void SetWizardSpawner(GameObject wizardSpawner)

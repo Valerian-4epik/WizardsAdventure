@@ -56,7 +56,8 @@ namespace RewardSystem
 
         private void Error(string value)
         {
-            return;
+            BlockFreeButton();
+            gameObject.SetActive(false);
         }
 
         private void BlockFreeButton()
