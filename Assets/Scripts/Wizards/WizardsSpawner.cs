@@ -27,7 +27,7 @@ public class WizardsSpawner : MonoBehaviour
     private WizardForMoney _wizardShop;
     private WizardForADS _wizardADSShop;
     private WizardPrice _wizardPrice;
-    
+
     private CameraFollower _cameraFollower;
 
     public CameraFollower CameraFollower => _cameraFollower;
@@ -66,6 +66,10 @@ public class WizardsSpawner : MonoBehaviour
             _wizardShop.Price = _wizardPrice.GetPrice(_playerProgress.PlayerWizardAmount);
             SquadChanged?.Invoke(wizard);
         }
+        else
+            onErrorCallBack?.Invoke(false);
+
+
         if (GetEmptyInitPoint() == null)
         {
             _wizardShop.gameObject.SetActive(false);
@@ -73,8 +77,6 @@ public class WizardsSpawner : MonoBehaviour
             CreateAdditionalyHpTrigger();
             CreateAdditionalyAttackSpeedTrigger();
         }
-        else
-            onErrorCallBack?.Invoke(false);
     }
 
     public void AddWizardForADS()
@@ -86,6 +88,7 @@ public class WizardsSpawner : MonoBehaviour
             _wizardShop.Price = _wizardPrice.GetPrice(_playerProgress.PlayerWizardAmount);
             SquadChanged?.Invoke(wizard);
         }
+
         if (GetEmptyInitPoint() == null)
         {
             _wizardShop.gameObject.SetActive(false);
@@ -181,7 +184,6 @@ public class WizardsSpawner : MonoBehaviour
             CreateAdditionalyHpTrigger();
             CreateAdditionalyAttackSpeedTrigger();
         }
-
     }
 
     private void SetupWizardShop(GameObject wizardForMoney, GameObject wizardForADS)
@@ -191,7 +193,7 @@ public class WizardsSpawner : MonoBehaviour
         _wizardADSShop = wizardForADS.GetComponent<WizardForADS>();
         _wizardADSShop.SetupSpawner(this);
     }
-    
+
     private void CreateAdditionalyAttackSpeedTrigger()
     {
         var additionalyAttackSpeedTrigger = Instantiate(_additionalyAttackSpeed, _wizardForViewingADSPoint.position,

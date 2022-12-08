@@ -21,51 +21,51 @@ namespace Data
         private bool _isTutorialStart = true;
         private int _additionalyHP;
         private float _additionalyAttackSpeed;
-
+        private int _currentHp;
+        private float _currentAttackSpeed;
+        
         public int PlayerWizardAmount { get; set; }
 
         public float AdditionalyAttackSpeed => _additionalyAttackSpeed;
         public int AdditionalyHp => _additionalyHP;
 
         public event Action MoneyChanged;
+        public event Action<int, float> StatsChanged;
 
-        private void Awake() =>
-            _rewardLevelData = new RewardLevelData();
-
-        public void SaveAdditionalHP(int hp)
+        private void Awake()
         {
-            _additionalyHP = hp;
+            _rewardLevelData = new RewardLevelData();
+            _additionalyAttackSpeed = LoadAdditionalAttackSpeed();
+            _additionalyHP = LoadAdditionalHP();
+        }
+
+        public void SaveAdditionalHP()
+        {
+            _additionalyHP = LoadAdditionalHP() + _currentHp;
             ES3.Save("additionalHP", _additionalyHP, "AdditionalHP.es3");
         }
 
         public int LoadAdditionalHP() => _additionalyHP = ES3.Load("additionalHP", "AdditionalHP.es3", _additionalyHP);
 
-        public void SaveAdditionalAttackSpeed(float attackSpeed)
+        public void SaveAdditionalAttackSpeed()
         {
-            _additionalyAttackSpeed = attackSpeed;
+            _additionalyAttackSpeed = LoadAdditionalAttackSpeed() + _currentAttackSpeed;
             ES3.Save("additionalAttackSpeed", _additionalyAttackSpeed, "AdditionalAttackSpeed.es3");
         }
 
         public float LoadAdditionalAttackSpeed() => _additionalyAttackSpeed =
             ES3.Load("additionalAttackSpeed", "AdditionalAttackSpeed.es3", _additionalyAttackSpeed);
 
-        public void AddAdditionalHP(int value)
+        public void AddCurrentHP(int value)
         {
-            _additionalyHP = LoadAdditionalHP();
-            _additionalyHP += value;
+            _currentHp += value;
+            StatsChanged?.Invoke(GetAdditionalHp(), GetAdditionalAttackSpeed());
         }
 
-        public void AddAdditionalAttackSpeed(float value)
+        public void AddCurrentAttackSpeed(float value)
         {
-            if (_additionalyAttackSpeed == 0)
-            {
-                _additionalyAttackSpeed = LoadAdditionalAttackSpeed();
-                _additionalyAttackSpeed += value;
-            }
-            else
-            {
-                _additionalyAttackSpeed += value;
-            }
+            _currentAttackSpeed += value;
+            StatsChanged?.Invoke(GetAdditionalHp(), GetAdditionalAttackSpeed());
         }
 
         public void SaveAllMoney(int value)
@@ -110,6 +110,7 @@ namespace Data
             ES3.Save("currentLevel", _currentLevel, "CurrentLevel.es3");
         }
 
+
         public int GetLevel() => _currentLevel = ES3.Load("currentLevel", "CurrentLevel.es3", _currentLevel);
 
         public void SaveCurrentItems(List<string> items)
@@ -137,6 +138,7 @@ namespace Data
 
         public void SavePlayerWizardsAmount() =>
             ES3.Save("mySquad", PlayerWizardAmount, "Squad.es3");
+
 
         public int GetPLayerWizardAmount() => PlayerWizardAmount = ES3.Load("mySquad", "Squad.es3", PlayerWizardAmount);
 
@@ -176,6 +178,9 @@ namespace Data
             var currentLevel = GetLevel();
             return _rewardLevelData.Rewards[currentLevel];
         }
+
+        public int GetAdditionalHp() => LoadAdditionalHP() + _currentHp;
+        public float GetAdditionalAttackSpeed() => LoadAdditionalAttackSpeed() + _currentAttackSpeed;
 
         private void SavePlayerWizardsAmount(int value) =>
             ES3.Save("mySquad", value, "Squad.es3");

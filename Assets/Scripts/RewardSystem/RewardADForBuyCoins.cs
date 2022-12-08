@@ -35,7 +35,7 @@ namespace UI.Services
 
         private void ErrorReturn(string value)
         {
-            return;
+            _panel.SetActive(false);
         }
 
         private void CloseButton()

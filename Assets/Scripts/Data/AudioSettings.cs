@@ -6,6 +6,7 @@ public class AudioSettings : MonoBehaviour
 {
     private const string SOUND_FX = "SoundFx";
     private const string MUSIC = "Music";
+    private const string MASTER = "Master";
 
     [SerializeField] private AudioMixerGroup _soundFXGroup;
     [SerializeField] private AudioMixerGroup _musicGroup;
@@ -15,6 +16,14 @@ public class AudioSettings : MonoBehaviour
     [SerializeField] private AudioSource _soundFxForSoundSlider;
 
     private bool _isPlaying;
+
+    private void OnApplicationFocus(bool hasFocus)
+    {
+        if (hasFocus)
+            _soundFXGroup.audioMixer.SetFloat(MASTER, 0);
+        else
+            _soundFXGroup.audioMixer.SetFloat(MASTER, -80);
+    }
 
     private void Start()
     {

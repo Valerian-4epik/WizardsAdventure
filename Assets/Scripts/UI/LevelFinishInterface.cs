@@ -65,10 +65,7 @@ public class LevelFinishInterface : MonoBehaviour
     private void GoNextLevel(bool value)
     {
         SaveRewardItems();
-        if (value == true)
-        {
-            LevelEnded?.Invoke();
-        }
+        LevelEnded?.Invoke();
     }
 
     private void SaveRewardItems(Action onEndedCallback = null)

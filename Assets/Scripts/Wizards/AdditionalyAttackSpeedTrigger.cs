@@ -34,7 +34,7 @@ public class AdditionalyAttackSpeedTrigger : MonoBehaviour
     }
 
     private void BuyAttackSpeed() =>
-        _playerProgress.AddAdditionalAttackSpeed(_additionalyAttackSpeed);
+        _playerProgress.AddCurrentAttackSpeed(_additionalyAttackSpeed);
 
     private void Return(string value)
     {

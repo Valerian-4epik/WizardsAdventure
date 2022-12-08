@@ -42,47 +42,29 @@ public class ArenaDisposer : MonoBehaviour
         _rewardToChestFollower = GetComponent<RewardToChestFollower>();
         FindAlLWizards();
         FindRewardPoint();
+        _raycastDetecter = Camera.main.gameObject.GetComponent<RaycastDetecter>();
     }
 
     public void SetAdditionalyAttackSpeed()
     {
         var additionalyAttackSpeed = _playerProgress.LoadAdditionalAttackSpeed();
-        if (_playerProgress.AdditionalyAttackSpeed != 0)
+
+        foreach (var wizard in _wizards)
         {
-            foreach (var wizard in _wizards)
-            {
-                wizard.GetComponent<Attack>().SetAdditionalyAttackSpeed(_playerProgress.AdditionalyAttackSpeed);
-            }
-        }
-        else
-        {
-            foreach (var wizard in _wizards)
-            {
-                wizard.GetComponent<Attack>().SetAdditionalyAttackSpeed(additionalyAttackSpeed);
-            }
+            wizard.GetComponent<Attack>().SetAdditionalyAttackSpeed(additionalyAttackSpeed);
         }
     }
-    
+
     public void SetAdditionalyHp()
     {
         var additionalyHp = _playerProgress.LoadAdditionalHP();
-        Debug.Log(additionalyHp);
-        if (_playerProgress.AdditionalyHp != 0)
+        
+        foreach (var wizard in _wizards)
         {
-            foreach (var wizard in _wizards)
-            {
-                wizard.GetComponent<Health>().SetHealth(_playerProgress.AdditionalyHp);
-            }
-        }
-        else
-        {
-            foreach (var wizard in _wizards)
-            {
-                wizard.GetComponent<Health>().SetHealth(additionalyHp);
-            }
+            wizard.GetComponent<Health>().SetHealth(additionalyHp);
         }
     }
-    
+
     public void SetShopInterface(UIInventory inventory)
     {
         _shopInterface = inventory;
@@ -262,27 +244,20 @@ public class ArenaDisposer : MonoBehaviour
     {
         PLaySoundFx(_startFightSoundFx);
         var activeFighters = _wizards.Concat(_enemies);
-        
+
         foreach (var fighter in activeFighters)
         {
             fighter.GetComponent<Idle>().SwitchOnStartFight();
         }
 
-
-        if(_playerProgress.AdditionalyAttackSpeed != 0)
-            _playerProgress.SaveAdditionalAttackSpeed(_playerProgress.AdditionalyAttackSpeed);
-        
+        _playerProgress.SaveAdditionalAttackSpeed();
         SetAdditionalyAttackSpeed();
-
-        if (_playerProgress.AdditionalyHp != 0)
-        {
-            _playerProgress.SaveAdditionalHP(_playerProgress.AdditionalyHp);
-        }
-        
+        _playerProgress.SaveAdditionalHP();
         SetAdditionalyHp();
-        
+
         DisableWizardsSpawner();
         DisableShopInterface();
+        _raycastDetecter.enabled = false;
     }
 
     public void Activate() //test

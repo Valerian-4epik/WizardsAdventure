@@ -28,7 +28,7 @@ namespace UI.Services
             if (_playerProgress.LoadCurrentMoney() >= _price)
             {
                 _playerProgress.SaveCurrentMoney(_playerProgress.LoadCurrentMoney() - _price);
-                _playerProgress.AddAdditionalHP(_additionalyHPValue);
+                _playerProgress.AddCurrentHP(_additionalyHPValue);
                 PLaySoundFx(true);
             }
             else

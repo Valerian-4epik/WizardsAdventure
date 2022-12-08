@@ -31,7 +31,6 @@ namespace Tutorial.Scripts
 
         public void FindAllObjects()
         {
-            Debug.Log("Ищем обьекты");
             _inventory = FindObjectOfType<UIInventory>();
             _raycastDetecter = FindObjectOfType<RaycastDetecter>();
             _arenaDisposer = FindObjectOfType<ArenaDisposer>();

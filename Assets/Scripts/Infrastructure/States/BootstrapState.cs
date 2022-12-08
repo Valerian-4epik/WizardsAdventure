@@ -56,6 +56,16 @@ namespace Infrastructure.States
         {
             _services.RegisterSingle<IAssets>(new AssetProvider());
             _services.RegisterSingle<IGameFactory>(new GameFactory(AllServices.Container.Single<IAssets>()));
+            _services.RegisterSingle<IYandexListener>( new YandexListener());
         }
+    }
+
+    public interface IYandexListener : IService
+    {
+    }
+
+    public class YandexListener : IYandexListener
+    {
+        
     }
 }

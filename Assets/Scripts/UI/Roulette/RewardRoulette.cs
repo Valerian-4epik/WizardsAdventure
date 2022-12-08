@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -15,6 +16,7 @@ namespace UI.Roulette
         [SerializeField] private Transform _needle;
         [SerializeField] private List<ItemInfo> _items = new ();
         [SerializeField] private List<Image> _displayItemSlot = new();
+        [SerializeField] private List<TMP_Text> _levelText = new();
         [SerializeField] private Image _resultSprite;
         [SerializeField] private ParticleSystem _winEffect;
 
@@ -39,6 +41,7 @@ namespace UI.Roulette
                 var randomIndex = Random.Range(0, _items.Count);
                 _itemListInDisplay.Add(_items[randomIndex]);
                 _displayItemSlot[i].sprite = _items[randomIndex].Icon;
+                _levelText[i].text = _items[randomIndex].Level.ToString();
             }
             
             Result();

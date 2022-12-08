@@ -1,10 +1,13 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class RandomItemADS : MonoBehaviour
 {
     [SerializeField] private Image _image;
+    [SerializeField] private GameObject _levelPanel;
+    [SerializeField] private TMP_Text _levelText;
     [SerializeField] private Button _button;
     [SerializeField] private GameObject _doneImage;
     [SerializeField] private GameObject _description;
@@ -21,6 +24,7 @@ public class RandomItemADS : MonoBehaviour
     {
         _item = item;
         SetImage(_item.Icon);
+        _levelText.text = _item.Level.ToString();
     }
 
     private void SetImage(Sprite sprite) => 
@@ -30,6 +34,7 @@ public class RandomItemADS : MonoBehaviour
     {
         PlaySoudFx();
         _button.enabled = false;
+        _levelPanel.gameObject.SetActive(false);
         _image.gameObject.SetActive(false);
         _description.SetActive(false);
         _doneImage.SetActive(true);

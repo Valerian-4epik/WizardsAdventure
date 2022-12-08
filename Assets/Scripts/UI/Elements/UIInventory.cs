@@ -14,6 +14,7 @@ namespace UI
     {
         [SerializeField] private UIInventorySlot[] _slots;
         [SerializeField] private List<ItemInfo> _itemsData = new List<ItemInfo>();
+        [SerializeField] private List<ItemInfo> _rewardItems = new List<ItemInfo>();
         [SerializeField] private CanvasGroup _canvasGroup;
         [SerializeField] private TMP_Text _currentMoney;
         [SerializeField] private RandomItemADS _adsTrigger;
@@ -23,10 +24,10 @@ namespace UI
         [SerializeField] private AudioClip _worngFxSound;
         [SerializeField] private List<Button> _buttonsForTutor;
         [SerializeField] private Button _branchButton;
+        [SerializeField] private StatsInfo _statsInfo;
 
         private RaycastDetecter _raycastDetecter;
         private PlayerProgress _playerProgress;
-        private RandomGenerator _randomGenerator;
 
         public PlayerProgress PlayerProgress => _playerProgress;
         public UIInventorySlot[] Slots => _slots;
@@ -47,7 +48,6 @@ namespace UI
 
             SetRaycastDetecter();
 
-            _randomGenerator = new RandomGenerator();
             _adsTrigger.SetItem(SetupRandomItem());
         }
 
@@ -119,9 +119,12 @@ namespace UI
             _playerProgress.MoneyChanged += ShowMoney;
             _playerProgress.SaveCurrentMoney(_playerProgress.LoadAllMoney());
             LoadCurrentItems();
-            Debug.Log("Подписался");
             ShowMoney();
+            ActivateStatPanel(_playerProgress.GetAdditionalHp(), _playerProgress.GetAdditionalAttackSpeed());
+            _playerProgress.StatsChanged += ActivateStatPanel;
         }
+
+        private void ActivateStatPanel(int hp, float attackSpeed) => _statsInfo.ActivateStatsPanel(hp, attackSpeed);
 
         public void ShowInventory()
         {
@@ -142,11 +145,8 @@ namespace UI
             return null;
         }
 
-        private void ReturnMoneyForItem(ItemInfo item)
-        {
-            Debug.Log($"Сохранил {item.Price}");
+        private void ReturnMoneyForItem(ItemInfo item) => 
             _playerProgress.SaveCurrentMoney(_playerProgress.LoadCurrentMoney() + item.Price);
-        }
 
         private void PLaySoundFx(AudioClip audioClip)
         {
@@ -158,8 +158,8 @@ namespace UI
 
         private ItemInfo SetupRandomItem()
         {
-            var item = _randomGenerator.GetRandomItem(_itemsData);
-            return item;
+            var number = Random.Range(0, _rewardItems.Count);
+            return _rewardItems[number];
         }
 
         private void ShowMoney() =>

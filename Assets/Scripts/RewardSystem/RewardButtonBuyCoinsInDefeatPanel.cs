@@ -33,7 +33,7 @@ namespace RewardSystem
 
         private void ErrorReturn(string value)
         {
-            return;
+            RestartLevel();
         }
 
         private void RestartLevel() => _levelFinishInterface.RestartLevel();
