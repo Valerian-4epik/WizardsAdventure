@@ -32,6 +32,8 @@ public class WizardsSpawner : MonoBehaviour
 
     public CameraFollower CameraFollower => _cameraFollower;
     public PlayerProgress PlayerProgress => _playerProgress;
+    public List<InitPoint> InitialPoints => _initPoints;
+    
     public event Action<GameObject> SquadChanged;
 
     private void OnEnable()

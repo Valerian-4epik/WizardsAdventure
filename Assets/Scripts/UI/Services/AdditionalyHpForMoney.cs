@@ -29,6 +29,7 @@ namespace UI.Services
             {
                 _playerProgress.SaveCurrentMoney(_playerProgress.LoadCurrentMoney() - _price);
                 _playerProgress.AddCurrentHP(_additionalyHPValue);
+                _wizardsSpawner.InitialPoints.ForEach(point => point.PlayHPGrade());
                 PLaySoundFx(true);
             }
             else

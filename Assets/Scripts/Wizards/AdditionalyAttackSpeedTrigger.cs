@@ -33,9 +33,11 @@ public class AdditionalyAttackSpeedTrigger : MonoBehaviour
         VideoAd.Show(onRewardedCallback: BuyAttackSpeed, onCloseCallback: CloseButton, onErrorCallback: Return);
     }
 
-    private void BuyAttackSpeed() =>
+    private void BuyAttackSpeed()
+    {
         _playerProgress.AddCurrentAttackSpeed(_additionalyAttackSpeed);
-
+    }
+    
     private void Return(string value)
     {
         Deactivate();
@@ -44,6 +46,7 @@ public class AdditionalyAttackSpeedTrigger : MonoBehaviour
     private void CloseButton()
     {
         _boxCollider.enabled = false;
+        _wizardsSpawner.InitialPoints.ForEach(point => point.PlayASGrade());
         StartCoroutine(PlaySoundFx(Deactivate));
     }
 

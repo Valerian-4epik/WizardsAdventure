@@ -1,31 +1,31 @@
 using System;
 using System.Collections.Generic;
 using Agava.YandexGames;
-using Unity.VisualScripting;
-using UnityEditor.Localization.Plugins.XLIFF.V20;
 using UnityEngine;
 
 namespace DefaultNamespace
 {
     public class Leaderboard : MonoBehaviour
     {
+        private const int LEADERBOURD_MAX_COUNT = 20;
+        
         [SerializeField] private RectTransform _rectTransform;
         [SerializeField] private LeaderboardPlayerView _playerView;
-        
+        [SerializeField] private GameObject _loadingSlider;
         
         private string _leaderboardName = "LevelValue";
-        protected const int LeaderbourdMaxCount = 20;
 
         private void OnEnable()
         {
-            // GetLeaderBoardData();
+            _loadingSlider.SetActive(true);
+            GetLeaderBoardData(OnLeaderboardResponce, _leaderboardName);
         }
 
         private void GetLeaderBoardData(Action<List<LeaderboardData>> onComplete, string _leaderboardName)
         {
             List<LeaderboardData> data = new();
             
-            Agava.YandexGames.Leaderboard.GetEntries(_leaderboardName, OnSucces, OnError, LeaderbourdMaxCount, LeaderbourdMaxCount, true);
+            Agava.YandexGames.Leaderboard.GetEntries(_leaderboardName, OnSucces, OnError, LEADERBOURD_MAX_COUNT, LEADERBOURD_MAX_COUNT, true);
             
             void OnSucces(LeaderboardGetEntriesResponse result)
             {
@@ -50,19 +50,26 @@ namespace DefaultNamespace
             }
         }
         
-        public void SetLeaderboardValue(string leaderboardName, int value)
+        private void OnLeaderboardResponce(List<LeaderboardData> data)
         {
-            Agava.YandexGames.Leaderboard.SetScore(leaderboardName, value, OnSucces, OnError);
+            if (gameObject == null)
+                return;
 
-            void OnSucces()
+            if (data == null || data.Count == 0)
             {
-                Debug.Log($"player's leaderboard data succesfully updated!");
+                _loadingSlider.SetActive(false);
             }
-
-            void OnError(string error)
+            else
             {
-                Debug.Log($"player's leaderboard data update failed");
+                data.ForEach(user => CreatePlayerView(user));
+                _loadingSlider.SetActive(false);
             }
+        }
+        
+        private void CreatePlayerView(LeaderboardData user)
+        {
+            LeaderboardPlayerView view = Instantiate(_playerView, _rectTransform);
+            view.Init(user.UserName, user.ScoreValue);
         }
     }
 }

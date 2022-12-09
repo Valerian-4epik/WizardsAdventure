@@ -14,7 +14,7 @@ PrefabInstance:
     - target: {fileID: 256331429548759647, guid: 688ff9444414ae14fbdfb599971b336a, type: 3}
       propertyPath: _weapon
       value: 
-      objectReference: {fileID: 11400000, guid: 1fc5bc6cb375d8f449286aefacfa92d4, type: 2}
+      objectReference: {fileID: 11400000, guid: e1b192450a6bba048b212f02ea8e3057, type: 2}
     - target: {fileID: 705345378623441127, guid: 688ff9444414ae14fbdfb599971b336a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -91,5 +91,9 @@ PrefabInstance:
       propertyPath: _maxHealth
       value: 30000
       objectReference: {fileID: 0}
+    - target: {fileID: 9208189547133540563, guid: 688ff9444414ae14fbdfb599971b336a, type: 3}
+      propertyPath: _healthPopupText
+      value: 
+      objectReference: {fileID: 1480532476303105516, guid: 354205704fbcbcb4eaa394e138cc64d7, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 688ff9444414ae14fbdfb599971b336a, type: 3}

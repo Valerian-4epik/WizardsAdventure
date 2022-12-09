@@ -1,5 +1,6 @@
 using Agava.YandexGames;
 using Data;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,12 +13,16 @@ namespace UI.Services
         [SerializeField] private Button _button;
         [SerializeField] private UIInventory _inventory;
         [SerializeField] private GameObject _panel;
+        [SerializeField] private TMP_Text _text;
 
         private PlayerProgress _progressData;
+        private int _currentLevel;
 
         private void OnEnable()
         {
             _progressData = _inventory.PlayerProgress;
+            _currentLevel = _progressData.GetLevel();
+            _text.text = GetRewardValue().ToString();
             _button.onClick.AddListener(delegate { Show(); });
         }
 
@@ -31,7 +36,7 @@ namespace UI.Services
             VideoAd.Show(onRewardedCallback:Reward, onCloseCallback:CloseButton, onErrorCallback:ErrorReturn);
         }
 
-        private void Reward() => _progressData.SaveCurrentMoney(_progressData.LoadCurrentMoney() + REWARD_MONEY);
+        private void Reward() => _progressData.SaveCurrentMoney(_progressData.LoadCurrentMoney() + GetRewardValue());
 
         private void ErrorReturn(string value)
         {
@@ -45,5 +50,23 @@ namespace UI.Services
         }
 
         private void PlaySoundFx() => _inventory.PlayGoldBuy();
+        
+        private int GetRewardValue()
+        {
+            if (_currentLevel < 12)
+                return 200;
+            if (_currentLevel < 24)
+                return 300;
+            if (_currentLevel < 36)
+                return 500;
+            if (_currentLevel < 48)
+                return 1000;
+            if (_currentLevel < 60)
+                return 2000;
+            if (_currentLevel < 72)
+                return 3000;
+
+            return 200;
+        }
     }
 }

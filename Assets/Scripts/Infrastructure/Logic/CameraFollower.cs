@@ -74,6 +74,7 @@ namespace Infrastructure.Logic
         {
             _shopInterface.CanvasGroup.alpha = 0;
             _shopInterface.CanvasGroup.interactable = false;
+            _shopInterface.CanvasGroup.blocksRaycasts = false;
             _playableDirector.playableAsset = _toEnemyTarget;
             _playableDirector.Play();
         }
@@ -82,6 +83,7 @@ namespace Infrastructure.Logic
         {
             _shopInterface.CanvasGroup.alpha = 1;
             _shopInterface.CanvasGroup.interactable = true;
+            _shopInterface.CanvasGroup.blocksRaycasts = true;
             _playableDirector.playableAsset = _toWizardTarget;
             _playableDirector.Play();
         }

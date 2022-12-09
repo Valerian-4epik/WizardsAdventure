@@ -10,6 +10,7 @@ namespace Data
     {
         private const int NEW_GAME_MONEY = 30;
 
+        private string _leaderboardName = "LevelValue";
         private bool _isNewGame = true;
         private int _allmoney;
         private int _currentMoney;
@@ -23,7 +24,7 @@ namespace Data
         private float _additionalyAttackSpeed;
         private int _currentHp;
         private float _currentAttackSpeed;
-        
+
         public int PlayerWizardAmount { get; set; }
 
         public float AdditionalyAttackSpeed => _additionalyAttackSpeed;
@@ -108,6 +109,11 @@ namespace Data
         {
             _currentLevel = level;
             ES3.Save("currentLevel", _currentLevel, "CurrentLevel.es3");
+            
+#if !UNITY_WEBGL || UNITY_EDITOR
+            return;
+#endif
+            SetLeaderboardValue(_leaderboardName, _currentLevel);
         }
 
 
@@ -205,6 +211,21 @@ namespace Data
         {
             var countNumber = ES3.Load("countNumber", "countNumber.es", _countNumberSaveMoney);
             return countNumber;
+        }
+
+        private void SetLeaderboardValue(string leaderboardName, int value)
+        {
+            Agava.YandexGames.Leaderboard.SetScore(leaderboardName, value, OnSucces, OnError);
+            
+            void OnSucces()
+            {
+                return;
+            }
+
+            void OnError(string error)
+            {
+                return;
+            }
         }
     }
 }

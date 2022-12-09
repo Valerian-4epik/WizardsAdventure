@@ -3700,7 +3700,7 @@ CanvasGroup:
   m_Enabled: 1
   m_Alpha: 0
   m_Interactable: 0
-  m_BlocksRaycasts: 1
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!1 &1885068026159542394
 GameObject:
@@ -15405,6 +15405,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 5553080552969682532}
     m_Modifications:
     - target: {fileID: 424562159137826666, guid: 67c479e213536b643aa229d9ba84c429, type: 3}
+      propertyPath: _text
+      value: 
+      objectReference: {fileID: 4113222126181854535}
+    - target: {fileID: 424562159137826666, guid: 67c479e213536b643aa229d9ba84c429, type: 3}
       propertyPath: _inventory
       value: 
       objectReference: {fileID: 1885068025135885133}
@@ -15496,6 +15500,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3056231509864882633, guid: 67c479e213536b643aa229d9ba84c429, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8412817965744893455, guid: 67c479e213536b643aa229d9ba84c429, type: 3}
       propertyPath: m_text
       value: '+200
@@ -15504,6 +15512,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 67c479e213536b643aa229d9ba84c429, type: 3}
+--- !u!114 &4113222126181854535 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8412817965744893455, guid: 67c479e213536b643aa229d9ba84c429, type: 3}
+  m_PrefabInstance: {fileID: 5608473465064981320}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &7676670629400520879 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2836229435599924199, guid: 67c479e213536b643aa229d9ba84c429, type: 3}

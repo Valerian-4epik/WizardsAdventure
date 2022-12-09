@@ -130,6 +130,7 @@ namespace UI
         {
             _canvasGroup.alpha = 1;
             _canvasGroup.interactable = true;
+            _canvasGroup.blocksRaycasts = true;
         }
 
         public void PlayGoldBuy() => PLaySoundFx(_successfulBuy);

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -31,5 +32,5 @@ public class StatsInfo : MonoBehaviour
     }
 
     private void FillHpText(int value, TMP_Text text) => text.text = $"HP + {value.ToString()}";
-    private void FillAsText(float value, TMP_Text text) => text.text = $"AS + {value.ToString()}";
+    private void FillAsText(float value, TMP_Text text) => text.text = $"AS + {Math.Round(value, 2)}";
 }
