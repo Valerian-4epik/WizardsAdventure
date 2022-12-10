@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 using Agava.YandexGames;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace DefaultNamespace
 {
@@ -12,13 +14,32 @@ namespace DefaultNamespace
         [SerializeField] private RectTransform _rectTransform;
         [SerializeField] private LeaderboardPlayerView _playerView;
         [SerializeField] private GameObject _loadingSlider;
+        [SerializeField] private Button _autorizationButton;
+        [SerializeField] private TMP_Text _warningText;
         
         private string _leaderboardName = "LevelValue";
 
         private void OnEnable()
         {
             _loadingSlider.SetActive(true);
-            GetLeaderBoardData(OnLeaderboardResponce, _leaderboardName);
+            CheckAutorizationPlayer();
+        }
+
+        public void Autorization() => PlayerAccount.Authorize();
+
+        private void CheckAutorizationPlayer()
+        {
+            if(PlayerAccount.IsAuthorized)
+                GetLeaderBoardData(OnLeaderboardResponce, _leaderboardName);
+            else
+                GetAutorization();
+        }
+
+        private void GetAutorization()
+        {
+            _autorizationButton.gameObject.SetActive(true);
+            _warningText.gameObject.SetActive(true);
+            _loadingSlider.SetActive(false);
         }
 
         private void GetLeaderBoardData(Action<List<LeaderboardData>> onComplete, string _leaderboardName)

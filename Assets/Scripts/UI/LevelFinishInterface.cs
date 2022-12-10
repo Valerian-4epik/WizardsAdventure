@@ -5,9 +5,11 @@ using Data;
 using RewardSystem;
 using UI.Services;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class LevelFinishInterface : MonoBehaviour
 {
+    [SerializeField] private AudioMixerGroup _audioMixer;
     [SerializeField] private GameObject _winPanel;
     [SerializeField] private GameObject _losePanel;
     [SerializeField] private RewarADForSpin _rewarAD;
@@ -26,8 +28,10 @@ public class LevelFinishInterface : MonoBehaviour
     public void NextLevel()
     {
 #if !UNITY_WEBGL || UNITY_EDITOR
+        OnSwitchMusicVolume(false);
         GoNextLevel(true);
 #endif
+        OnSwitchMusicVolume(false);
         InterstitialAd.Show(null, GoNextLevel, GoNextLevel);
     }
 
@@ -43,6 +47,8 @@ public class LevelFinishInterface : MonoBehaviour
         GetPlayerProgress();
     }
 
+    public void GoNextLevel(string value) => LevelEnded?.Invoke();
+    
     public void ActivatePanel(bool isWin)
     {
         if (isWin)
@@ -80,5 +86,12 @@ public class LevelFinishInterface : MonoBehaviour
     }
     
     private void AddRewardMoney() => _playerProgress.AddReward();
-    public void GoNextLevel(string value) => LevelEnded?.Invoke();
+    
+    private void OnSwitchMusicVolume(bool value)
+    {
+        if (value)
+            _audioMixer.audioMixer.SetFloat("Master", 0);
+        else
+            _audioMixer.audioMixer.SetFloat("Master", -80);
+    }
 }

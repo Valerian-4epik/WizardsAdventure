@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.Playables;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -10,6 +11,7 @@ using Random = UnityEngine.Random;
 
 public class Curtain : MonoBehaviour
 {
+    [SerializeField] private AudioMixerGroup _audioMixer;
     [SerializeField] private List<Sprite> _backgroundsSlot = new List<Sprite>();
     [SerializeField] private List<Sprite> _backgroundsLevelNumber = new List<Sprite>();
     [SerializeField] private List<ItemInfo> _items = new List<ItemInfo>();
@@ -55,6 +57,7 @@ public class Curtain : MonoBehaviour
             yield return new WaitForSeconds(delay);
         }
 
+        OnSwitchMusicVolume(true);
         _camera = Camera.main;
         _playableDirector = _camera.gameObject.GetComponent<PlayableDirector>();
         _playableDirector.Play();
@@ -77,4 +80,12 @@ public class Curtain : MonoBehaviour
     private Sprite GetRandomSprite(List<Sprite> sprites) => sprites[GetRandomNumber(sprites.Count)];
 
     private ItemInfo GetRandomItem() => _items[GetRandomNumber(_items.Count)];
+    
+    private void OnSwitchMusicVolume(bool value)
+    {
+        if (value)
+            _audioMixer.audioMixer.SetFloat("Master", 0);
+        else
+            _audioMixer.audioMixer.SetFloat("Master", -80);
+    }
 }

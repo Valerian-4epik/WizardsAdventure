@@ -259,7 +259,7 @@ public class ArenaDisposer : MonoBehaviour
         DisableShopInterface();
         _raycastDetecter.enabled = false;
     }
-
+    
     public void Activate() //test
     {
         FindAllFighters();

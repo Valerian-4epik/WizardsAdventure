@@ -1,13 +1,13 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using Agava.YandexGames;
 using Data;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class AdditionalyAttackSpeedTrigger : MonoBehaviour
 {
+    [SerializeField] private AudioMixerGroup _audioMixer;
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private AudioClip _successfulBuyWizard;
     [SerializeField] private AudioClip _unsuccessfulBuyWizard;
@@ -30,6 +30,7 @@ public class AdditionalyAttackSpeedTrigger : MonoBehaviour
         BuyAttackSpeed();
         CloseButton();
 #endif
+        OnSwitchMusicVolume(false);
         VideoAd.Show(onRewardedCallback: BuyAttackSpeed, onCloseCallback: CloseButton, onErrorCallback: Return);
     }
 
@@ -37,14 +38,16 @@ public class AdditionalyAttackSpeedTrigger : MonoBehaviour
     {
         _playerProgress.AddCurrentAttackSpeed(_additionalyAttackSpeed);
     }
-    
+
     private void Return(string value)
     {
+        OnSwitchMusicVolume(true);
         Deactivate();
     }
 
     private void CloseButton()
     {
+        OnSwitchMusicVolume(true);
         _boxCollider.enabled = false;
         _wizardsSpawner.InitialPoints.ForEach(point => point.PlayASGrade());
         StartCoroutine(PlaySoundFx(Deactivate));
@@ -62,5 +65,13 @@ public class AdditionalyAttackSpeedTrigger : MonoBehaviour
         yield return new WaitForSeconds(length);
 
         onCallBack?.Invoke();
+    }
+
+    private void OnSwitchMusicVolume(bool value)
+    {
+        if (value)
+            _audioMixer.audioMixer.SetFloat("Master", 0);
+        else
+            _audioMixer.audioMixer.SetFloat("Master", -80);
     }
 }

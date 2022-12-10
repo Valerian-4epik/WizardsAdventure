@@ -4,6 +4,7 @@ using Data;
 using Inventory;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
@@ -11,6 +12,7 @@ namespace RewardSystem
 {
     public class RandomItemForVictoryPanel : MonoBehaviour
     {
+        [SerializeField] private AudioMixerGroup _audioMixer;
         [SerializeField] private LevelFinishInterface _levelFinishInterface;
         [SerializeField] private List<ItemInfo> _items = new List<ItemInfo>();
         [SerializeField] private GameObject _freePanel;
@@ -36,6 +38,7 @@ namespace RewardSystem
             FillCell();
             BlockFreeButton();
 #endif
+            OnSwitchMusicVolume(false);
             VideoAd.Show(onRewardedCallback:FillCell, onCloseCallback:BlockFreeButton, onErrorCallback:Error);
         }
         
@@ -56,14 +59,24 @@ namespace RewardSystem
 
         private void Error(string value)
         {
+            OnSwitchMusicVolume(true);
             BlockFreeButton();
             gameObject.SetActive(false);
         }
 
         private void BlockFreeButton()
         {
+            OnSwitchMusicVolume(true);
             _button.enabled = false;
             _freePanel.SetActive(false);
+        }
+        
+        private void OnSwitchMusicVolume(bool value)
+        {
+            if (value)
+                _audioMixer.audioMixer.SetFloat("Master", 0);
+            else
+                _audioMixer.audioMixer.SetFloat("Master", -80);
         }
     }
 }

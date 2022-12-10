@@ -75,7 +75,8 @@ public class WizardsSpawner : MonoBehaviour
         if (GetEmptyInitPoint() == null)
         {
             _wizardShop.gameObject.SetActive(false);
-            _wizardForViewingADS.gameObject.SetActive(false);
+            _wizardADSShop.gameObject.SetActive(false);
+            // _wizardForViewingADS.gameObject.SetActive(false);
             CreateAdditionalyHpTrigger();
             CreateAdditionalyAttackSpeedTrigger();
         }

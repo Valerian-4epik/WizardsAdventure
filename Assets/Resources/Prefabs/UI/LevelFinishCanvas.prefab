@@ -1082,7 +1082,7 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
-  m_UseSpriteMesh: 0
+  m_UseSpriteMesh: 1
   m_PixelsPerUnitMultiplier: 1
 --- !u!1 &944386220711761713
 GameObject:
@@ -1312,7 +1312,7 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
-  m_UseSpriteMesh: 0
+  m_UseSpriteMesh: 1
   m_PixelsPerUnitMultiplier: 1
 --- !u!1 &1001415609837415199
 GameObject:
@@ -6462,8 +6462,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62b05598dcfc2e84e8cab373ec2b03c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioMixer: {fileID: 0}
   _roulette: {fileID: 0}
   _levelFinishInterface: {fileID: 5586699464229628121}
+  _spinButton: {fileID: 0}
+  _nextLevelButton: {fileID: 0}
 --- !u!1 &1446714817857870830
 GameObject:
   m_ObjectHideFlags: 0
@@ -14466,8 +14469,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62b05598dcfc2e84e8cab373ec2b03c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioMixer: {fileID: 24300002, guid: 00bc1f2040f80804cae23d6223daae76, type: 2}
   _roulette: {fileID: 3913110974387522266}
   _levelFinishInterface: {fileID: 5586699464229628121}
+  _spinButton: {fileID: 370077709}
+  _nextLevelButton: {fileID: 635257033562904049}
 --- !u!1 &4604725333800199933
 GameObject:
   m_ObjectHideFlags: 0
@@ -14580,6 +14586,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76dd4e15f0424808a0d151e2eeaf248f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioMixer: {fileID: 24300002, guid: 00bc1f2040f80804cae23d6223daae76, type: 2}
   _levelFinishInterface: {fileID: 5586699464229628121}
   _items:
   - {fileID: 11400000, guid: 72c1b0c10f220bd4d8f29988c4552dba, type: 2}
@@ -16537,7 +16544,7 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
-  m_UseSpriteMesh: 0
+  m_UseSpriteMesh: 1
   m_PixelsPerUnitMultiplier: 1
 --- !u!1 &5740102252995760843
 GameObject:
@@ -16767,7 +16774,7 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
-  m_UseSpriteMesh: 0
+  m_UseSpriteMesh: 1
   m_PixelsPerUnitMultiplier: 1
 --- !u!1 &5947671016419486983
 GameObject:
@@ -16844,7 +16851,7 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
-  m_UseSpriteMesh: 0
+  m_UseSpriteMesh: 1
   m_PixelsPerUnitMultiplier: 1
 --- !u!1 &6038461676591802134
 GameObject:
@@ -18282,7 +18289,7 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
-  m_UseSpriteMesh: 0
+  m_UseSpriteMesh: 1
   m_PixelsPerUnitMultiplier: 1
 --- !u!1 &7372627211961483855
 GameObject:
@@ -18551,6 +18558,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e54653ee0ba7c7a42a216628efa08663, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioMixer: {fileID: 24300002, guid: 00bc1f2040f80804cae23d6223daae76, type: 2}
   _winPanel: {fileID: 58300329351696251}
   _losePanel: {fileID: 8393201562395640621}
   _rewarAD: {fileID: 9058373126519062771}
@@ -23820,6 +23828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ae074fa65274980822d171d8e84cfc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _audioMixer: {fileID: 24300002, guid: 00bc1f2040f80804cae23d6223daae76, type: 2}
   _button: {fileID: 5223181200835496010}
   _levelFinishInterface: {fileID: 5586699464229628121}
 --- !u!1 &8002884522041791697
@@ -24757,6 +24766,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 70866dab1e96e4e42b38a4725770f18b, type: 3}
+    - target: {fileID: 296011488471708524, guid: 4f2e6425ad0551341802fbbe5cc85bb3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6a0b749826a795543b82ea7aa2c6fd30, type: 3}
+    - target: {fileID: 296011488471708524, guid: 4f2e6425ad0551341802fbbe5cc85bb3, type: 3}
+      propertyPath: m_UseSpriteMesh
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 555180634609974998, guid: 4f2e6425ad0551341802fbbe5cc85bb3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b3d8dbe835c404179842f9f9595f2bf0, type: 3}
+    - target: {fileID: 555180634609974998, guid: 4f2e6425ad0551341802fbbe5cc85bb3, type: 3}
+      propertyPath: m_UseSpriteMesh
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 667082659720212329, guid: 4f2e6425ad0551341802fbbe5cc85bb3, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -25269,6 +25294,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -22.7
       objectReference: {fileID: 0}
+    - target: {fileID: 4300997841982410600, guid: 4f2e6425ad0551341802fbbe5cc85bb3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: e963fdc7c6d93d94e9937fd35df20188, type: 3}
+    - target: {fileID: 4300997841982410600, guid: 4f2e6425ad0551341802fbbe5cc85bb3, type: 3}
+      propertyPath: m_UseSpriteMesh
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5507912355492058843, guid: 4f2e6425ad0551341802fbbe5cc85bb3, type: 3}
       propertyPath: m_SizeDelta.x
       value: 16
@@ -25341,6 +25374,14 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6192569626794166036, guid: 4f2e6425ad0551341802fbbe5cc85bb3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3c6f5b7a54bd84489ba7d655c5b7b812, type: 3}
+    - target: {fileID: 6192569626794166036, guid: 4f2e6425ad0551341802fbbe5cc85bb3, type: 3}
+      propertyPath: m_UseSpriteMesh
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6356132114017089240, guid: 4f2e6425ad0551341802fbbe5cc85bb3, type: 3}
       propertyPath: m_SizeDelta.x
       value: 16
@@ -25356,6 +25397,14 @@ PrefabInstance:
     - target: {fileID: 6356132114017089240, guid: 4f2e6425ad0551341802fbbe5cc85bb3, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 22.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6387752074558865258, guid: 4f2e6425ad0551341802fbbe5cc85bb3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b3d8dbe835c404179842f9f9595f2bf0, type: 3}
+    - target: {fileID: 6387752074558865258, guid: 4f2e6425ad0551341802fbbe5cc85bb3, type: 3}
+      propertyPath: m_UseSpriteMesh
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7263509561112110768, guid: 4f2e6425ad0551341802fbbe5cc85bb3, type: 3}
       propertyPath: m_SizeDelta.x
@@ -25405,6 +25454,14 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.45
       objectReference: {fileID: 0}
+    - target: {fileID: 8261551830720273756, guid: 4f2e6425ad0551341802fbbe5cc85bb3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3b6c3cb2e89deb6429ae24be051fbafd, type: 3}
+    - target: {fileID: 8261551830720273756, guid: 4f2e6425ad0551341802fbbe5cc85bb3, type: 3}
+      propertyPath: m_UseSpriteMesh
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8428940902329072952, guid: 4f2e6425ad0551341802fbbe5cc85bb3, type: 3}
       propertyPath: m_LocalRotation.w
       value: -0.92387944
@@ -25425,9 +25482,29 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8649037407828050924, guid: 4f2e6425ad0551341802fbbe5cc85bb3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 49ab23d20dcc3a24fa81bcd663e3aa4f, type: 3}
+    - target: {fileID: 8649037407828050924, guid: 4f2e6425ad0551341802fbbe5cc85bb3, type: 3}
+      propertyPath: m_UseSpriteMesh
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9081989006979464357, guid: 4f2e6425ad0551341802fbbe5cc85bb3, type: 3}
       propertyPath: m_Sprite
       value: 
+      objectReference: {fileID: 21300000, guid: de882c56552fa2e4799c48a21de01e35, type: 3}
+    - target: {fileID: 9081989006979464357, guid: 4f2e6425ad0551341802fbbe5cc85bb3, type: 3}
+      propertyPath: m_UseSpriteMesh
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9169883731487217685, guid: 4f2e6425ad0551341802fbbe5cc85bb3, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3fdd28875d2e2434fa9d7d2cb2f117bf, type: 3}
+    - target: {fileID: 9169883731487217685, guid: 4f2e6425ad0551341802fbbe5cc85bb3, type: 3}
+      propertyPath: m_UseSpriteMesh
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9213641413115175783, guid: 4f2e6425ad0551341802fbbe5cc85bb3, type: 3}
       propertyPath: m_IsActive

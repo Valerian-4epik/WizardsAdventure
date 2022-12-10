@@ -2,14 +2,14 @@ using Agava.YandexGames;
 using Data;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 namespace UI.Services
 {
     public class RewardADForBuyCoins : MonoBehaviour
     {
-        private const int REWARD_MONEY = 200;
-
+        [SerializeField] private AudioMixerGroup _audioMixer;
         [SerializeField] private Button _button;
         [SerializeField] private UIInventory _inventory;
         [SerializeField] private GameObject _panel;
@@ -33,19 +33,25 @@ namespace UI.Services
             PlaySoundFx();
             CloseButton();
 #endif
+            OnSwitchMusicVolume(false);
             VideoAd.Show(onRewardedCallback:Reward, onCloseCallback:CloseButton, onErrorCallback:ErrorReturn);
         }
 
-        private void Reward() => _progressData.SaveCurrentMoney(_progressData.LoadCurrentMoney() + GetRewardValue());
+        private void Reward()
+        {
+            _progressData.SaveCurrentMoney(_progressData.LoadCurrentMoney() + GetRewardValue());
+        }
 
         private void ErrorReturn(string value)
         {
+            OnSwitchMusicVolume(true);
             _panel.SetActive(false);
         }
 
         private void CloseButton()
         {
-            PlaySoundFx();
+            OnSwitchMusicVolume(true);
+             PlaySoundFx();
             _panel.SetActive(false);
         }
 
@@ -67,6 +73,14 @@ namespace UI.Services
                 return 3000;
 
             return 200;
+        }
+        
+        private void OnSwitchMusicVolume(bool value)
+        {
+            if (value)
+                _audioMixer.audioMixer.SetFloat("Master", 0);
+            else
+                _audioMixer.audioMixer.SetFloat("Master", -80);
         }
     }
 }

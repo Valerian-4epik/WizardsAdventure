@@ -1,12 +1,12 @@
 using System;
 using System.Collections;
 using Agava.YandexGames;
-using UI;
 using UnityEngine;
-using UnityEngine.Serialization;
+using UnityEngine.Audio;
 
 public class WizardForADS : MonoBehaviour
 {
+    [SerializeField] private AudioMixerGroup _audioMixer;
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private BoxCollider _boxCollider;
     
@@ -22,24 +22,29 @@ public class WizardForADS : MonoBehaviour
         Reward();
         CloseButton();
 #endif
+        OnSwitchMusicVolume(false);
         VideoAd.Show(onRewardedCallback:Reward, onCloseCallback:CloseButton, onErrorCallback:Return);
     }
     
-    private void Reward() => 
+    private void Reward()
+    {
         _spawner.AddWizardForADS();
+    }
 
     private void Return(string value)
     {
-        Deactivate();
+        OnSwitchMusicVolume(true);
+        DisabeleGameObject();
     }
 
     private void CloseButton()
     {
+        OnSwitchMusicVolume(true);
         _boxCollider.enabled = false;
-        StartCoroutine(PlaySoundFx(Deactivate));
+        StartCoroutine(PlaySoundFx(DisabeleGameObject));
     }
 
-    private void Deactivate() => gameObject.SetActive(false);
+    private void DisabeleGameObject() => gameObject.SetActive(false);
     
     private IEnumerator PlaySoundFx(Action onCallBack = null)
     {
@@ -51,5 +56,13 @@ public class WizardForADS : MonoBehaviour
         yield return new WaitForSeconds(length);
         
         onCallBack?.Invoke();
+    }
+    
+    private void OnSwitchMusicVolume(bool value)
+    {
+        if (value)
+            _audioMixer.audioMixer.SetFloat("Master", 0);
+        else
+            _audioMixer.audioMixer.SetFloat("Master", -80);
     }
 }
