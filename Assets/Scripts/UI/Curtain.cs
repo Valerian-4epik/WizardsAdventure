@@ -57,7 +57,6 @@ public class Curtain : MonoBehaviour
             yield return new WaitForSeconds(delay);
         }
 
-        OnSwitchMusicVolume(true);
         _camera = Camera.main;
         _playableDirector = _camera.gameObject.GetComponent<PlayableDirector>();
         _playableDirector.Play();
@@ -66,6 +65,7 @@ public class Curtain : MonoBehaviour
 
     private void DisableCartain()
     {
+        OnSwitchMusicVolume(true);
         _slider.value = 0;
         _canvasGroup.alpha = 0;
         // gameObject.SetActive(false);

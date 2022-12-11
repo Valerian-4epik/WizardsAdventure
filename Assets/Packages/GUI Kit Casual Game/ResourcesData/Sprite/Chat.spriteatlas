@@ -40,11 +40,14 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 49f61c3892c0c4e49bb222a51b286505, type: 3}
-    totalSpriteSurfaceArea: 607246
     bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 3f91c1a02b27d47c88a8fd1be83aa083, type: 3}
@@ -55,6 +58,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 74114cc50585c4f6785798e3d7f07fc8, type: 3}
   - {fileID: 21300000, guid: 5a8078061e365472e9705f99ec93021b, type: 3}
   - {fileID: 21300000, guid: 91343437293ce45ac84f9583191fd0bd, type: 3}
+  - {fileID: 21300000, guid: 272b651a1ad26154098ba926fe8bfb6e, type: 3}
   - {fileID: 21300000, guid: 88214a3a666014e50aa619bf5a0c5aee, type: 3}
   - {fileID: 21300000, guid: 77946dda098d145d6acdeda75d6b85ea, type: 3}
   - {fileID: 21300000, guid: 6a84fe7d00c0247719b41d0998c03ab0, type: 3}
@@ -69,10 +73,12 @@ SpriteAtlas:
   - speech_bubble_white
   - speech_bubble_pink
   - join_bg
+  - Test
   - icon_thumbnail
   - btn_emoji
   - speech_bubble_blue
   - shadow_bottom
   - popup_bg_top
+  m_RenderDataMap: {}
   m_Tag: Chat
   m_IsVariant: 0

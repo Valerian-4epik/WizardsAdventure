@@ -40,15 +40,18 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 7117d79a771584c12b4bc7f40b18743b, type: 3}
-    totalSpriteSurfaceArea: 949132
     bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 3ead9d80760a040d0b70e86939528e32, type: 3}
-  - {fileID: 21300000, guid: bdd674017bb6b4807aa77daf5310b898, type: 3}
+  - {fileID: 1676361546, guid: bdd674017bb6b4807aa77daf5310b898, type: 3}
   - {fileID: 21300000, guid: 2b5ca3519d4074c88afd1edc401c2aba, type: 3}
   - {fileID: 21300000, guid: 3fbf4e52eb58442c59fad6daec8a85e6, type: 3}
   - {fileID: 21300000, guid: 2e57f9725042d4e3aa9ec75259c6c3c0, type: 3}
@@ -85,7 +88,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 909969ef7ab0d428c8a6b640ab051d04, type: 3}
   m_PackedSpriteNamesToIndex:
   - pass_reward_prg_num_bg_gray
-  - pass_btn_active_pass
+  - pass_btn_active_pass_0
   - pass_reward_icon_chest_1
   - pass_icon_check
   - pass_reward_icon_clover
@@ -120,5 +123,6 @@ SpriteAtlas:
   - pass_icon_lock
   - pass_reward_icon_book
   - pass_reward_prg_bg
+  m_RenderDataMap: {}
   m_Tag: Pass
   m_IsVariant: 0

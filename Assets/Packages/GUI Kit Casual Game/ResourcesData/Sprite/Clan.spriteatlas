@@ -40,11 +40,14 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 879b178b46ee84f48871353be335cbf1, type: 3}
-    totalSpriteSurfaceArea: 1031005
     bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 3e36b570a407647f18e279be6421bc72, type: 3}
@@ -72,13 +75,13 @@ SpriteAtlas:
   - {fileID: 21300000, guid: e2531dbb210c447358dfd4dd637545c5, type: 3}
   - {fileID: 21300000, guid: fd8eea8c88f00490ab5a9a0e8bbe446f, type: 3}
   - {fileID: 21300000, guid: 32b0480dca1584fd99cd7bbea1266f55, type: 3}
-  - {fileID: 21300000, guid: 97af439d5b4004d96b2dadfe95b1b414, type: 3}
+  - {fileID: -350242986, guid: 97af439d5b4004d96b2dadfe95b1b414, type: 3}
   - {fileID: 21300000, guid: 5ef957ddb3b004127bc24457da886047, type: 3}
   - {fileID: 21300000, guid: 11682c1eab384411d9d22f54d5e646a7, type: 3}
   - {fileID: 21300000, guid: c50a0f6e42d5c4abeb157b1b97e14ae8, type: 3}
   - {fileID: 21300000, guid: aef20f8e21ef14da9ba50e7d8df50510, type: 3}
   - {fileID: 21300000, guid: 8e00845f7485c4c0cae22ef3fa875d60, type: 3}
-  - {fileID: 21300000, guid: 0357d37ff2ce1443485aa680e89d82f0, type: 3}
+  - {fileID: 1284184290, guid: 0357d37ff2ce1443485aa680e89d82f0, type: 3}
   m_PackedSpriteNamesToIndex:
   - clan_info_bg
   - clan_img_s_3
@@ -105,12 +108,13 @@ SpriteAtlas:
   - btn_icon_search
   - clan_img_s_1
   - clan_img_1
-  - list_bg
+  - list_bg_0
   - clan_img_s_4
   - clan_list_focus
   - clan_symbol_s_3
   - clan_symbol_1
   - clan_img_4
-  - clan_info_bg
+  - clan_info_bg_0
+  m_RenderDataMap: {}
   m_Tag: Clan
   m_IsVariant: 0

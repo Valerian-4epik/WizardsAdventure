@@ -40,11 +40,14 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 6b20be28215e542c2a71007fbfefd0ba, type: 3}
-    totalSpriteSurfaceArea: 763989
     bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 8707475047dfe4c8ebafa3eced6bcfa2, type: 3}
@@ -70,12 +73,12 @@ SpriteAtlas:
   - {fileID: 21300000, guid: cbcfb7fa0ecd54e4f8f646e7cad06abe, type: 3}
   - {fileID: 21300000, guid: 7a5cefdc871c749e2ac97673e7dd3c4f, type: 3}
   - {fileID: 21300000, guid: b6975c3de651f42babaed097a5f3312b, type: 3}
-  - {fileID: 21300000, guid: 8986eb0e903a74f6b91f7ef5d7eb204b, type: 3}
-  - {fileID: 21300000, guid: 24519d9e5e416492cb02278ecb464d63, type: 3}
-  - {fileID: 21300000, guid: 9edf88ae67e094b3cb3b788b80b98798, type: 3}
+  - {fileID: -2086450467, guid: 8986eb0e903a74f6b91f7ef5d7eb204b, type: 3}
+  - {fileID: -520658711, guid: 24519d9e5e416492cb02278ecb464d63, type: 3}
+  - {fileID: 1290230767, guid: 9edf88ae67e094b3cb3b788b80b98798, type: 3}
   - {fileID: 21300000, guid: 42f7f15f106c94250b08d8a43540c943, type: 3}
   - {fileID: 21300000, guid: 31c85e6f1caf54385b18aa90295dd6c4, type: 3}
-  - {fileID: 21300000, guid: f965acaf030bc408bb107241ad5d371b, type: 3}
+  - {fileID: -1771489558, guid: f965acaf030bc408bb107241ad5d371b, type: 3}
   - {fileID: 21300000, guid: 33fe47cf57cd44758a7a8573ea549012, type: 3}
   - {fileID: 21300000, guid: 88a1cbcfc07604b8bb6294fbbbcff649, type: 3}
   - {fileID: 21300000, guid: a64ef0df0b327478497db1e7a451fb16, type: 3}
@@ -103,14 +106,15 @@ SpriteAtlas:
   - reward_month_icon_rune_1
   - reward_week_icon_gold
   - reward_month_icon_skin_1
-  - reward_month_frame_dim
-  - reward_week_frame_blue
-  - reward_month_frame_blue
+  - reward_month_frame_dim_0
+  - reward_week_frame_blue_0
+  - reward_month_frame_blue_0
   - particle_rainbow
   - reward_week_frame_focus
-  - reward_week_frame_dim
+  - reward_week_frame_dim_0
   - reward_month_frame_focus
   - reward_month_icon_skin_0
   - reward_week_icon_gem
+  m_RenderDataMap: {}
   m_Tag: Reward
   m_IsVariant: 0

@@ -40,11 +40,14 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: b4f9e0db43d5a41e59519d800d7434ba, type: 3}
-    totalSpriteSurfaceArea: 4096391
     bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 0f56a520c9c034c2692fa3db3b7f1454, type: 3}
@@ -69,7 +72,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 4c95714486ef949438634bdbd26b8887, type: 3}
   - {fileID: 21300000, guid: cb37917483ee24fea8fab306393441e5, type: 3}
   - {fileID: 21300000, guid: d14da694cce9b4c2b87ef9421a9bd459, type: 3}
-  - {fileID: 21300000, guid: b78e1c94f1bcb42a7996ce616745e100, type: 3}
+  - {fileID: 671720672, guid: b78e1c94f1bcb42a7996ce616745e100, type: 3}
   - {fileID: 21300000, guid: f87d9d25262734d879c2da72faf95bf2, type: 3}
   - {fileID: 21300000, guid: af96c8555362c4b7fba005304d49b573, type: 3}
   - {fileID: 21300000, guid: 3a057b166165546afb4bab7fbec93a29, type: 3}
@@ -119,7 +122,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 2350fdbe01c4d42649eaf2b3259e2021, type: 3}
   - {fileID: 21300000, guid: 89bfafeec14b047a4ac5510b8751485d, type: 3}
   - {fileID: 21300000, guid: 30af861f4c8c141159c3c1ff5b424c3c, type: 3}
-  - {fileID: 21300000, guid: 681db73f19fb24efe843aad713eccb43, type: 3}
+  - {fileID: -992204320, guid: 681db73f19fb24efe843aad713eccb43, type: 3}
   - {fileID: 21300000, guid: 22bb5f5f739154e0581b8f1b535d6774, type: 3}
   - {fileID: 21300000, guid: 96274b6f4982041558dfdc5471747076, type: 3}
   - {fileID: 21300000, guid: 1c003fff2a78f4a4fa6e0a7be1fb3cbd, type: 3}
@@ -146,7 +149,7 @@ SpriteAtlas:
   - user_level_bar_blue
   - button_green
   - reward_icon_chest
-  - top_btn_icon_back
+  - top_btn_icon_back_0
   - button_dark
   - text_deco_line_left
   - top_status_bg_white
@@ -196,9 +199,10 @@ SpriteAtlas:
   - top_btn_icon_exit
   - top_btn_left
   - common_bg_glow_512
-  - button_red
+  - button_red_0
   - reward_icon_energy
   - common_bg
   - user_level_bar_bg
+  m_RenderDataMap: {}
   m_Tag: Common
   m_IsVariant: 0

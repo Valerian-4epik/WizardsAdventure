@@ -40,11 +40,14 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 9a9bd1864bafb49c4ae4553bb28adbd3, type: 3}
-    totalSpriteSurfaceArea: 6143785
     bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 0d625f208ad8e4a6db742c86a0c94c8e, type: 3}
@@ -55,12 +58,11 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 9d430462e79d84f99969ddf7a190b000, type: 3}
   - {fileID: 21300000, guid: 494f56e2fb2814696b824ae89249b018, type: 3}
   - {fileID: 21300000, guid: e1f4b2539c9f54e0d9d6d0a6c072e9a4, type: 3}
-  - {fileID: 21300000, guid: 77a23063aee114421aeaef7ff09f2c2c, type: 3}
   - {fileID: 21300000, guid: 39a1db93c915344dba834a5c425a40e1, type: 3}
   - {fileID: 21300000, guid: 3bd72ca3c2cd14673a655c6511fc9f12, type: 3}
   - {fileID: 21300000, guid: 9ae86ed394c9c42859006d2a7f51cad3, type: 3}
   - {fileID: 21300000, guid: c5a153e3de15e42c3a8fb052c0509fa8, type: 3}
-  - {fileID: 21300000, guid: a66ed104331aa4428a7a1966ed7ea087, type: 3}
+  - {fileID: 1505163766, guid: a66ed104331aa4428a7a1966ed7ea087, type: 3}
   - {fileID: 21300000, guid: f997bb5476232462ea3a680f9ddd0a98, type: 3}
   - {fileID: 21300000, guid: ce0dfd54574d644aea051e0f91555b1d, type: 3}
   - {fileID: 21300000, guid: ca5ff82589a4a487cb8c8e59004514fa, type: 3}
@@ -77,7 +79,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 6673df9812a5f47feabccf8559692b0c, type: 3}
   - {fileID: 21300000, guid: 110152c81329241e8ba95a93fafd44bc, type: 3}
   - {fileID: 21300000, guid: ccce3c4995a184098871954601242143, type: 3}
-  - {fileID: 21300000, guid: 63f17b1a0b59c4f49bc605873d683c1f, type: 3}
+  - {fileID: -112264999, guid: 63f17b1a0b59c4f49bc605873d683c1f, type: 3}
   - {fileID: 21300000, guid: f668d02a428774352b1ebad5c88557f2, type: 3}
   - {fileID: 21300000, guid: fb29f34a909f9437282d64589c55b8c1, type: 3}
   - {fileID: 21300000, guid: fb8c897ab55e9486ba18f0de979fdd93, type: 3}
@@ -98,12 +100,11 @@ SpriteAtlas:
   - rune_sample_15
   - rune_sample_11
   - rune_sample_3
-  - slider_fusion_bg
   - rune_sample_6
   - rune_sample_20
   - rune_sample_23
   - rune_sample_1
-  - rune_frame
+  - rune_frame_0
   - rune_large_sample_1
   - rune_sample_14
   - rune_sample_2
@@ -120,7 +121,7 @@ SpriteAtlas:
   - rune_sample_10
   - rune_sample_18
   - rune_sample_21
-  - slider_fusion_fill
+  - slider_fusion_fill_0
   - rune_sample_19
   - fusion_bg_2
   - icon_menu1_n
@@ -132,5 +133,6 @@ SpriteAtlas:
   - rune_sample_4
   - rune_sample_5
   - fusion_bg_3
+  m_RenderDataMap: {}
   m_Tag: RuneFuse
   m_IsVariant: 0

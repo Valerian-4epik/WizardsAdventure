@@ -40,11 +40,14 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 7f172dc70b99e478ba7d53dbbecf830d, type: 3}
-    totalSpriteSurfaceArea: 2502936
     bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: ebc3c570e3ed54d259c4921ea1c0d45d, type: 3}
@@ -59,7 +62,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: bc75c4e5853f6460fa57d4960f87fe16, type: 3}
   - {fileID: 21300000, guid: 1dc86866662534453a0e2cd9004dd340, type: 3}
   - {fileID: 21300000, guid: a28158a64ce9944fa886109e397ba83b, type: 3}
-  - {fileID: 21300000, guid: 26d029d646f6e4627ab7b853e7b043fc, type: 3}
+  - {fileID: -1503580473, guid: 26d029d646f6e4627ab7b853e7b043fc, type: 3}
   - {fileID: 21300000, guid: 82813c074e2854877b1382f0e987511b, type: 3}
   - {fileID: 21300000, guid: c1ada327db13247518d5a0bda29ed999, type: 3}
   - {fileID: 21300000, guid: 44a9a5484ba3c4cc895dc425ccaea164, type: 3}
@@ -67,7 +70,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 3fbd2378634f8403b97c467c5fd40fef, type: 3}
   - {fileID: 21300000, guid: 21c09f492ea294fcdb8fb24b87865462, type: 3}
   - {fileID: 21300000, guid: 61725b696bb9b4c73bb7f577825b65b2, type: 3}
-  - {fileID: 21300000, guid: 28554fc966eb749e587c11db562e7eeb, type: 3}
+  - {fileID: 312359988, guid: 28554fc966eb749e587c11db562e7eeb, type: 3}
   - {fileID: 21300000, guid: b8938ad989023427bbd623db2e630980, type: 3}
   - {fileID: 21300000, guid: 9762cfe9796d54299a537d68c91c8df6, type: 3}
   - {fileID: 21300000, guid: 99d6b42a998a64478ab7de9ccdd0e411, type: 3}
@@ -87,7 +90,7 @@ SpriteAtlas:
   - chest_special
   - shop_img_gem_0
   - shop_back_effect_gem
-  - shop_sub_bg
+  - shop_sub_bg_0
   - shop_img_gold_0
   - shop_img_gem_2
   - shop_frame_purple
@@ -95,12 +98,13 @@ SpriteAtlas:
   - common_badge_popular
   - chest_large
   - shop_img_gold_4
-  - shop_frame_yellow
+  - shop_frame_yellow_0
   - chest_normal
   - common_badge_best
   - shop_icon_gem
   - shop_img_gem_4
   - shop_img_gem_3
   - shop_img_gem_1
+  m_RenderDataMap: {}
   m_Tag: Shop
   m_IsVariant: 0

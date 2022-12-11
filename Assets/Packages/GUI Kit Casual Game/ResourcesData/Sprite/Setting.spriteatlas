@@ -40,11 +40,14 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: c1a3a57470b7644c6a8600cf7324a065, type: 3}
-    totalSpriteSurfaceArea: 348897
     bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: e9617c6098e9944e8bc66de8cdbfd7d5, type: 3}
@@ -59,7 +62,7 @@ SpriteAtlas:
   - {fileID: 21300000, guid: 4daa02b47ce2e4ad89de1dcdacc0e2b5, type: 3}
   - {fileID: 21300000, guid: 97a5d3e4798ee40fd88365eb180d2b46, type: 3}
   - {fileID: 21300000, guid: db0a0ff46d4864e7485eb0d56dc06a62, type: 3}
-  - {fileID: 21300000, guid: c426b035919094016adb99e1349aa315, type: 3}
+  - {fileID: -1553520622, guid: c426b035919094016adb99e1349aa315, type: 3}
   - {fileID: 21300000, guid: 68c6dd55fbff84c598bad2cd9fa46a66, type: 3}
   - {fileID: 21300000, guid: a3722465a62c44b77bef5f41147ebd54, type: 3}
   - {fileID: 21300000, guid: 78757b0623f3b4309b7cc69c4769ae37, type: 3}
@@ -97,7 +100,7 @@ SpriteAtlas:
   - language_small_kor
   - language_small_twn
   - language_small_prt
-  - switch_on
+  - switch_on_0
   - setting_reward_gold
   - language_small_tur
   - setting_icon_sound_off
@@ -122,5 +125,6 @@ SpriteAtlas:
   - setting_icon_bell
   - slider_frame
   - language_small_esp
+  m_RenderDataMap: {}
   m_Tag: Setting
   m_IsVariant: 0

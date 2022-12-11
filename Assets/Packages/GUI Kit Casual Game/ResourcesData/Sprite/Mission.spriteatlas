@@ -40,11 +40,14 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 905f757f8bb774773bc3e82060e3f824, type: 3}
-    totalSpriteSurfaceArea: 641115
     bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: 21300000, guid: 460f4830064ce4dc8b3534b94a4f636a, type: 3}
@@ -65,10 +68,10 @@ SpriteAtlas:
   - {fileID: 21300000, guid: c249affb68c10448491cf5f21db84c12, type: 3}
   - {fileID: 21300000, guid: a3b5933c788cc48a4ad1eccad6499632, type: 3}
   - {fileID: 21300000, guid: 658a4fdc592974780b58272c015e36e5, type: 3}
-  - {fileID: 21300000, guid: ccb9cb3d26ff0491da27678834d72789, type: 3}
+  - {fileID: -1266095623, guid: ccb9cb3d26ff0491da27678834d72789, type: 3}
   - {fileID: 21300000, guid: 048d137da78a041979d9dc4c6af017a2, type: 3}
   - {fileID: 21300000, guid: 061e147d676e74bac9cce5b73d150a15, type: 3}
-  - {fileID: 21300000, guid: 4c78129e98b2f43ab97f160e39362aea, type: 3}
+  - {fileID: -1204362430, guid: 4c78129e98b2f43ab97f160e39362aea, type: 3}
   - {fileID: 21300000, guid: 14bb7dbe03b4c4f1999e45ec89aafdb5, type: 3}
   - {fileID: 21300000, guid: 35e4ceee666464b0ab5525eef8ac4e24, type: 3}
   - {fileID: 21300000, guid: 267c0f3f80b3248eba5b2ce935fbc434, type: 3}
@@ -92,13 +95,14 @@ SpriteAtlas:
   - mission_icon_pouch
   - mission_list_reward_rune
   - mission_icon_crown
-  - mission_list_bg_complete
+  - mission_list_bg_complete_0
   - mission_icon_book
   - mission_reward_bg_purple
-  - mission_icon_tv
+  - mission_icon_tv_0
   - mission_reward_icon_chest
   - mission_list_reward_gold
   - mission_reward_bg_gray
   - mission_icon_trophy
+  m_RenderDataMap: {}
   m_Tag: Mission
   m_IsVariant: 0
