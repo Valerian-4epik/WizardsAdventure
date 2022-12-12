@@ -52,7 +52,7 @@ public class Curtain : MonoBehaviour
         while (_slider.value < 100)
         {
             var delay = Random.Range(0.05f, 0.1f);
-            _slider.value += 2.1f;
+            _slider.value += 3.1f;
             _sliderText.text = ($"...{Math.Round(_slider.value, 1)}%");
             yield return new WaitForSeconds(delay);
         }

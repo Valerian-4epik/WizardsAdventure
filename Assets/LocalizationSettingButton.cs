@@ -17,7 +17,6 @@ public class LocalizationSettingButton : MonoBehaviour
     private void GetLanguage()
     {
         var localeIdentifier = LocalizationSettings.SelectedLocale.Identifier.Code;
-        Debug.Log(localeIdentifier);
 
         if (localeIdentifier == "ru")
             _flag.sprite = _ruFlag;
