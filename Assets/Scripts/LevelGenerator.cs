@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Data;
 using DefaultNamespace;
 using Enemy.Spawner;
-using ES3Types;
 using UnityEngine;
 
 public class LevelGenerator : MonoBehaviour
@@ -24,6 +23,7 @@ public class LevelGenerator : MonoBehaviour
     {
         _enemyGenerator = GetComponent<EnemyGenerator>();
         _enemyGenerator.EnemySpawned += CompleteLevelGenerate;
+        
     }
 
     public void SetLevelProgress(PlayerProgress playerProgress)

@@ -1,4 +1,3 @@
-using Infrastructure.Logic;
 using Infrastructure.Services;
 using Infrastructure.States;
 
@@ -6,11 +5,11 @@ namespace Infrastructure
 {
     public class Game
     {
-        public GameStateMachine GameStateMachine; //нужна публична потомучто мы будем к ней обращаться
+        public GameStateMachine GameStateMachine;
 
-        public Game(ICoroutineRunner coroutineRunner, Curtain loadingCurtain)//при создании игры мы создаем стейтМашину
+        public Game(ICoroutineRunner coroutineRunner, Curtain loadingCurtain)
         {
-            GameStateMachine = new GameStateMachine(new SceneLoader(coroutineRunner), loadingCurtain, AllServices.Container); //у машины должен быть сцен лоудер мы его создаем
+            GameStateMachine = new GameStateMachine(new SceneLoader(coroutineRunner), loadingCurtain, AllServices.Container);
         }
     }
 }

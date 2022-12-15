@@ -589,7 +589,6 @@ MonoBehaviour:
   _audioSource: {fileID: 1269641127950177841}
   _clips:
   - {fileID: 8300000, guid: 5b59cce20f4d42a48b3069957f936fe4, type: 3}
-  - {fileID: 8300000, guid: d9e280ca0b9d3ad4f83da6d4defd2c91, type: 3}
   - {fileID: 8300000, guid: 14a1cf915de1c2448b200ab123c01445, type: 3}
 --- !u!1 &8608429315600608149
 GameObject:
@@ -1652,6 +1651,14 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2390981118699836746}
+    - target: {fileID: 1985044824696113615, guid: 9210eea945560b64c80a0d40e124c539, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 1985044824696113615, guid: 9210eea945560b64c80a0d40e124c539, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 900
+      objectReference: {fileID: 0}
     - target: {fileID: 2484299538610097999, guid: 9210eea945560b64c80a0d40e124c539, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 5

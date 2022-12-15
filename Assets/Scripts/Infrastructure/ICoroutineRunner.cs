@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Infrastructure
 {
-    public interface ICoroutineRunner //этот интерфейс нужен для запуска любих корутин 
+    public interface ICoroutineRunner
     {
         Coroutine StartCoroutine(IEnumerator coroutine);
     }

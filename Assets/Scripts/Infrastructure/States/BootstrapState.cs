@@ -9,21 +9,23 @@ namespace Infrastructure.States
     public class BootstrapState : IState
     {
         private const int INITIAL_SCENE = 0;
-        private const int MENU_SCENE = 1;
 
         private readonly GameStateMachine _gameStateMachine;
         private readonly SceneLoader _sceneLoader;
         private readonly AllServices _services;
 
         private IGameFactory _gameFactory;
+        private PlayerProgress _playerProgress;
+        private bool _isTutorialStart;
 
         public BootstrapState(GameStateMachine gameStateMachine, SceneLoader sceneLoader, AllServices services)
         {
             _gameStateMachine = gameStateMachine;
             _sceneLoader = sceneLoader;
             _services = services;
-
             RegisterServices();
+            _playerProgress = CreateProgress();
+            _isTutorialStart = _playerProgress.GetStartTutorialInfo();
         }
 
         public void Enter()
@@ -37,35 +39,21 @@ namespace Infrastructure.States
 
         private void EnterLoadLevel()
         {
-            // _gameStateMachine.Enter<LoadLevelState, int>(1);
-            if (IsTutorialStart())
-                _gameStateMachine.Enter<LoadLevelState, int>(2);
-            else
-                _gameStateMachine.Enter<LoadLevelState, int>(1);
+            _gameStateMachine.Enter<LoadLevelState, int>(_isTutorialStart ? 2 : 1);
         }
-
-        private bool IsTutorialStart()
+        
+        private PlayerProgress CreateProgress()
         {
             _gameFactory = _services.Single<IGameFactory>();
             GameObject playerProgress = _gameFactory.CreatePlayerProgress();
             var progress = playerProgress.GetComponent<PlayerProgress>();
-            return progress.GetStartTutorialInfo();
+            return progress;
         }
 
         private void RegisterServices()
         {
             _services.RegisterSingle<IAssets>(new AssetProvider());
             _services.RegisterSingle<IGameFactory>(new GameFactory(AllServices.Container.Single<IAssets>()));
-            _services.RegisterSingle<IYandexListener>( new YandexListener());
         }
-    }
-
-    public interface IYandexListener : IService
-    {
-    }
-
-    public class YandexListener : IYandexListener
-    {
-        
     }
 }
