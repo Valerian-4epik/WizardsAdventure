@@ -1,4 +1,3 @@
-using Agava.YandexGames;
 using Data;
 using Infrastructure.Factory;
 using Infrastructure.Logic;
@@ -27,8 +26,8 @@ namespace Infrastructure.States
 
         public void Enter(int payload)
         {
-            // _loadingCurtain.enabled = true;
-            // _loadingCurtain.Show();
+            _loadingCurtain.enabled = true;
+            _loadingCurtain.Show();
             _sceneLoader.Load(payload, OnLoaded);
         }
 

@@ -100,7 +100,6 @@ namespace UI
             else
             {
                 PLaySoundFx(_worngFxSound);
-                Debug.Log("wrong");
             }
         }
 

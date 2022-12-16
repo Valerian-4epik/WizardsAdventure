@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: BackLevel
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: WebGL
+      m_MaxTextureSize: 512
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: 50
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 512
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 1
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: eed1a062333f7224281d8f5db24a3d98, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 784484413cf4def429d2d65fb9e66af7, type: 3}
+  - {fileID: 21300000, guid: 3dfc7c74bf9ee6944a4e0ea4d35acb81, type: 3}
+  - {fileID: 21300000, guid: 4edb04c5ff14aa94b81309c4f376491e, type: 3}
+  - {fileID: 21300000, guid: 287e4f389aa69eb4f8e1c18e4764b279, type: 3}
+  - {fileID: 21300000, guid: 0af0613972fc6884ea421e6e8878648b, type: 3}
+  - {fileID: 21300000, guid: b255099bca237a64d94da561afeca890, type: 3}
+  - {fileID: 21300000, guid: 59a2d7ac921afec4191cc6a31a1050a0, type: 3}
+  - {fileID: 21300000, guid: ce0553cce9363754182b7087ba0aeaef, type: 3}
+  - {fileID: 21300000, guid: 3f28a8af6ee783a49812473686dc95df, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - mission_reward_bg_gray 1
+  - play_wave_bg_blue 1
+  - lobby_pass_season_bg 1
+  - play_wave_bg_yellow 1
+  - mission_reward_bg_green 1
+  - character_lv_bg_blue 1
+  - character_lv_bg_yellow 1
+  - mission_reward_bg_purple 1
+  - mission_reward_bg_yellow 1
+  m_RenderDataMap: {}
+  m_Tag: BackLevel
+  m_IsVariant: 0

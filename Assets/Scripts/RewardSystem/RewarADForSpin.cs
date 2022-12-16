@@ -24,16 +24,18 @@ namespace UI.Services
         public void Show()
         {
 #if !UNITY_WEBGL || UNITY_EDITOR
+            ButtonsBlock();
             PlaySpin();
 #endif
             OnSwitchMusicVolume(false);
+            ButtonsBlock();
             VideoAd.Show(onRewardedCallback:Reward, onCloseCallback:PlaySpin, onErrorCallback:ErrorReturn);
         }
 
         private void PlaySpin()
         {
             _roulette.ItemWined += AddItem;
-            _roulette.StartCoroutine(_roulette.SpinRoulette());
+            StartCoroutine(_roulette.SpinRoulette());
         }
 
         private void AddItem()
@@ -50,9 +52,13 @@ namespace UI.Services
 
         private void Reward()
         {
+            OnSwitchMusicVolume(false);
+        }
+
+        private void ButtonsBlock()
+        {
             _spinButton.interactable = false;
             _nextLevelButton.interactable = false;
-            OnSwitchMusicVolume(false);
         }
 
         private void OnSwitchMusicVolume(bool value)
