@@ -1,6 +1,5 @@
 using System;
 using Infrastructure.Logic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Enemy

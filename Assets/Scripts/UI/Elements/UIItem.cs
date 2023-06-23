@@ -12,6 +12,7 @@ namespace UI
         [SerializeField] private AudioClip _onBeginDragSoundFx;
         [SerializeField] private AudioClip _dropSoundFx;
 
+        private Camera _camera;
         private CanvasGroup _canvasGroup;
         private Canvas _mainCanvas;
         private RectTransform _rectTransform;
@@ -19,6 +20,7 @@ namespace UI
 
         public virtual void Start()
         {
+            _camera = Camera.main;
             _canvasGroup = GetComponent<CanvasGroup>();
             _rectTransform = GetComponent<RectTransform>();
             _mainCanvas = GetComponentInParent<Canvas>();
@@ -48,20 +50,18 @@ namespace UI
             _canvasGroup.blocksRaycasts = true;
             PlaySoundFx(_dropSoundFx);
 
-            if (Camera.main != null)
-            {
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (_camera == null) return;
+            Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
 
-                if (Physics.Raycast(ray, out var hit, 1000, _targetMask))
+            if (Physics.Raycast(ray, out var hit, 1000, _targetMask))
+            {
+                if (hit.collider.TryGetComponent(out InventoryFighter inventory))
                 {
-                    if (hit.collider.TryGetComponent(out InventoryFighter inventory))
-                    {
-                        inventory.SetWeapon(this);
-                    }
-                    else if (hit.collider.TryGetComponent(out SellSlot sellSlot))
-                    {
-                        sellSlot.SellItem(this);
-                    }
+                    inventory.SetWeapon(this);
+                }
+                else if (hit.collider.TryGetComponent(out SellSlot sellSlot))
+                {
+                    sellSlot.SellItem(this);
                 }
             }
         }
